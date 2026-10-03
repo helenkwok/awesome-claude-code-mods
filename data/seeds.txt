@@ -17,3 +17,4 @@ scasella/claude-flightdeck
 pawandeepdhall/claude-mods
 saiharsha03/clawd-spinner
 hoobnn/hoobnn-agent-mods
+helenkwok/gsd-status-mod

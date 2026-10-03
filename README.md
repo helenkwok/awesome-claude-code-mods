@@ -125,6 +125,7 @@ Read the mod's source and access details before installing. Validation checks th
 - [agent-race](https://github.com/OneWave-AI/claude-code-mods/tree/main/agent-race) - Puts several sessions on one track for the same task and scores tools, edits, tests and cost per lane.
 - [AFKSwitch](https://github.com/augbastos/afkswitch) - A one-click presence switch above the terminal prompt that tells live sessions when you leave and collects their status when you return.
 - [next-steps](https://github.com/pawandeepdhall/claude-mods/tree/main/plugins/next-steps) - After each reply, up to six Haiku-generated next steps appear above the prompt; select one or more and press Send to have Haiku compose and submit a combined prompt.
+- [gsd-status-mod](https://github.com/helenkwok/gsd-status-mod) - For GSD projects: shows where work stopped and a STATE.md drift warning above the prompt, adds the handoff's next action to the hint line, and offers the command it names as a Tab suggestion.
 
 ## Building mods
 
