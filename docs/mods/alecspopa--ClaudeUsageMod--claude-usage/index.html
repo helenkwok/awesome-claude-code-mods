@@ -16,23 +16,25 @@
 <p class="lede">A band above the prompt with the cost, tokens and rate limits of your Claude usage</p>
 
 <div class="facts"><div><h2>Access</h2><span class="level">L2 Writes or runs</span><span class="track" aria-label="Reach level 2: Writes or runs"><i class="on l2"></i><i class="on l2"></i><i class="on l2"></i><i class=""></i></span><span class="labels">other: $.state.get, other: $.state.set, runs processes, reads env vars, persists state, draws</span></div>
-<div><h2>Validation</h2><span class="status bad">fails on 2.1.301</span></div></div>
+<div><h2>Validation</h2><span class="status bad">fails on 2.1.332</span></div></div>
 <p class="actions"><a class="source" href="https://github.com/alecspopa/ClaudeUsageMod">View the source on GitHub <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 19 19 5M5 5h14v14"/></svg></a><a href="/#alecspopa--ClaudeUsageMod--claude-usage">Back to the list</a></p>
 <p class="install">To install it, open the repository and follow the author’s setup instructions. Mods need Claude Code 2.1.287 or later.</p>
 <section class="record" aria-labelledby="record-title"><h2 id="record-title">What the scan recorded</h2>
 <dl>
 
     <dt>Observed events</dt><dd>Only what it hooks</dd>
-    <dt>Hooks</dt><dd><code>session.start, session.measure, ui.render {component=AbovePrompt}</code></dd>
+    <dt>Hooks</dt><dd><code>session.start, session.measure, ui.render {component=AbovePrompt}, default, matcher, key, plugin</code></dd>
     <dt>API calls</dt><dd><code>$.clock.after, $.clock.every, $.clock.now, $.env.get, $.process.run, $.session.usage, $.state.get, $.state.set, $.store.get, $.store.set, $.ui.resolve</code></dd>
 
-    <dt>Validation on 2.1.301</dt><dd>fails on 2.1.301</dd>
+    <dt>Validation on 2.1.332</dt><dd>fails on 2.1.332</dd>
 
     <dt>Validator output</dt><dd>name: Plugin name &quot;claude-usage&quot; is reserved: it passes as one of Anthropic's own. A third party's plugin name cannot start with &quot;claude-&quot;, &quot;anthropic-&quot;, &quot;anthropics-&quot;, or &quot;cc-plugin-&quot;, be &quot;claude&quot;, &quot;anthropic&quot;, &quot;anthropics&quot;, &quot;claude-code&quot;, or &quot;claude-mods&quot;, or put &quot;official&quot; beside &quot;claude&quot; or &quot;anthropic&quot;. Name it for what it does. If this is one of Anthropic's own plugins, validate the marketplace that lists it.</dd>
     <dt>Scanned revision</dt><dd><a href="https://github.com/alecspopa/ClaudeUsageMod/tree/6a5caa51ae08b4b35aeacfe21f9e21d5a31d42bb"><code>6a5caa51ae08</code></a></dd>
     </dl>
 <p class="note">These are the hooks and API calls reported by <code>claude plugin validate</code>. Access levels describe the widest reach of those calls and are not safety ratings. Validation is a static check, not a runtime test, and a passing result does not prove that a mod works or is safe. <a href="https://github.com/karanb192/awesome-claude-code-mods/blob/main/SCANNING.md">How the scan works</a>.</p></section>
 
+<section class="badge-snippet" aria-labelledby="badge-title"><h2 id="badge-title">Badge for your README</h2><p><img src="/badges/alecspopa--ClaudeUsageMod--claude-usage-reach.svg" alt="Reach badge for claude-usage"> <img src="/badges/alecspopa--ClaudeUsageMod--claude-usage-validates.svg" alt="Validation badge for claude-usage"></p><p>Authors can show the latest scan result in their README. Each badge links to this page.</p><pre><code>[![reach](https://raw.githubusercontent.com/karanb192/awesome-claude-code-mods/main/badges/alecspopa--ClaudeUsageMod--claude-usage-reach.svg)](https://mods.aidojo.si/mods/alecspopa--ClaudeUsageMod--claude-usage/)
+[![validates](https://raw.githubusercontent.com/karanb192/awesome-claude-code-mods/main/badges/alecspopa--ClaudeUsageMod--claude-usage-validates.svg)](https://mods.aidojo.si/mods/alecspopa--ClaudeUsageMod--claude-usage/)</code></pre></section>
 </main>
 <footer class="shell"><a href="/" class="brand"><svg viewBox="0 0 32 32" fill="none" aria-hidden="true"><path d="M11 5H5v22h6M21 5h6v22h-6M16 10v12M10 16h12"/></svg><span>claude<span class="brand-light">mods</span></span></a><p>An independent community scan.<br>Not an official Anthropic directory.</p><a href="https://github.com/karanb192/awesome-claude-code-mods">Awesome Claude Code Mods on GitHub <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 19 19 5M5 5h14v14"/></svg></a></footer>
 </body></html>

@@ -16,23 +16,25 @@
 <p class="lede">The next Muslim prayer time under Claude Code's prompt, a gentle reminder at adhan, and a pane with today's sky, the timetable, a weekly prayer tracker and the Qibla. Calculated on your machine; no network.</p>
 
 <div class="facts"><div><h2>Access</h2><span class="level">L1 Reads files</span><span class="track" aria-label="Reach level 1: Reads files"><i class="on l1"></i><i class="on l1"></i><i class=""></i><i class=""></i></span><span class="labels">other: $.state.get, other: $.state.set, plays audio, persists state, draws</span></div>
-<div><h2>Validation</h2><span class="status">Passed on Claude Code 2.1.301</span></div></div>
+<div><h2>Validation</h2><span class="status">Passed on Claude Code 2.1.332</span></div></div>
 <p class="actions"><a class="source" href="https://github.com/mkbuilds4/mods/tree/main/plugins/prayer-times">View the source on GitHub <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 19 19 5M5 5h14v14"/></svg></a><a href="/#mkbuilds4--mods--prayer-times">Back to the list</a></p>
 <p class="install">To install it, open the repository and follow the author’s setup instructions. Mods need Claude Code 2.1.287 or later.</p>
 <section class="record" aria-labelledby="record-title"><h2 id="record-title">What the scan recorded</h2>
 <dl>
 
     <dt>Observed events</dt><dd>Only what it hooks</dd>
-    <dt>Hooks</dt><dd><code>ui.render {component=SessionMode}, session.start, command.run {command=prayer}, ui.render {component=AbovePrompt}, ui.render {component=Pane, requestId=prayer-times}</code></dd>
+    <dt>Hooks</dt><dd><code>ui.render {component=SessionMode}, session.start, command.run {command=prayer}, ui.render {component=AbovePrompt}, default, matcher, key, plugin, ui.render {component=Pane, requestId=prayer-times}, default, matcher, key, plugin</code></dd>
     <dt>API calls</dt><dd><code>$.audio.play, $.audio.speak, $.clock.every, $.clock.now, $.command.register, $.state.get, $.state.set, $.store.get, $.store.set, $.ui.open, $.ui.resolve, $.ui.toast</code></dd>
 
-    <dt>Validation on 2.1.301</dt><dd>Passed</dd>
+    <dt>Validation on 2.1.332</dt><dd>Passed</dd>
 
 
-    <dt>Scanned revision</dt><dd><a href="https://github.com/mkbuilds4/mods/tree/9a933e176d079575cada8517a47ca4dcb3f416b2"><code>9a933e176d07</code></a></dd>
+    <dt>Scanned revision</dt><dd><a href="https://github.com/mkbuilds4/mods/tree/87f23228b1958c41cb8485b13a692e5b07da5a29"><code>87f23228b195</code></a></dd>
     </dl>
 <p class="note">These are the hooks and API calls reported by <code>claude plugin validate</code>. Access levels describe the widest reach of those calls and are not safety ratings. Validation is a static check, not a runtime test, and a passing result does not prove that a mod works or is safe. <a href="https://github.com/karanb192/awesome-claude-code-mods/blob/main/SCANNING.md">How the scan works</a>.</p></section>
 
+<section class="badge-snippet" aria-labelledby="badge-title"><h2 id="badge-title">Badge for your README</h2><p><img src="/badges/mkbuilds4--mods--prayer-times-reach.svg" alt="Reach badge for prayer-times"> <img src="/badges/mkbuilds4--mods--prayer-times-validates.svg" alt="Validation badge for prayer-times"></p><p>Authors can show the latest scan result in their README. Each badge links to this page.</p><pre><code>[![reach](https://raw.githubusercontent.com/karanb192/awesome-claude-code-mods/main/badges/mkbuilds4--mods--prayer-times-reach.svg)](https://mods.aidojo.si/mods/mkbuilds4--mods--prayer-times/)
+[![validates](https://raw.githubusercontent.com/karanb192/awesome-claude-code-mods/main/badges/mkbuilds4--mods--prayer-times-validates.svg)](https://mods.aidojo.si/mods/mkbuilds4--mods--prayer-times/)</code></pre></section>
 </main>
 <footer class="shell"><a href="/" class="brand"><svg viewBox="0 0 32 32" fill="none" aria-hidden="true"><path d="M11 5H5v22h6M21 5h6v22h-6M16 10v12M10 16h12"/></svg><span>claude<span class="brand-light">mods</span></span></a><p>An independent community scan.<br>Not an official Anthropic directory.</p><a href="https://github.com/karanb192/awesome-claude-code-mods">Awesome Claude Code Mods on GitHub <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 19 19 5M5 5h14v14"/></svg></a></footer>
 </body></html>

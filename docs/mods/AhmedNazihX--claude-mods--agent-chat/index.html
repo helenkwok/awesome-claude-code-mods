@@ -16,23 +16,25 @@
 <p class="lede">A side pane with the conversation between Claude and its subagents: what each was asked and what it sent back</p>
 
 <div class="facts"><div><h2>Access</h2><span class="level">L1 Reads files</span><span class="track" aria-label="Reach level 1: Reads files"><i class="on l1"></i><i class="on l1"></i><i class=""></i><i class=""></i></span><span class="labels">other: $.state.get, other: $.state.set, draws</span></div>
-<div><h2>Validation</h2><span class="status">Passed on Claude Code 2.1.301</span></div></div>
+<div><h2>Validation</h2><span class="status">Passed on Claude Code 2.1.332</span></div></div>
 <p class="actions"><a class="source" href="https://github.com/AhmedNazihX/claude-mods/tree/main/agent-chat">View the source on GitHub <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 19 19 5M5 5h14v14"/></svg></a><a href="/#AhmedNazihX--claude-mods--agent-chat">Back to the list</a></p>
 <p class="install">To install it, open the repository and follow the author’s setup instructions. Mods need Claude Code 2.1.287 or later.</p>
 <section class="record" aria-labelledby="record-title"><h2 id="record-title">What the scan recorded</h2>
 <dl>
 
     <dt>Observed events</dt><dd>subagent spawns, every tool call</dd>
-    <dt>Hooks</dt><dd><code>session.start, command.run {command=agent-chat}, agent.spawn, tool.call, turn.step, session.send, session.append {door=response}, turn.complete, ui.scroll {requestId=agent-chat}, ui.render {component=Pane, requestId=agent-chat}</code></dd>
+    <dt>Hooks</dt><dd><code>session.start, command.run {command=agent-chat}, agent.spawn, tool.call, turn.step, session.send, session.append {door=response}, turn.complete, ui.scroll {requestId=agent-chat}, ui.render {component=Pane, requestId=agent-chat}, default, matcher, key, plugin</code></dd>
     <dt>API calls</dt><dd><code>$.agent.list, $.clock.every, $.clock.now, $.command.register, $.state.get, $.state.set, $.ui.log, $.ui.open, $.ui.resolve, $.ui.scroll</code></dd>
 
-    <dt>Validation on 2.1.301</dt><dd>Passed</dd>
+    <dt>Validation on 2.1.332</dt><dd>Passed</dd>
 
 
     <dt>Scanned revision</dt><dd><a href="https://github.com/AhmedNazihX/claude-mods/tree/07248611910caf2cc63bfc1e95cd8e21340192fd"><code>07248611910c</code></a></dd>
     <dt>Marketplace passed</dt><dd><a href="https://github.com/AhmedNazihX/claude-mods/blob/07248611910caf2cc63bfc1e95cd8e21340192fd/.claude-plugin/marketplace.json">ahmed-mods</a></dd></dl>
 <p class="note">These are the hooks and API calls reported by <code>claude plugin validate</code>. Access levels describe the widest reach of those calls and are not safety ratings. Validation is a static check, not a runtime test, and a passing result does not prove that a mod works or is safe. <a href="https://github.com/karanb192/awesome-claude-code-mods/blob/main/SCANNING.md">How the scan works</a>.</p></section>
 <section class="siblings" aria-labelledby="siblings-title"><h2 id="siblings-title">More from AhmedNazihX/claude-mods</h2><ul><li><a href="/mods/AhmedNazihX--claude-mods--cache-status/">cache-status</a><span>A band above the prompt showing whether the prompt cache is warm, how much of the last turn it served, and wh…</span></li><li><a href="/mods/AhmedNazihX--claude-mods--done-chime/">done-chime</a><span>Plays a chime and shows a toast when a long Claude reply finishes, so you can look away while it works</span></li><li><a href="/mods/AhmedNazihX--claude-mods--secret-guard/">secret-guard</a><span>Stops Claude from writing API keys, private keys and other secrets into your files</span></li></ul></section>
+<section class="badge-snippet" aria-labelledby="badge-title"><h2 id="badge-title">Badge for your README</h2><p><img src="/badges/AhmedNazihX--claude-mods--agent-chat-reach.svg" alt="Reach badge for agent-chat"> <img src="/badges/AhmedNazihX--claude-mods--agent-chat-validates.svg" alt="Validation badge for agent-chat"></p><p>Authors can show the latest scan result in their README. Each badge links to this page.</p><pre><code>[![reach](https://raw.githubusercontent.com/karanb192/awesome-claude-code-mods/main/badges/AhmedNazihX--claude-mods--agent-chat-reach.svg)](https://mods.aidojo.si/mods/AhmedNazihX--claude-mods--agent-chat/)
+[![validates](https://raw.githubusercontent.com/karanb192/awesome-claude-code-mods/main/badges/AhmedNazihX--claude-mods--agent-chat-validates.svg)](https://mods.aidojo.si/mods/AhmedNazihX--claude-mods--agent-chat/)</code></pre></section>
 </main>
 <footer class="shell"><a href="/" class="brand"><svg viewBox="0 0 32 32" fill="none" aria-hidden="true"><path d="M11 5H5v22h6M21 5h6v22h-6M16 10v12M10 16h12"/></svg><span>claude<span class="brand-light">mods</span></span></a><p>An independent community scan.<br>Not an official Anthropic directory.</p><a href="https://github.com/karanb192/awesome-claude-code-mods">Awesome Claude Code Mods on GitHub <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 19 19 5M5 5h14v14"/></svg></a></footer>
 </body></html>

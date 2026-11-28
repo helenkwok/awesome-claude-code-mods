@@ -16,23 +16,25 @@
 <p class="lede">A live forecast of the context window, drawn above the prompt.</p>
 
 <div class="facts"><div><h2>Access</h2><span class="level">L1 Reads files</span><span class="track" aria-label="Reach level 1: Reads files"><i class="on l1"></i><i class="on l1"></i><i class=""></i><i class=""></i></span><span class="labels">other: $.state.get, other: $.state.set, draws</span></div>
-<div><h2>Validation</h2><span class="status">Passed on Claude Code 2.1.301</span></div></div>
+<div><h2>Validation</h2><span class="status">Passed with warnings on Claude Code 2.1.332</span></div></div>
 <p class="actions"><a class="source" href="https://github.com/cskwork/claude-code-mods/tree/main/token-weather">View the source on GitHub <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 19 19 5M5 5h14v14"/></svg></a><a href="/#cskwork--claude-code-mods--token-weather">Back to the list</a></p>
 <p class="install">To install it, open the repository and follow the author’s setup instructions. Mods need Claude Code 2.1.287 or later.</p>
 <section class="record" aria-labelledby="record-title"><h2 id="record-title">What the scan recorded</h2>
 <dl>
 
     <dt>Observed events</dt><dd>Only what it hooks</dd>
-    <dt>Hooks</dt><dd><code>session.start, turn.complete, ui.render {component=AbovePrompt}</code></dd>
+    <dt>Hooks</dt><dd><code>session.start, turn.complete, ui.render {component=AbovePrompt}, default, matcher, key, plugin</code></dd>
     <dt>API calls</dt><dd><code>$.session.usage, $.state.get, $.state.set, $.ui.resolve</code></dd>
 
-    <dt>Validation on 2.1.301</dt><dd>Passed</dd>
+    <dt>Validation on 2.1.332</dt><dd>Passed with warnings</dd>
 
 
-    <dt>Scanned revision</dt><dd><a href="https://github.com/cskwork/claude-code-mods/tree/119d186eabd997e52efcd452c9490c0edd0d769f"><code>119d186eabd9</code></a></dd>
-    <dt>Marketplace passed</dt><dd><a href="https://github.com/cskwork/claude-code-mods/blob/119d186eabd997e52efcd452c9490c0edd0d769f/.claude-plugin/marketplace.json">claude-code-mods</a></dd></dl>
+    <dt>Scanned revision</dt><dd><a href="https://github.com/cskwork/claude-code-mods/tree/fc068c20c2635ddd7dfb65e0ade801752de9d4e1"><code>fc068c20c263</code></a></dd>
+    <dt>Marketplace passed</dt><dd><a href="https://github.com/cskwork/claude-code-mods/blob/fc068c20c2635ddd7dfb65e0ade801752de9d4e1/.claude-plugin/marketplace.json">claude-code-mods</a></dd></dl>
 <p class="note">These are the hooks and API calls reported by <code>claude plugin validate</code>. Access levels describe the widest reach of those calls and are not safety ratings. Validation is a static check, not a runtime test, and a passing result does not prove that a mod works or is safe. <a href="https://github.com/karanb192/awesome-claude-code-mods/blob/main/SCANNING.md">How the scan works</a>.</p></section>
-<section class="siblings" aria-labelledby="siblings-title"><h2 id="siblings-title">More from cskwork/claude-code-mods</h2><ul><li><a href="/mods/cskwork--claude-code-mods--blast-radius/">blast-radius</a><span>Dry-runs risky Bash commands (recursive deletes, destructive git, kubectl delete, SQL wipes) and asks Proceed…</span></li><li><a href="/mods/cskwork--claude-code-mods--usage-reporter/">usage-reporter</a><span>Shows the weekly limit reading and, once configured, POSTs it hourly to your HTTPS endpoint. Off by default.</span></li></ul></section>
+<section class="siblings" aria-labelledby="siblings-title"><h2 id="siblings-title">More from cskwork/claude-code-mods</h2><ul><li><a href="/mods/cskwork--claude-code-mods--blast-radius/">blast-radius</a><span>Previews risky Bash commands and asks Proceed or Cancel. BLAST_RADIUS_UNATTENDED=1 skips the dialog and requi…</span></li><li><a href="/mods/cskwork--claude-code-mods--usage-reporter/">usage-reporter</a><span>Shows the weekly limit reading and, once configured, POSTs it hourly to your HTTPS endpoint. Off by default.</span></li></ul></section>
+<section class="badge-snippet" aria-labelledby="badge-title"><h2 id="badge-title">Badge for your README</h2><p><img src="/badges/cskwork--claude-code-mods--token-weather-reach.svg" alt="Reach badge for token-weather"> <img src="/badges/cskwork--claude-code-mods--token-weather-validates.svg" alt="Validation badge for token-weather"></p><p>Authors can show the latest scan result in their README. Each badge links to this page.</p><pre><code>[![reach](https://raw.githubusercontent.com/karanb192/awesome-claude-code-mods/main/badges/cskwork--claude-code-mods--token-weather-reach.svg)](https://mods.aidojo.si/mods/cskwork--claude-code-mods--token-weather/)
+[![validates](https://raw.githubusercontent.com/karanb192/awesome-claude-code-mods/main/badges/cskwork--claude-code-mods--token-weather-validates.svg)](https://mods.aidojo.si/mods/cskwork--claude-code-mods--token-weather/)</code></pre></section>
 </main>
 <footer class="shell"><a href="/" class="brand"><svg viewBox="0 0 32 32" fill="none" aria-hidden="true"><path d="M11 5H5v22h6M21 5h6v22h-6M16 10v12M10 16h12"/></svg><span>claude<span class="brand-light">mods</span></span></a><p>An independent community scan.<br>Not an official Anthropic directory.</p><a href="https://github.com/karanb192/awesome-claude-code-mods">Awesome Claude Code Mods on GitHub <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 19 19 5M5 5h14v14"/></svg></a></footer>
 </body></html>

@@ -16,23 +16,25 @@
 <p class="lede">Hide tool calls and in-between chatter, keeping your prompts and Claude's latest reply</p>
 
 <div class="facts"><div><h2>Access</h2><span class="level">L1 Reads files</span><span class="track" aria-label="Reach level 1: Reads files"><i class="on l1"></i><i class="on l1"></i><i class=""></i><i class=""></i></span><span class="labels">other: $.state.get, other: $.state.set, draws</span></div>
-<div><h2>Validation</h2><span class="status">Passed on Claude Code 2.1.301</span></div></div>
+<div><h2>Validation</h2><span class="status">Passed with warnings on Claude Code 2.1.332</span></div></div>
 <p class="actions"><a class="source" href="https://github.com/robw-raviga/claude-mods/tree/main/quiet-mode">View the source on GitHub <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 19 19 5M5 5h14v14"/></svg></a><a href="/#robw-raviga--claude-mods--quiet-mode">Back to the list</a></p>
 <p class="install">To install it, open the repository and follow the author’s setup instructions. Mods need Claude Code 2.1.287 or later.</p>
 <section class="record" aria-labelledby="record-title"><h2 id="record-title">What the scan recorded</h2>
 <dl>
 
     <dt>Observed events</dt><dd>every prompt, every tool call</dd>
-    <dt>Hooks</dt><dd><code>session.start, command.run {command=quiet}, prompt.submit, tool.call, turn.complete, ui.render {component=ToolUse|ToolResult|ToolGroup}, ui.render {component=AssistantMessage}</code></dd>
+    <dt>Hooks</dt><dd><code>session.start, command.run {command=quiet}, prompt.submit, tool.call, turn.complete, ui.render {component=ToolUse|ToolResult|ToolGroup}, default, matcher, key, plugin, ui.render {component=AssistantMessage}</code></dd>
     <dt>API calls</dt><dd><code>$.command.register, $.state.get, $.state.set, $.ui.resolve, $.ui.status</code></dd>
 
-    <dt>Validation on 2.1.301</dt><dd>Passed</dd>
+    <dt>Validation on 2.1.332</dt><dd>Passed with warnings</dd>
 
 
     <dt>Scanned revision</dt><dd><a href="https://github.com/robw-raviga/claude-mods/tree/7293e51604c5588881bb0d088ec2d743baaccc18"><code>7293e51604c5</code></a></dd>
     <dt>Marketplace passed</dt><dd><a href="https://github.com/robw-raviga/claude-mods/blob/7293e51604c5588881bb0d088ec2d743baaccc18/.claude-plugin/marketplace.json">claude-mods</a></dd></dl>
 <p class="note">These are the hooks and API calls reported by <code>claude plugin validate</code>. Access levels describe the widest reach of those calls and are not safety ratings. Validation is a static check, not a runtime test, and a passing result does not prove that a mod works or is safe. <a href="https://github.com/karanb192/awesome-claude-code-mods/blob/main/SCANNING.md">How the scan works</a>.</p></section>
 <section class="siblings" aria-labelledby="siblings-title"><h2 id="siblings-title">More from robw-raviga/claude-mods</h2><ul><li><a href="/mods/robw-raviga--claude-mods--ledger/">ledger</a><span>A live pane of this thread's tasks, open questions and decisions, kept up to date by Haiku after every turn</span></li></ul></section>
+<section class="badge-snippet" aria-labelledby="badge-title"><h2 id="badge-title">Badge for your README</h2><p><img src="/badges/robw-raviga--claude-mods--quiet-mode-reach.svg" alt="Reach badge for quiet-mode"> <img src="/badges/robw-raviga--claude-mods--quiet-mode-validates.svg" alt="Validation badge for quiet-mode"></p><p>Authors can show the latest scan result in their README. Each badge links to this page.</p><pre><code>[![reach](https://raw.githubusercontent.com/karanb192/awesome-claude-code-mods/main/badges/robw-raviga--claude-mods--quiet-mode-reach.svg)](https://mods.aidojo.si/mods/robw-raviga--claude-mods--quiet-mode/)
+[![validates](https://raw.githubusercontent.com/karanb192/awesome-claude-code-mods/main/badges/robw-raviga--claude-mods--quiet-mode-validates.svg)](https://mods.aidojo.si/mods/robw-raviga--claude-mods--quiet-mode/)</code></pre></section>
 </main>
 <footer class="shell"><a href="/" class="brand"><svg viewBox="0 0 32 32" fill="none" aria-hidden="true"><path d="M11 5H5v22h6M21 5h6v22h-6M16 10v12M10 16h12"/></svg><span>claude<span class="brand-light">mods</span></span></a><p>An independent community scan.<br>Not an official Anthropic directory.</p><a href="https://github.com/karanb192/awesome-claude-code-mods">Awesome Claude Code Mods on GitHub <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 19 19 5M5 5h14v14"/></svg></a></footer>
 </body></html>

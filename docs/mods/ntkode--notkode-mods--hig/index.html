@@ -16,23 +16,25 @@
 <p class="lede">Apple's Human Interface Guidelines inside Claude Code: Claude works with them in mind, each edit is checked against them, and an audit pane shows which guidelines your app covers and which it does not yet.</p>
 
 <div class="facts"><div><h2>Access</h2><span class="level">L2 Writes or runs</span><span class="track" aria-label="Reach level 2: Writes or runs"><i class="on l2"></i><i class="on l2"></i><i class="on l2"></i><i class=""></i></span><span class="labels">other: $.state.get, other: $.state.set, runs processes, writes files, drives Claude, reads files, persists state, draws</span></div>
-<div><h2>Validation</h2><span class="status">Passed on Claude Code 2.1.301</span></div></div>
+<div><h2>Validation</h2><span class="status">Passed on Claude Code 2.1.332</span></div></div>
 <p class="actions"><a class="source" href="https://github.com/ntkode/notkode-mods/tree/main/hig/plugins/hig">View the source on GitHub <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 19 19 5M5 5h14v14"/></svg></a><a href="/#ntkode--notkode-mods--hig">Back to the list</a></p>
 <p class="install">To install it, open the repository and follow the author’s setup instructions. Mods need Claude Code 2.1.287 or later.</p>
 <section class="record" aria-labelledby="record-title"><h2 id="record-title">What the scan recorded</h2>
 <dl>
 
     <dt>Observed events</dt><dd>mcp__hig__audit calls, mcp__hig__verdict calls, every tool call</dd>
-    <dt>Hooks</dt><dd><code>session.start, command.run {command=hig}, tool.call {tool=mcp__hig__audit}, tool.call {tool=mcp__hig__verdict}, tool.call, prompt.compose, ui.render {component=Pane, requestId=hig}</code></dd>
+    <dt>Hooks</dt><dd><code>session.start, command.run {command=hig}, tool.call {tool=mcp__hig__audit}, tool.call {tool=mcp__hig__verdict}, tool.call, prompt.compose, ui.render {component=Pane, requestId=hig}, default, matcher, key, plugin</code></dd>
     <dt>API calls</dt><dd><code>$.clock.after, $.clock.now, $.clock.sleep, $.command.register, $.fs.list, $.fs.read, $.fs.write, $.process.run, $.prompt.submit, $.session.root, $.state.get, $.state.set, $.store.get, $.store.set, $.tool.register, $.ui.open, $.ui.resolve, $.ui.status, $.ui.toast</code></dd>
 
-    <dt>Validation on 2.1.301</dt><dd>Passed</dd>
+    <dt>Validation on 2.1.332</dt><dd>Passed</dd>
 
 
     <dt>Scanned revision</dt><dd><a href="https://github.com/ntkode/notkode-mods/tree/35b86b4aa26164e0ea9dd17263d429fbd15d36a8"><code>35b86b4aa261</code></a></dd>
     <dt>Marketplace passed</dt><dd><a href="https://github.com/ntkode/notkode-mods/blob/35b86b4aa26164e0ea9dd17263d429fbd15d36a8/.claude-plugin/marketplace.json">notkode-mods</a></dd></dl>
 <p class="note">These are the hooks and API calls reported by <code>claude plugin validate</code>. Access levels describe the widest reach of those calls and are not safety ratings. Validation is a static check, not a runtime test, and a passing result does not prove that a mod works or is safe. <a href="https://github.com/karanb192/awesome-claude-code-mods/blob/main/SCANNING.md">How the scan works</a>.</p></section>
 <section class="siblings" aria-labelledby="siblings-title"><h2 id="siblings-title">More from ntkode/notkode-mods</h2><ul><li><a href="/mods/ntkode--notkode-mods--files/">files</a><span>A file browser pane inside Claude Code: walk the project, read Markdown rendered, code highlighted, and pictu…</span></li><li><a href="/mods/ntkode--notkode-mods--jev/">jev</a><span>Jev picks the tool that fits Claude's next step and Claude gets it as a hint, shown live and measured against…</span></li></ul></section>
+<section class="badge-snippet" aria-labelledby="badge-title"><h2 id="badge-title">Badge for your README</h2><p><img src="/badges/ntkode--notkode-mods--hig-reach.svg" alt="Reach badge for hig"> <img src="/badges/ntkode--notkode-mods--hig-validates.svg" alt="Validation badge for hig"></p><p>Authors can show the latest scan result in their README. Each badge links to this page.</p><pre><code>[![reach](https://raw.githubusercontent.com/karanb192/awesome-claude-code-mods/main/badges/ntkode--notkode-mods--hig-reach.svg)](https://mods.aidojo.si/mods/ntkode--notkode-mods--hig/)
+[![validates](https://raw.githubusercontent.com/karanb192/awesome-claude-code-mods/main/badges/ntkode--notkode-mods--hig-validates.svg)](https://mods.aidojo.si/mods/ntkode--notkode-mods--hig/)</code></pre></section>
 </main>
 <footer class="shell"><a href="/" class="brand"><svg viewBox="0 0 32 32" fill="none" aria-hidden="true"><path d="M11 5H5v22h6M21 5h6v22h-6M16 10v12M10 16h12"/></svg><span>claude<span class="brand-light">mods</span></span></a><p>An independent community scan.<br>Not an official Anthropic directory.</p><a href="https://github.com/karanb192/awesome-claude-code-mods">Awesome Claude Code Mods on GitHub <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 19 19 5M5 5h14v14"/></svg></a></footer>
 </body></html>

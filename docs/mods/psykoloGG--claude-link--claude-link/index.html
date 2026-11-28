@@ -16,23 +16,25 @@
 <p class="lede">See and use Claude Code chats from your other machines</p>
 
 <div class="facts"><div><h2>Access</h2><span class="level">L3 Uses the network</span><span class="track" aria-label="Reach level 3: Uses the network"><i class="on l3"></i><i class="on l3"></i><i class="on l3"></i><i class="on l3"></i></span><span class="labels">other: $.state.get, other: $.state.set, network, drives Claude, reads files, reads env vars, draws</span></div>
-<div><h2>Validation</h2><span class="status bad">fails on 2.1.301</span></div></div>
+<div><h2>Validation</h2><span class="status bad">fails on 2.1.332</span></div></div>
 <p class="actions"><a class="source" href="https://github.com/psykoloGG/claude-link/tree/main/mod">View the source on GitHub <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 19 19 5M5 5h14v14"/></svg></a><a href="/#psykoloGG--claude-link--claude-link">Back to the list</a></p>
 <p class="install">To install it, open the repository and follow the author’s setup instructions. Mods need Claude Code 2.1.287 or later.</p>
 <section class="record" aria-labelledby="record-title"><h2 id="record-title">What the scan recorded</h2>
 <dl>
 
     <dt>Observed events</dt><dd>mcp__claude-link__chats calls, mcp__claude-link__read_chat calls, mcp__claude-link__search calls</dd>
-    <dt>Hooks</dt><dd><code>session.start, command.run {command=link}, tool.call {tool=mcp__claude-link__chats}, tool.call {tool=mcp__claude-link__read_chat}, tool.call {tool=mcp__claude-link__search}, ui.render {component=Pane, requestId=link}</code></dd>
+    <dt>Hooks</dt><dd><code>session.start, command.run {command=link}, tool.call {tool=mcp__claude-link__chats}, tool.call {tool=mcp__claude-link__read_chat}, tool.call {tool=mcp__claude-link__search}, ui.render {component=Pane, requestId=link}, default, matcher, key, plugin</code></dd>
     <dt>API calls</dt><dd><code>$.clock.every, $.clock.now, $.command.register, $.env.get, $.fs.exists, $.fs.read, $.http.fetch, $.session.append, $.session.root, $.state.get, $.state.set, $.tool.register, $.ui.copy, $.ui.open, $.ui.panes, $.ui.resolve, $.ui.scroll, $.ui.status, $.ui.toast</code></dd>
 
-    <dt>Validation on 2.1.301</dt><dd>fails on 2.1.301</dd>
+    <dt>Validation on 2.1.332</dt><dd>fails on 2.1.332</dd>
 
     <dt>Validator output</dt><dd>name: Plugin name &quot;claude-link&quot; is reserved: it passes as one of Anthropic's own. A third party's plugin name cannot start with &quot;claude-&quot;, &quot;anthropic-&quot;, &quot;anthropics-&quot;, or &quot;cc-plugin-&quot;, be &quot;claude&quot;, &quot;anthropic&quot;, &quot;anthropics&quot;, &quot;claude-code&quot;, or &quot;claude-mods&quot;, or put &quot;official&quot; beside &quot;claude&quot; or &quot;anthropic&quot;. Name it for what it does. If this is one of Anthropic's own plugins, validate the marketplace that lists it.; types ./types/index.d.ts declares state: claude-link.status, claude-link.chats, claude-link.counts, claude-link.project, claude-link.expanded, claude-link.lastOpened, claude-link.scope, claude-link.query, claude-link.detail, claude-link.busy, claude-link.error</dd>
     <dt>Scanned revision</dt><dd><a href="https://github.com/psykoloGG/claude-link/tree/36b6b2ffd2577c1f1529ab1b6a223eb80fd0f090"><code>36b6b2ffd257</code></a></dd>
     </dl>
 <p class="note">These are the hooks and API calls reported by <code>claude plugin validate</code>. Access levels describe the widest reach of those calls and are not safety ratings. Validation is a static check, not a runtime test, and a passing result does not prove that a mod works or is safe. <a href="https://github.com/karanb192/awesome-claude-code-mods/blob/main/SCANNING.md">How the scan works</a>.</p></section>
 
+<section class="badge-snippet" aria-labelledby="badge-title"><h2 id="badge-title">Badge for your README</h2><p><img src="/badges/psykoloGG--claude-link--claude-link-reach.svg" alt="Reach badge for claude-link"> <img src="/badges/psykoloGG--claude-link--claude-link-validates.svg" alt="Validation badge for claude-link"></p><p>Authors can show the latest scan result in their README. Each badge links to this page.</p><pre><code>[![reach](https://raw.githubusercontent.com/karanb192/awesome-claude-code-mods/main/badges/psykoloGG--claude-link--claude-link-reach.svg)](https://mods.aidojo.si/mods/psykoloGG--claude-link--claude-link/)
+[![validates](https://raw.githubusercontent.com/karanb192/awesome-claude-code-mods/main/badges/psykoloGG--claude-link--claude-link-validates.svg)](https://mods.aidojo.si/mods/psykoloGG--claude-link--claude-link/)</code></pre></section>
 </main>
 <footer class="shell"><a href="/" class="brand"><svg viewBox="0 0 32 32" fill="none" aria-hidden="true"><path d="M11 5H5v22h6M21 5h6v22h-6M16 10v12M10 16h12"/></svg><span>claude<span class="brand-light">mods</span></span></a><p>An independent community scan.<br>Not an official Anthropic directory.</p><a href="https://github.com/karanb192/awesome-claude-code-mods">Awesome Claude Code Mods on GitHub <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 19 19 5M5 5h14v14"/></svg></a></footer>
 </body></html>

@@ -15,8 +15,8 @@
 <p class="byline">A Claude Code mod in <a href="https://github.com/roma-vibe/jev-governor">roma-vibe/jev-governor</a></p>
 <p class="lede">Jev-guided model, effort and subagent routing for Claude Code (Opus 5.5 / Sonnet 5.5), auto-created specialist subagents and Jev-pruned compaction.</p>
 
-<div class="facts"><div><h2>Access</h2><span class="level">L3 Uses the network</span><span class="track" aria-label="Reach level 3: Uses the network"><i class="on l3"></i><i class="on l3"></i><i class="on l3"></i><i class="on l3"></i></span><span class="labels">other: $.agent.register, network, MCP servers, runs processes, writes files, sets env vars, drives Claude, reads files, reads env vars</span></div>
-<div><h2>Validation</h2><span class="status">Passed on Claude Code 2.1.301</span></div></div>
+<div class="facts"><div><h2>Access</h2><span class="level">L0 Draws &amp; remembers</span><span class="track" aria-label="Reach level 0: Draws & remembers"><i class="on l0"></i><i class=""></i><i class=""></i><i class=""></i></span><span class="labels">persists state, draws</span></div>
+<div><h2>Validation</h2><span class="status">Passed with warnings on Claude Code 2.1.332</span></div></div>
 <p class="actions"><a class="source" href="https://github.com/roma-vibe/jev-governor">View the source on GitHub <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 19 19 5M5 5h14v14"/></svg></a><a href="/#roma-vibe--jev-governor--jev-governor">Back to the list</a></p>
 <p class="install">To install it, open the repository and follow the author’s setup instructions. Mods need Claude Code 2.1.287 or later.</p>
 <section class="record" aria-labelledby="record-title"><h2 id="record-title">What the scan recorded</h2>
@@ -24,15 +24,17 @@
 
     <dt>Observed events</dt><dd>every tool call, subagent spawns, every prompt, compaction</dd>
     <dt>Hooks</dt><dd><code>session.start, session.end, command.run {command=jevg}, turn.start, turn.step, tool.describe, tool.call, agent.offer, agent.spawn, turn.complete, session.append {door=tool-result}, prompt.submit, tool.check, session.compact</code></dd>
-    <dt>API calls</dt><dd><code>$.agent.register, $.clock.after, $.clock.every, $.clock.sleep, $.command.register, $.command.run, $.env.get, $.env.set, $.fs.exists, $.fs.list, $.fs.read, $.fs.stat, $.fs.write, $.http.fetch, $.mcp.call, $.model.complete, $.model.fork, $.process.run</code></dd>
+    <dt>API calls</dt><dd><code>$.session.root, $.session.turns, $.session.usage, $.store.get, $.store.set, $.ui.copy, $.ui.log, $.ui.status, $.ui.toast</code></dd>
 
-    <dt>Validation on 2.1.301</dt><dd>Passed</dd>
+    <dt>Validation on 2.1.332</dt><dd>Passed with warnings</dd>
 
 
-    <dt>Scanned revision</dt><dd><a href="https://github.com/roma-vibe/jev-governor/tree/82ea4f60fcef73a2f1ce6c1faac8faf630f310a3"><code>82ea4f60fcef</code></a></dd>
+    <dt>Scanned revision</dt><dd><a href="https://github.com/roma-vibe/jev-governor/tree/e74b3e199bef11dce85f03cc48b66052f838aeca"><code>e74b3e199bef</code></a></dd>
     </dl>
 <p class="note">These are the hooks and API calls reported by <code>claude plugin validate</code>. Access levels describe the widest reach of those calls and are not safety ratings. Validation is a static check, not a runtime test, and a passing result does not prove that a mod works or is safe. <a href="https://github.com/karanb192/awesome-claude-code-mods/blob/main/SCANNING.md">How the scan works</a>.</p></section>
 
+<section class="badge-snippet" aria-labelledby="badge-title"><h2 id="badge-title">Badge for your README</h2><p><img src="/badges/roma-vibe--jev-governor--jev-governor-reach.svg" alt="Reach badge for jev-governor"> <img src="/badges/roma-vibe--jev-governor--jev-governor-validates.svg" alt="Validation badge for jev-governor"></p><p>Authors can show the latest scan result in their README. Each badge links to this page.</p><pre><code>[![reach](https://raw.githubusercontent.com/karanb192/awesome-claude-code-mods/main/badges/roma-vibe--jev-governor--jev-governor-reach.svg)](https://mods.aidojo.si/mods/roma-vibe--jev-governor--jev-governor/)
+[![validates](https://raw.githubusercontent.com/karanb192/awesome-claude-code-mods/main/badges/roma-vibe--jev-governor--jev-governor-validates.svg)](https://mods.aidojo.si/mods/roma-vibe--jev-governor--jev-governor/)</code></pre></section>
 </main>
 <footer class="shell"><a href="/" class="brand"><svg viewBox="0 0 32 32" fill="none" aria-hidden="true"><path d="M11 5H5v22h6M21 5h6v22h-6M16 10v12M10 16h12"/></svg><span>claude<span class="brand-light">mods</span></span></a><p>An independent community scan.<br>Not an official Anthropic directory.</p><a href="https://github.com/karanb192/awesome-claude-code-mods">Awesome Claude Code Mods on GitHub <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 19 19 5M5 5h14v14"/></svg></a></footer>
 </body></html>

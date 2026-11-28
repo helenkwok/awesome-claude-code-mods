@@ -16,23 +16,25 @@
 <p class="lede">右側看板：別的對話哪些在等你回、哪些跑完了你還沒看、哪些正在跑，一眼看出來，按一下就跳過去，跑完沒看的可以按「知道了」收掉；桌面版有東西時自動出現在右邊，關掉後有對話在等你時輸入框上方會出現「看板」按鈕</p>
 
 <div class="facts"><div><h2>Access</h2><span class="level">L3 Uses the network</span><span class="track" aria-label="Reach level 3: Uses the network"><i class="on l3"></i><i class="on l3"></i><i class="on l3"></i><i class="on l3"></i></span><span class="labels">other: $.state.get, other: $.state.set, MCP servers, runs processes, reads env vars, persists state, draws</span></div>
-<div><h2>Validation</h2><span class="status">Passed with warnings on Claude Code 2.1.301</span></div></div>
+<div><h2>Validation</h2><span class="status">Passed with warnings on Claude Code 2.1.332</span></div></div>
 <p class="actions"><a class="source" href="https://github.com/Open01277/claude-mods/tree/main/plugins/convo-board">View the source on GitHub <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 19 19 5M5 5h14v14"/></svg></a><a href="/#Open01277--claude-mods--convo-board">Back to the list</a></p>
 <p class="install">To install it, open the repository and follow the author’s setup instructions. Mods need Claude Code 2.1.287 or later.</p>
 <section class="record" aria-labelledby="record-title"><h2 id="record-title">What the scan recorded</h2>
 <dl>
 
     <dt>Observed events</dt><dd>every tool call, classic hooks</dd>
-    <dt>Hooks</dt><dd><code>session.start, session.attach, turn.start, tool.call, tool.check, classic.PermissionRequest, classic.Elicitation, classic.ElicitationResult, turn.complete, session.end, command.run {command=convo-board}, ui.close {id=convo-board}, ui.render {component=AbovePrompt}, ui.focus {component=AbovePrompt}, ui.focus {component=Pane}, ui.render {component=Pane, requestId=convo-board}</code></dd>
+    <dt>Hooks</dt><dd><code>session.start, session.attach, turn.start, tool.call, tool.check, classic.PermissionRequest, classic.Elicitation, classic.ElicitationResult, turn.complete, session.end, command.run {command=convo-board}, ui.close {id=convo-board}, ui.render {component=AbovePrompt}, default, matcher, key, plugin, ui.render {component=Pane, requestId=convo-board}, default, matcher, key, plugin</code></dd>
     <dt>API calls</dt><dd><code>$.clock.after, $.clock.every, $.clock.now, $.command.register, $.env.get, $.mcp.call, $.process.run, $.session.cwd, $.session.id, $.session.surfaces, $.state.get, $.state.set, $.store.delete, $.store.get, $.store.keys, $.store.set, $.ui.log, $.ui.open, $.ui.panes, $.ui.resolve, $.ui.toast</code></dd>
 
-    <dt>Validation on 2.1.301</dt><dd>Passed with warnings</dd>
+    <dt>Validation on 2.1.332</dt><dd>Passed with warnings</dd>
 
 
-    <dt>Scanned revision</dt><dd><a href="https://github.com/Open01277/claude-mods/tree/cfa58f34ea9650bd9a885d0ee0a1c6ae019e0783"><code>cfa58f34ea96</code></a></dd>
-    <dt>Marketplace warnings</dt><dd><a href="https://github.com/Open01277/claude-mods/blob/cfa58f34ea9650bd9a885d0ee0a1c6ae019e0783/.claude-plugin/marketplace.json">claude-mods</a></dd></dl>
+    <dt>Scanned revision</dt><dd><a href="https://github.com/Open01277/claude-mods/tree/e68fa7591a781596fab4dd893b709a3836afc3a9"><code>e68fa7591a78</code></a></dd>
+    <dt>Marketplace warnings</dt><dd><a href="https://github.com/Open01277/claude-mods/blob/e68fa7591a781596fab4dd893b709a3836afc3a9/.claude-plugin/marketplace.json">claude-mods</a></dd></dl>
 <p class="note">These are the hooks and API calls reported by <code>claude plugin validate</code>. Access levels describe the widest reach of those calls and are not safety ratings. Validation is a static check, not a runtime test, and a passing result does not prove that a mod works or is safe. <a href="https://github.com/karanb192/awesome-claude-code-mods/blob/main/SCANNING.md">How the scan works</a>.</p></section>
 <section class="siblings" aria-labelledby="siblings-title"><h2 id="siblings-title">More from Open01277/claude-mods</h2><ul><li><a href="/mods/Open01277--claude-mods--convo-diff/">convo-diff</a><span>只看這個對話改過、還沒 commit 的檔案 diff：每個檔案跟它在這個對話第一次被改之前的內容比，commit 過就改跟那次 commit 比，不混進別的對話或手動的修改，PowerShell 改的也算；也能切到「…</span></li><li><a href="/mods/Open01277--claude-mods--quota-pets/">quota-pets</a><span>額度寵物扭蛋：每個對話抽一隻顏文字貓或狗，額度快用完會講鬼故事、用完會陣亡、重置後轉生；context 是牠的肚子（/petdex 肚子 看牠吃了什麼），連續寫太久會吵著散步，半夜會催你睡；手上有重置券時會一直催你把這…</span></li></ul></section>
+<section class="badge-snippet" aria-labelledby="badge-title"><h2 id="badge-title">Badge for your README</h2><p><img src="/badges/Open01277--claude-mods--convo-board-reach.svg" alt="Reach badge for convo-board"> <img src="/badges/Open01277--claude-mods--convo-board-validates.svg" alt="Validation badge for convo-board"></p><p>Authors can show the latest scan result in their README. Each badge links to this page.</p><pre><code>[![reach](https://raw.githubusercontent.com/karanb192/awesome-claude-code-mods/main/badges/Open01277--claude-mods--convo-board-reach.svg)](https://mods.aidojo.si/mods/Open01277--claude-mods--convo-board/)
+[![validates](https://raw.githubusercontent.com/karanb192/awesome-claude-code-mods/main/badges/Open01277--claude-mods--convo-board-validates.svg)](https://mods.aidojo.si/mods/Open01277--claude-mods--convo-board/)</code></pre></section>
 </main>
 <footer class="shell"><a href="/" class="brand"><svg viewBox="0 0 32 32" fill="none" aria-hidden="true"><path d="M11 5H5v22h6M21 5h6v22h-6M16 10v12M10 16h12"/></svg><span>claude<span class="brand-light">mods</span></span></a><p>An independent community scan.<br>Not an official Anthropic directory.</p><a href="https://github.com/karanb192/awesome-claude-code-mods">Awesome Claude Code Mods on GitHub <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 19 19 5M5 5h14v14"/></svg></a></footer>
 </body></html>

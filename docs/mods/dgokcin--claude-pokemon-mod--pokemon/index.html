@@ -15,24 +15,26 @@
 <p class="byline">A Claude Code mod in <a href="https://github.com/dgokcin/claude-pokemon-mod">dgokcin/claude-pokemon-mod</a></p>
 <p class="lede">A pixel Pokémon that lives at the right edge of the band above the prompt</p>
 
-<div class="facts"><div><h2>Access</h2><span class="level">L3 Uses the network</span><span class="track" aria-label="Reach level 3: Uses the network"><i class="on l3"></i><i class="on l3"></i><i class="on l3"></i><i class="on l3"></i></span><span class="labels">network, reads env vars, persists state, draws</span></div>
-<div><h2>Validation</h2><span class="status">Passed with warnings on Claude Code 2.1.301</span></div></div>
+<div class="facts"><div><h2>Access</h2><span class="level">L0 Draws &amp; remembers</span><span class="track" aria-label="Reach level 0: Draws & remembers"><i class="on l0"></i><i class=""></i><i class=""></i><i class=""></i></span><span class="labels">draws</span></div>
+<div><h2>Validation</h2><span class="status">Passed with warnings on Claude Code 2.1.332</span></div></div>
 <p class="actions"><a class="source" href="https://github.com/dgokcin/claude-pokemon-mod">View the source on GitHub <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 19 19 5M5 5h14v14"/></svg></a><a href="/#dgokcin--claude-pokemon-mod--pokemon">Back to the list</a></p>
 <p class="install">To install it, open the repository and follow the author’s setup instructions. Mods need Claude Code 2.1.287 or later.</p>
 <section class="record" aria-labelledby="record-title"><h2 id="record-title">What the scan recorded</h2>
 <dl>
 
     <dt>Observed events</dt><dd>every prompt, every tool call, every skill, classic hooks, subagent spawns</dd>
-    <dt>Hooks</dt><dd><code>session.start, config.set {key=theme}, command.run {command=pokemon}, prompt.edit, prompt.submit, ui.render {component=Spinner}, turn.start, turn.complete, ui.render {component=AbovePrompt}, ui.render {component=Pane, requestId=pokemon}, ui.close, tool.call, command.run, skill.prompt, tool.check, classic.PermissionRequest, classic.Notification, agent.spawn, turn.step</code></dd>
-    <dt>API calls</dt><dd><code>$.agent.list, $.clock.every, $.clock.now, $.command.list, $.command.register, $.config.list, $.env.get, $.http.fetch, $.store.delete, $.store.get, $.store.keys, $.store.set, $.ui.blit, $.ui.close, $.ui.invalidate, $.ui.log, $.ui.open, $.ui.resolve, $.ui.toast</code></dd>
+    <dt>Hooks</dt><dd><code>session.start, config.set {key=theme}, prompt.edit, prompt.submit, ui.render {component=Spinner}, turn.start, turn.complete, ui.render {component=AbovePrompt}, default, matcher, key, plugin, ui.render {component=Pane, requestId=pokemon}, default, matcher, key, plugin, ui.close, tool.call, command.run, skill.prompt, tool.check, classic.PermissionRequest, classic.Notification, agent.spawn, turn.step</code></dd>
+    <dt>API calls</dt><dd><code>$.ui.toast</code></dd>
 
-    <dt>Validation on 2.1.301</dt><dd>Passed with warnings</dd>
+    <dt>Validation on 2.1.332</dt><dd>Passed with warnings</dd>
 
 
-    <dt>Scanned revision</dt><dd><a href="https://github.com/dgokcin/claude-pokemon-mod/tree/ed5ff86b7d62c51cdd43bc16979af22c52311dd5"><code>ed5ff86b7d62</code></a></dd>
-    <dt>Marketplace warnings</dt><dd><a href="https://github.com/dgokcin/claude-pokemon-mod/blob/ed5ff86b7d62c51cdd43bc16979af22c52311dd5/.claude-plugin/marketplace.json">claude-pokemon</a></dd></dl>
+    <dt>Scanned revision</dt><dd><a href="https://github.com/dgokcin/claude-pokemon-mod/tree/811b5dbc083212100d31bbcd42a0f30ea531b07c"><code>811b5dbc0832</code></a></dd>
+    <dt>Marketplace warnings</dt><dd><a href="https://github.com/dgokcin/claude-pokemon-mod/blob/811b5dbc083212100d31bbcd42a0f30ea531b07c/.claude-plugin/marketplace.json">claude-pokemon</a></dd></dl>
 <p class="note">These are the hooks and API calls reported by <code>claude plugin validate</code>. Access levels describe the widest reach of those calls and are not safety ratings. Validation is a static check, not a runtime test, and a passing result does not prove that a mod works or is safe. <a href="https://github.com/karanb192/awesome-claude-code-mods/blob/main/SCANNING.md">How the scan works</a>.</p></section>
 
+<section class="badge-snippet" aria-labelledby="badge-title"><h2 id="badge-title">Badge for your README</h2><p><img src="/badges/dgokcin--claude-pokemon-mod--pokemon-reach.svg" alt="Reach badge for pokemon"> <img src="/badges/dgokcin--claude-pokemon-mod--pokemon-validates.svg" alt="Validation badge for pokemon"></p><p>Authors can show the latest scan result in their README. Each badge links to this page.</p><pre><code>[![reach](https://raw.githubusercontent.com/karanb192/awesome-claude-code-mods/main/badges/dgokcin--claude-pokemon-mod--pokemon-reach.svg)](https://mods.aidojo.si/mods/dgokcin--claude-pokemon-mod--pokemon/)
+[![validates](https://raw.githubusercontent.com/karanb192/awesome-claude-code-mods/main/badges/dgokcin--claude-pokemon-mod--pokemon-validates.svg)](https://mods.aidojo.si/mods/dgokcin--claude-pokemon-mod--pokemon/)</code></pre></section>
 </main>
 <footer class="shell"><a href="/" class="brand"><svg viewBox="0 0 32 32" fill="none" aria-hidden="true"><path d="M11 5H5v22h6M21 5h6v22h-6M16 10v12M10 16h12"/></svg><span>claude<span class="brand-light">mods</span></span></a><p>An independent community scan.<br>Not an official Anthropic directory.</p><a href="https://github.com/karanb192/awesome-claude-code-mods">Awesome Claude Code Mods on GitHub <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 19 19 5M5 5h14v14"/></svg></a></footer>
 </body></html>

@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <title>pacman, a Claude Code mod by lukecameron | Awesome Claude Code Mods</title>
-<meta name="description" content="/pacman: Pac-Man played over the conversation on screen, eating it character by character while Claude works; Esc puts it back. Needs function hooks (CLAU…"><meta name="theme-color" content="#f0eee6" media="(prefers-color-scheme: light)"><meta name="theme-color" content="#1c1c1a" media="(prefers-color-scheme: dark)">
+<meta name="description" content="/pacman: Pac-Man played over the conversation on screen, eating it character by character while Claude works; Esc puts it back. Needs function hooks (CLAU…"><meta name="robots" content="noindex"><meta name="theme-color" content="#f0eee6" media="(prefers-color-scheme: light)"><meta name="theme-color" content="#1c1c1a" media="(prefers-color-scheme: dark)">
 <link rel="canonical" href="https://mods.aidojo.si/mods/lukecameron--dotfiles--pacman/"><link rel="icon" href="/favicon.svg" type="image/svg+xml">
 <link rel="preload" href="/fonts/hanken-grotesk-latin.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="/site.css">
@@ -16,7 +16,7 @@
 <p class="lede">/pacman: Pac-Man played over the conversation on screen, eating it character by character while Claude works; Esc puts it back. Needs function hooks (CLAUDE_CODE_ENABLE_FUNCTION_HOOKS=1).</p>
 
 <div class="facts"><div><h2>Access</h2><span class="level">L0 Draws &amp; remembers</span><span class="track" aria-label="Reach level 0: Draws & remembers"><i class="on l0"></i><i class=""></i><i class=""></i><i class=""></i></span><span class="labels">draws</span></div>
-<div><h2>Validation</h2><span class="status">Passed on Claude Code 2.1.301</span></div></div>
+<div><h2>Validation</h2><span class="status bad">not verified</span></div></div>
 <p class="actions"><a class="source" href="https://github.com/lukecameron/dotfiles/tree/main/claude-mods/pacman">View the source on GitHub <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 19 19 5M5 5h14v14"/></svg></a><a href="/#lukecameron--dotfiles--pacman">Back to the list</a></p>
 <p class="install">To install it, open the repository and follow the author’s setup instructions. Mods need Claude Code 2.1.287 or later.</p>
 <section class="record" aria-labelledby="record-title"><h2 id="record-title">What the scan recorded</h2>
@@ -26,13 +26,15 @@
     <dt>Hooks</dt><dd><code>session.start, command.run {command=pacman}, ui.close {id=pacman}, ui.render {component=Pane}, ui.render</code></dd>
     <dt>API calls</dt><dd><code>$.clock.every, $.command.register, $.ui.close, $.ui.invalidate, $.ui.log, $.ui.open, $.ui.panes, $.ui.resolve</code></dd>
 
-    <dt>Validation on 2.1.301</dt><dd>Passed</dd>
-
-
+    <dt>Validation on 2.1.301</dt><dd>not verified</dd>
+    <dt>Last known result</dt><dd>Passed on 2.1.301</dd>
+    <dt>Validator output</dt><dd>Not found in this scan; retained pending weekly retirement review.</dd>
     <dt>Scanned revision</dt><dd><a href="https://github.com/lukecameron/dotfiles/tree/3f6bd9bc0fe8e18a17b35b5954aae7ac3752914e"><code>3f6bd9bc0fe8</code></a></dd>
     <dt>Marketplace passed</dt><dd><a href="https://github.com/lukecameron/dotfiles/blob/3f6bd9bc0fe8e18a17b35b5954aae7ac3752914e/claude-mods/.claude-plugin/marketplace.json">luke-mods</a></dd></dl>
 <p class="note">These are the hooks and API calls reported by <code>claude plugin validate</code>. Access levels describe the widest reach of those calls and are not safety ratings. Validation is a static check, not a runtime test, and a passing result does not prove that a mod works or is safe. <a href="https://github.com/karanb192/awesome-claude-code-mods/blob/main/SCANNING.md">How the scan works</a>.</p></section>
 
+<section class="badge-snippet" aria-labelledby="badge-title"><h2 id="badge-title">Badge for your README</h2><p><img src="/badges/lukecameron--dotfiles--pacman-reach.svg" alt="Reach badge for pacman"> <img src="/badges/lukecameron--dotfiles--pacman-validates.svg" alt="Validation badge for pacman"></p><p>Authors can show the latest scan result in their README. Each badge links to this page.</p><pre><code>[![reach](https://raw.githubusercontent.com/karanb192/awesome-claude-code-mods/main/badges/lukecameron--dotfiles--pacman-reach.svg)](https://mods.aidojo.si/mods/lukecameron--dotfiles--pacman/)
+[![validates](https://raw.githubusercontent.com/karanb192/awesome-claude-code-mods/main/badges/lukecameron--dotfiles--pacman-validates.svg)](https://mods.aidojo.si/mods/lukecameron--dotfiles--pacman/)</code></pre></section>
 </main>
 <footer class="shell"><a href="/" class="brand"><svg viewBox="0 0 32 32" fill="none" aria-hidden="true"><path d="M11 5H5v22h6M21 5h6v22h-6M16 10v12M10 16h12"/></svg><span>claude<span class="brand-light">mods</span></span></a><p>An independent community scan.<br>Not an official Anthropic directory.</p><a href="https://github.com/karanb192/awesome-claude-code-mods">Awesome Claude Code Mods on GitHub <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 19 19 5M5 5h14v14"/></svg></a></footer>
 </body></html>

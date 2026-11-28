@@ -16,23 +16,25 @@
 <p class="lede">Play snake while Claude works. Every tool call Claude makes drops food into the game; the game pauses when Claude is done.</p>
 
 <div class="facts"><div><h2>Access</h2><span class="level">L1 Reads files</span><span class="track" aria-label="Reach level 1: Reads files"><i class="on l1"></i><i class="on l1"></i><i class=""></i><i class=""></i></span><span class="labels">other: $.state.get, other: $.state.set, plays audio, draws</span></div>
-<div><h2>Validation</h2><span class="status">Passed on Claude Code 2.1.301</span></div></div>
+<div><h2>Validation</h2><span class="status">Passed on Claude Code 2.1.332</span></div></div>
 <p class="actions"><a class="source" href="https://github.com/Yash1927/claude-code-snake">View the source on GitHub <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 19 19 5M5 5h14v14"/></svg></a><a href="/#Yash1927--claude-code-snake--tool-snake">Back to the list</a></p>
 <p class="install">To install it, open the repository and follow the author’s setup instructions. Mods need Claude Code 2.1.287 or later.</p>
 <section class="record" aria-labelledby="record-title"><h2 id="record-title">What the scan recorded</h2>
 <dl>
 
     <dt>Observed events</dt><dd>every prompt, every tool call</dd>
-    <dt>Hooks</dt><dd><code>session.start, command.run {command=snake}, prompt.submit, tool.call, turn.complete, ui.message, ui.render {component=Pane, requestId=tool-snake}</code></dd>
+    <dt>Hooks</dt><dd><code>session.start, command.run {command=snake}, prompt.submit, tool.call, turn.complete, ui.message, ui.render {component=Pane, requestId=tool-snake}, default, matcher, key, plugin</code></dd>
     <dt>API calls</dt><dd><code>$.audio.speak, $.command.register, $.state.get, $.state.set, $.ui.open, $.ui.resolve, $.ui.toast</code></dd>
     <dt>Surface modules</dt><dd><code>hooks/game.tsx</code></dd>
-    <dt>Validation on 2.1.301</dt><dd>Passed</dd>
+    <dt>Validation on 2.1.332</dt><dd>Passed</dd>
 
 
     <dt>Scanned revision</dt><dd><a href="https://github.com/Yash1927/claude-code-snake/tree/28cc17019819c9efa75a74e0eb98dc1629da2a13"><code>28cc17019819</code></a></dd>
     </dl>
 <p class="note">These are the hooks and API calls reported by <code>claude plugin validate</code>. Access levels describe the widest reach of those calls and are not safety ratings. Validation is a static check, not a runtime test, and a passing result does not prove that a mod works or is safe. <a href="https://github.com/karanb192/awesome-claude-code-mods/blob/main/SCANNING.md">How the scan works</a>.</p></section>
 
+<section class="badge-snippet" aria-labelledby="badge-title"><h2 id="badge-title">Badge for your README</h2><p><img src="/badges/Yash1927--claude-code-snake--tool-snake-reach.svg" alt="Reach badge for tool-snake"> <img src="/badges/Yash1927--claude-code-snake--tool-snake-validates.svg" alt="Validation badge for tool-snake"></p><p>Authors can show the latest scan result in their README. Each badge links to this page.</p><pre><code>[![reach](https://raw.githubusercontent.com/karanb192/awesome-claude-code-mods/main/badges/Yash1927--claude-code-snake--tool-snake-reach.svg)](https://mods.aidojo.si/mods/Yash1927--claude-code-snake--tool-snake/)
+[![validates](https://raw.githubusercontent.com/karanb192/awesome-claude-code-mods/main/badges/Yash1927--claude-code-snake--tool-snake-validates.svg)](https://mods.aidojo.si/mods/Yash1927--claude-code-snake--tool-snake/)</code></pre></section>
 </main>
 <footer class="shell"><a href="/" class="brand"><svg viewBox="0 0 32 32" fill="none" aria-hidden="true"><path d="M11 5H5v22h6M21 5h6v22h-6M16 10v12M10 16h12"/></svg><span>claude<span class="brand-light">mods</span></span></a><p>An independent community scan.<br>Not an official Anthropic directory.</p><a href="https://github.com/karanb192/awesome-claude-code-mods">Awesome Claude Code Mods on GitHub <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 19 19 5M5 5h14v14"/></svg></a></footer>
 </body></html>

@@ -15,24 +15,26 @@
 <p class="byline">A Claude Code mod in <a href="https://github.com/AltamimiYasser/claude-code-bar">AltamimiYasser/claude-code-bar</a></p>
 <p class="lede">A status bar above the prompt (context, plan limits, the running turn's time and tokens), and a frame around each final answer</p>
 
-<div class="facts"><div><h2>Access</h2><span class="level">L2 Writes or runs</span><span class="track" aria-label="Reach level 2: Writes or runs"><i class="on l2"></i><i class="on l2"></i><i class="on l2"></i><i class=""></i></span><span class="labels">other: $.prompt.read, other: $.state.get, other: $.state.set, runs processes, writes files, drives Claude, writes the prompt box, reads files, reads env vars, draws</span></div>
-<div><h2>Validation</h2><span class="status">Passed on Claude Code 2.1.301</span></div></div>
+<div class="facts"><div><h2>Access</h2><span class="level">L1 Reads files</span><span class="track" aria-label="Reach level 1: Reads files"><i class="on l1"></i><i class="on l1"></i><i class=""></i><i class=""></i></span><span class="labels">other: $.state.get, other: $.state.set, draws</span></div>
+<div><h2>Validation</h2><span class="status">Passed with warnings on Claude Code 2.1.332</span></div></div>
 <p class="actions"><a class="source" href="https://github.com/AltamimiYasser/claude-code-bar/tree/main/plugins/bar">View the source on GitHub <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 19 19 5M5 5h14v14"/></svg></a><a href="/#AltamimiYasser--claude-code-bar--bar">Back to the list</a></p>
 <p class="install">To install it, open the repository and follow the author’s setup instructions. Mods need Claude Code 2.1.287 or later.</p>
 <section class="record" aria-labelledby="record-title"><h2 id="record-title">What the scan recorded</h2>
 <dl>
 
-    <dt>Observed events</dt><dd>every tool call</dd>
-    <dt>Hooks</dt><dd><code>session.start, command.run {command=bar-limit}, command.run {command=bar-demo}, session.measure, ui.render {component=AbovePrompt}, session.start {isInteractive=true}, session.start {isInteractive=false}, command.run {command=bar-handoff}, turn.start, turn.complete, tool.call, turn.step, ui.render {component=Spinner}, ui.render {component=AssistantMessage}, ui.render {component=Pane, requestId=bar-tools}, session.start {isInteractive=true}, session.start {isInteractive=false}, command.run {command=remote}, ui.render {component=SessionMode}, ui.render {component=Pane, requestId=bar-remote}, ui.focus {requestId=?}, ui.press {requestId=?}</code></dd>
-    <dt>API calls</dt><dd><code>$.clock.after, $.clock.every, $.clock.now, $.command.list, $.command.register, $.command.run, $.env.get, $.fs.exists, $.fs.list, $.fs.read, $.fs.stat, $.fs.write, $.process.run, $.prompt.fill, $.prompt.read, $.prompt.submit, $.session.cwd, $.session.id, $.session.turns, $.session.usage, $.state.get, $.state.set, $.ui.close, $.ui.invalidate, $.ui.open, $.ui.panes, $.ui.resolve, $.ui.toast</code></dd>
+    <dt>Observed events</dt><dd>Only what it hooks</dd>
+    <dt>Hooks</dt><dd><code>ui.focus {requestId=?}, default, matcher, key, plugin, component, ui.press {requestId=?}, default, matcher, key, plugin, component</code></dd>
+    <dt>API calls</dt><dd><code>$.session.usage, $.state.get, $.state.set, $.ui.close, $.ui.invalidate, $.ui.open, $.ui.panes, $.ui.resolve, $.ui.toast</code></dd>
 
-    <dt>Validation on 2.1.301</dt><dd>Passed</dd>
+    <dt>Validation on 2.1.332</dt><dd>Passed with warnings</dd>
 
 
-    <dt>Scanned revision</dt><dd><a href="https://github.com/AltamimiYasser/claude-code-bar/tree/9256d6d5226a834cb0e2aa1882446e0bfbaacc35"><code>9256d6d5226a</code></a></dd>
-    <dt>Marketplace passed</dt><dd><a href="https://github.com/AltamimiYasser/claude-code-bar/blob/9256d6d5226a834cb0e2aa1882446e0bfbaacc35/.claude-plugin/marketplace.json">claude-code-bar</a></dd></dl>
+    <dt>Scanned revision</dt><dd><a href="https://github.com/AltamimiYasser/claude-code-bar/tree/2940ace962d992e78dec62ce5dc1fa46f06b30da"><code>2940ace962d9</code></a></dd>
+    <dt>Marketplace passed</dt><dd><a href="https://github.com/AltamimiYasser/claude-code-bar/blob/2940ace962d992e78dec62ce5dc1fa46f06b30da/.claude-plugin/marketplace.json">claude-code-bar</a></dd></dl>
 <p class="note">These are the hooks and API calls reported by <code>claude plugin validate</code>. Access levels describe the widest reach of those calls and are not safety ratings. Validation is a static check, not a runtime test, and a passing result does not prove that a mod works or is safe. <a href="https://github.com/karanb192/awesome-claude-code-mods/blob/main/SCANNING.md">How the scan works</a>.</p></section>
 
+<section class="badge-snippet" aria-labelledby="badge-title"><h2 id="badge-title">Badge for your README</h2><p><img src="/badges/AltamimiYasser--claude-code-bar--bar-reach.svg" alt="Reach badge for bar"> <img src="/badges/AltamimiYasser--claude-code-bar--bar-validates.svg" alt="Validation badge for bar"></p><p>Authors can show the latest scan result in their README. Each badge links to this page.</p><pre><code>[![reach](https://raw.githubusercontent.com/karanb192/awesome-claude-code-mods/main/badges/AltamimiYasser--claude-code-bar--bar-reach.svg)](https://mods.aidojo.si/mods/AltamimiYasser--claude-code-bar--bar/)
+[![validates](https://raw.githubusercontent.com/karanb192/awesome-claude-code-mods/main/badges/AltamimiYasser--claude-code-bar--bar-validates.svg)](https://mods.aidojo.si/mods/AltamimiYasser--claude-code-bar--bar/)</code></pre></section>
 </main>
 <footer class="shell"><a href="/" class="brand"><svg viewBox="0 0 32 32" fill="none" aria-hidden="true"><path d="M11 5H5v22h6M21 5h6v22h-6M16 10v12M10 16h12"/></svg><span>claude<span class="brand-light">mods</span></span></a><p>An independent community scan.<br>Not an official Anthropic directory.</p><a href="https://github.com/karanb192/awesome-claude-code-mods">Awesome Claude Code Mods on GitHub <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 19 19 5M5 5h14v14"/></svg></a></footer>
 </body></html>

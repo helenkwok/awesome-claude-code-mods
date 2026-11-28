@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <title>workflow-gates-rows, a Claude Code mod by leeovery | Awesome Claude Code Mods</title>
-<meta name="description" content="Draws the transcript rows of what the workflow-gates mod sends: an answer as the question it answered and the answer, a handoff's continuation as where th…"><meta name="theme-color" content="#f0eee6" media="(prefers-color-scheme: light)"><meta name="theme-color" content="#1c1c1a" media="(prefers-color-scheme: dark)">
+<meta name="description" content="Draws the transcript rows of what the workflow-gates mod sends: an answer as the question it answered and the answer, a handoff's continuation as where th…"><meta name="robots" content="noindex"><meta name="theme-color" content="#f0eee6" media="(prefers-color-scheme: light)"><meta name="theme-color" content="#1c1c1a" media="(prefers-color-scheme: dark)">
 <link rel="canonical" href="https://mods.aidojo.si/mods/leeovery--portal--workflow-gates-rows/"><link rel="icon" href="/favicon.svg" type="image/svg+xml">
 <link rel="preload" href="/fonts/hanken-grotesk-latin.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="/site.css">
@@ -16,7 +16,7 @@
 <p class="lede">Draws the transcript rows of what the workflow-gates mod sends: an answer as the question it answered and the answer, a handoff's continuation as where the work went: and a compaction's note as one dim line, instead of Claude Code's framing.</p>
 
 <div class="facts"><div><h2>Access</h2><span class="level">L2 Writes or runs</span><span class="track" aria-label="Reach level 2: Writes or runs"><i class="on l2"></i><i class="on l2"></i><i class="on l2"></i><i class=""></i></span><span class="labels">writes files, reads files, reads env vars, draws</span></div>
-<div><h2>Validation</h2><span class="status">Passed on Claude Code 2.1.301</span></div></div>
+<div><h2>Validation</h2><span class="status bad">not verified</span></div></div>
 <p class="actions"><a class="source" href="https://github.com/leeovery/portal/tree/main/.claude/skills/workflow-gates-rows">View the source on GitHub <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 19 19 5M5 5h14v14"/></svg></a><a href="/#leeovery--portal--workflow-gates-rows">Back to the list</a></p>
 <p class="install">To install it, open the repository and follow the author’s setup instructions. Mods need Claude Code 2.1.287 or later.</p>
 <section class="record" aria-labelledby="record-title"><h2 id="record-title">What the scan recorded</h2>
@@ -26,13 +26,15 @@
     <dt>Hooks</dt><dd><code>ui.render {component=UserMessage}, ui.render {component=UserMessage}</code></dd>
     <dt>API calls</dt><dd><code>$.env.get, $.fs.exists, $.fs.read, $.fs.write, $.session.id, $.ui.resolve</code></dd>
 
-    <dt>Validation on 2.1.301</dt><dd>Passed</dd>
-
-
+    <dt>Validation on 2.1.301</dt><dd>not verified</dd>
+    <dt>Last known result</dt><dd>Passed on 2.1.301</dd>
+    <dt>Validator output</dt><dd>Not found in this scan; retained pending weekly retirement review.</dd>
     <dt>Scanned revision</dt><dd><a href="https://github.com/leeovery/portal/tree/31e7518167275e7bc3e0fe075244ce2dfa03b054"><code>31e751816727</code></a></dd>
     </dl>
 <p class="note">These are the hooks and API calls reported by <code>claude plugin validate</code>. Access levels describe the widest reach of those calls and are not safety ratings. Validation is a static check, not a runtime test, and a passing result does not prove that a mod works or is safe. <a href="https://github.com/karanb192/awesome-claude-code-mods/blob/main/SCANNING.md">How the scan works</a>.</p></section>
-<section class="siblings" aria-labelledby="siblings-title"><h2 id="siblings-title">More from leeovery/portal</h2><ul><li><a href="/mods/leeovery--portal--workflow-gates/">workflow-gates</a><span>Draws the agentic-workflows engine's gates in the band above the prompt: rows a click puts in the prompt and…</span></li></ul></section>
+<section class="siblings" aria-labelledby="siblings-title"><h2 id="siblings-title">More from leeovery/portal</h2><ul><li><a href="/mods/leeovery--portal--ledger-gates/">ledger-gates</a><span>Draws Ledger's gates in the band above the prompt: rows a click puts in the prompt and a second click sends:…</span></li><li><a href="/mods/leeovery--portal--ledger-gates-rows/">ledger-gates-rows</a><span>Draws the transcript rows of what the ledger-gates mod sends: an answer as the question it answered and the a…</span></li><li><a href="/mods/leeovery--portal--workflow-gates/">workflow-gates</a><span>Draws the agentic-workflows engine's gates in the band above the prompt: rows a click puts in the prompt and…</span></li></ul></section>
+<section class="badge-snippet" aria-labelledby="badge-title"><h2 id="badge-title">Badge for your README</h2><p><img src="/badges/leeovery--portal--workflow-gates-rows-reach.svg" alt="Reach badge for workflow-gates-rows"> <img src="/badges/leeovery--portal--workflow-gates-rows-validates.svg" alt="Validation badge for workflow-gates-rows"></p><p>Authors can show the latest scan result in their README. Each badge links to this page.</p><pre><code>[![reach](https://raw.githubusercontent.com/karanb192/awesome-claude-code-mods/main/badges/leeovery--portal--workflow-gates-rows-reach.svg)](https://mods.aidojo.si/mods/leeovery--portal--workflow-gates-rows/)
+[![validates](https://raw.githubusercontent.com/karanb192/awesome-claude-code-mods/main/badges/leeovery--portal--workflow-gates-rows-validates.svg)](https://mods.aidojo.si/mods/leeovery--portal--workflow-gates-rows/)</code></pre></section>
 </main>
 <footer class="shell"><a href="/" class="brand"><svg viewBox="0 0 32 32" fill="none" aria-hidden="true"><path d="M11 5H5v22h6M21 5h6v22h-6M16 10v12M10 16h12"/></svg><span>claude<span class="brand-light">mods</span></span></a><p>An independent community scan.<br>Not an official Anthropic directory.</p><a href="https://github.com/karanb192/awesome-claude-code-mods">Awesome Claude Code Mods on GitHub <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 19 19 5M5 5h14v14"/></svg></a></footer>
 </body></html>

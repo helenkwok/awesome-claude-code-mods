@@ -15,24 +15,26 @@
 <p class="byline">A Claude Code mod in <a href="https://github.com/lperezmo/cache-caffeine">lperezmo/cache-caffeine</a> <span class="listed" title="Listed in Anthropic's plugin directory as cache-caffeine@anthropic-plugin-directory">In Anthropic directory</span></p>
 <p class="lede">Keeps the prompt cache warm while you step away: a short poke before the cache expires, so the next turn reads the cache instead of writing it again. A row above the prompt turns it on and off and edits the message. Near the usage limit it books Claude a wake right after the reset.</p>
 
-<div class="facts"><div><h2>Access</h2><span class="level">L2 Writes or runs</span><span class="track" aria-label="Reach level 2: Writes or runs"><i class="on l2"></i><i class="on l2"></i><i class="on l2"></i><i class=""></i></span><span class="labels">other: $.state.get, other: $.state.set, drives Claude, reads env vars, reads settings, persists state, draws</span></div>
-<div><h2>Validation</h2><span class="status">Passed on Claude Code 2.1.301</span></div></div>
+<div class="facts"><div><h2>Access</h2><span class="level">L2 Writes or runs</span><span class="track" aria-label="Reach level 2: Writes or runs"><i class="on l2"></i><i class="on l2"></i><i class="on l2"></i><i class=""></i></span><span class="labels">other: $.state.get, other: $.state.set, drives Claude, persists state, draws</span></div>
+<div><h2>Validation</h2><span class="status">Passed on Claude Code 2.1.332</span></div></div>
 <p class="actions"><a class="source" href="https://github.com/lperezmo/cache-caffeine/tree/main/plugins/cache-caffeine">View the source on GitHub <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 19 19 5M5 5h14v14"/></svg></a><a href="/#lperezmo--cache-caffeine--cache-caffeine">Back to the list</a></p>
 <p class="install">To install it, open the repository and follow the author’s setup instructions. Mods need Claude Code 2.1.287 or later.</p>
 <section class="record" aria-labelledby="record-title"><h2 id="record-title">What the scan recorded</h2>
 <dl>
     <dt>Anthropic directory</dt><dd>Listed as <code>cache-caffeine@anthropic-plugin-directory</code></dd>
     <dt>Observed events</dt><dd>classic hooks, every prompt, compaction</dd>
-    <dt>Hooks</dt><dd><code>session.start, session.measure, classic.StopFailure, turn.step, turn.start, turn.complete, prompt.submit, session.compact, session.end, command.run {command=caffeine}, ui.render {component=AbovePrompt}</code></dd>
-    <dt>API calls</dt><dd><code>$.clock.after, $.clock.every, $.clock.now, $.command.register, $.env.get, $.prompt.submit, $.session.id, $.session.usage, $.settings.read, $.state.get, $.state.set, $.store.delete, $.store.get, $.store.set, $.ui.ask, $.ui.focus, $.ui.invalidate, $.ui.log, $.ui.resolve, $.ui.status, $.ui.toast</code></dd>
+    <dt>Hooks</dt><dd><code>session.start, session.measure, classic.StopFailure, turn.step, turn.start, turn.complete, prompt.submit, session.compact, session.end, command.run {command=caffeine}, ui.render {component=AbovePrompt}, default, matcher, key, plugin</code></dd>
+    <dt>API calls</dt><dd><code>$.clock.after, $.clock.every, $.clock.now, $.command.register, $.prompt.submit, $.session.id, $.session.usage, $.state.get, $.state.set, $.store.delete, $.store.get, $.store.set, $.ui.ask, $.ui.focus, $.ui.invalidate, $.ui.log, $.ui.resolve, $.ui.status, $.ui.toast</code></dd>
 
-    <dt>Validation on 2.1.301</dt><dd>Passed</dd>
+    <dt>Validation on 2.1.332</dt><dd>Passed</dd>
 
 
-    <dt>Scanned revision</dt><dd><a href="https://github.com/lperezmo/cache-caffeine/tree/ba5ce57b3f059d8962a72008306fb436e2e90314"><code>ba5ce57b3f05</code></a></dd>
-    <dt>Marketplace passed</dt><dd><a href="https://github.com/lperezmo/cache-caffeine/blob/ba5ce57b3f059d8962a72008306fb436e2e90314/.claude-plugin/marketplace.json">cache-caffeine</a></dd></dl>
+    <dt>Scanned revision</dt><dd><a href="https://github.com/lperezmo/cache-caffeine/tree/0c96f82f089b3de1da1540c04895f884fd910788"><code>0c96f82f089b</code></a></dd>
+    <dt>Marketplace passed</dt><dd><a href="https://github.com/lperezmo/cache-caffeine/blob/0c96f82f089b3de1da1540c04895f884fd910788/.claude-plugin/marketplace.json">cache-caffeine</a></dd></dl>
 <p class="note">These are the hooks and API calls reported by <code>claude plugin validate</code>. Access levels describe the widest reach of those calls and are not safety ratings. Validation is a static check, not a runtime test, and a passing result does not prove that a mod works or is safe. <a href="https://github.com/karanb192/awesome-claude-code-mods/blob/main/SCANNING.md">How the scan works</a>.</p></section>
 
+<section class="badge-snippet" aria-labelledby="badge-title"><h2 id="badge-title">Badge for your README</h2><p><img src="/badges/lperezmo--cache-caffeine--cache-caffeine-reach.svg" alt="Reach badge for cache-caffeine"> <img src="/badges/lperezmo--cache-caffeine--cache-caffeine-validates.svg" alt="Validation badge for cache-caffeine"></p><p>Authors can show the latest scan result in their README. Each badge links to this page.</p><pre><code>[![reach](https://raw.githubusercontent.com/karanb192/awesome-claude-code-mods/main/badges/lperezmo--cache-caffeine--cache-caffeine-reach.svg)](https://mods.aidojo.si/mods/lperezmo--cache-caffeine--cache-caffeine/)
+[![validates](https://raw.githubusercontent.com/karanb192/awesome-claude-code-mods/main/badges/lperezmo--cache-caffeine--cache-caffeine-validates.svg)](https://mods.aidojo.si/mods/lperezmo--cache-caffeine--cache-caffeine/)</code></pre></section>
 </main>
 <footer class="shell"><a href="/" class="brand"><svg viewBox="0 0 32 32" fill="none" aria-hidden="true"><path d="M11 5H5v22h6M21 5h6v22h-6M16 10v12M10 16h12"/></svg><span>claude<span class="brand-light">mods</span></span></a><p>An independent community scan.<br>Not an official Anthropic directory.</p><a href="https://github.com/karanb192/awesome-claude-code-mods">Awesome Claude Code Mods on GitHub <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 19 19 5M5 5h14v14"/></svg></a></footer>
 </body></html>

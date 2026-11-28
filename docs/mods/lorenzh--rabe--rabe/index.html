@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <title>rabe, a Claude Code mod by lorenzh | Awesome Claude Code Mods</title>
-<meta name="description" content="Watch Claude Code's background work: subagents, Codex jobs, shells, monitors, cron jobs and workflows."><meta name="theme-color" content="#f0eee6" media="(prefers-color-scheme: light)"><meta name="theme-color" content="#1c1c1a" media="(prefers-color-scheme: dark)">
+<meta name="description" content="Watch Claude Code's background work: subagents, Codex jobs, shells, monitors, cron jobs and workflows."><meta name="robots" content="noindex"><meta name="theme-color" content="#f0eee6" media="(prefers-color-scheme: light)"><meta name="theme-color" content="#1c1c1a" media="(prefers-color-scheme: dark)">
 <link rel="canonical" href="https://mods.aidojo.si/mods/lorenzh--rabe--rabe/"><link rel="icon" href="/favicon.svg" type="image/svg+xml">
 <link rel="preload" href="/fonts/hanken-grotesk-latin.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="/site.css">
@@ -15,24 +15,27 @@
 <p class="byline">A Claude Code mod in <a href="https://github.com/lorenzh/rabe">lorenzh/rabe</a></p>
 <p class="lede">Watch Claude Code's background work: subagents, Codex jobs, shells, monitors, cron jobs and workflows.</p>
 
-<div class="facts"><div><h2>Access</h2><span class="level">L2 Writes or runs</span><span class="track" aria-label="Reach level 2: Writes or runs"><i class="on l2"></i><i class="on l2"></i><i class="on l2"></i><i class=""></i></span><span class="labels">other: $.state.get, other: $.state.set, runs processes, drives Claude, reads files, reads env vars, persists state, draws</span></div>
-<div><h2>Validation</h2><span class="status">Passed on Claude Code 2.1.301</span></div></div>
+<div class="facts"><div><h2>Access</h2><span class="level">Unknown access</span><span class="track" aria-label="Unknown access"><i class=""></i><i class=""></i><i class=""></i><i class=""></i></span><span class="labels">The footprint is unavailable or incomplete.</span></div>
+<div><h2>Validation</h2><span class="status bad">not verified</span></div></div>
 <p class="actions"><a class="source" href="https://github.com/lorenzh/rabe">View the source on GitHub <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 19 19 5M5 5h14v14"/></svg></a><a href="/#lorenzh--rabe--rabe">Back to the list</a></p>
 <p class="install">To install it, open the repository and follow the author’s setup instructions. Mods need Claude Code 2.1.287 or later.</p>
 <section class="record" aria-labelledby="record-title"><h2 id="record-title">What the scan recorded</h2>
 <dl>
 
-    <dt>Observed events</dt><dd>subagent spawns, classic hooks, Edit|Write calls, Bash calls, Workflow calls, every prompt, Monitor calls, CronCreate calls, CronDelete calls, ScheduleWakeup calls</dd>
-    <dt>Hooks</dt><dd><code>session.start {cwd=/&quot;^&quot;/}, session.start {cwd=/&quot;^&quot;/}, agent.spawn {subagentType=/&quot;^&quot;/}, classic.SubagentStart {agent_id=/&quot;^&quot;/}, turn.step {agentId=/&quot;^&quot;/}, turn.step {model=/&quot;^&quot;/}, tool.call {tool=Edit|Write}, tool.call {tool=Bash}, turn.complete {agentId=/&quot;^&quot;/}, tool.call {tool=Workflow}, prompt.submit {origin has {kind=task-notification}, session.start {isInteractive=true|false}, command.run {command=rabe-stop}, session.start {isInteractive=true|false}, tool.call {tool=Bash}, prompt.submit {origin has {kind=task-notification}, classic.Stop {stop_hook_active=true|false}, session.start {isInteractive=true|false}, tool.call {tool=Monitor}, prompt.submit {origin has {kind=task-notification}, classic.Stop {stop_hook_active=true|false}, session.start {isInteractive=true}, tool.call {tool=CronCreate}, tool.call {tool=CronDelete}, tool.call {tool=ScheduleWakeup}, prompt.submit {origin has {kind=scheduled-trigger}, classic.Stop {stop_hook_active=true|false}, session.append {door=prompt}, turn.st, 716, chars</code></dd>
-    <dt>API calls</dt><dd><code>$.agent.list, $.clock.after, $.clock.every, $.clock.now, $.clock.sleep, $.command.register, $.command.run, $.env.get, $.fs.list, $.fs.read, $.fs.stat, $.process.run, $.session.cwd, $.session.id, $.session.root, $.session.send, $.session.surfaces, $.session.usage, $.session.version, $.state.get, $.state.set, $.store.get, $.store.set, $.tool.call, $.ui.close, $.ui.copy</code></dd>
+    <dt>Footprint</dt><dd>Unavailable or incomplete. Recorded events and calls below may omit access.</dd>
+    <dt>Observed events</dt><dd>unknown</dd>
+    <dt>Hooks</dt><dd><code>not reported</code></dd>
+    <dt>API calls</dt><dd><code>not reported</code></dd>
 
-    <dt>Validation on 2.1.301</dt><dd>Passed</dd>
+    <dt>Validation on 2.1.332</dt><dd>not verified</dd>
 
-
-    <dt>Scanned revision</dt><dd><a href="https://github.com/lorenzh/rabe/tree/09c932047a3858c7a8d76c6aeb164034ea3bec8c"><code>09c932047a38</code></a></dd>
-    <dt>Marketplace passed</dt><dd><a href="https://github.com/lorenzh/rabe/blob/09c932047a3858c7a8d76c6aeb164034ea3bec8c/.claude-plugin/marketplace.json">rabe</a></dd></dl>
+    <dt>Validator output</dt><dd>ETIMEDOUT</dd>
+    <dt>Scanned revision</dt><dd><a href="https://github.com/lorenzh/rabe/tree/cb5c542a59a19b4deabfe5efe02873d0f549deaf"><code>cb5c542a59a1</code></a></dd>
+    <dt>Marketplace passed</dt><dd><a href="https://github.com/lorenzh/rabe/blob/cb5c542a59a19b4deabfe5efe02873d0f549deaf/.claude-plugin/marketplace.json">rabe</a></dd></dl>
 <p class="note">These are the hooks and API calls reported by <code>claude plugin validate</code>. Access levels describe the widest reach of those calls and are not safety ratings. Validation is a static check, not a runtime test, and a passing result does not prove that a mod works or is safe. <a href="https://github.com/karanb192/awesome-claude-code-mods/blob/main/SCANNING.md">How the scan works</a>.</p></section>
 
+<section class="badge-snippet" aria-labelledby="badge-title"><h2 id="badge-title">Badge for your README</h2><p><img src="/badges/lorenzh--rabe--rabe-reach.svg" alt="Reach badge for rabe"> <img src="/badges/lorenzh--rabe--rabe-validates.svg" alt="Validation badge for rabe"></p><p>Authors can show the latest scan result in their README. Each badge links to this page.</p><pre><code>[![reach](https://raw.githubusercontent.com/karanb192/awesome-claude-code-mods/main/badges/lorenzh--rabe--rabe-reach.svg)](https://mods.aidojo.si/mods/lorenzh--rabe--rabe/)
+[![validates](https://raw.githubusercontent.com/karanb192/awesome-claude-code-mods/main/badges/lorenzh--rabe--rabe-validates.svg)](https://mods.aidojo.si/mods/lorenzh--rabe--rabe/)</code></pre></section>
 </main>
 <footer class="shell"><a href="/" class="brand"><svg viewBox="0 0 32 32" fill="none" aria-hidden="true"><path d="M11 5H5v22h6M21 5h6v22h-6M16 10v12M10 16h12"/></svg><span>claude<span class="brand-light">mods</span></span></a><p>An independent community scan.<br>Not an official Anthropic directory.</p><a href="https://github.com/karanb192/awesome-claude-code-mods">Awesome Claude Code Mods on GitHub <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 19 19 5M5 5h14v14"/></svg></a></footer>
 </body></html>

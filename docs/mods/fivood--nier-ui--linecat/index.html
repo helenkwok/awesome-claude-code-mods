@@ -16,23 +16,25 @@
 <p class="lede">A cat walks a line your Claude Code session unfolds, wearing what Claude is doing overhead; plus retro paper-panel styling for messages, tool rows and a usage monitor</p>
 
 <div class="facts"><div><h2>Access</h2><span class="level">L1 Reads files</span><span class="track" aria-label="Reach level 1: Reads files"><i class="on l1"></i><i class="on l1"></i><i class=""></i><i class=""></i></span><span class="labels">other: $.state.get, other: $.state.set, persists state, draws</span></div>
-<div><h2>Validation</h2><span class="status">Passed on Claude Code 2.1.301</span></div></div>
+<div><h2>Validation</h2><span class="status">Passed with warnings on Claude Code 2.1.332</span></div></div>
 <p class="actions"><a class="source" href="https://github.com/fivood/nier-ui">View the source on GitHub <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 19 19 5M5 5h14v14"/></svg></a><a href="/#fivood--nier-ui--linecat">Back to the list</a></p>
 <p class="install">To install it, open the repository and follow the author’s setup instructions. Mods need Claude Code 2.1.287 or later.</p>
 <section class="record" aria-labelledby="record-title"><h2 id="record-title">What the scan recorded</h2>
 <dl>
 
     <dt>Observed events</dt><dd>every tool call, classic hooks, compaction, every prompt</dd>
-    <dt>Hooks</dt><dd><code>session.start, command.run {command=lineland}, tool.call, classic.PermissionRequest, session.compact, prompt.submit, session.measure, ui.render {component=AbovePrompt}, ui.render {component=Pane, requestId=lineland}, turn.start, turn.complete, ui.render {component=Spinner}, turn.step, ui.render {component=ToolUse}, ui.render {component=ToolGroup}, ui.render {component=AssistantMessage}, ui.render {component=UserMessage}</code></dd>
+    <dt>Hooks</dt><dd><code>session.start, command.run {command=lineland}, tool.call, classic.PermissionRequest, session.compact, prompt.submit, session.measure, ui.render {component=AbovePrompt}, default, matcher, key, plugin, ui.render {component=Pane, requestId=lineland}, default, matcher, key, plugin, turn.start, turn.complete, ui.render {component=Spinner}, turn.step, ui.render {component=ToolUse}, ui.render {component=ToolGroup}, ui.render {component=AssistantMessage}, ui.render {component=UserMessage}</code></dd>
     <dt>API calls</dt><dd><code>$.clock.every, $.clock.now, $.command.register, $.config.list, $.session.usage, $.state.get, $.state.set, $.store.get, $.store.set, $.ui.close, $.ui.invalidate, $.ui.open, $.ui.resolve</code></dd>
 
-    <dt>Validation on 2.1.301</dt><dd>Passed</dd>
+    <dt>Validation on 2.1.332</dt><dd>Passed with warnings</dd>
 
 
     <dt>Scanned revision</dt><dd><a href="https://github.com/fivood/nier-ui/tree/b0c0737570a13ab2b070919eff1c8048f96197df"><code>b0c0737570a1</code></a></dd>
     <dt>Marketplace passed</dt><dd><a href="https://github.com/fivood/nier-ui/blob/b0c0737570a13ab2b070919eff1c8048f96197df/.claude-plugin/marketplace.json">fivood</a></dd></dl>
 <p class="note">These are the hooks and API calls reported by <code>claude plugin validate</code>. Access levels describe the widest reach of those calls and are not safety ratings. Validation is a static check, not a runtime test, and a passing result does not prove that a mod works or is safe. <a href="https://github.com/karanb192/awesome-claude-code-mods/blob/main/SCANNING.md">How the scan works</a>.</p></section>
 
+<section class="badge-snippet" aria-labelledby="badge-title"><h2 id="badge-title">Badge for your README</h2><p><img src="/badges/fivood--nier-ui--linecat-reach.svg" alt="Reach badge for linecat"> <img src="/badges/fivood--nier-ui--linecat-validates.svg" alt="Validation badge for linecat"></p><p>Authors can show the latest scan result in their README. Each badge links to this page.</p><pre><code>[![reach](https://raw.githubusercontent.com/karanb192/awesome-claude-code-mods/main/badges/fivood--nier-ui--linecat-reach.svg)](https://mods.aidojo.si/mods/fivood--nier-ui--linecat/)
+[![validates](https://raw.githubusercontent.com/karanb192/awesome-claude-code-mods/main/badges/fivood--nier-ui--linecat-validates.svg)](https://mods.aidojo.si/mods/fivood--nier-ui--linecat/)</code></pre></section>
 </main>
 <footer class="shell"><a href="/" class="brand"><svg viewBox="0 0 32 32" fill="none" aria-hidden="true"><path d="M11 5H5v22h6M21 5h6v22h-6M16 10v12M10 16h12"/></svg><span>claude<span class="brand-light">mods</span></span></a><p>An independent community scan.<br>Not an official Anthropic directory.</p><a href="https://github.com/karanb192/awesome-claude-code-mods">Awesome Claude Code Mods on GitHub <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 19 19 5M5 5h14v14"/></svg></a></footer>
 </body></html>

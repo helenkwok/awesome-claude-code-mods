@@ -15,24 +15,26 @@
 <p class="byline">A Claude Code mod in <a href="https://github.com/0NE-C0DEMAN/deskbar">0NE-C0DEMAN/deskbar</a></p>
 <p class="lede">A desk for the Claude Code prompt: context weather, Gmail, calendar, tasks across sessions, notes, a music deck and a billable-hours timer</p>
 
-<div class="facts"><div><h2>Access</h2><span class="level">L3 Uses the network</span><span class="track" aria-label="Reach level 3: Uses the network"><i class="on l3"></i><i class="on l3"></i><i class="on l3"></i><i class="on l3"></i></span><span class="labels">other: $.process.spawn, other: $.stat, other: $.state.get, MCP servers, runs processes, writes files, drives Claude, reads files, reads env vars, reads the transcript, plays audio</span></div>
-<div><h2>Validation</h2><span class="status">Passed on Claude Code 2.1.301</span></div></div>
+<div class="facts"><div><h2>Access</h2><span class="level">L2 Writes or runs</span><span class="track" aria-label="Reach level 2: Writes or runs"><i class="on l2"></i><i class="on l2"></i><i class="on l2"></i><i class=""></i></span><span class="labels">other: $.state.get, other: $.state.set, other: $.tool.list, drives Claude, reads the transcript, persists state, draws</span></div>
+<div><h2>Validation</h2><span class="status">Passed on Claude Code 2.1.332</span></div></div>
 <p class="actions"><a class="source" href="https://github.com/0NE-C0DEMAN/deskbar">View the source on GitHub <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 19 19 5M5 5h14v14"/></svg></a><a href="/#0NE-C0DEMAN--deskbar--deskbar">Back to the list</a></p>
 <p class="install">To install it, open the repository and follow the author’s setup instructions. Mods need Claude Code 2.1.287 or later.</p>
 <section class="record" aria-labelledby="record-title"><h2 id="record-title">What the scan recorded</h2>
 <dl>
 
     <dt>Observed events</dt><dd>mcp__deskbar__timer calls, mcp__deskbar__notes calls, the system prompt, every prompt</dd>
-    <dt>Hooks</dt><dd><code>session.start {isInteractive=true|false}, tool.call {tool=mcp__deskbar__timer}, command.run {command=timer}, ui.render {component=Pane, requestId=deskbar-timer}, ui.press {component=AbovePrompt}, ui.render {component=AbovePrompt}, session.start, command.run {command=desk}, tool.call {tool=mcp__deskbar__notes}, prompt.context, prompt.submit, ui.message, ui.press, command.run {command=weather}, turn.complete, ui.render {component=AbovePrompt}</code></dd>
-    <dt>API calls</dt><dd><code>$.audio.play, $.clock.every, $.clock.now, $.clock.sleep, $.command.register, $.env.get, $.fs.exists, $.fs.list, $.fs.read, $.fs.stat, $.fs.write, $.mcp.call, $.process.run, $.process.spawn, $.prompt.submit, $.session.id, $.session.messages, $.session.root, $.session.usage, $.session.version, $.stat, $.state.get</code></dd>
+    <dt>Hooks</dt><dd><code>session.start {isInteractive=true|false}, tool.call {tool=mcp__deskbar__timer}, command.run {command=timer}, ui.render {component=Pane, requestId=deskbar-timer}, default, matcher, key, plugin, ui.press {component=AbovePrompt}, default, matcher, key, plugin, ui.render {component=AbovePrompt}, default, matcher, key, plugin, session.start, command.run {command=desk}, tool.call {tool=mcp__deskbar__notes}, prompt.context, prompt.submit, ui.message, ui.press, default, matcher, key, plugin, component, command.run {command=weather}, turn.complete, ui.render {component=AbovePrompt}, default, matcher, key, plugin</code></dd>
+    <dt>API calls</dt><dd><code>$.prompt.submit, $.session.id, $.session.messages, $.session.root, $.session.usage, $.session.version, $.state.get, $.state.set, $.store.get, $.store.set, $.tool.list, $.tool.register, $.ui.invalidate, $.ui.open, $.ui.resolve, $.ui.status, $.ui.toast</code></dd>
     <dt>Surface modules</dt><dd><code>hooks/meter.tsx, hooks/pulse.tsx, hooks/spectrum.tsx</code></dd>
-    <dt>Validation on 2.1.301</dt><dd>Passed</dd>
+    <dt>Validation on 2.1.332</dt><dd>Passed</dd>
 
 
     <dt>Scanned revision</dt><dd><a href="https://github.com/0NE-C0DEMAN/deskbar/tree/cd22818a1c91c8120fbef43c38d02ab7befc58ee"><code>cd22818a1c91</code></a></dd>
     </dl>
 <p class="note">These are the hooks and API calls reported by <code>claude plugin validate</code>. Access levels describe the widest reach of those calls and are not safety ratings. Validation is a static check, not a runtime test, and a passing result does not prove that a mod works or is safe. <a href="https://github.com/karanb192/awesome-claude-code-mods/blob/main/SCANNING.md">How the scan works</a>.</p></section>
 
+<section class="badge-snippet" aria-labelledby="badge-title"><h2 id="badge-title">Badge for your README</h2><p><img src="/badges/0NE-C0DEMAN--deskbar--deskbar-reach.svg" alt="Reach badge for deskbar"> <img src="/badges/0NE-C0DEMAN--deskbar--deskbar-validates.svg" alt="Validation badge for deskbar"></p><p>Authors can show the latest scan result in their README. Each badge links to this page.</p><pre><code>[![reach](https://raw.githubusercontent.com/karanb192/awesome-claude-code-mods/main/badges/0NE-C0DEMAN--deskbar--deskbar-reach.svg)](https://mods.aidojo.si/mods/0NE-C0DEMAN--deskbar--deskbar/)
+[![validates](https://raw.githubusercontent.com/karanb192/awesome-claude-code-mods/main/badges/0NE-C0DEMAN--deskbar--deskbar-validates.svg)](https://mods.aidojo.si/mods/0NE-C0DEMAN--deskbar--deskbar/)</code></pre></section>
 </main>
 <footer class="shell"><a href="/" class="brand"><svg viewBox="0 0 32 32" fill="none" aria-hidden="true"><path d="M11 5H5v22h6M21 5h6v22h-6M16 10v12M10 16h12"/></svg><span>claude<span class="brand-light">mods</span></span></a><p>An independent community scan.<br>Not an official Anthropic directory.</p><a href="https://github.com/karanb192/awesome-claude-code-mods">Awesome Claude Code Mods on GitHub <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 19 19 5M5 5h14v14"/></svg></a></footer>
 </body></html>

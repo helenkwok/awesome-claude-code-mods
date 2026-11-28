@@ -15,24 +15,26 @@
 <p class="byline">A Claude Code mod in <a href="https://github.com/SamAct/todo-ledger">SamAct/todo-ledger</a></p>
 <p class="lede">One global ledger of the todos, parked work, proposals and discussions you and Claude leave behind, across every project, in a ToDo's sidebar</p>
 
-<div class="facts"><div><h2>Access</h2><span class="level">L2 Writes or runs</span><span class="track" aria-label="Reach level 2: Writes or runs"><i class="on l2"></i><i class="on l2"></i><i class="on l2"></i><i class=""></i></span><span class="labels">runs processes, writes files, drives Claude, writes the prompt box, reads files, reads env vars, persists state, draws</span></div>
-<div><h2>Validation</h2><span class="status">Passed on Claude Code 2.1.301</span></div></div>
+<div class="facts"><div><h2>Access</h2><span class="level">L0 Draws &amp; remembers</span><span class="track" aria-label="Reach level 0: Draws & remembers"><i class="on l0"></i><i class=""></i><i class=""></i><i class=""></i></span><span class="labels">draws</span></div>
+<div><h2>Validation</h2><span class="status">Passed with warnings on Claude Code 2.1.332</span></div></div>
 <p class="actions"><a class="source" href="https://github.com/SamAct/todo-ledger">View the source on GitHub <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 19 19 5M5 5h14v14"/></svg></a><a href="/#SamAct--todo-ledger--todo-ledger">Back to the list</a></p>
 <p class="install">To install it, open the repository and follow the author’s setup instructions. Mods need Claude Code 2.1.287 or later.</p>
 <section class="record" aria-labelledby="record-title"><h2 id="record-title">What the scan recorded</h2>
 <dl>
 
-    <dt>Observed events</dt><dd>mcp__todo-ledger__park_item calls, mcp__todo-ledger__list_items calls, mcp__todo-ledger__get_item calls, mcp__todo-ledger__update_item calls, TodoWrite calls</dd>
-    <dt>Hooks</dt><dd><code>session.start, ui.press, ui.close, ui.render {component=SessionMode}, ui.render {component=Pane}, turn.start, turn.complete, tool.call {tool=mcp__todo-ledger__park_item}, tool.call {tool=mcp__todo-ledger__list_items}, tool.call {tool=mcp__todo-ledger__get_item}, tool.call {tool=mcp__todo-ledger__update_item}, tool.call {tool=TodoWrite}, command.run {command=todo}, command.run {command=todos}, command.run {command=ledger-add}, command.run {command=ledger}</code></dd>
-    <dt>API calls</dt><dd><code>$.clock.after, $.clock.every, $.clock.now, $.command.register, $.env.get, $.fs.exists, $.fs.list, $.fs.read, $.fs.write, $.model.complete, $.process.run, $.prompt.fill, $.prompt.submit, $.session.cwd, $.session.id, $.store.get, $.store.set, $.tool.register, $.ui.close, $.ui.copy, $.ui.focus, $.ui.invalidate, $.ui.log, $.ui.open, $.ui.resolve, $.ui.toast</code></dd>
+    <dt>Observed events</dt><dd>every tool call, every prompt, mcp__todo-ledger__park_item calls, mcp__todo-ledger__list_items calls, mcp__todo-ledger__get_item calls, mcp__todo-ledger__update_item calls, TodoWrite calls</dd>
+    <dt>Hooks</dt><dd><code>session.start, ui.press, default, matcher, key, plugin, component, ui.close, ui.render {component=AbovePrompt}, default, matcher, key, plugin, ui.render {component=Pane}, default, matcher, key, plugin, turn.start, turn.complete, tool.call, session.end, prompt.submit, prompt.compose, tool.call {tool=mcp__todo-ledger__park_item}, tool.call {tool=mcp__todo-ledger__list_items}, tool.call {tool=mcp__todo-ledger__get_item}, tool.call {tool=mcp__todo-ledger__update_item}, tool.call {tool=TodoWrite}, command.run {command=todo}, command.run {command=todos}, command.run {command=ledger-add}, command.run {command=ledger}</code></dd>
+    <dt>API calls</dt><dd><code>$.ui.open, $.ui.resolve, $.ui.toast</code></dd>
 
-    <dt>Validation on 2.1.301</dt><dd>Passed</dd>
+    <dt>Validation on 2.1.332</dt><dd>Passed with warnings</dd>
 
 
-    <dt>Scanned revision</dt><dd><a href="https://github.com/SamAct/todo-ledger/tree/e6d9b5f7581f05afe69a2e0b1dccabe2e2012191"><code>e6d9b5f7581f</code></a></dd>
-    <dt>Marketplace passed</dt><dd><a href="https://github.com/SamAct/todo-ledger/blob/e6d9b5f7581f05afe69a2e0b1dccabe2e2012191/.claude-plugin/marketplace.json">todo-ledger</a></dd></dl>
+    <dt>Scanned revision</dt><dd><a href="https://github.com/SamAct/todo-ledger/tree/d42037c35a89c42afa912eed6143aa9080c46d5d"><code>d42037c35a89</code></a></dd>
+    <dt>Marketplace passed</dt><dd><a href="https://github.com/SamAct/todo-ledger/blob/d42037c35a89c42afa912eed6143aa9080c46d5d/.claude-plugin/marketplace.json">todo-ledger</a></dd></dl>
 <p class="note">These are the hooks and API calls reported by <code>claude plugin validate</code>. Access levels describe the widest reach of those calls and are not safety ratings. Validation is a static check, not a runtime test, and a passing result does not prove that a mod works or is safe. <a href="https://github.com/karanb192/awesome-claude-code-mods/blob/main/SCANNING.md">How the scan works</a>.</p></section>
 
+<section class="badge-snippet" aria-labelledby="badge-title"><h2 id="badge-title">Badge for your README</h2><p><img src="/badges/SamAct--todo-ledger--todo-ledger-reach.svg" alt="Reach badge for todo-ledger"> <img src="/badges/SamAct--todo-ledger--todo-ledger-validates.svg" alt="Validation badge for todo-ledger"></p><p>Authors can show the latest scan result in their README. Each badge links to this page.</p><pre><code>[![reach](https://raw.githubusercontent.com/karanb192/awesome-claude-code-mods/main/badges/SamAct--todo-ledger--todo-ledger-reach.svg)](https://mods.aidojo.si/mods/SamAct--todo-ledger--todo-ledger/)
+[![validates](https://raw.githubusercontent.com/karanb192/awesome-claude-code-mods/main/badges/SamAct--todo-ledger--todo-ledger-validates.svg)](https://mods.aidojo.si/mods/SamAct--todo-ledger--todo-ledger/)</code></pre></section>
 </main>
 <footer class="shell"><a href="/" class="brand"><svg viewBox="0 0 32 32" fill="none" aria-hidden="true"><path d="M11 5H5v22h6M21 5h6v22h-6M16 10v12M10 16h12"/></svg><span>claude<span class="brand-light">mods</span></span></a><p>An independent community scan.<br>Not an official Anthropic directory.</p><a href="https://github.com/karanb192/awesome-claude-code-mods">Awesome Claude Code Mods on GitHub <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 19 19 5M5 5h14v14"/></svg></a></footer>
 </body></html>

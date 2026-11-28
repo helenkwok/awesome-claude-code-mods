@@ -16,23 +16,25 @@
 <p class="lede">Trajectory segmentation for long Claude Code sessions: every N steps a model of your choice (haiku by default) reads the previous segments and the last 40 steps and either adds a segment of what Claude is doing now and the path it is on, amends the current one, or stays quiet. Cards in a pane on the right, each with an X. Needs Claude Code 2.1.289 or later.</p>
 
 <div class="facts"><div><h2>Access</h2><span class="level">L2 Writes or runs</span><span class="track" aria-label="Reach level 2: Writes or runs"><i class="on l2"></i><i class="on l2"></i><i class="on l2"></i><i class=""></i></span><span class="labels">writes files, drives Claude, reads files, reads env vars, reads the transcript, persists state, draws</span></div>
-<div><h2>Validation</h2><span class="status">Passed on Claude Code 2.1.301</span></div></div>
+<div><h2>Validation</h2><span class="status">Passed with warnings on Claude Code 2.1.332</span></div></div>
 <p class="actions"><a class="source" href="https://github.com/lucastononro/cc-traj-seg">View the source on GitHub <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 19 19 5M5 5h14v14"/></svg></a><a href="/#lucastononro--cc-traj-seg--cc-traj-seg">Back to the list</a></p>
 <p class="install">To install it, open the repository and follow the author’s setup instructions. Mods need Claude Code 2.1.287 or later.</p>
 <section class="record" aria-labelledby="record-title"><h2 id="record-title">What the scan recorded</h2>
 <dl>
 
     <dt>Observed events</dt><dd>every tool call</dd>
-    <dt>Hooks</dt><dd><code>session.start, command.run {command=traj}, ui.close {id=traj}, ui.close {id=traj-steps}, ui.close {id=traj-btw}, ui.close {id=traj-settings}, ui.close {id=traj-edit}, ui.message, tool.call, turn.complete, ui.render {component=Pane, requestId=traj}, ui.render {component=Pane, requestId=traj-steps}, ui.render {component=Pane, requestId=traj-btw}, ui.render {component=Pane, requestId=traj-settings}, ui.render {component=Pane, requestId=traj-edit}</code></dd>
+    <dt>Hooks</dt><dd><code>session.start, command.run {command=traj}, ui.close {id=traj}, ui.close {id=traj-steps}, ui.close {id=traj-btw}, ui.close {id=traj-settings}, ui.close {id=traj-edit}, ui.message, tool.call, turn.complete, ui.render {component=Pane, requestId=traj}, default, matcher, key, plugin, ui.render {component=Pane, requestId=traj-steps}, default, matcher, key, plugin, ui.render {component=Pane, requestId=traj-btw}, default, matcher, key, plugin, ui.render {component=Pane, requestId=traj-settings}, default, matcher, key, plugin, ui.render {component=Pane, requestId=traj-edit}, default, matcher, key, plugin</code></dd>
     <dt>API calls</dt><dd><code>$.clock.now, $.command.register, $.env.get, $.fs.read, $.fs.write, $.model.complete, $.session.id, $.session.messages, $.session.usage, $.store.get, $.store.set, $.ui.close, $.ui.invalidate, $.ui.log, $.ui.open, $.ui.resolve, $.ui.toast</code></dd>
     <dt>Surface modules</dt><dd><code>hooks/editor.tsx</code></dd>
-    <dt>Validation on 2.1.301</dt><dd>Passed</dd>
+    <dt>Validation on 2.1.332</dt><dd>Passed with warnings</dd>
 
 
     <dt>Scanned revision</dt><dd><a href="https://github.com/lucastononro/cc-traj-seg/tree/6c3f4a6adc40f33b3be23e9c3f17f2599cd23789"><code>6c3f4a6adc40</code></a></dd>
     <dt>Marketplace passed</dt><dd><a href="https://github.com/lucastononro/cc-traj-seg/blob/6c3f4a6adc40f33b3be23e9c3f17f2599cd23789/.claude-plugin/marketplace.json">cc-traj-seg</a></dd></dl>
 <p class="note">These are the hooks and API calls reported by <code>claude plugin validate</code>. Access levels describe the widest reach of those calls and are not safety ratings. Validation is a static check, not a runtime test, and a passing result does not prove that a mod works or is safe. <a href="https://github.com/karanb192/awesome-claude-code-mods/blob/main/SCANNING.md">How the scan works</a>.</p></section>
 
+<section class="badge-snippet" aria-labelledby="badge-title"><h2 id="badge-title">Badge for your README</h2><p><img src="/badges/lucastononro--cc-traj-seg--cc-traj-seg-reach.svg" alt="Reach badge for cc-traj-seg"> <img src="/badges/lucastononro--cc-traj-seg--cc-traj-seg-validates.svg" alt="Validation badge for cc-traj-seg"></p><p>Authors can show the latest scan result in their README. Each badge links to this page.</p><pre><code>[![reach](https://raw.githubusercontent.com/karanb192/awesome-claude-code-mods/main/badges/lucastononro--cc-traj-seg--cc-traj-seg-reach.svg)](https://mods.aidojo.si/mods/lucastononro--cc-traj-seg--cc-traj-seg/)
+[![validates](https://raw.githubusercontent.com/karanb192/awesome-claude-code-mods/main/badges/lucastononro--cc-traj-seg--cc-traj-seg-validates.svg)](https://mods.aidojo.si/mods/lucastononro--cc-traj-seg--cc-traj-seg/)</code></pre></section>
 </main>
 <footer class="shell"><a href="/" class="brand"><svg viewBox="0 0 32 32" fill="none" aria-hidden="true"><path d="M11 5H5v22h6M21 5h6v22h-6M16 10v12M10 16h12"/></svg><span>claude<span class="brand-light">mods</span></span></a><p>An independent community scan.<br>Not an official Anthropic directory.</p><a href="https://github.com/karanb192/awesome-claude-code-mods">Awesome Claude Code Mods on GitHub <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 19 19 5M5 5h14v14"/></svg></a></footer>
 </body></html>

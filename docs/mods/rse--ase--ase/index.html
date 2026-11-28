@@ -15,24 +15,26 @@
 <p class="byline">A Claude Code mod in <a href="https://github.com/rse/ase">rse/ase</a></p>
 <p class="lede">Agentic Software Engineering (ASE)</p>
 
-<div class="facts"><div><h2>Access</h2><span class="level">L1 Reads files</span><span class="track" aria-label="Reach level 1: Reads files"><i class="on l1"></i><i class="on l1"></i><i class=""></i><i class=""></i></span><span class="labels">other: $.prompt.read, writes the prompt box, draws</span></div>
-<div><h2>Validation</h2><span class="status">Passed on Claude Code 2.1.301</span></div></div>
+<div class="facts"><div><h2>Access</h2><span class="level">L3 Uses the network</span><span class="track" aria-label="Reach level 3: Uses the network"><i class="on l3"></i><i class="on l3"></i><i class="on l3"></i><i class="on l3"></i></span><span class="labels">other: $.prompt.read, MCP servers, runs processes, drives Claude, writes the prompt box, reads files, reads env vars, draws</span></div>
+<div><h2>Validation</h2><span class="status">Passed on Claude Code 2.1.332</span></div></div>
 <p class="actions"><a class="source" href="https://github.com/rse/ase/tree/master/plugin">View the source on GitHub <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 19 19 5M5 5h14v14"/></svg></a><a href="/#rse--ase--ase">Back to the list</a></p>
 <p class="install">To install it, open the repository and follow the author’s setup instructions. Mods need Claude Code 2.1.287 or later.</p>
 <section class="record" aria-labelledby="record-title"><h2 id="record-title">What the scan recorded</h2>
 <dl>
 
     <dt>Observed events</dt><dd>every prompt</dd>
-    <dt>Hooks</dt><dd><code>prompt.edit, prompt.submit, ui.render {component=AssistantMessage, surface=terminal}</code></dd>
-    <dt>API calls</dt><dd><code>$.prompt.fill, $.prompt.read, $.ui.invalidate, $.ui.resolve</code></dd>
+    <dt>Hooks</dt><dd><code>prompt.submit, ui.render {component=AssistantMessage, surface=terminal}, ui.render {component=AbovePrompt, surface=terminal}, default, matcher, key, plugin, command.describe</code></dd>
+    <dt>API calls</dt><dd><code>$.clock.after, $.clock.every, $.clock.now, $.clock.sleep, $.command.register, $.env.get, $.fs.list, $.fs.read, $.mcp.call, $.model.complete, $.model.fork, $.process.run, $.prompt.fill, $.prompt.read, $.session.compact, $.session.id, $.session.usage, $.tool.call, $.tool.register, $.ui.ask, $.ui.blit, $.ui.invalidate, $.ui.resolve</code></dd>
 
-    <dt>Validation on 2.1.301</dt><dd>Passed</dd>
+    <dt>Validation on 2.1.332</dt><dd>Passed</dd>
 
 
-    <dt>Scanned revision</dt><dd><a href="https://github.com/rse/ase/tree/003143bb3c031e120259f4b989237db3139be4ab"><code>003143bb3c03</code></a></dd>
-    <dt>Marketplace passed</dt><dd><a href="https://github.com/rse/ase/blob/003143bb3c031e120259f4b989237db3139be4ab/.claude-plugin/marketplace.json">ase</a></dd></dl>
+    <dt>Scanned revision</dt><dd><a href="https://github.com/rse/ase/tree/223aa3abd018a05113684f6bc71eda5673ac2715"><code>223aa3abd018</code></a></dd>
+    <dt>Marketplace passed</dt><dd><a href="https://github.com/rse/ase/blob/223aa3abd018a05113684f6bc71eda5673ac2715/.claude-plugin/marketplace.json">ase</a></dd></dl>
 <p class="note">These are the hooks and API calls reported by <code>claude plugin validate</code>. Access levels describe the widest reach of those calls and are not safety ratings. Validation is a static check, not a runtime test, and a passing result does not prove that a mod works or is safe. <a href="https://github.com/karanb192/awesome-claude-code-mods/blob/main/SCANNING.md">How the scan works</a>.</p></section>
 
+<section class="badge-snippet" aria-labelledby="badge-title"><h2 id="badge-title">Badge for your README</h2><p><img src="/badges/rse--ase--ase-reach.svg" alt="Reach badge for ase"> <img src="/badges/rse--ase--ase-validates.svg" alt="Validation badge for ase"></p><p>Authors can show the latest scan result in their README. Each badge links to this page.</p><pre><code>[![reach](https://raw.githubusercontent.com/karanb192/awesome-claude-code-mods/main/badges/rse--ase--ase-reach.svg)](https://mods.aidojo.si/mods/rse--ase--ase/)
+[![validates](https://raw.githubusercontent.com/karanb192/awesome-claude-code-mods/main/badges/rse--ase--ase-validates.svg)](https://mods.aidojo.si/mods/rse--ase--ase/)</code></pre></section>
 </main>
 <footer class="shell"><a href="/" class="brand"><svg viewBox="0 0 32 32" fill="none" aria-hidden="true"><path d="M11 5H5v22h6M21 5h6v22h-6M16 10v12M10 16h12"/></svg><span>claude<span class="brand-light">mods</span></span></a><p>An independent community scan.<br>Not an official Anthropic directory.</p><a href="https://github.com/karanb192/awesome-claude-code-mods">Awesome Claude Code Mods on GitHub <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 19 19 5M5 5h14v14"/></svg></a></footer>
 </body></html>

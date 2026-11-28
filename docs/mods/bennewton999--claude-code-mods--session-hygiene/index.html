@@ -16,7 +16,7 @@
 <p class="lede">Configurable tripwires for the rules you keep forgetting, and a handoff card of open loops left by earlier sessions</p>
 
 <div class="facts"><div><h2>Access</h2><span class="level">L2 Writes or runs</span><span class="track" aria-label="Reach level 2: Writes or runs"><i class="on l2"></i><i class="on l2"></i><i class="on l2"></i><i class=""></i></span><span class="labels">runs processes, reads files, persists state, draws</span></div>
-<div><h2>Validation</h2><span class="status">Passed on Claude Code 2.1.301</span></div></div>
+<div><h2>Validation</h2><span class="status">Passed on Claude Code 2.1.332</span></div></div>
 <p class="actions"><a class="source" href="https://github.com/bennewton999/claude-code-mods/tree/main/session-hygiene">View the source on GitHub <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 19 19 5M5 5h14v14"/></svg></a><a href="/#bennewton999--claude-code-mods--session-hygiene">Back to the list</a></p>
 <p class="install">To install it, open the repository and follow the author’s setup instructions. Mods need Claude Code 2.1.287 or later.</p>
 <section class="record" aria-labelledby="record-title"><h2 id="record-title">What the scan recorded</h2>
@@ -26,13 +26,15 @@
     <dt>Hooks</dt><dd><code>session.start, session.end, command.run {command=handoff}, prompt.submit, tool.call, turn.complete</code></dd>
     <dt>API calls</dt><dd><code>$.clock.now, $.command.register, $.fs.exists, $.process.run, $.session.cwd, $.session.id, $.store.delete, $.store.get, $.store.keys, $.store.set, $.ui.ask, $.ui.log, $.ui.toast</code></dd>
 
-    <dt>Validation on 2.1.301</dt><dd>Passed</dd>
+    <dt>Validation on 2.1.332</dt><dd>Passed</dd>
 
 
-    <dt>Scanned revision</dt><dd><a href="https://github.com/bennewton999/claude-code-mods/tree/5e9caba25830a31c13802680017bd80ae7a77716"><code>5e9caba25830</code></a></dd>
-    <dt>Marketplace passed</dt><dd><a href="https://github.com/bennewton999/claude-code-mods/blob/5e9caba25830a31c13802680017bd80ae7a77716/.claude-plugin/marketplace.json">bennewton-mods</a></dd></dl>
+    <dt>Scanned revision</dt><dd><a href="https://github.com/bennewton999/claude-code-mods/tree/40dad7ed87f4392d3fc7f4181d6c4afe964d5d06"><code>40dad7ed87f4</code></a></dd>
+    <dt>Marketplace passed</dt><dd><a href="https://github.com/bennewton999/claude-code-mods/blob/40dad7ed87f4392d3fc7f4181d6c4afe964d5d06/.claude-plugin/marketplace.json">bennewton-mods</a></dd></dl>
 <p class="note">These are the hooks and API calls reported by <code>claude plugin validate</code>. Access levels describe the widest reach of those calls and are not safety ratings. Validation is a static check, not a runtime test, and a passing result does not prove that a mod works or is safe. <a href="https://github.com/karanb192/awesome-claude-code-mods/blob/main/SCANNING.md">How the scan works</a>.</p></section>
 <section class="siblings" aria-labelledby="siblings-title"><h2 id="siblings-title">More from bennewton999/claude-code-mods</h2><ul><li><a href="/mods/bennewton999--claude-code-mods--context-gauge/">context-gauge</a><span>Context-window gauge with a pre-compaction warning, and a log of what was in flight at each compaction</span></li><li><a href="/mods/bennewton999--claude-code-mods--session-activity/">session-activity</a><span>Side-effects ledger (/ledger) with a hold on production SQL writes, and a waiting-on tracker for background w…</span></li><li><a href="/mods/bennewton999--claude-code-mods--session-fleet/">session-fleet</a><span>Fleet board of live sessions, a needs-you beacon, and a worktree claim guard, shared across sessions</span></li><li><a href="/mods/bennewton999--claude-code-mods--ship-tracker/">ship-tracker</a><span>Ship-pipeline band (PR, CI, merge, prod deployment, live) and a receipt line under each turn</span></li></ul></section>
+<section class="badge-snippet" aria-labelledby="badge-title"><h2 id="badge-title">Badge for your README</h2><p><img src="/badges/bennewton999--claude-code-mods--session-hygiene-reach.svg" alt="Reach badge for session-hygiene"> <img src="/badges/bennewton999--claude-code-mods--session-hygiene-validates.svg" alt="Validation badge for session-hygiene"></p><p>Authors can show the latest scan result in their README. Each badge links to this page.</p><pre><code>[![reach](https://raw.githubusercontent.com/karanb192/awesome-claude-code-mods/main/badges/bennewton999--claude-code-mods--session-hygiene-reach.svg)](https://mods.aidojo.si/mods/bennewton999--claude-code-mods--session-hygiene/)
+[![validates](https://raw.githubusercontent.com/karanb192/awesome-claude-code-mods/main/badges/bennewton999--claude-code-mods--session-hygiene-validates.svg)](https://mods.aidojo.si/mods/bennewton999--claude-code-mods--session-hygiene/)</code></pre></section>
 </main>
 <footer class="shell"><a href="/" class="brand"><svg viewBox="0 0 32 32" fill="none" aria-hidden="true"><path d="M11 5H5v22h6M21 5h6v22h-6M16 10v12M10 16h12"/></svg><span>claude<span class="brand-light">mods</span></span></a><p>An independent community scan.<br>Not an official Anthropic directory.</p><a href="https://github.com/karanb192/awesome-claude-code-mods">Awesome Claude Code Mods on GitHub <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 19 19 5M5 5h14v14"/></svg></a></footer>
 </body></html>

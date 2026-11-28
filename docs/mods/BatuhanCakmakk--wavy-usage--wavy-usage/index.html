@@ -15,24 +15,26 @@
 <p class="byline">A Claude Code mod in <a href="https://github.com/BatuhanCakmakk/wavy-usage">BatuhanCakmakk/wavy-usage</a></p>
 <p class="lede">Liquid-filled rings above the Claude Code prompt for the 5-hour and 7-day limit windows, context fill and prompt-cache lifetime, a fighter jet that shows the model's effort, and a pane of recent turns, their cost, their share of the 5-hour window and what filled it.</p>
 
-<div class="facts"><div><h2>Access</h2><span class="level">L1 Reads files</span><span class="track" aria-label="Reach level 1: Reads files"><i class="on l1"></i><i class="on l1"></i><i class=""></i><i class=""></i></span><span class="labels">other: $.state.get, other: $.state.set, reads env vars, persists state, draws</span></div>
-<div><h2>Validation</h2><span class="status">Passed on Claude Code 2.1.301</span></div></div>
+<div class="facts"><div><h2>Access</h2><span class="level">L3 Uses the network</span><span class="track" aria-label="Reach level 3: Uses the network"><i class="on l3"></i><i class="on l3"></i><i class="on l3"></i><i class="on l3"></i></span><span class="labels">other: $.state.get, other: $.state.set, network, reads env vars, reads the transcript, persists state, draws</span></div>
+<div><h2>Validation</h2><span class="status">Passed with warnings on Claude Code 2.1.332</span></div></div>
 <p class="actions"><a class="source" href="https://github.com/BatuhanCakmakk/wavy-usage">View the source on GitHub <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 19 19 5M5 5h14v14"/></svg></a><a href="/#BatuhanCakmakk--wavy-usage--wavy-usage">Back to the list</a></p>
 <p class="install">To install it, open the repository and follow the author’s setup instructions. Mods need Claude Code 2.1.287 or later.</p>
 <section class="record" aria-labelledby="record-title"><h2 id="record-title">What the scan recorded</h2>
 <dl>
 
     <dt>Observed events</dt><dd>Only what it hooks</dd>
-    <dt>Hooks</dt><dd><code>session.start, session.measure, turn.complete, turn.step, ui.close, ui.render {component=Pane, requestId=wavy-usage}, ui.render {component=AbovePrompt}, command.run {command=wavy-usage}</code></dd>
-    <dt>API calls</dt><dd><code>$.clock.every, $.clock.now, $.command.register, $.config.list, $.env.get, $.session.cwd, $.session.id, $.session.model, $.session.usage, $.state.get, $.state.set, $.store.delete, $.store.get, $.store.keys, $.store.set, $.ui.close, $.ui.invalidate, $.ui.log, $.ui.open, $.ui.resolve, $.ui.toast</code></dd>
+    <dt>Hooks</dt><dd><code>session.start, session.measure, turn.complete, turn.step, ui.close, ui.render {component=Pane, requestId=wavy-usage}, default, matcher, key, plugin, ui.render {component=AbovePrompt}, default, matcher, key, plugin, command.run {command=wavy-usage}</code></dd>
+    <dt>API calls</dt><dd><code>$.clock.every, $.clock.now, $.command.register, $.config.list, $.env.get, $.http.fetch, $.session.authorize, $.session.cwd, $.session.id, $.session.model, $.session.usage, $.state.get, $.state.set, $.store.delete, $.store.get, $.store.keys, $.store.set, $.ui.close, $.ui.invalidate, $.ui.log, $.ui.open, $.ui.resolve, $.ui.toast</code></dd>
 
-    <dt>Validation on 2.1.301</dt><dd>Passed</dd>
+    <dt>Validation on 2.1.332</dt><dd>Passed with warnings</dd>
 
 
-    <dt>Scanned revision</dt><dd><a href="https://github.com/BatuhanCakmakk/wavy-usage/tree/0d98d80f4d415310fc613e08f395c810088e79f3"><code>0d98d80f4d41</code></a></dd>
-    <dt>Marketplace passed</dt><dd><a href="https://github.com/BatuhanCakmakk/wavy-usage/blob/0d98d80f4d415310fc613e08f395c810088e79f3/.claude-plugin/marketplace.json">wavy-usage</a></dd></dl>
+    <dt>Scanned revision</dt><dd><a href="https://github.com/BatuhanCakmakk/wavy-usage/tree/d8f5aaed4f9fb4ad143f6957b1346c8dee0815c9"><code>d8f5aaed4f9f</code></a></dd>
+    <dt>Marketplace passed</dt><dd><a href="https://github.com/BatuhanCakmakk/wavy-usage/blob/d8f5aaed4f9fb4ad143f6957b1346c8dee0815c9/.claude-plugin/marketplace.json">wavy-usage</a></dd></dl>
 <p class="note">These are the hooks and API calls reported by <code>claude plugin validate</code>. Access levels describe the widest reach of those calls and are not safety ratings. Validation is a static check, not a runtime test, and a passing result does not prove that a mod works or is safe. <a href="https://github.com/karanb192/awesome-claude-code-mods/blob/main/SCANNING.md">How the scan works</a>.</p></section>
 
+<section class="badge-snippet" aria-labelledby="badge-title"><h2 id="badge-title">Badge for your README</h2><p><img src="/badges/BatuhanCakmakk--wavy-usage--wavy-usage-reach.svg" alt="Reach badge for wavy-usage"> <img src="/badges/BatuhanCakmakk--wavy-usage--wavy-usage-validates.svg" alt="Validation badge for wavy-usage"></p><p>Authors can show the latest scan result in their README. Each badge links to this page.</p><pre><code>[![reach](https://raw.githubusercontent.com/karanb192/awesome-claude-code-mods/main/badges/BatuhanCakmakk--wavy-usage--wavy-usage-reach.svg)](https://mods.aidojo.si/mods/BatuhanCakmakk--wavy-usage--wavy-usage/)
+[![validates](https://raw.githubusercontent.com/karanb192/awesome-claude-code-mods/main/badges/BatuhanCakmakk--wavy-usage--wavy-usage-validates.svg)](https://mods.aidojo.si/mods/BatuhanCakmakk--wavy-usage--wavy-usage/)</code></pre></section>
 </main>
 <footer class="shell"><a href="/" class="brand"><svg viewBox="0 0 32 32" fill="none" aria-hidden="true"><path d="M11 5H5v22h6M21 5h6v22h-6M16 10v12M10 16h12"/></svg><span>claude<span class="brand-light">mods</span></span></a><p>An independent community scan.<br>Not an official Anthropic directory.</p><a href="https://github.com/karanb192/awesome-claude-code-mods">Awesome Claude Code Mods on GitHub <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 19 19 5M5 5h14v14"/></svg></a></footer>
 </body></html>

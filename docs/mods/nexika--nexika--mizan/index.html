@@ -16,23 +16,25 @@
 <p class="lede">Nexika mizan: keeps your Claude Code session in balance. A band above the prompt shows the branch and who started it, open PRs or MRs per person, the branch's CI (passed, failed with the job, running), RAM and disk with warnings, the context level (fresh, mid, full), the running agent and its task, the current task step and the session cost; /mizan opens the details. At full context it saves a hafiz handoff and puts /clear in the prompt for you to send. English and Arabic.</p>
 
 <div class="facts"><div><h2>Access</h2><span class="level">L2 Writes or runs</span><span class="track" aria-label="Reach level 2: Writes or runs"><i class="on l2"></i><i class="on l2"></i><i class="on l2"></i><i class=""></i></span><span class="labels">other: $.prompt.read, other: $.state.get, other: $.state.set, runs processes, writes the prompt box, draws</span></div>
-<div><h2>Validation</h2><span class="status">Passed on Claude Code 2.1.301</span></div></div>
+<div><h2>Validation</h2><span class="status">Passed with warnings on Claude Code 2.1.332</span></div></div>
 <p class="actions"><a class="source" href="https://github.com/nexika/nexika/tree/main/plugins/mizan">View the source on GitHub <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 19 19 5M5 5h14v14"/></svg></a><a href="/#nexika--nexika--mizan">Back to the list</a></p>
 <p class="install">To install it, open the repository and follow the author’s setup instructions. Mods need Claude Code 2.1.287 or later.</p>
 <section class="record" aria-labelledby="record-title"><h2 id="record-title">What the scan recorded</h2>
 <dl>
 
     <dt>Observed events</dt><dd>classic hooks, every prompt, every tool call</dd>
-    <dt>Hooks</dt><dd><code>session.start, classic.SessionStart, classic.Stop, prompt.submit, session.measure, session.end, tool.call, command.run {command=mizan}, ui.render {component=AbovePrompt}, ui.render {component=Pane, requestId=mizan}</code></dd>
+    <dt>Hooks</dt><dd><code>session.start, classic.SessionStart, classic.Stop, prompt.submit, session.measure, session.end, tool.call, command.run {command=mizan}, ui.render {component=AbovePrompt}, default, matcher, key, plugin, ui.render {component=Pane, requestId=mizan}, default, matcher, key, plugin</code></dd>
     <dt>API calls</dt><dd><code>$.agent.list, $.clock.after, $.clock.every, $.clock.now, $.command.register, $.process.run, $.prompt.fill, $.prompt.read, $.session.cwd, $.session.id, $.session.usage, $.state.get, $.state.set, $.ui.open, $.ui.resolve, $.ui.toast</code></dd>
 
-    <dt>Validation on 2.1.301</dt><dd>Passed</dd>
+    <dt>Validation on 2.1.332</dt><dd>Passed with warnings</dd>
 
 
-    <dt>Scanned revision</dt><dd><a href="https://github.com/nexika/nexika/tree/19cc626d8342f1acb762fcd48b6cf6b6c182afdb"><code>19cc626d8342</code></a></dd>
-    <dt>Marketplace passed</dt><dd><a href="https://github.com/nexika/nexika/blob/19cc626d8342f1acb762fcd48b6cf6b6c182afdb/.claude-plugin/marketplace.json">nexika</a></dd></dl>
+    <dt>Scanned revision</dt><dd><a href="https://github.com/nexika/nexika/tree/805004001a80e6afa39e698fec21a44d005d1b16"><code>805004001a80</code></a></dd>
+    <dt>Marketplace passed</dt><dd><a href="https://github.com/nexika/nexika/blob/805004001a80e6afa39e698fec21a44d005d1b16/.claude-plugin/marketplace.json">nexika</a></dd></dl>
 <p class="note">These are the hooks and API calls reported by <code>claude plugin validate</code>. Access levels describe the widest reach of those calls and are not safety ratings. Validation is a static check, not a runtime test, and a passing result does not prove that a mod works or is safe. <a href="https://github.com/karanb192/awesome-claude-code-mods/blob/main/SCANNING.md">How the scan works</a>.</p></section>
 
+<section class="badge-snippet" aria-labelledby="badge-title"><h2 id="badge-title">Badge for your README</h2><p><img src="/badges/nexika--nexika--mizan-reach.svg" alt="Reach badge for mizan"> <img src="/badges/nexika--nexika--mizan-validates.svg" alt="Validation badge for mizan"></p><p>Authors can show the latest scan result in their README. Each badge links to this page.</p><pre><code>[![reach](https://raw.githubusercontent.com/karanb192/awesome-claude-code-mods/main/badges/nexika--nexika--mizan-reach.svg)](https://mods.aidojo.si/mods/nexika--nexika--mizan/)
+[![validates](https://raw.githubusercontent.com/karanb192/awesome-claude-code-mods/main/badges/nexika--nexika--mizan-validates.svg)](https://mods.aidojo.si/mods/nexika--nexika--mizan/)</code></pre></section>
 </main>
 <footer class="shell"><a href="/" class="brand"><svg viewBox="0 0 32 32" fill="none" aria-hidden="true"><path d="M11 5H5v22h6M21 5h6v22h-6M16 10v12M10 16h12"/></svg><span>claude<span class="brand-light">mods</span></span></a><p>An independent community scan.<br>Not an official Anthropic directory.</p><a href="https://github.com/karanb192/awesome-claude-code-mods">Awesome Claude Code Mods on GitHub <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 19 19 5M5 5h14v14"/></svg></a></footer>
 </body></html>

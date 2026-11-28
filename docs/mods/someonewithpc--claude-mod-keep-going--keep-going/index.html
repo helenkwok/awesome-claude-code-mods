@@ -16,23 +16,25 @@
 <p class="lede">Keeps unattended sessions going: continues after usage limits reset, retries API overload with backoff, resumes cut-off responses, and compacts idle sessions before the prompt cache expires.</p>
 
 <div class="facts"><div><h2>Access</h2><span class="level">L3 Uses the network</span><span class="track" aria-label="Reach level 3: Uses the network"><i class="on l3"></i><i class="on l3"></i><i class="on l3"></i><i class="on l3"></i></span><span class="labels">other: $.state.get, other: $.state.set, network, runs processes, writes files, drives Claude, reads files, reads env vars, reads the transcript, persists state, draws</span></div>
-<div><h2>Validation</h2><span class="status">Passed on Claude Code 2.1.301</span></div></div>
+<div><h2>Validation</h2><span class="status">Passed with warnings on Claude Code 2.1.332</span></div></div>
 <p class="actions"><a class="source" href="https://github.com/someonewithpc/claude-mod-keep-going">View the source on GitHub <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 19 19 5M5 5h14v14"/></svg></a><a href="/#someonewithpc--claude-mod-keep-going--keep-going">Back to the list</a></p>
 <p class="install">To install it, open the repository and follow the author’s setup instructions. Mods need Claude Code 2.1.287 or later.</p>
 <section class="record" aria-labelledby="record-title"><h2 id="record-title">What the scan recorded</h2>
 <dl>
 
-    <dt>Observed events</dt><dd>classic hooks, compaction, every prompt, every tool call, mcp__keep-going__request_compact calls</dd>
-    <dt>Hooks</dt><dd><code>session.start, session.end, turn.start, turn.complete, classic.StopFailure, classic.Stop, classic.Notification, classic.PostModelSwitch, session.compact, turn.step, session.measure, prompt.submit, tool.call, command.run {command=rate-limit-options}, prompt.edit, ui.render {component=InfoNotice}, session.append, tool.call {tool=mcp__keep-going__request_compact}, command.run {command=keep-going}, ui.render {component=AbovePrompt}</code></dd>
+    <dt>Observed events</dt><dd>every prompt, every tool call, mcp__keep-going__request_compact calls</dd>
+    <dt>Hooks</dt><dd><code>session.start, session.end, turn.start, turn.complete, command.run {command=compact}, turn.step, session.measure, prompt.submit, tool.check, tool.call, command.run {command=rate-limit-options}, prompt.edit, ui.render {component=InfoNotice}, session.append {door=command|delivery|note|notice}, tool.call {tool=mcp__keep-going__request_compact}, command.run {command=keep-going}, ui.render {component=AbovePrompt}, default, matcher, key, plugin</code></dd>
     <dt>API calls</dt><dd><code>$.agent.list, $.clock.after, $.clock.every, $.clock.now, $.clock.sleep, $.command.register, $.env.get, $.fs.read, $.fs.write, $.http.fetch, $.process.run, $.prompt.submit, $.session.compact, $.session.id, $.session.messages, $.session.model, $.session.usage, $.state.get, $.state.set, $.store.delete, $.store.get, $.store.keys, $.store.set, $.tool.register, $.ui.log, $.ui.resolve, $.ui.status</code></dd>
 
-    <dt>Validation on 2.1.301</dt><dd>Passed</dd>
+    <dt>Validation on 2.1.332</dt><dd>Passed with warnings</dd>
 
 
-    <dt>Scanned revision</dt><dd><a href="https://github.com/someonewithpc/claude-mod-keep-going/tree/d35b6c8409230e16f69bef57643a73058e51d585"><code>d35b6c840923</code></a></dd>
-    <dt>Marketplace warnings</dt><dd><a href="https://github.com/someonewithpc/claude-mod-keep-going/blob/d35b6c8409230e16f69bef57643a73058e51d585/.claude-plugin/marketplace.json">claude-mod-keep-going</a></dd></dl>
+    <dt>Scanned revision</dt><dd><a href="https://github.com/someonewithpc/claude-mod-keep-going/tree/2bf3370064d8d57e77e3e3cf6a03a4e60338bb76"><code>2bf3370064d8</code></a></dd>
+    <dt>Marketplace warnings</dt><dd><a href="https://github.com/someonewithpc/claude-mod-keep-going/blob/2bf3370064d8d57e77e3e3cf6a03a4e60338bb76/.claude-plugin/marketplace.json">claude-mod-keep-going</a></dd></dl>
 <p class="note">These are the hooks and API calls reported by <code>claude plugin validate</code>. Access levels describe the widest reach of those calls and are not safety ratings. Validation is a static check, not a runtime test, and a passing result does not prove that a mod works or is safe. <a href="https://github.com/karanb192/awesome-claude-code-mods/blob/main/SCANNING.md">How the scan works</a>.</p></section>
 
+<section class="badge-snippet" aria-labelledby="badge-title"><h2 id="badge-title">Badge for your README</h2><p><img src="/badges/someonewithpc--claude-mod-keep-going--keep-going-reach.svg" alt="Reach badge for keep-going"> <img src="/badges/someonewithpc--claude-mod-keep-going--keep-going-validates.svg" alt="Validation badge for keep-going"></p><p>Authors can show the latest scan result in their README. Each badge links to this page.</p><pre><code>[![reach](https://raw.githubusercontent.com/karanb192/awesome-claude-code-mods/main/badges/someonewithpc--claude-mod-keep-going--keep-going-reach.svg)](https://mods.aidojo.si/mods/someonewithpc--claude-mod-keep-going--keep-going/)
+[![validates](https://raw.githubusercontent.com/karanb192/awesome-claude-code-mods/main/badges/someonewithpc--claude-mod-keep-going--keep-going-validates.svg)](https://mods.aidojo.si/mods/someonewithpc--claude-mod-keep-going--keep-going/)</code></pre></section>
 </main>
 <footer class="shell"><a href="/" class="brand"><svg viewBox="0 0 32 32" fill="none" aria-hidden="true"><path d="M11 5H5v22h6M21 5h6v22h-6M16 10v12M10 16h12"/></svg><span>claude<span class="brand-light">mods</span></span></a><p>An independent community scan.<br>Not an official Anthropic directory.</p><a href="https://github.com/karanb192/awesome-claude-code-mods">Awesome Claude Code Mods on GitHub <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 19 19 5M5 5h14v14"/></svg></a></footer>
 </body></html>

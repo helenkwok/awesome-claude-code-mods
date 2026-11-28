@@ -16,23 +16,25 @@
 <p class="lede">A usage board for Claude Code: a weekly pace gauge and a sliding ticker of your spend per model, in the terminal and on the desktop.</p>
 
 <div class="facts"><div><h2>Access</h2><span class="level">L2 Writes or runs</span><span class="track" aria-label="Reach level 2: Writes or runs"><i class="on l2"></i><i class="on l2"></i><i class="on l2"></i><i class=""></i></span><span class="labels">runs processes, persists state, draws</span></div>
-<div><h2>Validation</h2><span class="status">Passed on Claude Code 2.1.301</span></div></div>
+<div><h2>Validation</h2><span class="status">Passed with warnings on Claude Code 2.1.332</span></div></div>
 <p class="actions"><a class="source" href="https://github.com/aycandv/claude-usage-meter/tree/main/plugins/usage-ticker">View the source on GitHub <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 19 19 5M5 5h14v14"/></svg></a><a href="/#aycandv--claude-usage-meter--usage-ticker">Back to the list</a></p>
 <p class="install">To install it, open the repository and follow the author’s setup instructions. Mods need Claude Code 2.1.287 or later.</p>
 <section class="record" aria-labelledby="record-title"><h2 id="record-title">What the scan recorded</h2>
 <dl>
 
     <dt>Observed events</dt><dd>Only what it hooks</dd>
-    <dt>Hooks</dt><dd><code>session.start, ui.close, session.measure, turn.start, turn.complete, ui.render {component=AbovePrompt}, ui.render {component=Pane}</code></dd>
+    <dt>Hooks</dt><dd><code>session.start, ui.close, session.measure, turn.start, turn.complete, ui.render {component=AbovePrompt}, default, matcher, key, plugin, ui.render {component=Pane}, default, matcher, key, plugin</code></dd>
     <dt>API calls</dt><dd><code>$.clock.every, $.clock.now, $.process.run, $.session.usage, $.store.get, $.store.set, $.ui.blit, $.ui.invalidate, $.ui.open, $.ui.resolve</code></dd>
 
-    <dt>Validation on 2.1.301</dt><dd>Passed</dd>
+    <dt>Validation on 2.1.332</dt><dd>Passed with warnings</dd>
 
 
     <dt>Scanned revision</dt><dd><a href="https://github.com/aycandv/claude-usage-meter/tree/52b1130bddedc9cc9127e370a2f970429254647e"><code>52b1130bdded</code></a></dd>
     <dt>Marketplace passed</dt><dd><a href="https://github.com/aycandv/claude-usage-meter/blob/52b1130bddedc9cc9127e370a2f970429254647e/.claude-plugin/marketplace.json">claude-usage-meter</a></dd></dl>
 <p class="note">These are the hooks and API calls reported by <code>claude plugin validate</code>. Access levels describe the widest reach of those calls and are not safety ratings. Validation is a static check, not a runtime test, and a passing result does not prove that a mod works or is safe. <a href="https://github.com/karanb192/awesome-claude-code-mods/blob/main/SCANNING.md">How the scan works</a>.</p></section>
 
+<section class="badge-snippet" aria-labelledby="badge-title"><h2 id="badge-title">Badge for your README</h2><p><img src="/badges/aycandv--claude-usage-meter--usage-ticker-reach.svg" alt="Reach badge for usage-ticker"> <img src="/badges/aycandv--claude-usage-meter--usage-ticker-validates.svg" alt="Validation badge for usage-ticker"></p><p>Authors can show the latest scan result in their README. Each badge links to this page.</p><pre><code>[![reach](https://raw.githubusercontent.com/karanb192/awesome-claude-code-mods/main/badges/aycandv--claude-usage-meter--usage-ticker-reach.svg)](https://mods.aidojo.si/mods/aycandv--claude-usage-meter--usage-ticker/)
+[![validates](https://raw.githubusercontent.com/karanb192/awesome-claude-code-mods/main/badges/aycandv--claude-usage-meter--usage-ticker-validates.svg)](https://mods.aidojo.si/mods/aycandv--claude-usage-meter--usage-ticker/)</code></pre></section>
 </main>
 <footer class="shell"><a href="/" class="brand"><svg viewBox="0 0 32 32" fill="none" aria-hidden="true"><path d="M11 5H5v22h6M21 5h6v22h-6M16 10v12M10 16h12"/></svg><span>claude<span class="brand-light">mods</span></span></a><p>An independent community scan.<br>Not an official Anthropic directory.</p><a href="https://github.com/karanb192/awesome-claude-code-mods">Awesome Claude Code Mods on GitHub <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 19 19 5M5 5h14v14"/></svg></a></footer>
 </body></html>

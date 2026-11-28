@@ -16,23 +16,25 @@
 <p class="lede">Session-scoped, encrypted, read-only secrets that Claude uses in commands as {{ck:NAME}} without ever seeing them</p>
 
 <div class="facts"><div><h2>Access</h2><span class="level">L2 Writes or runs</span><span class="track" aria-label="Reach level 2: Writes or runs"><i class="on l2"></i><i class="on l2"></i><i class="on l2"></i><i class=""></i></span><span class="labels">other: $.tool.check, runs processes, reads files, reads env vars, draws</span></div>
-<div><h2>Validation</h2><span class="status">Passed on Claude Code 2.1.301</span></div></div>
+<div><h2>Validation</h2><span class="status">Passed on Claude Code 2.1.332</span></div></div>
 <p class="actions"><a class="source" href="https://github.com/dixonSolutions/ClaudeKeys">View the source on GitHub <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 19 19 5M5 5h14v14"/></svg></a><a href="/#dixonSolutions--ClaudeKeys--claudekeys">Back to the list</a></p>
 <p class="install">To install it, open the repository and follow the author’s setup instructions. Mods need Claude Code 2.1.287 or later.</p>
 <section class="record" aria-labelledby="record-title"><h2 id="record-title">What the scan recorded</h2>
 <dl>
 
     <dt>Observed events</dt><dd>classic hooks, every tool call, every prompt</dd>
-    <dt>Hooks</dt><dd><code>session.start, classic.SessionStart {source=clear|resume|fork}, session.end, command.run {command=keys}, tool.call, tool.check {tool=Bash}, prompt.submit, session.append, ui.render {component=SessionMode}, ui.render {component=Pane}</code></dd>
+    <dt>Hooks</dt><dd><code>session.start, classic.SessionStart {source=clear|resume|fork}, session.end, command.run {command=keys}, tool.call, tool.check {tool=Bash}, prompt.submit, session.append, ui.render {component=SessionMode}, ui.render {component=Pane}, default, matcher, key, plugin</code></dd>
     <dt>API calls</dt><dd><code>$.clock.after, $.command.register, $.env.get, $.fs.read, $.process.run, $.session.id, $.tool.check, $.ui.ask, $.ui.close, $.ui.invalidate, $.ui.open, $.ui.resolve, $.ui.toast</code></dd>
 
-    <dt>Validation on 2.1.301</dt><dd>Passed</dd>
+    <dt>Validation on 2.1.332</dt><dd>Passed</dd>
 
 
     <dt>Scanned revision</dt><dd><a href="https://github.com/dixonSolutions/ClaudeKeys/tree/2cc2d92c25e0d56e524cf0585d079f32c86de8fa"><code>2cc2d92c25e0</code></a></dd>
     </dl>
 <p class="note">These are the hooks and API calls reported by <code>claude plugin validate</code>. Access levels describe the widest reach of those calls and are not safety ratings. Validation is a static check, not a runtime test, and a passing result does not prove that a mod works or is safe. <a href="https://github.com/karanb192/awesome-claude-code-mods/blob/main/SCANNING.md">How the scan works</a>.</p></section>
 
+<section class="badge-snippet" aria-labelledby="badge-title"><h2 id="badge-title">Badge for your README</h2><p><img src="/badges/dixonSolutions--ClaudeKeys--claudekeys-reach.svg" alt="Reach badge for claudekeys"> <img src="/badges/dixonSolutions--ClaudeKeys--claudekeys-validates.svg" alt="Validation badge for claudekeys"></p><p>Authors can show the latest scan result in their README. Each badge links to this page.</p><pre><code>[![reach](https://raw.githubusercontent.com/karanb192/awesome-claude-code-mods/main/badges/dixonSolutions--ClaudeKeys--claudekeys-reach.svg)](https://mods.aidojo.si/mods/dixonSolutions--ClaudeKeys--claudekeys/)
+[![validates](https://raw.githubusercontent.com/karanb192/awesome-claude-code-mods/main/badges/dixonSolutions--ClaudeKeys--claudekeys-validates.svg)](https://mods.aidojo.si/mods/dixonSolutions--ClaudeKeys--claudekeys/)</code></pre></section>
 </main>
 <footer class="shell"><a href="/" class="brand"><svg viewBox="0 0 32 32" fill="none" aria-hidden="true"><path d="M11 5H5v22h6M21 5h6v22h-6M16 10v12M10 16h12"/></svg><span>claude<span class="brand-light">mods</span></span></a><p>An independent community scan.<br>Not an official Anthropic directory.</p><a href="https://github.com/karanb192/awesome-claude-code-mods">Awesome Claude Code Mods on GitHub <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 19 19 5M5 5h14v14"/></svg></a></footer>
 </body></html>

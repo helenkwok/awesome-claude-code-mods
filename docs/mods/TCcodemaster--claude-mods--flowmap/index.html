@@ -16,23 +16,25 @@
 <p class="lede">長回應結束後自動產生 Mermaid 流程圖：cmux 瀏覽器窗格顯示彩色圖，終端機面板顯示彩色摘要</p>
 
 <div class="facts"><div><h2>Access</h2><span class="level">L2 Writes or runs</span><span class="track" aria-label="Reach level 2: Writes or runs"><i class="on l2"></i><i class="on l2"></i><i class="on l2"></i><i class=""></i></span><span class="labels">other: $.state.get, other: $.state.set, runs processes, writes files, drives Claude, reads files, reads env vars, draws</span></div>
-<div><h2>Validation</h2><span class="status">Passed with warnings on Claude Code 2.1.301</span></div></div>
+<div><h2>Validation</h2><span class="status">Passed with warnings on Claude Code 2.1.332</span></div></div>
 <p class="actions"><a class="source" href="https://github.com/TCcodemaster/claude-mods/tree/main/flowmap">View the source on GitHub <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 19 19 5M5 5h14v14"/></svg></a><a href="/#TCcodemaster--claude-mods--flowmap">Back to the list</a></p>
 <p class="install">To install it, open the repository and follow the author’s setup instructions. Mods need Claude Code 2.1.287 or later.</p>
 <section class="record" aria-labelledby="record-title"><h2 id="record-title">What the scan recorded</h2>
 <dl>
 
     <dt>Observed events</dt><dd>Only what it hooks</dd>
-    <dt>Hooks</dt><dd><code>session.start, command.run {command=flow}, turn.complete, ui.render {component=AbovePrompt}, ui.render {component=Pane, requestId=flowmap}</code></dd>
+    <dt>Hooks</dt><dd><code>session.start, command.run {command=flow}, turn.complete, ui.render {component=SessionMode}, ui.render {component=Pane, requestId=flowmap}, default, matcher, key, plugin</code></dd>
     <dt>API calls</dt><dd><code>$.clock.after, $.clock.now, $.command.register, $.env.get, $.fs.list, $.fs.write, $.model.complete, $.process.run, $.state.get, $.state.set, $.ui.close, $.ui.open, $.ui.resolve, $.ui.toast</code></dd>
 
-    <dt>Validation on 2.1.301</dt><dd>Passed with warnings</dd>
+    <dt>Validation on 2.1.332</dt><dd>Passed with warnings</dd>
 
 
-    <dt>Scanned revision</dt><dd><a href="https://github.com/TCcodemaster/claude-mods/tree/d9256035132d9fb003cfd3c8a036df4205f2cd11"><code>d9256035132d</code></a></dd>
+    <dt>Scanned revision</dt><dd><a href="https://github.com/TCcodemaster/claude-mods/tree/0ea4eb0389781be28288fce8e585476377bea996"><code>0ea4eb038978</code></a></dd>
     </dl>
 <p class="note">These are the hooks and API calls reported by <code>claude plugin validate</code>. Access levels describe the widest reach of those calls and are not safety ratings. Validation is a static check, not a runtime test, and a passing result does not prove that a mod works or is safe. <a href="https://github.com/karanb192/awesome-claude-code-mods/blob/main/SCANNING.md">How the scan works</a>.</p></section>
-<section class="siblings" aria-labelledby="siblings-title"><h2 id="siblings-title">More from TCcodemaster/claude-mods</h2><ul><li><a href="/mods/TCcodemaster--claude-mods--gitgraph/">gitgraph</a><span>在 Claude Code 面板顯示目前 repo 的 git 分支線圖，執行 git 指令後自動更新</span></li></ul></section>
+<section class="siblings" aria-labelledby="siblings-title"><h2 id="siblings-title">More from TCcodemaster/claude-mods</h2><ul><li><a href="/mods/TCcodemaster--claude-mods--env-hint/">env-hint</a><span>在輸入框上方以顏色標示目前的機器、資料夾與 git 分支</span></li><li><a href="/mods/TCcodemaster--claude-mods--gitgraph/">gitgraph</a><span>在 Claude Code 面板顯示目前 repo 的 git 分支線圖，執行 git 指令後自動更新</span></li><li><a href="/mods/TCcodemaster--claude-mods--ledger-hint/">ledger-hint</a><span>把 Ledger 自動同步的推送提醒、成功與失敗結果，以及尚待補跑的專案顯示成提醒小框</span></li></ul></section>
+<section class="badge-snippet" aria-labelledby="badge-title"><h2 id="badge-title">Badge for your README</h2><p><img src="/badges/TCcodemaster--claude-mods--flowmap-reach.svg" alt="Reach badge for flowmap"> <img src="/badges/TCcodemaster--claude-mods--flowmap-validates.svg" alt="Validation badge for flowmap"></p><p>Authors can show the latest scan result in their README. Each badge links to this page.</p><pre><code>[![reach](https://raw.githubusercontent.com/karanb192/awesome-claude-code-mods/main/badges/TCcodemaster--claude-mods--flowmap-reach.svg)](https://mods.aidojo.si/mods/TCcodemaster--claude-mods--flowmap/)
+[![validates](https://raw.githubusercontent.com/karanb192/awesome-claude-code-mods/main/badges/TCcodemaster--claude-mods--flowmap-validates.svg)](https://mods.aidojo.si/mods/TCcodemaster--claude-mods--flowmap/)</code></pre></section>
 </main>
 <footer class="shell"><a href="/" class="brand"><svg viewBox="0 0 32 32" fill="none" aria-hidden="true"><path d="M11 5H5v22h6M21 5h6v22h-6M16 10v12M10 16h12"/></svg><span>claude<span class="brand-light">mods</span></span></a><p>An independent community scan.<br>Not an official Anthropic directory.</p><a href="https://github.com/karanb192/awesome-claude-code-mods">Awesome Claude Code Mods on GitHub <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 19 19 5M5 5h14v14"/></svg></a></footer>
 </body></html>

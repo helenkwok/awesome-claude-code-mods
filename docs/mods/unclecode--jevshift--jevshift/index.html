@@ -16,7 +16,7 @@
 <p class="lede">Experimental Jev-assisted model and effort selection for Claude Code: observe, pin, off, and opt-in auto.</p>
 
 <div class="facts"><div><h2>Access</h2><span class="level">L2 Writes or runs</span><span class="track" aria-label="Reach level 2: Writes or runs"><i class="on l2"></i><i class="on l2"></i><i class="on l2"></i><i class=""></i></span><span class="labels">runs processes, drives Claude, reads env vars, reads the transcript, persists state, draws</span></div>
-<div><h2>Validation</h2><span class="status">Passed on Claude Code 2.1.301</span></div></div>
+<div><h2>Validation</h2><span class="status">Passed with warnings on Claude Code 2.1.332</span></div></div>
 <p class="actions"><a class="source" href="https://github.com/unclecode/jevshift">View the source on GitHub <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 19 19 5M5 5h14v14"/></svg></a><a href="/#unclecode--jevshift--jevshift">Back to the list</a></p>
 <p class="install">To install it, open the repository and follow the author’s setup instructions. Mods need Claude Code 2.1.287 or later.</p>
 <section class="record" aria-labelledby="record-title"><h2 id="record-title">What the scan recorded</h2>
@@ -26,13 +26,15 @@
     <dt>Hooks</dt><dd><code>session.start, command.run, prompt.submit, turn.start, classic.SessionStart, session.compact, turn.step, classic.PostModelSwitch</code></dd>
     <dt>API calls</dt><dd><code>$.clock.after, $.clock.now, $.command.register, $.env.get, $.process.run, $.session.id, $.session.messages, $.session.model, $.store.get, $.store.set, $.turn.abort, $.ui.log, $.ui.status</code></dd>
 
-    <dt>Validation on 2.1.301</dt><dd>Passed</dd>
+    <dt>Validation on 2.1.332</dt><dd>Passed with warnings</dd>
 
 
     <dt>Scanned revision</dt><dd><a href="https://github.com/unclecode/jevshift/tree/4f68cd7e15c1af652aaa32d71f3dabc5a60e73a0"><code>4f68cd7e15c1</code></a></dd>
     <dt>Marketplace passed</dt><dd><a href="https://github.com/unclecode/jevshift/blob/4f68cd7e15c1af652aaa32d71f3dabc5a60e73a0/.claude-plugin/marketplace.json">jevshift</a></dd></dl>
 <p class="note">These are the hooks and API calls reported by <code>claude plugin validate</code>. Access levels describe the widest reach of those calls and are not safety ratings. Validation is a static check, not a runtime test, and a passing result does not prove that a mod works or is safe. <a href="https://github.com/karanb192/awesome-claude-code-mods/blob/main/SCANNING.md">How the scan works</a>.</p></section>
 
+<section class="badge-snippet" aria-labelledby="badge-title"><h2 id="badge-title">Badge for your README</h2><p><img src="/badges/unclecode--jevshift--jevshift-reach.svg" alt="Reach badge for jevshift"> <img src="/badges/unclecode--jevshift--jevshift-validates.svg" alt="Validation badge for jevshift"></p><p>Authors can show the latest scan result in their README. Each badge links to this page.</p><pre><code>[![reach](https://raw.githubusercontent.com/karanb192/awesome-claude-code-mods/main/badges/unclecode--jevshift--jevshift-reach.svg)](https://mods.aidojo.si/mods/unclecode--jevshift--jevshift/)
+[![validates](https://raw.githubusercontent.com/karanb192/awesome-claude-code-mods/main/badges/unclecode--jevshift--jevshift-validates.svg)](https://mods.aidojo.si/mods/unclecode--jevshift--jevshift/)</code></pre></section>
 </main>
 <footer class="shell"><a href="/" class="brand"><svg viewBox="0 0 32 32" fill="none" aria-hidden="true"><path d="M11 5H5v22h6M21 5h6v22h-6M16 10v12M10 16h12"/></svg><span>claude<span class="brand-light">mods</span></span></a><p>An independent community scan.<br>Not an official Anthropic directory.</p><a href="https://github.com/karanb192/awesome-claude-code-mods">Awesome Claude Code Mods on GitHub <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 19 19 5M5 5h14v14"/></svg></a></footer>
 </body></html>

@@ -15,24 +15,26 @@
 <p class="byline">A Claude Code mod in <a href="https://github.com/anthonyzng/agent-cats">anthonyzng/agent-cats</a></p>
 <p class="lede">A dashboard of the session's agents as coloured cats: their tasks, skills and run time, their questions answered in place with a meow, and the skills each task uses</p>
 
-<div class="facts"><div><h2>Access</h2><span class="level">L2 Writes or runs</span><span class="track" aria-label="Reach level 2: Writes or runs"><i class="on l2"></i><i class="on l2"></i><i class="on l2"></i><i class=""></i></span><span class="labels">other: $.state.get, other: $.state.set, drives Claude, plays audio, draws</span></div>
-<div><h2>Validation</h2><span class="status">Passed on Claude Code 2.1.301</span></div></div>
+<div class="facts"><div><h2>Access</h2><span class="level">L2 Writes or runs</span><span class="track" aria-label="Reach level 2: Writes or runs"><i class="on l2"></i><i class="on l2"></i><i class="on l2"></i><i class=""></i></span><span class="labels">other: $.state.get, other: $.state.set, runs processes, drives Claude, reads env vars, plays audio, draws</span></div>
+<div><h2>Validation</h2><span class="status">Passed on Claude Code 2.1.332</span></div></div>
 <p class="actions"><a class="source" href="https://github.com/anthonyzng/agent-cats">View the source on GitHub <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 19 19 5M5 5h14v14"/></svg></a><a href="/#anthonyzng--agent-cats--agent-cats">Back to the list</a></p>
 <p class="install">To install it, open the repository and follow the author’s setup instructions. Mods need Claude Code 2.1.287 or later.</p>
 <section class="record" aria-labelledby="record-title"><h2 id="record-title">What the scan recorded</h2>
 <dl>
 
-    <dt>Observed events</dt><dd>every prompt, subagent spawns, every tool call, AskUserQuestion calls, classic hooks</dd>
-    <dt>Hooks</dt><dd><code>session.start, ui.focus {requestId=agent-cats}, command.run {command=cats}, prompt.submit, agent.spawn, turn.start, turn.complete, tool.call, tool.call {tool=AskUserQuestion}, classic.PermissionRequest, ui.render {component=AskUserQuestion}, ui.render {component=Pane, requestId=agent-cats}</code></dd>
-    <dt>API calls</dt><dd><code>$.agent.list, $.audio.play, $.clock.every, $.clock.now, $.command.list, $.command.register, $.prompt.submit, $.session.append, $.session.usage, $.state.get, $.state.set, $.ui.log, $.ui.open, $.ui.resolve, $.ui.toast</code></dd>
+    <dt>Observed events</dt><dd>every prompt, subagent spawns, classic hooks, ExitPlanMode calls, every tool call, AskUserQuestion calls</dd>
+    <dt>Hooks</dt><dd><code>session.start, ui.focus {requestId=agent-cats}, default, matcher, key, plugin, component, command.run {command=cats}, prompt.submit, agent.spawn, turn.start, turn.complete, classic.Stop, tool.call {tool=ExitPlanMode}, classic.Notification, tool.call, tool.call {tool=AskUserQuestion}, classic.PermissionRequest, ui.render {component=AskUserQuestion}, ui.render {component=Pane, requestId=agent-cats}, default, matcher, key, plugin</code></dd>
+    <dt>API calls</dt><dd><code>$.agent.list, $.audio.play, $.clock.after, $.clock.every, $.clock.now, $.command.list, $.command.register, $.env.get, $.process.run, $.prompt.submit, $.session.append, $.session.usage, $.state.get, $.state.set, $.tool.call, $.turn.abort, $.ui.log, $.ui.open, $.ui.resolve, $.ui.toast</code></dd>
 
-    <dt>Validation on 2.1.301</dt><dd>Passed</dd>
+    <dt>Validation on 2.1.332</dt><dd>Passed</dd>
 
 
-    <dt>Scanned revision</dt><dd><a href="https://github.com/anthonyzng/agent-cats/tree/ea3f43d0e514b4d4c337add238a552055a1cc858"><code>ea3f43d0e514</code></a></dd>
-    <dt>Marketplace passed</dt><dd><a href="https://github.com/anthonyzng/agent-cats/blob/ea3f43d0e514b4d4c337add238a552055a1cc858/.claude-plugin/marketplace.json">agent-cats</a></dd></dl>
+    <dt>Scanned revision</dt><dd><a href="https://github.com/anthonyzng/agent-cats/tree/25e446f75b5af54d163335c2ab40db5e737c2102"><code>25e446f75b5a</code></a></dd>
+    <dt>Marketplace passed</dt><dd><a href="https://github.com/anthonyzng/agent-cats/blob/25e446f75b5af54d163335c2ab40db5e737c2102/.claude-plugin/marketplace.json">agent-cats</a></dd></dl>
 <p class="note">These are the hooks and API calls reported by <code>claude plugin validate</code>. Access levels describe the widest reach of those calls and are not safety ratings. Validation is a static check, not a runtime test, and a passing result does not prove that a mod works or is safe. <a href="https://github.com/karanb192/awesome-claude-code-mods/blob/main/SCANNING.md">How the scan works</a>.</p></section>
 
+<section class="badge-snippet" aria-labelledby="badge-title"><h2 id="badge-title">Badge for your README</h2><p><img src="/badges/anthonyzng--agent-cats--agent-cats-reach.svg" alt="Reach badge for agent-cats"> <img src="/badges/anthonyzng--agent-cats--agent-cats-validates.svg" alt="Validation badge for agent-cats"></p><p>Authors can show the latest scan result in their README. Each badge links to this page.</p><pre><code>[![reach](https://raw.githubusercontent.com/karanb192/awesome-claude-code-mods/main/badges/anthonyzng--agent-cats--agent-cats-reach.svg)](https://mods.aidojo.si/mods/anthonyzng--agent-cats--agent-cats/)
+[![validates](https://raw.githubusercontent.com/karanb192/awesome-claude-code-mods/main/badges/anthonyzng--agent-cats--agent-cats-validates.svg)](https://mods.aidojo.si/mods/anthonyzng--agent-cats--agent-cats/)</code></pre></section>
 </main>
 <footer class="shell"><a href="/" class="brand"><svg viewBox="0 0 32 32" fill="none" aria-hidden="true"><path d="M11 5H5v22h6M21 5h6v22h-6M16 10v12M10 16h12"/></svg><span>claude<span class="brand-light">mods</span></span></a><p>An independent community scan.<br>Not an official Anthropic directory.</p><a href="https://github.com/karanb192/awesome-claude-code-mods">Awesome Claude Code Mods on GitHub <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 19 19 5M5 5h14v14"/></svg></a></footer>
 </body></html>

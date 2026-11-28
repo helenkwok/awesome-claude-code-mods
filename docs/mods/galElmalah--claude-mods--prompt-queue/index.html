@@ -16,23 +16,25 @@
 <p class="lede">A prompt typed while Claude is working is held in a stack above the prompt instead of landing in the running turn, and sent once the turn ends. Reorder the stack, edit a row in place, send one first, remove one, flush the lot. Needs function hooks (early access) and an interactive terminal.</p>
 
 <div class="facts"><div><h2>Access</h2><span class="level">L2 Writes or runs</span><span class="track" aria-label="Reach level 2: Writes or runs"><i class="on l2"></i><i class="on l2"></i><i class="on l2"></i><i class=""></i></span><span class="labels">drives Claude, writes the prompt box, draws</span></div>
-<div><h2>Validation</h2><span class="status">Passed on Claude Code 2.1.301</span></div></div>
+<div><h2>Validation</h2><span class="status">Passed with warnings on Claude Code 2.1.332</span></div></div>
 <p class="actions"><a class="source" href="https://github.com/galElmalah/claude-mods/tree/main/claude-queue">View the source on GitHub <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 19 19 5M5 5h14v14"/></svg></a><a href="/#galElmalah--claude-mods--prompt-queue">Back to the list</a></p>
 <p class="install">To install it, open the repository and follow the author’s setup instructions. Mods need Claude Code 2.1.287 or later.</p>
 <section class="record" aria-labelledby="record-title"><h2 id="record-title">What the scan recorded</h2>
 <dl>
 
     <dt>Observed events</dt><dd>classic hooks, every tool call, every prompt</dd>
-    <dt>Hooks</dt><dd><code>session.start, turn.start, turn.complete, classic.Stop, tool.call, prompt.submit, ui.focus {component=AbovePrompt}, command.run {command=q}, ui.render {component=AbovePrompt}</code></dd>
+    <dt>Hooks</dt><dd><code>session.start, turn.start, turn.complete, classic.Stop, tool.call, prompt.submit, ui.focus {component=AbovePrompt}, default, matcher, key, plugin, command.run {command=q}, ui.render {component=AbovePrompt}, default, matcher, key, plugin</code></dd>
     <dt>API calls</dt><dd><code>$.clock.after, $.command.register, $.command.run, $.prompt.fill, $.prompt.submit, $.ui.focus, $.ui.invalidate, $.ui.log, $.ui.resolve</code></dd>
 
-    <dt>Validation on 2.1.301</dt><dd>Passed</dd>
+    <dt>Validation on 2.1.332</dt><dd>Passed with warnings</dd>
 
 
     <dt>Scanned revision</dt><dd><a href="https://github.com/galElmalah/claude-mods/tree/f7e8416f994738293cb39fea75cc9f0ba387e91a"><code>f7e8416f9947</code></a></dd>
     <dt>Marketplace passed</dt><dd><a href="https://github.com/galElmalah/claude-mods/blob/f7e8416f994738293cb39fea75cc9f0ba387e91a/.claude-plugin/marketplace.json">gal-mods</a></dd></dl>
 <p class="note">These are the hooks and API calls reported by <code>claude plugin validate</code>. Access levels describe the widest reach of those calls and are not safety ratings. Validation is a static check, not a runtime test, and a passing result does not prove that a mod works or is safe. <a href="https://github.com/karanb192/awesome-claude-code-mods/blob/main/SCANNING.md">How the scan works</a>.</p></section>
 <section class="siblings" aria-labelledby="siblings-title"><h2 id="siblings-title">More from galElmalah/claude-mods</h2><ul><li><a href="/mods/galElmalah--claude-mods--mermaid-draw/">mermaid-draw</a><span>Mermaid diagrams in Claude Code: every ```mermaid block Claude writes is drawn as box art, in colour, right w…</span></li></ul></section>
+<section class="badge-snippet" aria-labelledby="badge-title"><h2 id="badge-title">Badge for your README</h2><p><img src="/badges/galElmalah--claude-mods--prompt-queue-reach.svg" alt="Reach badge for prompt-queue"> <img src="/badges/galElmalah--claude-mods--prompt-queue-validates.svg" alt="Validation badge for prompt-queue"></p><p>Authors can show the latest scan result in their README. Each badge links to this page.</p><pre><code>[![reach](https://raw.githubusercontent.com/karanb192/awesome-claude-code-mods/main/badges/galElmalah--claude-mods--prompt-queue-reach.svg)](https://mods.aidojo.si/mods/galElmalah--claude-mods--prompt-queue/)
+[![validates](https://raw.githubusercontent.com/karanb192/awesome-claude-code-mods/main/badges/galElmalah--claude-mods--prompt-queue-validates.svg)](https://mods.aidojo.si/mods/galElmalah--claude-mods--prompt-queue/)</code></pre></section>
 </main>
 <footer class="shell"><a href="/" class="brand"><svg viewBox="0 0 32 32" fill="none" aria-hidden="true"><path d="M11 5H5v22h6M21 5h6v22h-6M16 10v12M10 16h12"/></svg><span>claude<span class="brand-light">mods</span></span></a><p>An independent community scan.<br>Not an official Anthropic directory.</p><a href="https://github.com/karanb192/awesome-claude-code-mods">Awesome Claude Code Mods on GitHub <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 19 19 5M5 5h14v14"/></svg></a></footer>
 </body></html>

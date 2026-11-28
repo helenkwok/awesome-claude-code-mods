@@ -15,24 +15,26 @@
 <p class="byline">A Claude Code mod in <a href="https://github.com/dgsantana/claude-mods">dgsantana/claude-mods</a></p>
 <p class="lede">The instruments around each Claude Code session: themed status line, TTSR and layered rules, AGENTS.md and APPEND_SYSTEM, an edit advisor</p>
 
-<div class="facts"><div><h2>Access</h2><span class="level">L2 Writes or runs</span><span class="track" aria-label="Reach level 2: Writes or runs"><i class="on l2"></i><i class="on l2"></i><i class="on l2"></i><i class=""></i></span><span class="labels">other: $.state.get, other: $.state.set, runs processes, writes files, drives Claude, reads files, reads env vars, persists state, draws</span></div>
-<div><h2>Validation</h2><span class="status">Passed on Claude Code 2.1.301</span></div></div>
+<div class="facts"><div><h2>Access</h2><span class="level">L0 Draws &amp; remembers</span><span class="track" aria-label="Reach level 0: Draws & remembers"><i class="on l0"></i><i class=""></i><i class=""></i><i class=""></i></span><span class="labels">persists state, draws</span></div>
+<div><h2>Validation</h2><span class="status">Passed on Claude Code 2.1.332</span></div></div>
 <p class="actions"><a class="source" href="https://github.com/dgsantana/claude-mods/tree/main/plugins/agent-cockpit">View the source on GitHub <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 19 19 5M5 5h14v14"/></svg></a><a href="/#dgsantana--claude-mods--agent-cockpit">Back to the list</a></p>
 <p class="install">To install it, open the repository and follow the author’s setup instructions. Mods need Claude Code 2.1.287 or later.</p>
 <section class="record" aria-labelledby="record-title"><h2 id="record-title">What the scan recorded</h2>
 <dl>
 
     <dt>Observed events</dt><dd>every prompt, the system prompt, Edit calls, Write calls</dd>
-    <dt>Hooks</dt><dd><code>session.start, turn.start, command.run {command=dgs}, ui.render {component=Pane, requestId=agent-cockpit-settings}, ui.focus {requestId=agent-cockpit-settings}, prompt.submit, ui.render {component=AbovePrompt}, prompt.compose, prompt.context, turn.complete, tool.call {tool=Edit}, tool.call {tool=Write}</code></dd>
-    <dt>API calls</dt><dd><code>$.clock.after, $.clock.every, $.clock.now, $.command.register, $.env.get, $.fs.ancestors, $.fs.exists, $.fs.list, $.fs.read, $.fs.stat, $.fs.write, $.model.complete, $.model.fork, $.process.run, $.session.cwd, $.session.model, $.session.repo, $.session.root, $.session.usage, $.state.get, $.state.set, $.store.delete, $.store.get, $.store.set, $.ui.log, $.ui.open, $.ui.resolve, $.ui.toast</code></dd>
+    <dt>Hooks</dt><dd><code>session.start, turn.start, command.run {command=dgs}, ui.render {component=Pane, requestId=agent-cockpit-settings}, default, matcher, key, plugin, ui.focus {requestId=agent-cockpit-settings}, default, matcher, key, plugin, component, prompt.submit, ui.render {component=AbovePrompt}, default, matcher, key, plugin, prompt.compose, prompt.context, turn.complete, tool.call {tool=Edit}, tool.call {tool=Write}</code></dd>
+    <dt>API calls</dt><dd><code>$.store.delete, $.store.get, $.store.set, $.ui.log, $.ui.open, $.ui.resolve, $.ui.toast</code></dd>
 
-    <dt>Validation on 2.1.301</dt><dd>Passed</dd>
+    <dt>Validation on 2.1.332</dt><dd>Passed</dd>
 
 
-    <dt>Scanned revision</dt><dd><a href="https://github.com/dgsantana/claude-mods/tree/c532409cc3cf2870f00d7d6627ccce492dd13294"><code>c532409cc3cf</code></a></dd>
-    <dt>Marketplace passed</dt><dd><a href="https://github.com/dgsantana/claude-mods/blob/c532409cc3cf2870f00d7d6627ccce492dd13294/.claude-plugin/marketplace.json">dgsantana</a></dd></dl>
+    <dt>Scanned revision</dt><dd><a href="https://github.com/dgsantana/claude-mods/tree/fff4d637d1fb3e18d5eb5364b0888d75e686ae92"><code>fff4d637d1fb</code></a></dd>
+    <dt>Marketplace passed</dt><dd><a href="https://github.com/dgsantana/claude-mods/blob/fff4d637d1fb3e18d5eb5364b0888d75e686ae92/.claude-plugin/marketplace.json">dgsantana</a></dd></dl>
 <p class="note">These are the hooks and API calls reported by <code>claude plugin validate</code>. Access levels describe the widest reach of those calls and are not safety ratings. Validation is a static check, not a runtime test, and a passing result does not prove that a mod works or is safe. <a href="https://github.com/karanb192/awesome-claude-code-mods/blob/main/SCANNING.md">How the scan works</a>.</p></section>
 
+<section class="badge-snippet" aria-labelledby="badge-title"><h2 id="badge-title">Badge for your README</h2><p><img src="/badges/dgsantana--claude-mods--agent-cockpit-reach.svg" alt="Reach badge for agent-cockpit"> <img src="/badges/dgsantana--claude-mods--agent-cockpit-validates.svg" alt="Validation badge for agent-cockpit"></p><p>Authors can show the latest scan result in their README. Each badge links to this page.</p><pre><code>[![reach](https://raw.githubusercontent.com/karanb192/awesome-claude-code-mods/main/badges/dgsantana--claude-mods--agent-cockpit-reach.svg)](https://mods.aidojo.si/mods/dgsantana--claude-mods--agent-cockpit/)
+[![validates](https://raw.githubusercontent.com/karanb192/awesome-claude-code-mods/main/badges/dgsantana--claude-mods--agent-cockpit-validates.svg)](https://mods.aidojo.si/mods/dgsantana--claude-mods--agent-cockpit/)</code></pre></section>
 </main>
 <footer class="shell"><a href="/" class="brand"><svg viewBox="0 0 32 32" fill="none" aria-hidden="true"><path d="M11 5H5v22h6M21 5h6v22h-6M16 10v12M10 16h12"/></svg><span>claude<span class="brand-light">mods</span></span></a><p>An independent community scan.<br>Not an official Anthropic directory.</p><a href="https://github.com/karanb192/awesome-claude-code-mods">Awesome Claude Code Mods on GitHub <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 19 19 5M5 5h14v14"/></svg></a></footer>
 </body></html>

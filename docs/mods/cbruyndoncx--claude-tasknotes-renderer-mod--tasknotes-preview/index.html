@@ -16,23 +16,25 @@
 <p class="lede">Show Obsidian TaskNotes tasks from a .base view as a board, list, agenda or dependency graph in a Claude Desktop side pane</p>
 <p class="compatibility">review UI rewrite</p>
 <div class="facts"><div><h2>Access</h2><span class="level">L2 Writes or runs</span><span class="track" aria-label="Reach level 2: Writes or runs"><i class="on l2"></i><i class="on l2"></i><i class="on l2"></i><i class=""></i></span><span class="labels">other: $.state.get, other: $.state.set, runs processes, drives Claude, reads files, draws</span></div>
-<div><h2>Validation</h2><span class="status">Passed on Claude Code 2.1.301</span></div></div>
+<div><h2>Validation</h2><span class="status">Passed with warnings on Claude Code 2.1.332</span></div></div>
 <p class="actions"><a class="source" href="https://github.com/cbruyndoncx/claude-tasknotes-renderer-mod">View the source on GitHub <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 19 19 5M5 5h14v14"/></svg></a><a href="/#cbruyndoncx--claude-tasknotes-renderer-mod--tasknotes-preview">Back to the list</a></p>
 <p class="install">To install it, open the repository and follow the author’s setup instructions. Mods need Claude Code 2.1.287 or later.</p>
 <section class="record" aria-labelledby="record-title"><h2 id="record-title">What the scan recorded</h2>
 <dl>
 
     <dt>Observed events</dt><dd>mcp__tasknotes-preview__open calls, Write|Edit calls</dd>
-    <dt>Hooks</dt><dd><code>session.start, command.run {command=taskboard}, tool.call {tool=mcp__tasknotes-preview__open}, tool.call {tool=Write|Edit}, ui.render {component=Pane, requestId=tasks}</code></dd>
+    <dt>Hooks</dt><dd><code>session.start, command.run {command=taskboard}, tool.call {tool=mcp__tasknotes-preview__open}, tool.call {tool=Write|Edit}, ui.render {component=Pane, requestId=tasks}, default, matcher, key, plugin</code></dd>
     <dt>API calls</dt><dd><code>$.command.register, $.fs.exists, $.fs.list, $.fs.read, $.fs.stat, $.process.run, $.session.cwd, $.session.root, $.state.get, $.state.set, $.tool.register, $.ui.close, $.ui.open, $.ui.panes, $.ui.resolve, $.ui.toast</code></dd>
 
-    <dt>Validation on 2.1.301</dt><dd>Passed</dd>
+    <dt>Validation on 2.1.332</dt><dd>Passed with warnings</dd>
 
 
-    <dt>Scanned revision</dt><dd><a href="https://github.com/cbruyndoncx/claude-tasknotes-renderer-mod/tree/61ab49cdff991d31ebe9c9b4d731a135644d2fd1"><code>61ab49cdff99</code></a></dd>
-    <dt>UI rewrite review</dt><dd>UI hook source contains control-character strings. Review any values passed to next() as rewritten props.text; the scanner does not trace whether these strings reach that call. <a href="https://github.com/cbruyndoncx/claude-tasknotes-renderer-mod/blob/61ab49cdff991d31ebe9c9b4d731a135644d2fd1/hooks/expr.ts#L85">hooks/expr.ts:85</a>, <a href="https://github.com/cbruyndoncx/claude-tasknotes-renderer-mod/blob/61ab49cdff991d31ebe9c9b4d731a135644d2fd1/hooks/register.tsx#L338">hooks/register.tsx:338</a>, <a href="https://github.com/cbruyndoncx/claude-tasknotes-renderer-mod/blob/61ab49cdff991d31ebe9c9b4d731a135644d2fd1/hooks/yaml.ts#L265">hooks/yaml.ts:265</a></dd></dl>
+    <dt>Scanned revision</dt><dd><a href="https://github.com/cbruyndoncx/claude-tasknotes-renderer-mod/tree/c0f22f1b16ea13f94f8b15e946c7515d5be95caf"><code>c0f22f1b16ea</code></a></dd>
+    <dt>UI rewrite review</dt><dd>UI hook source contains control-character strings. Review any values passed to next() as rewritten props.text; the scanner does not trace whether these strings reach that call. <a href="https://github.com/cbruyndoncx/claude-tasknotes-renderer-mod/blob/c0f22f1b16ea13f94f8b15e946c7515d5be95caf/hooks/expr.ts#L85">hooks/expr.ts:85</a>, <a href="https://github.com/cbruyndoncx/claude-tasknotes-renderer-mod/blob/c0f22f1b16ea13f94f8b15e946c7515d5be95caf/hooks/register.tsx#L338">hooks/register.tsx:338</a>, <a href="https://github.com/cbruyndoncx/claude-tasknotes-renderer-mod/blob/c0f22f1b16ea13f94f8b15e946c7515d5be95caf/hooks/yaml.ts#L265">hooks/yaml.ts:265</a></dd></dl>
 <p class="note">These are the hooks and API calls reported by <code>claude plugin validate</code>. Access levels describe the widest reach of those calls and are not safety ratings. Validation is a static check, not a runtime test, and a passing result does not prove that a mod works or is safe. <a href="https://github.com/karanb192/awesome-claude-code-mods/blob/main/SCANNING.md">How the scan works</a>.</p></section>
 
+<section class="badge-snippet" aria-labelledby="badge-title"><h2 id="badge-title">Badge for your README</h2><p><img src="/badges/cbruyndoncx--claude-tasknotes-renderer-mod--tasknotes-preview-reach.svg" alt="Reach badge for tasknotes-preview"> <img src="/badges/cbruyndoncx--claude-tasknotes-renderer-mod--tasknotes-preview-validates.svg" alt="Validation badge for tasknotes-preview"></p><p>Authors can show the latest scan result in their README. Each badge links to this page.</p><pre><code>[![reach](https://raw.githubusercontent.com/karanb192/awesome-claude-code-mods/main/badges/cbruyndoncx--claude-tasknotes-renderer-mod--tasknotes-preview-reach.svg)](https://mods.aidojo.si/mods/cbruyndoncx--claude-tasknotes-renderer-mod--tasknotes-preview/)
+[![validates](https://raw.githubusercontent.com/karanb192/awesome-claude-code-mods/main/badges/cbruyndoncx--claude-tasknotes-renderer-mod--tasknotes-preview-validates.svg)](https://mods.aidojo.si/mods/cbruyndoncx--claude-tasknotes-renderer-mod--tasknotes-preview/)</code></pre></section>
 </main>
 <footer class="shell"><a href="/" class="brand"><svg viewBox="0 0 32 32" fill="none" aria-hidden="true"><path d="M11 5H5v22h6M21 5h6v22h-6M16 10v12M10 16h12"/></svg><span>claude<span class="brand-light">mods</span></span></a><p>An independent community scan.<br>Not an official Anthropic directory.</p><a href="https://github.com/karanb192/awesome-claude-code-mods">Awesome Claude Code Mods on GitHub <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 19 19 5M5 5h14v14"/></svg></a></footer>
 </body></html>

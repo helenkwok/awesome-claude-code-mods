@@ -16,23 +16,25 @@
 <p class="lede">Opt-in persistent task checklist: the agent asks to use it, the user approves, checks items off and alone can clear or disable it.</p>
 
 <div class="facts"><div><h2>Access</h2><span class="level">L2 Writes or runs</span><span class="track" aria-label="Reach level 2: Writes or runs"><i class="on l2"></i><i class="on l2"></i><i class="on l2"></i><i class=""></i></span><span class="labels">other: $.state.get, other: $.state.set, writes files, drives Claude, reads files, reads env vars, persists state, draws</span></div>
-<div><h2>Validation</h2><span class="status">Passed on Claude Code 2.1.301</span></div></div>
+<div><h2>Validation</h2><span class="status">Passed with warnings on Claude Code 2.1.332</span></div></div>
 <p class="actions"><a class="source" href="https://github.com/reecelikesramen/claude-task-list">View the source on GitHub <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 19 19 5M5 5h14v14"/></svg></a><a href="/#reecelikesramen--claude-task-list--task-list">Back to the list</a></p>
 <p class="install">To install it, open the repository and follow the author’s setup instructions. Mods need Claude Code 2.1.287 or later.</p>
 <section class="record" aria-labelledby="record-title"><h2 id="record-title">What the scan recorded</h2>
 <dl>
 
-    <dt>Observed events</dt><dd>mcp__task-list__task_list_request calls, mcp__task-list__task_update calls, the system prompt, every tool call, every prompt</dd>
-    <dt>Hooks</dt><dd><code>session.start, tool.describe {tool=mcp__task-list__task_list_request}, tool.describe {tool=mcp__task-list__task_update}, tool.call {tool=mcp__task-list__task_list_request}, tool.call {tool=mcp__task-list__task_update}, command.run {command=tasklist}, ui.close {id=task-list}, prompt.section {name=env_info_simple}, ui.render {component=Pane, requestId=task-list}, ui.render {component=ToolUse, props has {tool=?}, ui.render {component=ToolResult, props has {tool=?}, tool.call, prompt.submit, turn.start, turn.complete, ui.render {component=UserMessage}, ui.focus {requestId=task-list}, ui.scroll {requestId=task-list}, ui.render {component=AbovePrompt}</code></dd>
+    <dt>Observed events</dt><dd>Only what it hooks</dd>
+    <dt>Hooks</dt><dd><code>ui.render {component=AbovePrompt}, default, matcher, key, plugin</code></dd>
     <dt>API calls</dt><dd><code>$.clock.after, $.command.register, $.env.get, $.fs.read, $.fs.stat, $.fs.write, $.prompt.submit, $.session.root, $.state.get, $.state.set, $.store.delete, $.store.get, $.store.set, $.tool.register, $.ui.ask, $.ui.close, $.ui.focus, $.ui.invalidate, $.ui.log, $.ui.open, $.ui.panes, $.ui.resolve, $.ui.scroll, $.ui.toast</code></dd>
 
-    <dt>Validation on 2.1.301</dt><dd>Passed</dd>
+    <dt>Validation on 2.1.332</dt><dd>Passed with warnings</dd>
 
 
     <dt>Scanned revision</dt><dd><a href="https://github.com/reecelikesramen/claude-task-list/tree/9299c124d6cf83f85b16b1047e1529d255b6325d"><code>9299c124d6cf</code></a></dd>
     <dt>Marketplace passed</dt><dd><a href="https://github.com/reecelikesramen/claude-task-list/blob/9299c124d6cf83f85b16b1047e1529d255b6325d/.claude-plugin/marketplace.json">task-list</a></dd></dl>
 <p class="note">These are the hooks and API calls reported by <code>claude plugin validate</code>. Access levels describe the widest reach of those calls and are not safety ratings. Validation is a static check, not a runtime test, and a passing result does not prove that a mod works or is safe. <a href="https://github.com/karanb192/awesome-claude-code-mods/blob/main/SCANNING.md">How the scan works</a>.</p></section>
 
+<section class="badge-snippet" aria-labelledby="badge-title"><h2 id="badge-title">Badge for your README</h2><p><img src="/badges/reecelikesramen--claude-task-list--task-list-reach.svg" alt="Reach badge for task-list"> <img src="/badges/reecelikesramen--claude-task-list--task-list-validates.svg" alt="Validation badge for task-list"></p><p>Authors can show the latest scan result in their README. Each badge links to this page.</p><pre><code>[![reach](https://raw.githubusercontent.com/karanb192/awesome-claude-code-mods/main/badges/reecelikesramen--claude-task-list--task-list-reach.svg)](https://mods.aidojo.si/mods/reecelikesramen--claude-task-list--task-list/)
+[![validates](https://raw.githubusercontent.com/karanb192/awesome-claude-code-mods/main/badges/reecelikesramen--claude-task-list--task-list-validates.svg)](https://mods.aidojo.si/mods/reecelikesramen--claude-task-list--task-list/)</code></pre></section>
 </main>
 <footer class="shell"><a href="/" class="brand"><svg viewBox="0 0 32 32" fill="none" aria-hidden="true"><path d="M11 5H5v22h6M21 5h6v22h-6M16 10v12M10 16h12"/></svg><span>claude<span class="brand-light">mods</span></span></a><p>An independent community scan.<br>Not an official Anthropic directory.</p><a href="https://github.com/karanb192/awesome-claude-code-mods">Awesome Claude Code Mods on GitHub <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 19 19 5M5 5h14v14"/></svg></a></footer>
 </body></html>

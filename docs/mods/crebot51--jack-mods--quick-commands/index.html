@@ -16,23 +16,25 @@
 <p class="lede">在模型名右边加一个 ⚡ 按钮，点开面板用点选代替手打斜杠命令，并可直接点选修改 /config 设置；支持中英文界面</p>
 
 <div class="facts"><div><h2>Access</h2><span class="level">L2 Writes or runs</span><span class="track" aria-label="Reach level 2: Writes or runs"><i class="on l2"></i><i class="on l2"></i><i class="on l2"></i><i class=""></i></span><span class="labels">other: $.state.get, other: $.state.set, changes config, drives Claude, writes the prompt box, reads env vars, reads settings, persists state, draws</span></div>
-<div><h2>Validation</h2><span class="status">Passed on Claude Code 2.1.301</span></div></div>
+<div><h2>Validation</h2><span class="status">Passed on Claude Code 2.1.332</span></div></div>
 <p class="actions"><a class="source" href="https://github.com/crebot51/jack-mods/tree/main/plugins/quick-commands">View the source on GitHub <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 19 19 5M5 5h14v14"/></svg></a><a href="/#crebot51--jack-mods--quick-commands">Back to the list</a></p>
 <p class="install">To install it, open the repository and follow the author’s setup instructions. Mods need Claude Code 2.1.287 or later.</p>
 <section class="record" aria-labelledby="record-title"><h2 id="record-title">What the scan recorded</h2>
 <dl>
 
     <dt>Observed events</dt><dd>Only what it hooks</dd>
-    <dt>Hooks</dt><dd><code>session.start, ui.close {id=quick-commands}, ui.render {component=SessionMode}, ui.render {component=Pane, requestId=quick-commands}</code></dd>
+    <dt>Hooks</dt><dd><code>session.start, ui.close {id=quick-commands}, ui.render {component=SessionMode}, ui.render {component=Pane, requestId=quick-commands}, default, matcher, key, plugin</code></dd>
     <dt>API calls</dt><dd><code>$.clock.sleep, $.command.list, $.command.run, $.config.list, $.config.set, $.env.get, $.model.complete, $.prompt.fill, $.session.model, $.settings.read, $.state.get, $.state.set, $.store.get, $.store.set, $.ui.close, $.ui.invalidate, $.ui.open, $.ui.panes, $.ui.resolve, $.ui.toast</code></dd>
 
-    <dt>Validation on 2.1.301</dt><dd>Passed</dd>
+    <dt>Validation on 2.1.332</dt><dd>Passed</dd>
 
 
-    <dt>Scanned revision</dt><dd><a href="https://github.com/crebot51/jack-mods/tree/46f74053cac7e9c2fa222f5336acbb221f1b7a00"><code>46f74053cac7</code></a></dd>
-    <dt>Marketplace passed</dt><dd><a href="https://github.com/crebot51/jack-mods/blob/46f74053cac7e9c2fa222f5336acbb221f1b7a00/.claude-plugin/marketplace.json">jack-mods</a></dd></dl>
+    <dt>Scanned revision</dt><dd><a href="https://github.com/crebot51/jack-mods/tree/f06d51f43bea86dab69a600b397deb2ca62b5d9c"><code>f06d51f43bea</code></a></dd>
+    <dt>Marketplace passed</dt><dd><a href="https://github.com/crebot51/jack-mods/blob/f06d51f43bea86dab69a600b397deb2ca62b5d9c/.claude-plugin/marketplace.json">jack-mods</a></dd></dl>
 <p class="note">These are the hooks and API calls reported by <code>claude plugin validate</code>. Access levels describe the widest reach of those calls and are not safety ratings. Validation is a static check, not a runtime test, and a passing result does not prove that a mod works or is safe. <a href="https://github.com/karanb192/awesome-claude-code-mods/blob/main/SCANNING.md">How the scan works</a>.</p></section>
 <section class="siblings" aria-labelledby="siblings-title"><h2 id="siblings-title">More from crebot51/jack-mods</h2><ul><li><a href="/mods/crebot51--jack-mods--token-band/">token-band</a><span>在输入框上方实时显示 token 用量、输出速度、缓存命中率、订阅额度和费用，并检测模型是否被切换或降级</span></li></ul></section>
+<section class="badge-snippet" aria-labelledby="badge-title"><h2 id="badge-title">Badge for your README</h2><p><img src="/badges/crebot51--jack-mods--quick-commands-reach.svg" alt="Reach badge for quick-commands"> <img src="/badges/crebot51--jack-mods--quick-commands-validates.svg" alt="Validation badge for quick-commands"></p><p>Authors can show the latest scan result in their README. Each badge links to this page.</p><pre><code>[![reach](https://raw.githubusercontent.com/karanb192/awesome-claude-code-mods/main/badges/crebot51--jack-mods--quick-commands-reach.svg)](https://mods.aidojo.si/mods/crebot51--jack-mods--quick-commands/)
+[![validates](https://raw.githubusercontent.com/karanb192/awesome-claude-code-mods/main/badges/crebot51--jack-mods--quick-commands-validates.svg)](https://mods.aidojo.si/mods/crebot51--jack-mods--quick-commands/)</code></pre></section>
 </main>
 <footer class="shell"><a href="/" class="brand"><svg viewBox="0 0 32 32" fill="none" aria-hidden="true"><path d="M11 5H5v22h6M21 5h6v22h-6M16 10v12M10 16h12"/></svg><span>claude<span class="brand-light">mods</span></span></a><p>An independent community scan.<br>Not an official Anthropic directory.</p><a href="https://github.com/karanb192/awesome-claude-code-mods">Awesome Claude Code Mods on GitHub <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 19 19 5M5 5h14v14"/></svg></a></footer>
 </body></html>

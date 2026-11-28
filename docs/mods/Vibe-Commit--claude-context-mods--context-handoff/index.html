@@ -16,7 +16,7 @@
 <p class="lede">In the 60-70% context band, Claude writes a handoff, the handoff is rewound away, the session compacts, and Claude resumes from the file.</p>
 
 <div class="facts"><div><h2>Access</h2><span class="level">L2 Writes or runs</span><span class="track" aria-label="Reach level 2: Writes or runs"><i class="on l2"></i><i class="on l2"></i><i class="on l2"></i><i class=""></i></span><span class="labels">other: $.state.get, other: $.state.set, runs processes, writes files, drives Claude, reads files, reads env vars, draws</span></div>
-<div><h2>Validation</h2><span class="status">Passed on Claude Code 2.1.301</span></div></div>
+<div><h2>Validation</h2><span class="status">Passed with warnings on Claude Code 2.1.332</span></div></div>
 <p class="actions"><a class="source" href="https://github.com/Vibe-Commit/claude-context-mods/tree/main/plugins/context-handoff">View the source on GitHub <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 19 19 5M5 5h14v14"/></svg></a><a href="/#Vibe-Commit--claude-context-mods--context-handoff">Back to the list</a></p>
 <p class="install">To install it, open the repository and follow the author’s setup instructions. Mods need Claude Code 2.1.287 or later.</p>
 <section class="record" aria-labelledby="record-title"><h2 id="record-title">What the scan recorded</h2>
@@ -24,15 +24,17 @@
 
     <dt>Observed events</dt><dd>mcp__context-handoff__Handoff calls, every tool call, every prompt, compaction</dd>
     <dt>Hooks</dt><dd><code>session.start, command.run {command=handoff}, tool.call {tool=mcp__context-handoff__Handoff}, tool.call, prompt.submit, turn.start, turn.complete, session.receive, session.append, session.compact</code></dd>
-    <dt>API calls</dt><dd><code>$.clock.after, $.clock.now, $.command.register, $.command.run, $.env.get, $.fs.stat, $.fs.write, $.process.run, $.prompt.submit, $.session.append, $.session.id, $.session.usage, $.state.get, $.state.set, $.tool.register, $.ui.log, $.ui.status, $.ui.toast</code></dd>
+    <dt>API calls</dt><dd><code>$.clock.after, $.clock.now, $.command.register, $.command.run, $.env.get, $.fs.exists, $.fs.list, $.fs.read, $.fs.stat, $.fs.write, $.process.run, $.prompt.submit, $.session.append, $.session.id, $.session.usage, $.state.get, $.state.set, $.tool.register, $.ui.log, $.ui.status, $.ui.toast</code></dd>
 
-    <dt>Validation on 2.1.301</dt><dd>Passed</dd>
+    <dt>Validation on 2.1.332</dt><dd>Passed with warnings</dd>
 
 
-    <dt>Scanned revision</dt><dd><a href="https://github.com/Vibe-Commit/claude-context-mods/tree/8bf06d776137baeb50957dc87fb443087a3bf14c"><code>8bf06d776137</code></a></dd>
-    <dt>Marketplace passed</dt><dd><a href="https://github.com/Vibe-Commit/claude-context-mods/blob/8bf06d776137baeb50957dc87fb443087a3bf14c/.claude-plugin/marketplace.json">claude-context-mods</a></dd></dl>
+    <dt>Scanned revision</dt><dd><a href="https://github.com/Vibe-Commit/claude-context-mods/tree/f861fef8ec5a020679ea7cd0154940b500da3fd5"><code>f861fef8ec5a</code></a></dd>
+    <dt>Marketplace passed</dt><dd><a href="https://github.com/Vibe-Commit/claude-context-mods/blob/f861fef8ec5a020679ea7cd0154940b500da3fd5/.claude-plugin/marketplace.json">claude-context-mods</a></dd></dl>
 <p class="note">These are the hooks and API calls reported by <code>claude plugin validate</code>. Access levels describe the widest reach of those calls and are not safety ratings. Validation is a static check, not a runtime test, and a passing result does not prove that a mod works or is safe. <a href="https://github.com/karanb192/awesome-claude-code-mods/blob/main/SCANNING.md">How the scan works</a>.</p></section>
 <section class="siblings" aria-labelledby="siblings-title"><h2 id="siblings-title">More from Vibe-Commit/claude-context-mods</h2><ul><li><a href="/mods/Vibe-Commit--claude-context-mods--context-meter/">context-meter</a><span>Shows context-window usage and five-hour and weekly limit usage in the prompt footer</span></li><li><a href="/mods/Vibe-Commit--claude-context-mods--prompt-timestamp/">prompt-timestamp</a><span>Prefixes every prompt you type with the local date and time, visible to you and Claude.</span></li></ul></section>
+<section class="badge-snippet" aria-labelledby="badge-title"><h2 id="badge-title">Badge for your README</h2><p><img src="/badges/Vibe-Commit--claude-context-mods--context-handoff-reach.svg" alt="Reach badge for context-handoff"> <img src="/badges/Vibe-Commit--claude-context-mods--context-handoff-validates.svg" alt="Validation badge for context-handoff"></p><p>Authors can show the latest scan result in their README. Each badge links to this page.</p><pre><code>[![reach](https://raw.githubusercontent.com/karanb192/awesome-claude-code-mods/main/badges/Vibe-Commit--claude-context-mods--context-handoff-reach.svg)](https://mods.aidojo.si/mods/Vibe-Commit--claude-context-mods--context-handoff/)
+[![validates](https://raw.githubusercontent.com/karanb192/awesome-claude-code-mods/main/badges/Vibe-Commit--claude-context-mods--context-handoff-validates.svg)](https://mods.aidojo.si/mods/Vibe-Commit--claude-context-mods--context-handoff/)</code></pre></section>
 </main>
 <footer class="shell"><a href="/" class="brand"><svg viewBox="0 0 32 32" fill="none" aria-hidden="true"><path d="M11 5H5v22h6M21 5h6v22h-6M16 10v12M10 16h12"/></svg><span>claude<span class="brand-light">mods</span></span></a><p>An independent community scan.<br>Not an official Anthropic directory.</p><a href="https://github.com/karanb192/awesome-claude-code-mods">Awesome Claude Code Mods on GitHub <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 19 19 5M5 5h14v14"/></svg></a></footer>
 </body></html>

@@ -16,23 +16,25 @@
 <p class="lede">A pane listing everything that entered the context window since the session started, by turn and by category</p>
 
 <div class="facts"><div><h2>Access</h2><span class="level">L1 Reads files</span><span class="track" aria-label="Reach level 1: Reads files"><i class="on l1"></i><i class="on l1"></i><i class=""></i><i class=""></i></span><span class="labels">other: $.prompt.compose, other: $.state.get, other: $.state.set, other: $.tool.list, reads env vars, reads the transcript, draws</span></div>
-<div><h2>Validation</h2><span class="status">Passed on Claude Code 2.1.301</span></div></div>
+<div><h2>Validation</h2><span class="status">Passed on Claude Code 2.1.332</span></div></div>
 <p class="actions"><a class="source" href="https://github.com/chrishan17/claude-mod-context-window/tree/main/plugins/context-window">View the source on GitHub <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 19 19 5M5 5h14v14"/></svg></a><a href="/#chrishan17--claude-mod-context-window--context-window">Back to the list</a></p>
 <p class="install">To install it, open the repository and follow the author’s setup instructions. Mods need Claude Code 2.1.287 or later.</p>
 <section class="record" aria-labelledby="record-title"><h2 id="record-title">What the scan recorded</h2>
 <dl>
     <dt>Anthropic directory</dt><dd>Listed as <code>context-window@anthropic-plugin-directory</code></dd>
     <dt>Observed events</dt><dd>the system prompt, compaction</dd>
-    <dt>Hooks</dt><dd><code>session.start, command.run {command=context-window}, ui.close, session.append, prompt.compose, prompt.context, turn.step, turn.complete, session.compact, session.end, ui.render {component=Pane, requestId=context-window}</code></dd>
+    <dt>Hooks</dt><dd><code>session.start, command.run {command=context-window}, ui.close, session.append, prompt.compose, prompt.context, turn.step, turn.complete, session.compact, session.end, ui.render {component=Pane, requestId=context-window}, default, matcher, key, plugin</code></dd>
     <dt>API calls</dt><dd><code>$.agent.list, $.clock.after, $.command.register, $.config.list, $.env.get, $.prompt.compose, $.session.messages, $.session.surfaces, $.session.usage, $.state.get, $.state.set, $.tool.list, $.ui.close, $.ui.open, $.ui.panes, $.ui.resolve, $.ui.toast</code></dd>
 
-    <dt>Validation on 2.1.301</dt><dd>Passed</dd>
+    <dt>Validation on 2.1.332</dt><dd>Passed</dd>
 
 
     <dt>Scanned revision</dt><dd><a href="https://github.com/chrishan17/claude-mod-context-window/tree/041fa4383b8fbd85d13ab718b39722af22fd2fcf"><code>041fa4383b8f</code></a></dd>
     <dt>Marketplace passed</dt><dd><a href="https://github.com/chrishan17/claude-mod-context-window/blob/041fa4383b8fbd85d13ab718b39722af22fd2fcf/.claude-plugin/marketplace.json">claude-mod-context-window</a></dd></dl>
 <p class="note">These are the hooks and API calls reported by <code>claude plugin validate</code>. Access levels describe the widest reach of those calls and are not safety ratings. Validation is a static check, not a runtime test, and a passing result does not prove that a mod works or is safe. <a href="https://github.com/karanb192/awesome-claude-code-mods/blob/main/SCANNING.md">How the scan works</a>.</p></section>
 
+<section class="badge-snippet" aria-labelledby="badge-title"><h2 id="badge-title">Badge for your README</h2><p><img src="/badges/chrishan17--claude-mod-context-window--context-window-reach.svg" alt="Reach badge for context-window"> <img src="/badges/chrishan17--claude-mod-context-window--context-window-validates.svg" alt="Validation badge for context-window"></p><p>Authors can show the latest scan result in their README. Each badge links to this page.</p><pre><code>[![reach](https://raw.githubusercontent.com/karanb192/awesome-claude-code-mods/main/badges/chrishan17--claude-mod-context-window--context-window-reach.svg)](https://mods.aidojo.si/mods/chrishan17--claude-mod-context-window--context-window/)
+[![validates](https://raw.githubusercontent.com/karanb192/awesome-claude-code-mods/main/badges/chrishan17--claude-mod-context-window--context-window-validates.svg)](https://mods.aidojo.si/mods/chrishan17--claude-mod-context-window--context-window/)</code></pre></section>
 </main>
 <footer class="shell"><a href="/" class="brand"><svg viewBox="0 0 32 32" fill="none" aria-hidden="true"><path d="M11 5H5v22h6M21 5h6v22h-6M16 10v12M10 16h12"/></svg><span>claude<span class="brand-light">mods</span></span></a><p>An independent community scan.<br>Not an official Anthropic directory.</p><a href="https://github.com/karanb192/awesome-claude-code-mods">Awesome Claude Code Mods on GitHub <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 19 19 5M5 5h14v14"/></svg></a></footer>
 </body></html>

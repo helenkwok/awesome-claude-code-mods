@@ -16,23 +16,25 @@
 <p class="lede">Hand work to another session or repo without copy-paste: /handoff writes a note from facts it gathers itself (branch, commits, PRs, worklog) plus a six-section narrative from a fork of the conversation, saves it under ~/.claude/handoffs, copies it, and /handoff pick inserts it in the other session; a waiting note for this repo shows as a toast.</p>
 
 <div class="facts"><div><h2>Access</h2><span class="level">L2 Writes or runs</span><span class="track" aria-label="Reach level 2: Writes or runs"><i class="on l2"></i><i class="on l2"></i><i class="on l2"></i><i class=""></i></span><span class="labels">other: $.state.get, other: $.state.set, runs processes, writes files, drives Claude, writes the prompt box, reads files, reads env vars, reads the transcript, persists state, draws</span></div>
-<div><h2>Validation</h2><span class="status">Passed on Claude Code 2.1.301</span></div></div>
+<div><h2>Validation</h2><span class="status">Passed on Claude Code 2.1.332</span></div></div>
 <p class="actions"><a class="source" href="https://github.com/Recokioshi/claude-kit/tree/master/mods/handoff">View the source on GitHub <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 19 19 5M5 5h14v14"/></svg></a><a href="/#Recokioshi--claude-kit--handoff">Back to the list</a></p>
 <p class="install">To install it, open the repository and follow the author’s setup instructions. Mods need Claude Code 2.1.287 or later.</p>
 <section class="record" aria-labelledby="record-title"><h2 id="record-title">What the scan recorded</h2>
 <dl>
 
     <dt>Observed events</dt><dd>Only what it hooks</dd>
-    <dt>Hooks</dt><dd><code>session.start, command.run {command=handoff}, ui.render {component=Pane, requestId=handoff}</code></dd>
+    <dt>Hooks</dt><dd><code>session.start, command.run {command=handoff}, ui.render {component=Pane, requestId=handoff}, default, matcher, key, plugin</code></dd>
     <dt>API calls</dt><dd><code>$.clock.now, $.command.register, $.env.get, $.fs.list, $.fs.read, $.fs.write, $.model.fork, $.process.run, $.prompt.fill, $.session.cwd, $.session.messages, $.session.repo, $.state.get, $.state.set, $.store.get, $.store.keys, $.store.set, $.ui.close, $.ui.copy, $.ui.open, $.ui.resolve, $.ui.toast</code></dd>
 
-    <dt>Validation on 2.1.301</dt><dd>Passed</dd>
+    <dt>Validation on 2.1.332</dt><dd>Passed</dd>
 
 
     <dt>Scanned revision</dt><dd><a href="https://github.com/Recokioshi/claude-kit/tree/0571ae726c4b5aa7720d9b4834abb9390d5d8a5f"><code>0571ae726c4b</code></a></dd>
     <dt>Marketplace passed</dt><dd><a href="https://github.com/Recokioshi/claude-kit/blob/0571ae726c4b5aa7720d9b4834abb9390d5d8a5f/.claude-plugin/marketplace.json">claude-kit</a></dd></dl>
 <p class="note">These are the hooks and API calls reported by <code>claude plugin validate</code>. Access levels describe the widest reach of those calls and are not safety ratings. Validation is a static check, not a runtime test, and a passing result does not prove that a mod works or is safe. <a href="https://github.com/karanb192/awesome-claude-code-mods/blob/main/SCANNING.md">How the scan works</a>.</p></section>
 <section class="siblings" aria-labelledby="siblings-title"><h2 id="siblings-title">More from Recokioshi/claude-kit</h2><ul><li><a href="/mods/Recokioshi--claude-kit--git-gate/">git-gate</a><span>Git only when you asked: commits, pushes, pull requests, merges and destructive git commands run only when yo…</span></li><li><a href="/mods/Recokioshi--claude-kit--model-guard/">model-guard</a><span>Choose the model versions Claude and its subagents may use: /models lists the newest of each family from Anth…</span></li><li><a href="/mods/Recokioshi--claude-kit--progress-pane/">progress-pane</a><span>Mission control for Claude sessions, in a Notebook look: a band and /progress pane in every session (model, e…</span></li></ul></section>
+<section class="badge-snippet" aria-labelledby="badge-title"><h2 id="badge-title">Badge for your README</h2><p><img src="/badges/Recokioshi--claude-kit--handoff-reach.svg" alt="Reach badge for handoff"> <img src="/badges/Recokioshi--claude-kit--handoff-validates.svg" alt="Validation badge for handoff"></p><p>Authors can show the latest scan result in their README. Each badge links to this page.</p><pre><code>[![reach](https://raw.githubusercontent.com/karanb192/awesome-claude-code-mods/main/badges/Recokioshi--claude-kit--handoff-reach.svg)](https://mods.aidojo.si/mods/Recokioshi--claude-kit--handoff/)
+[![validates](https://raw.githubusercontent.com/karanb192/awesome-claude-code-mods/main/badges/Recokioshi--claude-kit--handoff-validates.svg)](https://mods.aidojo.si/mods/Recokioshi--claude-kit--handoff/)</code></pre></section>
 </main>
 <footer class="shell"><a href="/" class="brand"><svg viewBox="0 0 32 32" fill="none" aria-hidden="true"><path d="M11 5H5v22h6M21 5h6v22h-6M16 10v12M10 16h12"/></svg><span>claude<span class="brand-light">mods</span></span></a><p>An independent community scan.<br>Not an official Anthropic directory.</p><a href="https://github.com/karanb192/awesome-claude-code-mods">Awesome Claude Code Mods on GitHub <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 19 19 5M5 5h14v14"/></svg></a></footer>
 </body></html>

@@ -16,23 +16,25 @@
 <p class="lede">A small Claude avatar that runs back and forth above the prompt</p>
 
 <div class="facts"><div><h2>Access</h2><span class="level">L0 Draws &amp; remembers</span><span class="track" aria-label="Reach level 0: Draws & remembers"><i class="on l0"></i><i class=""></i><i class=""></i><i class=""></i></span><span class="labels">plays audio, persists state, draws</span></div>
-<div><h2>Validation</h2><span class="status">Passed on Claude Code 2.1.301</span></div></div>
+<div><h2>Validation</h2><span class="status">Passed on Claude Code 2.1.332</span></div></div>
 <p class="actions"><a class="source" href="https://github.com/MarkMerk/markmerk-mods/tree/main/plugins/runner-avatar">View the source on GitHub <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 19 19 5M5 5h14v14"/></svg></a><a href="/#MarkMerk--markmerk-mods--runner-avatar">Back to the list</a></p>
 <p class="install">To install it, open the repository and follow the author’s setup instructions. Mods need Claude Code 2.1.287 or later.</p>
 <section class="record" aria-labelledby="record-title"><h2 id="record-title">What the scan recorded</h2>
 <dl>
 
     <dt>Observed events</dt><dd>every prompt, every tool call</dd>
-    <dt>Hooks</dt><dd><code>session.start, command.run {command=avatar}, ui.message, prompt.submit, turn.start, tool.call, turn.complete, ui.render {component=AbovePrompt}</code></dd>
+    <dt>Hooks</dt><dd><code>session.start, command.run {command=avatar}, ui.message, prompt.submit, turn.start, tool.call, turn.complete, ui.render {component=AbovePrompt}, default, matcher, key, plugin</code></dd>
     <dt>API calls</dt><dd><code>$.audio.play, $.clock.every, $.command.register, $.session.usage, $.store.get, $.store.set, $.ui.invalidate, $.ui.resolve</code></dd>
     <dt>Surface modules</dt><dd><code>hooks/sprite.js</code></dd>
-    <dt>Validation on 2.1.301</dt><dd>Passed</dd>
+    <dt>Validation on 2.1.332</dt><dd>Passed</dd>
 
 
-    <dt>Scanned revision</dt><dd><a href="https://github.com/MarkMerk/markmerk-mods/tree/4e24168401ae8f13d0a9c4ca57f53d8bd10f2edc"><code>4e24168401ae</code></a></dd>
-    <dt>Marketplace passed</dt><dd><a href="https://github.com/MarkMerk/markmerk-mods/blob/4e24168401ae8f13d0a9c4ca57f53d8bd10f2edc/.claude-plugin/marketplace.json">markmerk-mods</a></dd></dl>
+    <dt>Scanned revision</dt><dd><a href="https://github.com/MarkMerk/markmerk-mods/tree/6df1d2109f880e5474652a04c25af1e265f23439"><code>6df1d2109f88</code></a></dd>
+    <dt>Marketplace passed</dt><dd><a href="https://github.com/MarkMerk/markmerk-mods/blob/6df1d2109f880e5474652a04c25af1e265f23439/.claude-plugin/marketplace.json">markmerk-mods</a></dd></dl>
 <p class="note">These are the hooks and API calls reported by <code>claude plugin validate</code>. Access levels describe the widest reach of those calls and are not safety ratings. Validation is a static check, not a runtime test, and a passing result does not prove that a mod works or is safe. <a href="https://github.com/karanb192/awesome-claude-code-mods/blob/main/SCANNING.md">How the scan works</a>.</p></section>
 <section class="siblings" aria-labelledby="siblings-title"><h2 id="siblings-title">More from MarkMerk/markmerk-mods</h2><ul><li><a href="/mods/MarkMerk--markmerk-mods--agent-workshop/">agent-workshop</a><span>A workshop where Claude and its subagents walk between tool stations: a pixel-art pane in the terminal, and a…</span></li></ul></section>
+<section class="badge-snippet" aria-labelledby="badge-title"><h2 id="badge-title">Badge for your README</h2><p><img src="/badges/MarkMerk--markmerk-mods--runner-avatar-reach.svg" alt="Reach badge for runner-avatar"> <img src="/badges/MarkMerk--markmerk-mods--runner-avatar-validates.svg" alt="Validation badge for runner-avatar"></p><p>Authors can show the latest scan result in their README. Each badge links to this page.</p><pre><code>[![reach](https://raw.githubusercontent.com/karanb192/awesome-claude-code-mods/main/badges/MarkMerk--markmerk-mods--runner-avatar-reach.svg)](https://mods.aidojo.si/mods/MarkMerk--markmerk-mods--runner-avatar/)
+[![validates](https://raw.githubusercontent.com/karanb192/awesome-claude-code-mods/main/badges/MarkMerk--markmerk-mods--runner-avatar-validates.svg)](https://mods.aidojo.si/mods/MarkMerk--markmerk-mods--runner-avatar/)</code></pre></section>
 </main>
 <footer class="shell"><a href="/" class="brand"><svg viewBox="0 0 32 32" fill="none" aria-hidden="true"><path d="M11 5H5v22h6M21 5h6v22h-6M16 10v12M10 16h12"/></svg><span>claude<span class="brand-light">mods</span></span></a><p>An independent community scan.<br>Not an official Anthropic directory.</p><a href="https://github.com/karanb192/awesome-claude-code-mods">Awesome Claude Code Mods on GitHub <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 19 19 5M5 5h14v14"/></svg></a></footer>
 </body></html>

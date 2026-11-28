@@ -16,23 +16,25 @@
 <p class="lede">Pane showing Claude service status, unpushed local repos, recent commits and GitHub pushes</p>
 
 <div class="facts"><div><h2>Access</h2><span class="level">L3 Uses the network</span><span class="track" aria-label="Reach level 3: Uses the network"><i class="on l3"></i><i class="on l3"></i><i class="on l3"></i><i class="on l3"></i></span><span class="labels">other: $.state.get, other: $.state.set, network, runs processes, reads env vars, persists state, draws</span></div>
-<div><h2>Validation</h2><span class="status">Passed on Claude Code 2.1.301</span></div></div>
+<div><h2>Validation</h2><span class="status">Passed on Claude Code 2.1.332</span></div></div>
 <p class="actions"><a class="source" href="https://github.com/tanuu5/dev-dashboard/tree/main/plugins/dev-dashboard">View the source on GitHub <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 19 19 5M5 5h14v14"/></svg></a><a href="/#tanuu5--dev-dashboard--dev-dashboard">Back to the list</a></p>
 <p class="install">To install it, open the repository and follow the author’s setup instructions. Mods need Claude Code 2.1.287 or later.</p>
 <section class="record" aria-labelledby="record-title"><h2 id="record-title">What the scan recorded</h2>
 <dl>
 
     <dt>Observed events</dt><dd>Only what it hooks</dd>
-    <dt>Hooks</dt><dd><code>session.start, command.run {command=dash}, ui.close, ui.render {component=SessionMode}, ui.render {component=Pane, requestId=dev-dashboard}</code></dd>
+    <dt>Hooks</dt><dd><code>session.start, command.run {command=dash}, ui.close, ui.render {component=SessionMode}, ui.render {component=Pane, requestId=dev-dashboard}, default, matcher, key, plugin</code></dd>
     <dt>API calls</dt><dd><code>$.clock.every, $.command.register, $.env.get, $.http.fetch, $.process.run, $.session.usage, $.state.get, $.state.set, $.store.get, $.store.set, $.ui.open, $.ui.resolve</code></dd>
 
-    <dt>Validation on 2.1.301</dt><dd>Passed</dd>
+    <dt>Validation on 2.1.332</dt><dd>Passed</dd>
 
 
     <dt>Scanned revision</dt><dd><a href="https://github.com/tanuu5/dev-dashboard/tree/7c0ac4b6d94cfbf5ba6248e16d93e1c68a3701f6"><code>7c0ac4b6d94c</code></a></dd>
     <dt>Marketplace passed</dt><dd><a href="https://github.com/tanuu5/dev-dashboard/blob/7c0ac4b6d94cfbf5ba6248e16d93e1c68a3701f6/.claude-plugin/marketplace.json">dev-dashboard</a></dd></dl>
 <p class="note">These are the hooks and API calls reported by <code>claude plugin validate</code>. Access levels describe the widest reach of those calls and are not safety ratings. Validation is a static check, not a runtime test, and a passing result does not prove that a mod works or is safe. <a href="https://github.com/karanb192/awesome-claude-code-mods/blob/main/SCANNING.md">How the scan works</a>.</p></section>
 
+<section class="badge-snippet" aria-labelledby="badge-title"><h2 id="badge-title">Badge for your README</h2><p><img src="/badges/tanuu5--dev-dashboard--dev-dashboard-reach.svg" alt="Reach badge for dev-dashboard"> <img src="/badges/tanuu5--dev-dashboard--dev-dashboard-validates.svg" alt="Validation badge for dev-dashboard"></p><p>Authors can show the latest scan result in their README. Each badge links to this page.</p><pre><code>[![reach](https://raw.githubusercontent.com/karanb192/awesome-claude-code-mods/main/badges/tanuu5--dev-dashboard--dev-dashboard-reach.svg)](https://mods.aidojo.si/mods/tanuu5--dev-dashboard--dev-dashboard/)
+[![validates](https://raw.githubusercontent.com/karanb192/awesome-claude-code-mods/main/badges/tanuu5--dev-dashboard--dev-dashboard-validates.svg)](https://mods.aidojo.si/mods/tanuu5--dev-dashboard--dev-dashboard/)</code></pre></section>
 </main>
 <footer class="shell"><a href="/" class="brand"><svg viewBox="0 0 32 32" fill="none" aria-hidden="true"><path d="M11 5H5v22h6M21 5h6v22h-6M16 10v12M10 16h12"/></svg><span>claude<span class="brand-light">mods</span></span></a><p>An independent community scan.<br>Not an official Anthropic directory.</p><a href="https://github.com/karanb192/awesome-claude-code-mods">Awesome Claude Code Mods on GitHub <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 19 19 5M5 5h14v14"/></svg></a></footer>
 </body></html>

@@ -16,23 +16,25 @@
 <p class="lede">Free internet radio above the prompt, and any song through hum's visible YouTube player, with the synced lyric line, a DJ Clawd and an optional big panel with a sharp quadrant-block cover, a dithered aurora and karaoke-style lyrics. The music steps down when Claude asks you a question. No account. macOS.</p>
 
 <div class="facts"><div><h2>Access</h2><span class="level">L3 Uses the network</span><span class="track" aria-label="Reach level 3: Uses the network"><i class="on l3"></i><i class="on l3"></i><i class="on l3"></i><i class="on l3"></i></span><span class="labels">network, runs processes, reads files, reads env vars, persists state, draws</span></div>
-<div><h2>Validation</h2><span class="status">Passed on Claude Code 2.1.301</span></div></div>
+<div><h2>Validation</h2><span class="status">Passed on Claude Code 2.1.332</span></div></div>
 <p class="actions"><a class="source" href="https://github.com/anzal1/hush">View the source on GitHub <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 19 19 5M5 5h14v14"/></svg></a><a href="/#anzal1--hush--hush">Back to the list</a></p>
 <p class="install">To install it, open the repository and follow the author’s setup instructions. Mods need Claude Code 2.1.287 or later.</p>
 <section class="record" aria-labelledby="record-title"><h2 id="record-title">What the scan recorded</h2>
 <dl>
 
     <dt>Observed events</dt><dd>AskUserQuestion calls, every tool call, every prompt, classic hooks</dd>
-    <dt>Hooks</dt><dd><code>session.start, command.run {command=music}, tool.check, tool.call {tool=AskUserQuestion}, tool.call, session.append {door=tool-result}, turn.complete, prompt.submit, classic.PostToolUse, classic.PostToolUseFailure, classic.PermissionDenied, classic.Stop, classic.UserPromptSubmit, ui.focus, ui.render {component=AbovePrompt}, session.end</code></dd>
+    <dt>Hooks</dt><dd><code>session.start, command.run {command=music}, tool.check, tool.call {tool=AskUserQuestion}, tool.call, session.append {door=tool-result}, turn.complete, prompt.submit, classic.PostToolUse, classic.PostToolUseFailure, classic.PermissionDenied, classic.Stop, classic.UserPromptSubmit, ui.focus, default, matcher, key, plugin, component, ui.render {component=AbovePrompt}, default, matcher, key, plugin, session.end</code></dd>
     <dt>API calls</dt><dd><code>$.clock.after, $.clock.every, $.clock.sleep, $.command.register, $.env.get, $.fs.read, $.http.fetch, $.process.run, $.store.get, $.store.set, $.ui.blit, $.ui.invalidate, $.ui.resolve, $.ui.toast</code></dd>
 
-    <dt>Validation on 2.1.301</dt><dd>Passed</dd>
+    <dt>Validation on 2.1.332</dt><dd>Passed</dd>
 
 
     <dt>Scanned revision</dt><dd><a href="https://github.com/anzal1/hush/tree/db3b76d109466760a54ef6afb52731750f9e5e2c"><code>db3b76d10946</code></a></dd>
     <dt>Marketplace passed</dt><dd><a href="https://github.com/anzal1/hush/blob/db3b76d109466760a54ef6afb52731750f9e5e2c/.claude-plugin/marketplace.json">hush</a></dd></dl>
 <p class="note">These are the hooks and API calls reported by <code>claude plugin validate</code>. Access levels describe the widest reach of those calls and are not safety ratings. Validation is a static check, not a runtime test, and a passing result does not prove that a mod works or is safe. <a href="https://github.com/karanb192/awesome-claude-code-mods/blob/main/SCANNING.md">How the scan works</a>.</p></section>
 
+<section class="badge-snippet" aria-labelledby="badge-title"><h2 id="badge-title">Badge for your README</h2><p><img src="/badges/anzal1--hush--hush-reach.svg" alt="Reach badge for hush"> <img src="/badges/anzal1--hush--hush-validates.svg" alt="Validation badge for hush"></p><p>Authors can show the latest scan result in their README. Each badge links to this page.</p><pre><code>[![reach](https://raw.githubusercontent.com/karanb192/awesome-claude-code-mods/main/badges/anzal1--hush--hush-reach.svg)](https://mods.aidojo.si/mods/anzal1--hush--hush/)
+[![validates](https://raw.githubusercontent.com/karanb192/awesome-claude-code-mods/main/badges/anzal1--hush--hush-validates.svg)](https://mods.aidojo.si/mods/anzal1--hush--hush/)</code></pre></section>
 </main>
 <footer class="shell"><a href="/" class="brand"><svg viewBox="0 0 32 32" fill="none" aria-hidden="true"><path d="M11 5H5v22h6M21 5h6v22h-6M16 10v12M10 16h12"/></svg><span>claude<span class="brand-light">mods</span></span></a><p>An independent community scan.<br>Not an official Anthropic directory.</p><a href="https://github.com/karanb192/awesome-claude-code-mods">Awesome Claude Code Mods on GitHub <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 19 19 5M5 5h14v14"/></svg></a></footer>
 </body></html>

@@ -16,23 +16,25 @@
 <p class="lede">Pane of this repo's kintsugi verification runs: the stage pipeline, each stage's exit and time, and a timing bar. /kintsugi-runs toggles it.</p>
 
 <div class="facts"><div><h2>Access</h2><span class="level">L2 Writes or runs</span><span class="track" aria-label="Reach level 2: Writes or runs"><i class="on l2"></i><i class="on l2"></i><i class="on l2"></i><i class=""></i></span><span class="labels">other: $.state.get, other: $.state.set, runs processes, reads env vars, draws</span></div>
-<div><h2>Validation</h2><span class="status">Passed on Claude Code 2.1.301</span></div></div>
+<div><h2>Validation</h2><span class="status">Passed on Claude Code 2.1.332</span></div></div>
 <p class="actions"><a class="source" href="https://github.com/russellpope/claude-mods/tree/main/kintsugi-runs">View the source on GitHub <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 19 19 5M5 5h14v14"/></svg></a><a href="/#russellpope--claude-mods--kintsugi-runs">Back to the list</a></p>
 <p class="install">To install it, open the repository and follow the author’s setup instructions. Mods need Claude Code 2.1.287 or later.</p>
 <section class="record" aria-labelledby="record-title"><h2 id="record-title">What the scan recorded</h2>
 <dl>
 
     <dt>Observed events</dt><dd>Only what it hooks</dd>
-    <dt>Hooks</dt><dd><code>session.start, command.run {command=kintsugi-runs}, ui.render {component=Pane, requestId=kintsugi-runs}</code></dd>
+    <dt>Hooks</dt><dd><code>session.start, command.run {command=kintsugi-runs}, ui.render {component=Pane, requestId=kintsugi-runs}, default, matcher, key, plugin</code></dd>
     <dt>API calls</dt><dd><code>$.clock.every, $.clock.now, $.command.register, $.env.get, $.process.run, $.session.cwd, $.state.get, $.state.set, $.ui.close, $.ui.open, $.ui.panes, $.ui.resolve</code></dd>
 
-    <dt>Validation on 2.1.301</dt><dd>Passed</dd>
+    <dt>Validation on 2.1.332</dt><dd>Passed</dd>
 
 
-    <dt>Scanned revision</dt><dd><a href="https://github.com/russellpope/claude-mods/tree/992b2d48c6ed4cb8100b73874e91d3b48f01b686"><code>992b2d48c6ed</code></a></dd>
+    <dt>Scanned revision</dt><dd><a href="https://github.com/russellpope/claude-mods/tree/71211316ab87bc4d6c007aeef088f4b0cd241dc9"><code>71211316ab87</code></a></dd>
     </dl>
 <p class="note">These are the hooks and API calls reported by <code>claude plugin validate</code>. Access levels describe the widest reach of those calls and are not safety ratings. Validation is a static check, not a runtime test, and a passing result does not prove that a mod works or is safe. <a href="https://github.com/karanb192/awesome-claude-code-mods/blob/main/SCANNING.md">How the scan works</a>.</p></section>
-<section class="siblings" aria-labelledby="siblings-title"><h2 id="siblings-title">More from russellpope/claude-mods</h2><ul><li><a href="/mods/russellpope--claude-mods--agent-tree/">agent-tree</a><span>Pane of the herdr agents this session spawned, and theirs: status, model, context, cost, ticket. /agent-tree…</span></li><li><a href="/mods/russellpope--claude-mods--outputs-pane/">outputs-pane</a><span>Side pane listing files Claude writes or edits, split into planning, code and scratch, with a filter; click o…</span></li></ul></section>
+<section class="siblings" aria-labelledby="siblings-title"><h2 id="siblings-title">More from russellpope/claude-mods</h2><ul><li><a href="/mods/russellpope--claude-mods--agent-tree/">agent-tree</a><span>Pane of the herdr and Rex agents this session spawned, and theirs: status, model, context, cost, ticket, batc…</span></li><li><a href="/mods/russellpope--claude-mods--artifacts/">artifacts</a><span>Claude posts designs, plans and diagrams to a pane; each project keeps a versioned history in ~/.claude/artif…</span></li><li><a href="/mods/russellpope--claude-mods--explore/">explore</a><span>A drawer above the prompt that explores one question of a grilling round in a side fork, and takes the conclu…</span></li><li><a href="/mods/russellpope--claude-mods--outputs-pane/">outputs-pane</a><span>Side pane listing files Claude writes, edits or makes with shell commands, split into planning, code, misc an…</span></li></ul></section>
+<section class="badge-snippet" aria-labelledby="badge-title"><h2 id="badge-title">Badge for your README</h2><p><img src="/badges/russellpope--claude-mods--kintsugi-runs-reach.svg" alt="Reach badge for kintsugi-runs"> <img src="/badges/russellpope--claude-mods--kintsugi-runs-validates.svg" alt="Validation badge for kintsugi-runs"></p><p>Authors can show the latest scan result in their README. Each badge links to this page.</p><pre><code>[![reach](https://raw.githubusercontent.com/karanb192/awesome-claude-code-mods/main/badges/russellpope--claude-mods--kintsugi-runs-reach.svg)](https://mods.aidojo.si/mods/russellpope--claude-mods--kintsugi-runs/)
+[![validates](https://raw.githubusercontent.com/karanb192/awesome-claude-code-mods/main/badges/russellpope--claude-mods--kintsugi-runs-validates.svg)](https://mods.aidojo.si/mods/russellpope--claude-mods--kintsugi-runs/)</code></pre></section>
 </main>
 <footer class="shell"><a href="/" class="brand"><svg viewBox="0 0 32 32" fill="none" aria-hidden="true"><path d="M11 5H5v22h6M21 5h6v22h-6M16 10v12M10 16h12"/></svg><span>claude<span class="brand-light">mods</span></span></a><p>An independent community scan.<br>Not an official Anthropic directory.</p><a href="https://github.com/karanb192/awesome-claude-code-mods">Awesome Claude Code Mods on GitHub <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 19 19 5M5 5h14v14"/></svg></a></footer>
 </body></html>

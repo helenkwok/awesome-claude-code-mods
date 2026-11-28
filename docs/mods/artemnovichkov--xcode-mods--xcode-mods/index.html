@@ -16,23 +16,25 @@
 <p class="lede">Xcode in Claude Code: build, run and tests pane, scheme/destination band, notifications and SwiftUI previews over headless Xcode MCP</p>
 
 <div class="facts"><div><h2>Access</h2><span class="level">L3 Uses the network</span><span class="track" aria-label="Reach level 3: Uses the network"><i class="on l3"></i><i class="on l3"></i><i class="on l3"></i><i class="on l3"></i></span><span class="labels">other: $.state.get, other: $.state.set, MCP servers, runs processes, drives Claude, reads files, draws</span></div>
-<div><h2>Validation</h2><span class="status">Passed on Claude Code 2.1.301</span></div></div>
+<div><h2>Validation</h2><span class="status">Passed with warnings on Claude Code 2.1.332</span></div></div>
 <p class="actions"><a class="source" href="https://github.com/artemnovichkov/xcode-mods/tree/main/mods/xcode-mods">View the source on GitHub <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 19 19 5M5 5h14v14"/></svg></a><a href="/#artemnovichkov--xcode-mods--xcode-mods">Back to the list</a></p>
 <p class="install">To install it, open the repository and follow the author’s setup instructions. Mods need Claude Code 2.1.287 or later.</p>
 <section class="record" aria-labelledby="record-title"><h2 id="record-title">What the scan recorded</h2>
 <dl>
 
-    <dt>Observed events</dt><dd>mcp__xcode__BuildProject calls, mcp__xcode__RunAllTests|mcp__xcode__RunSomeTests calls, mcp__xcode__RunProject calls, mcp__xcode__StopProject calls, mcp__xcode__XcodeSwitchScheme|mcp__xcode__XcodeSwitchRunDestination|mcp__xcode__XcodeSwitchTestPlan calls, mcp__xcode__RenderPreview calls, Edit|Write calls</dd>
-    <dt>Hooks</dt><dd><code>session.start, command.run {command=build}, command.run {command=tests}, command.run {command=run}, command.run {command=stop}, command.run {command=xcode}, tool.call {tool=mcp__xcode__BuildProject}, tool.call {tool=mcp__xcode__RunAllTests|mcp__xcode__RunSomeTests}, tool.call {tool=mcp__xcode__RunProject}, tool.call {tool=mcp__xcode__StopProject}, session.end, tool.call {tool=mcp__xcode__XcodeSwitchScheme|mcp__xcode__XcodeSwitchRunDestination|mcp__xcode__XcodeSwitchTestPlan}, ui.render {component=AbovePrompt}, ui.render {component=Pane, requestId=xcode}, command.run {command=preview}, tool.call {tool=mcp__xcode__RenderPreview}, tool.call {tool=Edit|Write}, ui.render {component=Pane, requestId=xcode-canvas}</code></dd>
+    <dt>Observed events</dt><dd>Edit|Write calls</dd>
+    <dt>Hooks</dt><dd><code>tool.call {tool=Edit|Write}, ui.render {component=Pane, requestId=xcode-canvas}, default, matcher, key, plugin</code></dd>
     <dt>API calls</dt><dd><code>$.clock.after, $.clock.every, $.clock.now, $.command.register, $.fs.read, $.mcp.call, $.process.run, $.prompt.submit, $.session.cwd, $.state.get, $.state.set, $.ui.open, $.ui.resolve, $.ui.toast</code></dd>
 
-    <dt>Validation on 2.1.301</dt><dd>Passed</dd>
+    <dt>Validation on 2.1.332</dt><dd>Passed with warnings</dd>
 
 
     <dt>Scanned revision</dt><dd><a href="https://github.com/artemnovichkov/xcode-mods/tree/00450b399c7260a5b08c64f950d1b69e35341ea4"><code>00450b399c72</code></a></dd>
     <dt>Marketplace passed</dt><dd><a href="https://github.com/artemnovichkov/xcode-mods/blob/00450b399c7260a5b08c64f950d1b69e35341ea4/.claude-plugin/marketplace.json">xcode-mods</a></dd></dl>
 <p class="note">These are the hooks and API calls reported by <code>claude plugin validate</code>. Access levels describe the widest reach of those calls and are not safety ratings. Validation is a static check, not a runtime test, and a passing result does not prove that a mod works or is safe. <a href="https://github.com/karanb192/awesome-claude-code-mods/blob/main/SCANNING.md">How the scan works</a>.</p></section>
 
+<section class="badge-snippet" aria-labelledby="badge-title"><h2 id="badge-title">Badge for your README</h2><p><img src="/badges/artemnovichkov--xcode-mods--xcode-mods-reach.svg" alt="Reach badge for xcode-mods"> <img src="/badges/artemnovichkov--xcode-mods--xcode-mods-validates.svg" alt="Validation badge for xcode-mods"></p><p>Authors can show the latest scan result in their README. Each badge links to this page.</p><pre><code>[![reach](https://raw.githubusercontent.com/karanb192/awesome-claude-code-mods/main/badges/artemnovichkov--xcode-mods--xcode-mods-reach.svg)](https://mods.aidojo.si/mods/artemnovichkov--xcode-mods--xcode-mods/)
+[![validates](https://raw.githubusercontent.com/karanb192/awesome-claude-code-mods/main/badges/artemnovichkov--xcode-mods--xcode-mods-validates.svg)](https://mods.aidojo.si/mods/artemnovichkov--xcode-mods--xcode-mods/)</code></pre></section>
 </main>
 <footer class="shell"><a href="/" class="brand"><svg viewBox="0 0 32 32" fill="none" aria-hidden="true"><path d="M11 5H5v22h6M21 5h6v22h-6M16 10v12M10 16h12"/></svg><span>claude<span class="brand-light">mods</span></span></a><p>An independent community scan.<br>Not an official Anthropic directory.</p><a href="https://github.com/karanb192/awesome-claude-code-mods">Awesome Claude Code Mods on GitHub <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 19 19 5M5 5h14v14"/></svg></a></footer>
 </body></html>

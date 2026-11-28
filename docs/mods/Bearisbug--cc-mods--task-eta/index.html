@@ -16,23 +16,25 @@
 <p class="lede">长任务进度行：一轮跑满 3 分钟时让模型估一次剩余步骤，之后按工具调用推进状态栏里的步骤、进度条和剩余时间</p>
 
 <div class="facts"><div><h2>Access</h2><span class="level">L2 Writes or runs</span><span class="track" aria-label="Reach level 2: Writes or runs"><i class="on l2"></i><i class="on l2"></i><i class="on l2"></i><i class=""></i></span><span class="labels">drives Claude, draws</span></div>
-<div><h2>Validation</h2><span class="status">Passed on Claude Code 2.1.301</span></div></div>
+<div><h2>Validation</h2><span class="status">Passed with warnings on Claude Code 2.1.332</span></div></div>
 <p class="actions"><a class="source" href="https://github.com/Bearisbug/cc-mods/tree/main/task-eta">View the source on GitHub <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 19 19 5M5 5h14v14"/></svg></a><a href="/#Bearisbug--cc-mods--task-eta">Back to the list</a></p>
 <p class="install">To install it, open the repository and follow the author’s setup instructions. Mods need Claude Code 2.1.287 or later.</p>
 <section class="record" aria-labelledby="record-title"><h2 id="record-title">What the scan recorded</h2>
 <dl>
 
     <dt>Observed events</dt><dd>every tool call</dd>
-    <dt>Hooks</dt><dd><code>session.start, command.run {command=steps}, session.end, turn.start, tool.call, turn.complete, ui.render {component=AbovePrompt}, ui.render {component=Pane, requestId=steps}</code></dd>
+    <dt>Hooks</dt><dd><code>session.start, command.run {command=steps}, session.end, turn.start, tool.call, turn.complete, ui.render {component=AbovePrompt}, default, matcher, key, plugin, ui.render {component=Pane, requestId=steps}, default, matcher, key, plugin</code></dd>
     <dt>API calls</dt><dd><code>$.clock.after, $.clock.every, $.command.register, $.model.fork, $.ui.close, $.ui.invalidate, $.ui.open, $.ui.panes, $.ui.resolve</code></dd>
 
-    <dt>Validation on 2.1.301</dt><dd>Passed</dd>
+    <dt>Validation on 2.1.332</dt><dd>Passed with warnings</dd>
 
 
-    <dt>Scanned revision</dt><dd><a href="https://github.com/Bearisbug/cc-mods/tree/cd2be78744dac9b7648b9a43f877d648cca7423b"><code>cd2be78744da</code></a></dd>
-    <dt>Marketplace passed</dt><dd><a href="https://github.com/Bearisbug/cc-mods/blob/cd2be78744dac9b7648b9a43f877d648cca7423b/.claude-plugin/marketplace.json">cc-mods</a></dd></dl>
+    <dt>Scanned revision</dt><dd><a href="https://github.com/Bearisbug/cc-mods/tree/e05f1c7754c47211cedf12f37e4df80cce462299"><code>e05f1c7754c4</code></a></dd>
+    <dt>Marketplace passed</dt><dd><a href="https://github.com/Bearisbug/cc-mods/blob/e05f1c7754c47211cedf12f37e4df80cce462299/.claude-plugin/marketplace.json">cc-mods</a></dd></dl>
 <p class="note">These are the hooks and API calls reported by <code>claude plugin validate</code>. Access levels describe the widest reach of those calls and are not safety ratings. Validation is a static check, not a runtime test, and a passing result does not prove that a mod works or is safe. <a href="https://github.com/karanb192/awesome-claude-code-mods/blob/main/SCANNING.md">How the scan works</a>.</p></section>
-<section class="siblings" aria-labelledby="siblings-title"><h2 id="siblings-title">More from Bearisbug/cc-mods</h2><ul><li><a href="/mods/Bearisbug--cc-mods--ctx-slim/">ctx-slim</a><span>按目录规则去掉用不上的 MCP 服务器说明，省上下文；规则在 userConfig 的 rules 里配置，没配规则时什么都不做</span></li><li><a href="/mods/Bearisbug--cc-mods--shot-view/">shot-view</a><span>收集 Claude 截下或查看的 PNG，ctrl+x s 在侧边面板里看图；n/p 翻页，按住 o 在终端里放大、松开收起，轻按 o 用快速查看打开；看过的按 r 标为已读就不再出现（u 撤销）</span></li></ul></section>
+<section class="siblings" aria-labelledby="siblings-title"><h2 id="siblings-title">More from Bearisbug/cc-mods</h2><ul><li><a href="/mods/Bearisbug--cc-mods--cmds/">cmds</a><span>自定义斜杠命令速查：/cmds 打开面板，按你配的分组列出 ~/.claude/commands 和项目 .claude/commands 里的命令、参数和用途；空闲时提示行末尾轮换介绍一条</span></li><li><a href="/mods/Bearisbug--cc-mods--ctx-slim/">ctx-slim</a><span>按目录规则去掉用不上的 MCP 服务器说明，省上下文；规则在 userConfig 的 rules 里配置，没配规则时什么都不做</span></li><li><a href="/mods/Bearisbug--cc-mods--decide/">decide</a><span>等你拍板的事攒成一个列表：Claude 需要你定的事项会登记进来并在右上角提醒，/decide 打开面板，按数字选或写答复，攒几项一起提交给 Claude</span></li><li><a href="/mods/Bearisbug--cc-mods--shot-view/">shot-view</a><span>收集 Claude 截下或查看的 PNG，ctrl+x s 在侧边面板里看图；n/p 翻页，按住 o 在终端里放大、松开收起，轻按 o 用快速查看打开；看过的按 r 标为已读就不再出现（u 撤销）</span></li></ul></section>
+<section class="badge-snippet" aria-labelledby="badge-title"><h2 id="badge-title">Badge for your README</h2><p><img src="/badges/Bearisbug--cc-mods--task-eta-reach.svg" alt="Reach badge for task-eta"> <img src="/badges/Bearisbug--cc-mods--task-eta-validates.svg" alt="Validation badge for task-eta"></p><p>Authors can show the latest scan result in their README. Each badge links to this page.</p><pre><code>[![reach](https://raw.githubusercontent.com/karanb192/awesome-claude-code-mods/main/badges/Bearisbug--cc-mods--task-eta-reach.svg)](https://mods.aidojo.si/mods/Bearisbug--cc-mods--task-eta/)
+[![validates](https://raw.githubusercontent.com/karanb192/awesome-claude-code-mods/main/badges/Bearisbug--cc-mods--task-eta-validates.svg)](https://mods.aidojo.si/mods/Bearisbug--cc-mods--task-eta/)</code></pre></section>
 </main>
 <footer class="shell"><a href="/" class="brand"><svg viewBox="0 0 32 32" fill="none" aria-hidden="true"><path d="M11 5H5v22h6M21 5h6v22h-6M16 10v12M10 16h12"/></svg><span>claude<span class="brand-light">mods</span></span></a><p>An independent community scan.<br>Not an official Anthropic directory.</p><a href="https://github.com/karanb192/awesome-claude-code-mods">Awesome Claude Code Mods on GitHub <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 19 19 5M5 5h14v14"/></svg></a></footer>
 </body></html>

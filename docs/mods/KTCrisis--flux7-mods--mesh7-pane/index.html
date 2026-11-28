@@ -16,23 +16,25 @@
 <p class="lede">Live mesh7 decisions, pending approvals and emergency stops in a pane</p>
 
 <div class="facts"><div><h2>Access</h2><span class="level">L3 Uses the network</span><span class="track" aria-label="Reach level 3: Uses the network"><i class="on l3"></i><i class="on l3"></i><i class="on l3"></i><i class="on l3"></i></span><span class="labels">other: $.state.get, other: $.state.set, network, draws</span></div>
-<div><h2>Validation</h2><span class="status">Passed with warnings on Claude Code 2.1.301</span></div></div>
+<div><h2>Validation</h2><span class="status">Passed with warnings on Claude Code 2.1.332</span></div></div>
 <p class="actions"><a class="source" href="https://github.com/KTCrisis/flux7-mods/tree/main/mesh7-pane">View the source on GitHub <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 19 19 5M5 5h14v14"/></svg></a><a href="/#KTCrisis--flux7-mods--mesh7-pane">Back to the list</a></p>
 <p class="install">To install it, open the repository and follow the author’s setup instructions. Mods need Claude Code 2.1.287 or later.</p>
 <section class="record" aria-labelledby="record-title"><h2 id="record-title">What the scan recorded</h2>
 <dl>
 
     <dt>Observed events</dt><dd>every tool call</dd>
-    <dt>Hooks</dt><dd><code>session.start, tool.call, command.run {command=mesh7}, ui.render {component=Pane, requestId=mesh7-pane}</code></dd>
+    <dt>Hooks</dt><dd><code>session.start, tool.call, command.run {command=mesh7}, ui.render {component=Pane, requestId=mesh7-pane}, default, matcher, key, plugin</code></dd>
     <dt>API calls</dt><dd><code>$.clock.every, $.command.register, $.http.fetch, $.session.id, $.state.get, $.state.set, $.ui.open, $.ui.resolve, $.ui.status, $.ui.toast</code></dd>
 
-    <dt>Validation on 2.1.301</dt><dd>Passed with warnings</dd>
+    <dt>Validation on 2.1.332</dt><dd>Passed with warnings</dd>
 
 
-    <dt>Scanned revision</dt><dd><a href="https://github.com/KTCrisis/flux7-mods/tree/8d619d6db3ac78e449c4dc47375d1591c64a208a"><code>8d619d6db3ac</code></a></dd>
+    <dt>Scanned revision</dt><dd><a href="https://github.com/KTCrisis/flux7-mods/tree/0f7396c6de5fe901c8e7110bd94266e6be7c0ac8"><code>0f7396c6de5f</code></a></dd>
     </dl>
 <p class="note">These are the hooks and API calls reported by <code>claude plugin validate</code>. Access levels describe the widest reach of those calls and are not safety ratings. Validation is a static check, not a runtime test, and a passing result does not prove that a mod works or is safe. <a href="https://github.com/karanb192/awesome-claude-code-mods/blob/main/SCANNING.md">How the scan works</a>.</p></section>
-<section class="siblings" aria-labelledby="siblings-title"><h2 id="siblings-title">More from KTCrisis/flux7-mods</h2><ul><li><a href="/mods/KTCrisis--flux7-mods--atelier-bell/">atelier-bell</a><span>Tells you when an atelier finishes: flux7-studio renders, as toasts and a line under the prompt</span></li><li><a href="/mods/KTCrisis--flux7-mods--avatar7/">avatar7</a><span>A machine face that watches tool calls and comments on them, with switchable avatars</span></li><li><a href="/mods/KTCrisis--flux7-mods--jukebox7/">jukebox7</a><span>Plays music from YouTube when asked in plain words, audio only through a hidden VLC, with a small control pane</span></li><li><a href="/mods/KTCrisis--flux7-mods--usage-bell/">usage-bell</a><span>Rings when the session nears a limit: context fill, rate-limit windows, the auto-memory index</span></li></ul></section>
+<section class="siblings" aria-labelledby="siblings-title"><h2 id="siblings-title">More from KTCrisis/flux7-mods</h2><ul><li><a href="/mods/KTCrisis--flux7-mods--atelier-bell/">atelier-bell</a><span>Tells you when an atelier finishes: flux7-studio renders, as toasts and a line under the prompt</span></li><li><a href="/mods/KTCrisis--flux7-mods--atlas7/">atlas7</a><span>A wireframe planisphere in a pane: the lit half of the Earth now, earthquakes, natural events and the world's…</span></li><li><a href="/mods/KTCrisis--flux7-mods--avatar7/">avatar7</a><span>A machine face that watches tool calls and comments on them, with switchable avatars</span></li><li><a href="/mods/KTCrisis--flux7-mods--jukebox7/">jukebox7</a><span>Plays music from YouTube when asked in plain words, audio only through a hidden VLC, with a small control pane</span></li><li><a href="/mods/KTCrisis--flux7-mods--net7/">net7</a><span>The connection in a pane: where a slowness comes from (this machine, the box, the ISP, further), the web's an…</span></li><li><a href="/mods/KTCrisis--flux7-mods--usage-bell/">usage-bell</a><span>Rings when the session nears a limit: context fill, rate-limit windows, the auto-memory index</span></li></ul></section>
+<section class="badge-snippet" aria-labelledby="badge-title"><h2 id="badge-title">Badge for your README</h2><p><img src="/badges/KTCrisis--flux7-mods--mesh7-pane-reach.svg" alt="Reach badge for mesh7-pane"> <img src="/badges/KTCrisis--flux7-mods--mesh7-pane-validates.svg" alt="Validation badge for mesh7-pane"></p><p>Authors can show the latest scan result in their README. Each badge links to this page.</p><pre><code>[![reach](https://raw.githubusercontent.com/karanb192/awesome-claude-code-mods/main/badges/KTCrisis--flux7-mods--mesh7-pane-reach.svg)](https://mods.aidojo.si/mods/KTCrisis--flux7-mods--mesh7-pane/)
+[![validates](https://raw.githubusercontent.com/karanb192/awesome-claude-code-mods/main/badges/KTCrisis--flux7-mods--mesh7-pane-validates.svg)](https://mods.aidojo.si/mods/KTCrisis--flux7-mods--mesh7-pane/)</code></pre></section>
 </main>
 <footer class="shell"><a href="/" class="brand"><svg viewBox="0 0 32 32" fill="none" aria-hidden="true"><path d="M11 5H5v22h6M21 5h6v22h-6M16 10v12M10 16h12"/></svg><span>claude<span class="brand-light">mods</span></span></a><p>An independent community scan.<br>Not an official Anthropic directory.</p><a href="https://github.com/karanb192/awesome-claude-code-mods">Awesome Claude Code Mods on GitHub <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 19 19 5M5 5h14v14"/></svg></a></footer>
 </body></html>

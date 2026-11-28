@@ -16,7 +16,7 @@
 <p class="lede">Replaces context compaction in the controller's interactive session of a log-driven repo: the conversation is rebuilt from .context/events.jsonl by `eventlog context`, plus the last few turns word for word. Rebuilds at the log's task boundaries and at a fill backstop; /rebuild queues a rebuild for the end of the next turn, and /compact rebuilds from the log at once. Inert in headless sessions, for other EVENTLOG_AS writers, with EVENTLOG_CONTEXT=off, and in a repo without the log. Falls back to the engine's compaction when eventlog fails.</p>
 
 <div class="facts"><div><h2>Access</h2><span class="level">L2 Writes or runs</span><span class="track" aria-label="Reach level 2: Writes or runs"><i class="on l2"></i><i class="on l2"></i><i class="on l2"></i><i class=""></i></span><span class="labels">runs processes, drives Claude, reads files, reads env vars, reads the transcript, draws</span></div>
-<div><h2>Validation</h2><span class="status">Passed on Claude Code 2.1.301</span></div></div>
+<div><h2>Validation</h2><span class="status">Passed with warnings on Claude Code 2.1.332</span></div></div>
 <p class="actions"><a class="source" href="https://github.com/radiator-engineering/eventlog/tree/main/mods/eventlog-context">View the source on GitHub <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 19 19 5M5 5h14v14"/></svg></a><a href="/#radiator-engineering--eventlog--eventlog-context">Back to the list</a></p>
 <p class="install">To install it, open the repository and follow the author’s setup instructions. Mods need Claude Code 2.1.287 or later.</p>
 <section class="record" aria-labelledby="record-title"><h2 id="record-title">What the scan recorded</h2>
@@ -26,13 +26,15 @@
     <dt>Hooks</dt><dd><code>session.start, command.run {command=rebuild}, turn.complete, session.compact</code></dd>
     <dt>API calls</dt><dd><code>$.command.register, $.env.get, $.fs.exists, $.fs.read, $.process.run, $.session.compact, $.session.messages, $.session.usage, $.ui.log</code></dd>
 
-    <dt>Validation on 2.1.301</dt><dd>Passed</dd>
+    <dt>Validation on 2.1.332</dt><dd>Passed with warnings</dd>
 
 
-    <dt>Scanned revision</dt><dd><a href="https://github.com/radiator-engineering/eventlog/tree/656b0aa1b6e87da3147cbf192316d79b12ce5dd3"><code>656b0aa1b6e8</code></a></dd>
+    <dt>Scanned revision</dt><dd><a href="https://github.com/radiator-engineering/eventlog/tree/3ccdc0e9fe4b8fa83181b04dcc51cc3ccf060633"><code>3ccdc0e9fe4b</code></a></dd>
     </dl>
 <p class="note">These are the hooks and API calls reported by <code>claude plugin validate</code>. Access levels describe the widest reach of those calls and are not safety ratings. Validation is a static check, not a runtime test, and a passing result does not prove that a mod works or is safe. <a href="https://github.com/karanb192/awesome-claude-code-mods/blob/main/SCANNING.md">How the scan works</a>.</p></section>
 
+<section class="badge-snippet" aria-labelledby="badge-title"><h2 id="badge-title">Badge for your README</h2><p><img src="/badges/radiator-engineering--eventlog--eventlog-context-reach.svg" alt="Reach badge for eventlog-context"> <img src="/badges/radiator-engineering--eventlog--eventlog-context-validates.svg" alt="Validation badge for eventlog-context"></p><p>Authors can show the latest scan result in their README. Each badge links to this page.</p><pre><code>[![reach](https://raw.githubusercontent.com/karanb192/awesome-claude-code-mods/main/badges/radiator-engineering--eventlog--eventlog-context-reach.svg)](https://mods.aidojo.si/mods/radiator-engineering--eventlog--eventlog-context/)
+[![validates](https://raw.githubusercontent.com/karanb192/awesome-claude-code-mods/main/badges/radiator-engineering--eventlog--eventlog-context-validates.svg)](https://mods.aidojo.si/mods/radiator-engineering--eventlog--eventlog-context/)</code></pre></section>
 </main>
 <footer class="shell"><a href="/" class="brand"><svg viewBox="0 0 32 32" fill="none" aria-hidden="true"><path d="M11 5H5v22h6M21 5h6v22h-6M16 10v12M10 16h12"/></svg><span>claude<span class="brand-light">mods</span></span></a><p>An independent community scan.<br>Not an official Anthropic directory.</p><a href="https://github.com/karanb192/awesome-claude-code-mods">Awesome Claude Code Mods on GitHub <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 19 19 5M5 5h14v14"/></svg></a></footer>
 </body></html>

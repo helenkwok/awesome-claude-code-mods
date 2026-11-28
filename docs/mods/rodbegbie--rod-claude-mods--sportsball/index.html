@@ -16,23 +16,25 @@
 <p class="lede">Follow teams and see their live game scores above the prompt, with /follow-team, /unfollow-team, /following and /sportsball</p>
 <p class="compatibility">review UI rewrite</p>
 <div class="facts"><div><h2>Access</h2><span class="level">L3 Uses the network</span><span class="track" aria-label="Reach level 3: Uses the network"><i class="on l3"></i><i class="on l3"></i><i class="on l3"></i><i class="on l3"></i></span><span class="labels">other: $.state.get, other: $.state.set, network, runs processes, persists state, draws</span></div>
-<div><h2>Validation</h2><span class="status">Passed on Claude Code 2.1.301</span></div></div>
+<div><h2>Validation</h2><span class="status">Passed with warnings on Claude Code 2.1.332</span></div></div>
 <p class="actions"><a class="source" href="https://github.com/rodbegbie/rod-claude-mods/tree/main/plugins/sportsball">View the source on GitHub <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 19 19 5M5 5h14v14"/></svg></a><a href="/#rodbegbie--rod-claude-mods--sportsball">Back to the list</a></p>
 <p class="install">To install it, open the repository and follow the author’s setup instructions. Mods need Claude Code 2.1.287 or later.</p>
 <section class="record" aria-labelledby="record-title"><h2 id="record-title">What the scan recorded</h2>
 <dl>
 
     <dt>Observed events</dt><dd>Only what it hooks</dd>
-    <dt>Hooks</dt><dd><code>session.start, command.run {command=follow-team}, ui.render {component=Pane, requestId=sportsball-teams}, ui.select {element=team}, command.run {command=following}, command.run {command=unfollow-team}, command.run {command=sportsball}, ui.render {component=AbovePrompt}</code></dd>
+    <dt>Hooks</dt><dd><code>session.start, command.run {command=follow-team}, ui.render {component=Pane, requestId=sportsball-teams}, default, matcher, key, plugin, ui.select {element=team}, default, matcher, key, plugin, component, command.run {command=following}, command.run {command=unfollow-team}, command.run {command=sportsball}, ui.render {component=AbovePrompt}, default, matcher, key, plugin</code></dd>
     <dt>API calls</dt><dd><code>$.clock.after, $.clock.now, $.command.register, $.http.fetch, $.process.run, $.state.get, $.state.set, $.store.get, $.store.set, $.ui.ask, $.ui.close, $.ui.open, $.ui.resolve, $.ui.toast</code></dd>
 
-    <dt>Validation on 2.1.301</dt><dd>Passed</dd>
+    <dt>Validation on 2.1.332</dt><dd>Passed with warnings</dd>
 
 
     <dt>Scanned revision</dt><dd><a href="https://github.com/rodbegbie/rod-claude-mods/tree/5d81f05136d95c494806d3e97dac0c514a4cc146"><code>5d81f05136d9</code></a></dd>
     <dt>Marketplace passed</dt><dd><a href="https://github.com/rodbegbie/rod-claude-mods/blob/5d81f05136d95c494806d3e97dac0c514a4cc146/.claude-plugin/marketplace.json">rod-claude-mods</a></dd><dt>UI rewrite review</dt><dd>UI hook source contains control-character strings. Review any values passed to next() as rewritten props.text; the scanner does not trace whether these strings reach that call. <a href="https://github.com/rodbegbie/rod-claude-mods/blob/5d81f05136d95c494806d3e97dac0c514a4cc146/plugins/sportsball/hooks/register.tsx#L56">plugins/sportsball/hooks/register.tsx:56</a></dd></dl>
 <p class="note">These are the hooks and API calls reported by <code>claude plugin validate</code>. Access levels describe the widest reach of those calls and are not safety ratings. Validation is a static check, not a runtime test, and a passing result does not prove that a mod works or is safe. <a href="https://github.com/karanb192/awesome-claude-code-mods/blob/main/SCANNING.md">How the scan works</a>.</p></section>
 <section class="siblings" aria-labelledby="siblings-title"><h2 id="siblings-title">More from rodbegbie/rod-claude-mods</h2><ul><li><a href="/mods/rodbegbie--rod-claude-mods--context-bar/">context-bar</a><span>Draws the context window as a stacked bar above the prompt, toggled with /context-bar</span></li><li><a href="/mods/rodbegbie--rod-claude-mods--pro-limits/">pro-limits</a><span>Gauges for the 5-hour and weekly Claude usage limits above the prompt, toggled with /pro-limits</span></li></ul></section>
+<section class="badge-snippet" aria-labelledby="badge-title"><h2 id="badge-title">Badge for your README</h2><p><img src="/badges/rodbegbie--rod-claude-mods--sportsball-reach.svg" alt="Reach badge for sportsball"> <img src="/badges/rodbegbie--rod-claude-mods--sportsball-validates.svg" alt="Validation badge for sportsball"></p><p>Authors can show the latest scan result in their README. Each badge links to this page.</p><pre><code>[![reach](https://raw.githubusercontent.com/karanb192/awesome-claude-code-mods/main/badges/rodbegbie--rod-claude-mods--sportsball-reach.svg)](https://mods.aidojo.si/mods/rodbegbie--rod-claude-mods--sportsball/)
+[![validates](https://raw.githubusercontent.com/karanb192/awesome-claude-code-mods/main/badges/rodbegbie--rod-claude-mods--sportsball-validates.svg)](https://mods.aidojo.si/mods/rodbegbie--rod-claude-mods--sportsball/)</code></pre></section>
 </main>
 <footer class="shell"><a href="/" class="brand"><svg viewBox="0 0 32 32" fill="none" aria-hidden="true"><path d="M11 5H5v22h6M21 5h6v22h-6M16 10v12M10 16h12"/></svg><span>claude<span class="brand-light">mods</span></span></a><p>An independent community scan.<br>Not an official Anthropic directory.</p><a href="https://github.com/karanb192/awesome-claude-code-mods">Awesome Claude Code Mods on GitHub <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 19 19 5M5 5h14v14"/></svg></a></footer>
 </body></html>

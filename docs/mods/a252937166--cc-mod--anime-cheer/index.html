@@ -16,23 +16,25 @@
 <p class="lede">Voiced pixel anime girls who roam the Claude Code transcript: they dance while Claude works and serve tea when it is done, and they do chores too: usage reports, a guard on dangerous commands, secret scans, quick code reviews and task recaps (/waifu help)</p>
 <p class="compatibility">review UI rewrite</p>
 <div class="facts"><div><h2>Access</h2><span class="level">L2 Writes or runs</span><span class="track" aria-label="Reach level 2: Writes or runs"><i class="on l2"></i><i class="on l2"></i><i class="on l2"></i><i class=""></i></span><span class="labels">other: $.state.get, other: $.state.set, runs processes, drives Claude, reads files, plays audio, persists state, draws</span></div>
-<div><h2>Validation</h2><span class="status">Passed with warnings on Claude Code 2.1.301</span></div></div>
+<div><h2>Validation</h2><span class="status">Passed with warnings on Claude Code 2.1.332</span></div></div>
 <p class="actions"><a class="source" href="https://github.com/a252937166/cc-mod/tree/main/anime-cheer">View the source on GitHub <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 19 19 5M5 5h14v14"/></svg></a><a href="/#a252937166--cc-mod--anime-cheer">Back to the list</a></p>
 <p class="install">To install it, open the repository and follow the author’s setup instructions. Mods need Claude Code 2.1.287 or later.</p>
 <section class="record" aria-labelledby="record-title"><h2 id="record-title">What the scan recorded</h2>
 <dl>
 
     <dt>Observed events</dt><dd>classic hooks, every prompt, every tool call</dd>
-    <dt>Hooks</dt><dd><code>session.start, command.run {command=waifu}, classic.Notification, ui.close, prompt.submit, turn.start, tool.call, turn.step, turn.complete, session.measure, ui.render {component=UserMessage}, ui.render {component=AssistantMessage}, ui.render {component=ToolUse}, ui.render {component=ToolResult}, ui.render {component=ToolGroup}, ui.render {component=CommandOutput}, ui.render {component=TurnDuration}, ui.render {component=InfoNotice}, ui.render {component=Spinner}, ui.render {component=Pane, requestId=anime-cheer}</code></dd>
+    <dt>Hooks</dt><dd><code>session.start, command.run {command=waifu}, classic.Notification, ui.close, prompt.submit, turn.start, tool.call, turn.step, turn.complete, session.measure, ui.render {component=UserMessage}, ui.render {component=AssistantMessage}, ui.render {component=ToolUse}, ui.render {component=ToolResult}, ui.render {component=ToolGroup}, ui.render {component=CommandOutput}, ui.render {component=TurnDuration}, ui.render {component=InfoNotice}, ui.render {component=Spinner}, ui.render {component=Pane, requestId=anime-cheer}, default, matcher, key, plugin</code></dd>
     <dt>API calls</dt><dd><code>$.audio.play, $.clock.every, $.clock.now, $.command.register, $.fs.exists, $.fs.list, $.fs.read, $.fs.stat, $.model.complete, $.process.run, $.session.cwd, $.session.id, $.session.usage, $.state.get, $.state.set, $.store.get, $.store.set, $.ui.blit, $.ui.close, $.ui.log, $.ui.open, $.ui.resolve, $.ui.status, $.ui.toast</code></dd>
 
-    <dt>Validation on 2.1.301</dt><dd>Passed with warnings</dd>
+    <dt>Validation on 2.1.332</dt><dd>Passed with warnings</dd>
 
 
     <dt>Scanned revision</dt><dd><a href="https://github.com/a252937166/cc-mod/tree/1593228828de78c785931d7a5bc94156eda8a66b"><code>1593228828de</code></a></dd>
     <dt>UI rewrite review</dt><dd>UI hook source contains control-character strings. Review any values passed to next() as rewritten props.text; the scanner does not trace whether these strings reach that call. <a href="https://github.com/a252937166/cc-mod/blob/1593228828de78c785931d7a5bc94156eda8a66b/anime-cheer/hooks/register.tsx#L1208">anime-cheer/hooks/register.tsx:1208</a></dd></dl>
 <p class="note">These are the hooks and API calls reported by <code>claude plugin validate</code>. Access levels describe the widest reach of those calls and are not safety ratings. Validation is a static check, not a runtime test, and a passing result does not prove that a mod works or is safe. <a href="https://github.com/karanb192/awesome-claude-code-mods/blob/main/SCANNING.md">How the scan works</a>.</p></section>
 
+<section class="badge-snippet" aria-labelledby="badge-title"><h2 id="badge-title">Badge for your README</h2><p><img src="/badges/a252937166--cc-mod--anime-cheer-reach.svg" alt="Reach badge for anime-cheer"> <img src="/badges/a252937166--cc-mod--anime-cheer-validates.svg" alt="Validation badge for anime-cheer"></p><p>Authors can show the latest scan result in their README. Each badge links to this page.</p><pre><code>[![reach](https://raw.githubusercontent.com/karanb192/awesome-claude-code-mods/main/badges/a252937166--cc-mod--anime-cheer-reach.svg)](https://mods.aidojo.si/mods/a252937166--cc-mod--anime-cheer/)
+[![validates](https://raw.githubusercontent.com/karanb192/awesome-claude-code-mods/main/badges/a252937166--cc-mod--anime-cheer-validates.svg)](https://mods.aidojo.si/mods/a252937166--cc-mod--anime-cheer/)</code></pre></section>
 </main>
 <footer class="shell"><a href="/" class="brand"><svg viewBox="0 0 32 32" fill="none" aria-hidden="true"><path d="M11 5H5v22h6M21 5h6v22h-6M16 10v12M10 16h12"/></svg><span>claude<span class="brand-light">mods</span></span></a><p>An independent community scan.<br>Not an official Anthropic directory.</p><a href="https://github.com/karanb192/awesome-claude-code-mods">Awesome Claude Code Mods on GitHub <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 19 19 5M5 5h14v14"/></svg></a></footer>
 </body></html>

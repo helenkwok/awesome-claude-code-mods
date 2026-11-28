@@ -16,23 +16,25 @@
 <p class="lede">工作階段狀態 pane：用量與預報（context、rate limit、compact 預估，可手動重新整理）、任務與執行紀錄（回放）、上下文與改動範圍；context 達 80% 時在回合之間先壓縮，壓縮摘要存到專案 .claude/session-notes/</p>
 
 <div class="facts"><div><h2>Access</h2><span class="level">L2 Writes or runs</span><span class="track" aria-label="Reach level 2: Writes or runs"><i class="on l2"></i><i class="on l2"></i><i class="on l2"></i><i class=""></i></span><span class="labels">other: $.state.get, other: $.state.set, writes files, drives Claude, reads files, draws</span></div>
-<div><h2>Validation</h2><span class="status">Passed on Claude Code 2.1.301</span></div></div>
+<div><h2>Validation</h2><span class="status">Passed with warnings on Claude Code 2.1.332</span></div></div>
 <p class="actions"><a class="source" href="https://github.com/hn83320589/claude-mods/tree/main/session-stats">View the source on GitHub <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 19 19 5M5 5h14v14"/></svg></a><a href="/#hn83320589--claude-mods--session-stats">Back to the list</a></p>
 <p class="install">To install it, open the repository and follow the author’s setup instructions. Mods need Claude Code 2.1.287 or later.</p>
 <section class="record" aria-labelledby="record-title"><h2 id="record-title">What the scan recorded</h2>
 <dl>
 
     <dt>Observed events</dt><dd>every prompt, every tool call, compaction</dd>
-    <dt>Hooks</dt><dd><code>session.start, command.run {command=session-stats}, ui.close, prompt.submit, tool.call, turn.complete, session.compact, ui.render {component=Pane, requestId=session-stats}</code></dd>
+    <dt>Hooks</dt><dd><code>session.start, command.run {command=session-stats}, ui.close, prompt.submit, tool.call, turn.complete, session.compact, ui.render {component=Pane, requestId=session-stats}, default, matcher, key, plugin</code></dd>
     <dt>API calls</dt><dd><code>$.agent.list, $.clock.after, $.clock.every, $.clock.now, $.command.register, $.fs.list, $.fs.stat, $.fs.write, $.session.compact, $.session.model, $.session.root, $.session.turns, $.session.usage, $.state.get, $.state.set, $.ui.close, $.ui.log, $.ui.open, $.ui.resolve, $.ui.toast</code></dd>
 
-    <dt>Validation on 2.1.301</dt><dd>Passed</dd>
+    <dt>Validation on 2.1.332</dt><dd>Passed with warnings</dd>
 
 
     <dt>Scanned revision</dt><dd><a href="https://github.com/hn83320589/claude-mods/tree/b7254f8b74183a6f889a6a161485355853a15b30"><code>b7254f8b7418</code></a></dd>
     <dt>Marketplace passed</dt><dd><a href="https://github.com/hn83320589/claude-mods/blob/b7254f8b74183a6f889a6a161485355853a15b30/.claude-plugin/marketplace.json">claude-mods</a></dd></dl>
 <p class="note">These are the hooks and API calls reported by <code>claude plugin validate</code>. Access levels describe the widest reach of those calls and are not safety ratings. Validation is a static check, not a runtime test, and a passing result does not prove that a mod works or is safe. <a href="https://github.com/karanb192/awesome-claude-code-mods/blob/main/SCANNING.md">How the scan works</a>.</p></section>
 <section class="siblings" aria-labelledby="siblings-title"><h2 id="siblings-title">More from hn83320589/claude-mods</h2><ul><li><a href="/mods/hn83320589--claude-mods--project-activity/">project-activity</a><span>任何專案通用：專案活動 pane（專案狀態、熱門檔案、最近活動）與 Git 狀態 pane，加上測試結果 status line 與回合摘要 band</span></li></ul></section>
+<section class="badge-snippet" aria-labelledby="badge-title"><h2 id="badge-title">Badge for your README</h2><p><img src="/badges/hn83320589--claude-mods--session-stats-reach.svg" alt="Reach badge for session-stats"> <img src="/badges/hn83320589--claude-mods--session-stats-validates.svg" alt="Validation badge for session-stats"></p><p>Authors can show the latest scan result in their README. Each badge links to this page.</p><pre><code>[![reach](https://raw.githubusercontent.com/karanb192/awesome-claude-code-mods/main/badges/hn83320589--claude-mods--session-stats-reach.svg)](https://mods.aidojo.si/mods/hn83320589--claude-mods--session-stats/)
+[![validates](https://raw.githubusercontent.com/karanb192/awesome-claude-code-mods/main/badges/hn83320589--claude-mods--session-stats-validates.svg)](https://mods.aidojo.si/mods/hn83320589--claude-mods--session-stats/)</code></pre></section>
 </main>
 <footer class="shell"><a href="/" class="brand"><svg viewBox="0 0 32 32" fill="none" aria-hidden="true"><path d="M11 5H5v22h6M21 5h6v22h-6M16 10v12M10 16h12"/></svg><span>claude<span class="brand-light">mods</span></span></a><p>An independent community scan.<br>Not an official Anthropic directory.</p><a href="https://github.com/karanb192/awesome-claude-code-mods">Awesome Claude Code Mods on GitHub <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 19 19 5M5 5h14v14"/></svg></a></footer>
 </body></html>

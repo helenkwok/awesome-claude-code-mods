@@ -16,23 +16,25 @@
 <p class="lede">Token Tycoon, an idle game in a pane: Claude's tool calls earn tokens, tokens buy generators and upgrades, and everything is kept between sessions. /tycoon opens it</p>
 
 <div class="facts"><div><h2>Access</h2><span class="level">L3 Uses the network</span><span class="track" aria-label="Reach level 3: Uses the network"><i class="on l3"></i><i class="on l3"></i><i class="on l3"></i><i class="on l3"></i></span><span class="labels">other: $.state.get, other: $.state.set, network, persists state, draws</span></div>
-<div><h2>Validation</h2><span class="status">Passed on Claude Code 2.1.301</span></div></div>
+<div><h2>Validation</h2><span class="status">Passed with warnings on Claude Code 2.1.332</span></div></div>
 <p class="actions"><a class="source" href="https://github.com/barisdemirhan/claude-tycoon">View the source on GitHub <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 19 19 5M5 5h14v14"/></svg></a><a href="/#barisdemirhan--claude-tycoon--tycoon">Back to the list</a></p>
 <p class="install">To install it, open the repository and follow the author’s setup instructions. Mods need Claude Code 2.1.287 or later.</p>
 <section class="record" aria-labelledby="record-title"><h2 id="record-title">What the scan recorded</h2>
 <dl>
 
     <dt>Observed events</dt><dd>every tool call</dd>
-    <dt>Hooks</dt><dd><code>session.start, command.run {command=tycoon}, ui.message, ui.close, tool.call, turn.complete, ui.render {component=PromptHint}, ui.render {component=Pane, requestId=tycoon}</code></dd>
+    <dt>Hooks</dt><dd><code>session.start, command.run {command=tycoon}, ui.message, ui.close, tool.call, turn.complete, ui.render {component=PromptHint}, ui.render {component=Pane, requestId=tycoon}, default, matcher, key, plugin</code></dd>
     <dt>API calls</dt><dd><code>$.clock.after, $.clock.every, $.clock.now, $.command.register, $.http.fetch, $.state.get, $.state.set, $.store.delete, $.store.get, $.store.set, $.ui.close, $.ui.open, $.ui.resolve, $.ui.toast</code></dd>
     <dt>Surface modules</dt><dd><code>hooks/game.tsx</code></dd>
-    <dt>Validation on 2.1.301</dt><dd>Passed</dd>
+    <dt>Validation on 2.1.332</dt><dd>Passed with warnings</dd>
 
 
     <dt>Scanned revision</dt><dd><a href="https://github.com/barisdemirhan/claude-tycoon/tree/3d9582f2e31b4d30f3675a323589f30a4046c17f"><code>3d9582f2e31b</code></a></dd>
     <dt>Marketplace passed</dt><dd><a href="https://github.com/barisdemirhan/claude-tycoon/blob/3d9582f2e31b4d30f3675a323589f30a4046c17f/.claude-plugin/marketplace.json">claude-tycoon</a></dd></dl>
 <p class="note">These are the hooks and API calls reported by <code>claude plugin validate</code>. Access levels describe the widest reach of those calls and are not safety ratings. Validation is a static check, not a runtime test, and a passing result does not prove that a mod works or is safe. <a href="https://github.com/karanb192/awesome-claude-code-mods/blob/main/SCANNING.md">How the scan works</a>.</p></section>
 
+<section class="badge-snippet" aria-labelledby="badge-title"><h2 id="badge-title">Badge for your README</h2><p><img src="/badges/barisdemirhan--claude-tycoon--tycoon-reach.svg" alt="Reach badge for tycoon"> <img src="/badges/barisdemirhan--claude-tycoon--tycoon-validates.svg" alt="Validation badge for tycoon"></p><p>Authors can show the latest scan result in their README. Each badge links to this page.</p><pre><code>[![reach](https://raw.githubusercontent.com/karanb192/awesome-claude-code-mods/main/badges/barisdemirhan--claude-tycoon--tycoon-reach.svg)](https://mods.aidojo.si/mods/barisdemirhan--claude-tycoon--tycoon/)
+[![validates](https://raw.githubusercontent.com/karanb192/awesome-claude-code-mods/main/badges/barisdemirhan--claude-tycoon--tycoon-validates.svg)](https://mods.aidojo.si/mods/barisdemirhan--claude-tycoon--tycoon/)</code></pre></section>
 </main>
 <footer class="shell"><a href="/" class="brand"><svg viewBox="0 0 32 32" fill="none" aria-hidden="true"><path d="M11 5H5v22h6M21 5h6v22h-6M16 10v12M10 16h12"/></svg><span>claude<span class="brand-light">mods</span></span></a><p>An independent community scan.<br>Not an official Anthropic directory.</p><a href="https://github.com/karanb192/awesome-claude-code-mods">Awesome Claude Code Mods on GitHub <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 19 19 5M5 5h14v14"/></svg></a></footer>
 </body></html>

@@ -15,24 +15,26 @@
 <p class="byline">A Claude Code mod in <a href="https://github.com/home-dev-lab/workflow-toolbox">home-dev-lab/workflow-toolbox</a></p>
 <p class="lede">EXPERIMENTAL. Deliver frontmatter-triggered rules at matching prompts and tool calls.</p>
 
-<div class="facts"><div><h2>Access</h2><span class="level">L2 Writes or runs</span><span class="track" aria-label="Reach level 2: Writes or runs"><i class="on l2"></i><i class="on l2"></i><i class="on l2"></i><i class=""></i></span><span class="labels">writes files, drives Claude, reads files, reads env vars, reads the transcript, persists state, draws</span></div>
-<div><h2>Validation</h2><span class="status">Passed on Claude Code 2.1.301</span></div></div>
+<div class="facts"><div><h2>Access</h2><span class="level">L0 Draws &amp; remembers</span><span class="track" aria-label="Reach level 0: Draws & remembers"><i class="on l0"></i><i class=""></i><i class=""></i><i class=""></i></span><span class="labels">persists state, draws</span></div>
+<div><h2>Validation</h2><span class="status">Passed on Claude Code 2.1.332</span></div></div>
 <p class="actions"><a class="source" href="https://github.com/home-dev-lab/workflow-toolbox/tree/main/plugins/wt-rules-on-demand">View the source on GitHub <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 19 19 5M5 5h14v14"/></svg></a><a href="/#home-dev-lab--workflow-toolbox--wt-rules-on-demand">Back to the list</a></p>
 <p class="install">To install it, open the repository and follow the author’s setup instructions. Mods need Claude Code 2.1.287 or later.</p>
 <section class="record" aria-labelledby="record-title"><h2 id="record-title">What the scan recorded</h2>
 <dl>
 
-    <dt>Observed events</dt><dd>the system prompt, compaction, every prompt, every tool call</dd>
-    <dt>Hooks</dt><dd><code>prompt.context, session.compact, prompt.submit, turn.complete, tool.call</code></dd>
-    <dt>API calls</dt><dd><code>$.clock.sleep, $.env.get, $.fs.exists, $.fs.list, $.fs.read, $.fs.stat, $.fs.write, $.model.classify, $.session.id, $.session.messages, $.session.root, $.store.get, $.store.keys, $.store.set, $.ui.log</code></dd>
+    <dt>Observed events</dt><dd>the system prompt, compaction, every prompt, every tool call, subagent spawns</dd>
+    <dt>Hooks</dt><dd><code>prompt.context, session.compact, prompt.submit, turn.complete, tool.call, agent.spawn</code></dd>
+    <dt>API calls</dt><dd><code>$.session.root, $.session.usage, $.store.get, $.store.keys, $.store.set, $.ui.log</code></dd>
 
-    <dt>Validation on 2.1.301</dt><dd>Passed</dd>
+    <dt>Validation on 2.1.332</dt><dd>Passed</dd>
 
 
-    <dt>Scanned revision</dt><dd><a href="https://github.com/home-dev-lab/workflow-toolbox/tree/12f2f264cdc46753cb51a60310568b16a4f0c58b"><code>12f2f264cdc4</code></a></dd>
-    <dt>Marketplace passed</dt><dd><a href="https://github.com/home-dev-lab/workflow-toolbox/blob/12f2f264cdc46753cb51a60310568b16a4f0c58b/.claude-plugin/marketplace.json">workflow-toolbox</a></dd></dl>
+    <dt>Scanned revision</dt><dd><a href="https://github.com/home-dev-lab/workflow-toolbox/tree/eede6a979b44a9b8ec30cd2c70d599b48813c54a"><code>eede6a979b44</code></a></dd>
+    <dt>Marketplace passed</dt><dd><a href="https://github.com/home-dev-lab/workflow-toolbox/blob/eede6a979b44a9b8ec30cd2c70d599b48813c54a/.claude-plugin/marketplace.json">workflow-toolbox</a></dd></dl>
 <p class="note">These are the hooks and API calls reported by <code>claude plugin validate</code>. Access levels describe the widest reach of those calls and are not safety ratings. Validation is a static check, not a runtime test, and a passing result does not prove that a mod works or is safe. <a href="https://github.com/karanb192/awesome-claude-code-mods/blob/main/SCANNING.md">How the scan works</a>.</p></section>
 <section class="siblings" aria-labelledby="siblings-title"><h2 id="siblings-title">More from home-dev-lab/workflow-toolbox</h2><ul><li><a href="/mods/home-dev-lab--workflow-toolbox--pilot-guard/">pilot-guard</a><span>Author, scaffold, and debug multi-agent workflows for Claude Code's Workflow tool: a skills-only plugin plus…</span></li><li><a href="/mods/home-dev-lab--workflow-toolbox--workflow-toolbox/">workflow-toolbox</a><span>Toolbox for Claude Code's Workflow tool: author deterministic multi-agent workflow scripts (workflow-composer…</span></li><li><a href="/mods/home-dev-lab--workflow-toolbox--wt-deep-search/">wt-deep-search</a><span>EXPERIMENTAL. Answers a WebSearch from the local Claude Code doc mirror, context7, Brave or Exa, and adds a d…</span></li><li><a href="/mods/home-dev-lab--workflow-toolbox--wt-secret-guard/">wt-secret-guard</a><span>Function-hook secret scrubber for prompts, assistant text, tool results, and raw outbound tool inputs</span></li></ul></section>
+<section class="badge-snippet" aria-labelledby="badge-title"><h2 id="badge-title">Badge for your README</h2><p><img src="/badges/home-dev-lab--workflow-toolbox--wt-rules-on-demand-reach.svg" alt="Reach badge for wt-rules-on-demand"> <img src="/badges/home-dev-lab--workflow-toolbox--wt-rules-on-demand-validates.svg" alt="Validation badge for wt-rules-on-demand"></p><p>Authors can show the latest scan result in their README. Each badge links to this page.</p><pre><code>[![reach](https://raw.githubusercontent.com/karanb192/awesome-claude-code-mods/main/badges/home-dev-lab--workflow-toolbox--wt-rules-on-demand-reach.svg)](https://mods.aidojo.si/mods/home-dev-lab--workflow-toolbox--wt-rules-on-demand/)
+[![validates](https://raw.githubusercontent.com/karanb192/awesome-claude-code-mods/main/badges/home-dev-lab--workflow-toolbox--wt-rules-on-demand-validates.svg)](https://mods.aidojo.si/mods/home-dev-lab--workflow-toolbox--wt-rules-on-demand/)</code></pre></section>
 </main>
 <footer class="shell"><a href="/" class="brand"><svg viewBox="0 0 32 32" fill="none" aria-hidden="true"><path d="M11 5H5v22h6M21 5h6v22h-6M16 10v12M10 16h12"/></svg><span>claude<span class="brand-light">mods</span></span></a><p>An independent community scan.<br>Not an official Anthropic directory.</p><a href="https://github.com/karanb192/awesome-claude-code-mods">Awesome Claude Code Mods on GitHub <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 19 19 5M5 5h14v14"/></svg></a></footer>
 </body></html>

@@ -16,23 +16,25 @@
 <p class="lede">A side pane in Claude Code that draws mermaid diagrams as colored text art, with C4-style zoom: click a box to see the level inside it</p>
 <p class="compatibility">review UI rewrite</p>
 <div class="facts"><div><h2>Access</h2><span class="level">L2 Writes or runs</span><span class="track" aria-label="Reach level 2: Writes or runs"><i class="on l2"></i><i class="on l2"></i><i class="on l2"></i><i class=""></i></span><span class="labels">other: $.state.get, other: $.state.set, runs processes, drives Claude, draws</span></div>
-<div><h2>Validation</h2><span class="status">Passed on Claude Code 2.1.301</span></div></div>
+<div><h2>Validation</h2><span class="status">Passed on Claude Code 2.1.332</span></div></div>
 <p class="actions"><a class="source" href="https://github.com/testy-cool/mermaid-c4-zoom">View the source on GitHub <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 19 19 5M5 5h14v14"/></svg></a><a href="/#testy-cool--mermaid-c4-zoom--mermaid-c4-zoom">Back to the list</a></p>
 <p class="install">To install it, open the repository and follow the author’s setup instructions. Mods need Claude Code 2.1.287 or later.</p>
 <section class="record" aria-labelledby="record-title"><h2 id="record-title">What the scan recorded</h2>
 <dl>
 
     <dt>Observed events</dt><dd>classic hooks, mcp__mermaid-c4-zoom__show_diagram calls</dd>
-    <dt>Hooks</dt><dd><code>session.start, classic.UserPromptSubmit, tool.call {tool=mcp__mermaid-c4-zoom__show_diagram}, turn.complete, command.run {command=diagrams}, ui.render {component=Pane, requestId=diagrams}</code></dd>
+    <dt>Hooks</dt><dd><code>session.start, classic.UserPromptSubmit, tool.call {tool=mcp__mermaid-c4-zoom__show_diagram}, turn.complete, command.run {command=diagrams}, ui.render {component=Pane, requestId=diagrams}, default, matcher, key, plugin</code></dd>
     <dt>API calls</dt><dd><code>$.clock.after, $.command.register, $.model.fork, $.process.run, $.state.get, $.state.set, $.tool.register, $.ui.close, $.ui.open, $.ui.panes, $.ui.resolve, $.ui.toast</code></dd>
 
-    <dt>Validation on 2.1.301</dt><dd>Passed</dd>
+    <dt>Validation on 2.1.332</dt><dd>Passed</dd>
 
 
     <dt>Scanned revision</dt><dd><a href="https://github.com/testy-cool/mermaid-c4-zoom/tree/a4616775535ed8e278b8e1b60729d670fd6bc3ab"><code>a4616775535e</code></a></dd>
     <dt>Marketplace passed</dt><dd><a href="https://github.com/testy-cool/mermaid-c4-zoom/blob/a4616775535ed8e278b8e1b60729d670fd6bc3ab/.claude-plugin/marketplace.json">mermaid-c4-zoom</a></dd><dt>UI rewrite review</dt><dd>UI hook source contains control-character strings. Review any values passed to next() as rewritten props.text; the scanner does not trace whether these strings reach that call. <a href="https://github.com/testy-cool/mermaid-c4-zoom/blob/a4616775535ed8e278b8e1b60729d670fd6bc3ab/hooks/vendor/mermaid-text.js#L4">hooks/vendor/mermaid-text.js:4</a></dd></dl>
 <p class="note">These are the hooks and API calls reported by <code>claude plugin validate</code>. Access levels describe the widest reach of those calls and are not safety ratings. Validation is a static check, not a runtime test, and a passing result does not prove that a mod works or is safe. <a href="https://github.com/karanb192/awesome-claude-code-mods/blob/main/SCANNING.md">How the scan works</a>.</p></section>
 
+<section class="badge-snippet" aria-labelledby="badge-title"><h2 id="badge-title">Badge for your README</h2><p><img src="/badges/testy-cool--mermaid-c4-zoom--mermaid-c4-zoom-reach.svg" alt="Reach badge for mermaid-c4-zoom"> <img src="/badges/testy-cool--mermaid-c4-zoom--mermaid-c4-zoom-validates.svg" alt="Validation badge for mermaid-c4-zoom"></p><p>Authors can show the latest scan result in their README. Each badge links to this page.</p><pre><code>[![reach](https://raw.githubusercontent.com/karanb192/awesome-claude-code-mods/main/badges/testy-cool--mermaid-c4-zoom--mermaid-c4-zoom-reach.svg)](https://mods.aidojo.si/mods/testy-cool--mermaid-c4-zoom--mermaid-c4-zoom/)
+[![validates](https://raw.githubusercontent.com/karanb192/awesome-claude-code-mods/main/badges/testy-cool--mermaid-c4-zoom--mermaid-c4-zoom-validates.svg)](https://mods.aidojo.si/mods/testy-cool--mermaid-c4-zoom--mermaid-c4-zoom/)</code></pre></section>
 </main>
 <footer class="shell"><a href="/" class="brand"><svg viewBox="0 0 32 32" fill="none" aria-hidden="true"><path d="M11 5H5v22h6M21 5h6v22h-6M16 10v12M10 16h12"/></svg><span>claude<span class="brand-light">mods</span></span></a><p>An independent community scan.<br>Not an official Anthropic directory.</p><a href="https://github.com/karanb192/awesome-claude-code-mods">Awesome Claude Code Mods on GitHub <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 19 19 5M5 5h14v14"/></svg></a></footer>
 </body></html>

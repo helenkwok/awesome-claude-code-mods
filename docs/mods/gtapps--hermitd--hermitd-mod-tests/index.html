@@ -15,24 +15,26 @@
 <p class="byline">A Claude Code mod in <a href="https://github.com/gtapps/hermitd">gtapps/hermitd</a></p>
 <p class="lede">Test wrapper for the core chat harness mod.</p>
 
-<div class="facts"><div><h2>Access</h2><span class="level">L2 Writes or runs</span><span class="track" aria-label="Reach level 2: Writes or runs"><i class="on l2"></i><i class="on l2"></i><i class="on l2"></i><i class=""></i></span><span class="labels">runs processes, drives Claude</span></div>
-<div><h2>Validation</h2><span class="status">Passed on Claude Code 2.1.301</span></div></div>
+<div class="facts"><div><h2>Access</h2><span class="level">L2 Writes or runs</span><span class="track" aria-label="Reach level 2: Writes or runs"><i class="on l2"></i><i class="on l2"></i><i class="on l2"></i><i class=""></i></span><span class="labels">runs processes, writes files, drives Claude, reads files, reads env vars</span></div>
+<div><h2>Validation</h2><span class="status">Passed on Claude Code 2.1.332</span></div></div>
 <p class="actions"><a class="source" href="https://github.com/gtapps/hermitd/tree/main/plugins/hermitd/mod">View the source on GitHub <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 19 19 5M5 5h14v14"/></svg></a><a href="/#gtapps--hermitd--hermitd-mod-tests">Back to the list</a></p>
 <p class="install">To install it, open the repository and follow the author’s setup instructions. Mods need Claude Code 2.1.287 or later.</p>
 <section class="record" aria-labelledby="record-title"><h2 id="record-title">What the scan recorded</h2>
 <dl>
 
-    <dt>Observed events</dt><dd>every prompt, classic hooks, compaction</dd>
-    <dt>Hooks</dt><dd><code>prompt.submit, classic.PreModelSwitch, classic.PostModelSwitch, session.append, session.compact, session.start, classic.SessionStart, turn.complete</code></dd>
-    <dt>API calls</dt><dd><code>$.clock.after, $.command.run, $.process.run, $.prompt.submit, $.session.cwd, $.session.id</code></dd>
+    <dt>Observed events</dt><dd>classic hooks, every prompt, compaction</dd>
+    <dt>Hooks</dt><dd><code>tool.check, classic.PermissionRequest, prompt.submit, session.receive, classic.PreModelSwitch, classic.PostModelSwitch, session.append, session.compact, session.start, classic.SessionStart, turn.step, turn.start, turn.complete</code></dd>
+    <dt>API calls</dt><dd><code>$.clock.after, $.clock.every, $.clock.now, $.command.list, $.command.run, $.env.get, $.fs.list, $.fs.read, $.fs.write, $.process.run, $.prompt.submit, $.session.id, $.session.root, $.session.send, $.turn.abort</code></dd>
 
-    <dt>Validation on 2.1.301</dt><dd>Passed</dd>
+    <dt>Validation on 2.1.332</dt><dd>Passed</dd>
 
 
-    <dt>Scanned revision</dt><dd><a href="https://github.com/gtapps/hermitd/tree/b9e6863f2e0f63abeb80eb905da9df19669adf20"><code>b9e6863f2e0f</code></a></dd>
+    <dt>Scanned revision</dt><dd><a href="https://github.com/gtapps/hermitd/tree/7c96ad10e24269d05972a906e068313a107625d4"><code>7c96ad10e242</code></a></dd>
     </dl>
 <p class="note">These are the hooks and API calls reported by <code>claude plugin validate</code>. Access levels describe the widest reach of those calls and are not safety ratings. Validation is a static check, not a runtime test, and a passing result does not prove that a mod works or is safe. <a href="https://github.com/karanb192/awesome-claude-code-mods/blob/main/SCANNING.md">How the scan works</a>.</p></section>
 <section class="siblings" aria-labelledby="siblings-title"><h2 id="siblings-title">More from gtapps/hermitd</h2><ul><li><a href="/mods/gtapps--hermitd--hermitd/">hermitd</a><span>Your own local Claude Tag, in the Claude app, Discord, Telegram, or a custom Claude Code channel.</span></li></ul></section>
+<section class="badge-snippet" aria-labelledby="badge-title"><h2 id="badge-title">Badge for your README</h2><p><img src="/badges/gtapps--hermitd--hermitd-mod-tests-reach.svg" alt="Reach badge for hermitd-mod-tests"> <img src="/badges/gtapps--hermitd--hermitd-mod-tests-validates.svg" alt="Validation badge for hermitd-mod-tests"></p><p>Authors can show the latest scan result in their README. Each badge links to this page.</p><pre><code>[![reach](https://raw.githubusercontent.com/karanb192/awesome-claude-code-mods/main/badges/gtapps--hermitd--hermitd-mod-tests-reach.svg)](https://mods.aidojo.si/mods/gtapps--hermitd--hermitd-mod-tests/)
+[![validates](https://raw.githubusercontent.com/karanb192/awesome-claude-code-mods/main/badges/gtapps--hermitd--hermitd-mod-tests-validates.svg)](https://mods.aidojo.si/mods/gtapps--hermitd--hermitd-mod-tests/)</code></pre></section>
 </main>
 <footer class="shell"><a href="/" class="brand"><svg viewBox="0 0 32 32" fill="none" aria-hidden="true"><path d="M11 5H5v22h6M21 5h6v22h-6M16 10v12M10 16h12"/></svg><span>claude<span class="brand-light">mods</span></span></a><p>An independent community scan.<br>Not an official Anthropic directory.</p><a href="https://github.com/karanb192/awesome-claude-code-mods">Awesome Claude Code Mods on GitHub <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 19 19 5M5 5h14v14"/></svg></a></footer>
 </body></html>

@@ -15,24 +15,26 @@
 <p class="byline">A Claude Code mod in <a href="https://github.com/Ludomajn/claude-mods">Ludomajn/claude-mods</a></p>
 <p class="lede">Viser, hvor meget af dine grænser (5 timer og ugen) dine samtaler bruger, også planlagte opgaver og forbrug i chat og Cowork, med indsigt på tværs af samtaler, råd til at bruge færre tokens og bedre første prompts</p>
 
-<div class="facts"><div><h2>Access</h2><span class="level">L2 Writes or runs</span><span class="track" aria-label="Reach level 2: Writes or runs"><i class="on l2"></i><i class="on l2"></i><i class="on l2"></i><i class=""></i></span><span class="labels">other: $.process.spawn, other: $.state.get, other: $.state.set, drives Claude, reads files, reads env vars, persists state, draws</span></div>
-<div><h2>Validation</h2><span class="status">Passed on Claude Code 2.1.301</span></div></div>
+<div class="facts"><div><h2>Access</h2><span class="level">L2 Writes or runs</span><span class="track" aria-label="Reach level 2: Writes or runs"><i class="on l2"></i><i class="on l2"></i><i class="on l2"></i><i class=""></i></span><span class="labels">drives Claude, persists state, draws</span></div>
+<div><h2>Validation</h2><span class="status">Passed on Claude Code 2.1.332</span></div></div>
 <p class="actions"><a class="source" href="https://github.com/Ludomajn/claude-mods/tree/main/token-maaler">View the source on GitHub <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 19 19 5M5 5h14v14"/></svg></a><a href="/#Ludomajn--claude-mods--token-maaler">Back to the list</a></p>
 <p class="install">To install it, open the repository and follow the author’s setup instructions. Mods need Claude Code 2.1.287 or later.</p>
 <section class="record" aria-labelledby="record-title"><h2 id="record-title">What the scan recorded</h2>
 <dl>
 
     <dt>Observed events</dt><dd>every tool call</dd>
-    <dt>Hooks</dt><dd><code>session.start, session.measure, turn.start, turn.step, tool.call, turn.complete, command.run {command=tokens}, command.run {command=prompts}, ui.render {component=AbovePrompt}, ui.render {component=Pane, requestId=token-maaler}</code></dd>
-    <dt>API calls</dt><dd><code>$.agent.list, $.clock.after, $.clock.now, $.command.register, $.env.get, $.fs.exists, $.fs.list, $.fs.read, $.fs.stat, $.model.complete, $.process.spawn, $.session.cwd, $.session.id, $.session.usage, $.state.get, $.state.set, $.store.delete, $.store.get, $.store.keys, $.store.set, $.tool.register, $.ui.open, $.ui.resolve, $.ui.toast</code></dd>
+    <dt>Hooks</dt><dd><code>session.start, session.measure, turn.start, turn.step, tool.call, turn.complete, command.run {command=tokens}, command.run {command=prompts}, ui.render {component=AbovePrompt}, default, matcher, key, plugin, ui.render {component=Pane, requestId=token-maaler}, default, matcher, key, plugin</code></dd>
+    <dt>API calls</dt><dd><code>$.store.keys, $.store.set, $.tool.register, $.ui.open, $.ui.resolve, $.ui.toast</code></dd>
 
-    <dt>Validation on 2.1.301</dt><dd>Passed</dd>
+    <dt>Validation on 2.1.332</dt><dd>Passed</dd>
 
 
-    <dt>Scanned revision</dt><dd><a href="https://github.com/Ludomajn/claude-mods/tree/be66ebaa47cc65a645fa3edd089a538ffe25a49e"><code>be66ebaa47cc</code></a></dd>
-    <dt>Marketplace passed</dt><dd><a href="https://github.com/Ludomajn/claude-mods/blob/be66ebaa47cc65a645fa3edd089a538ffe25a49e/.claude-plugin/marketplace.json">claude-mods</a></dd></dl>
+    <dt>Scanned revision</dt><dd><a href="https://github.com/Ludomajn/claude-mods/tree/c0831635c1c958a633d85d6ead8424cc58258cea"><code>c0831635c1c9</code></a></dd>
+    <dt>Marketplace warnings</dt><dd><a href="https://github.com/Ludomajn/claude-mods/blob/c0831635c1c958a633d85d6ead8424cc58258cea/.claude-plugin/marketplace.json">claude-mods</a></dd></dl>
 <p class="note">These are the hooks and API calls reported by <code>claude plugin validate</code>. Access levels describe the widest reach of those calls and are not safety ratings. Validation is a static check, not a runtime test, and a passing result does not prove that a mod works or is safe. <a href="https://github.com/karanb192/awesome-claude-code-mods/blob/main/SCANNING.md">How the scan works</a>.</p></section>
 
+<section class="badge-snippet" aria-labelledby="badge-title"><h2 id="badge-title">Badge for your README</h2><p><img src="/badges/Ludomajn--claude-mods--token-maaler-reach.svg" alt="Reach badge for token-maaler"> <img src="/badges/Ludomajn--claude-mods--token-maaler-validates.svg" alt="Validation badge for token-maaler"></p><p>Authors can show the latest scan result in their README. Each badge links to this page.</p><pre><code>[![reach](https://raw.githubusercontent.com/karanb192/awesome-claude-code-mods/main/badges/Ludomajn--claude-mods--token-maaler-reach.svg)](https://mods.aidojo.si/mods/Ludomajn--claude-mods--token-maaler/)
+[![validates](https://raw.githubusercontent.com/karanb192/awesome-claude-code-mods/main/badges/Ludomajn--claude-mods--token-maaler-validates.svg)](https://mods.aidojo.si/mods/Ludomajn--claude-mods--token-maaler/)</code></pre></section>
 </main>
 <footer class="shell"><a href="/" class="brand"><svg viewBox="0 0 32 32" fill="none" aria-hidden="true"><path d="M11 5H5v22h6M21 5h6v22h-6M16 10v12M10 16h12"/></svg><span>claude<span class="brand-light">mods</span></span></a><p>An independent community scan.<br>Not an official Anthropic directory.</p><a href="https://github.com/karanb192/awesome-claude-code-mods">Awesome Claude Code Mods on GitHub <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 19 19 5M5 5h14v14"/></svg></a></footer>
 </body></html>

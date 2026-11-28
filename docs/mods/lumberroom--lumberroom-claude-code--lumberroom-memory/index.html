@@ -15,8 +15,8 @@
 <p class="byline">A Claude Code mod in <a href="https://github.com/lumberroom/lumberroom-claude-code">lumberroom/lumberroom-claude-code</a></p>
 <p class="lede">lumberroom as Claude Code's memory: the digest in the system prompt, a periodic search-and-write reminder, optional per-prompt recall, built-in memory off.</p>
 
-<div class="facts"><div><h2>Access</h2><span class="level">L3 Uses the network</span><span class="track" aria-label="Reach level 3: Uses the network"><i class="on l3"></i><i class="on l3"></i><i class="on l3"></i><i class="on l3"></i></span><span class="labels">other: $.mcp.connect, other: $.state.get, other: $.state.set, network, MCP servers, writes files, drives Claude, reads files, reads env vars, reads settings, reads the transcript, persists state, draws</span></div>
-<div><h2>Validation</h2><span class="status">Passed on Claude Code 2.1.301</span></div></div>
+<div class="facts"><div><h2>Access</h2><span class="level">L1 Reads files</span><span class="track" aria-label="Reach level 1: Reads files"><i class="on l1"></i><i class="on l1"></i><i class=""></i><i class=""></i></span><span class="labels">other: $.state.get, other: $.state.set, reads settings, persists state, draws</span></div>
+<div><h2>Validation</h2><span class="status">Passed with warnings on Claude Code 2.1.332</span></div></div>
 <p class="actions"><a class="source" href="https://github.com/lumberroom/lumberroom-claude-code">View the source on GitHub <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 19 19 5M5 5h14v14"/></svg></a><a href="/#lumberroom--lumberroom-claude-code--lumberroom-memory">Back to the list</a></p>
 <p class="install">To install it, open the repository and follow the author’s setup instructions. Mods need Claude Code 2.1.287 or later.</p>
 <section class="record" aria-labelledby="record-title"><h2 id="record-title">What the scan recorded</h2>
@@ -24,15 +24,17 @@
 
     <dt>Observed events</dt><dd>the system prompt, every prompt, every tool call, compaction</dd>
     <dt>Hooks</dt><dd><code>session.start, prompt.compose, prompt.section {name=memory}, prompt.submit, tool.call, turn.complete, session.end, session.compact, command.run {command=lr-setup}, command.run {command=lr-import}</code></dd>
-    <dt>API calls</dt><dd><code>$.clock.after, $.clock.now, $.clock.sleep, $.command.register, $.env.get, $.fs.exists, $.fs.list, $.fs.read, $.fs.stat, $.fs.write, $.http.fetch, $.mcp.call, $.mcp.connect, $.model.complete, $.session.cwd, $.session.messages, $.session.root, $.session.turns, $.settings.read, $.state.get, $.state.set, $.store.get, $.store.set, $.ui.ask, $.ui.invalidate, $.ui.log</code></dd>
+    <dt>API calls</dt><dd><code>$.session.root, $.session.turns, $.settings.read, $.state.get, $.state.set, $.store.delete, $.store.get, $.store.set, $.ui.ask, $.ui.invalidate, $.ui.log, $.ui.status, $.ui.toast</code></dd>
 
-    <dt>Validation on 2.1.301</dt><dd>Passed</dd>
+    <dt>Validation on 2.1.332</dt><dd>Passed with warnings</dd>
 
 
-    <dt>Scanned revision</dt><dd><a href="https://github.com/lumberroom/lumberroom-claude-code/tree/4d2c3b485f8de77c66d9754fc7e795e59efe1e20"><code>4d2c3b485f8d</code></a></dd>
-    <dt>Marketplace passed</dt><dd><a href="https://github.com/lumberroom/lumberroom-claude-code/blob/4d2c3b485f8de77c66d9754fc7e795e59efe1e20/.claude-plugin/marketplace.json">lumberroom</a></dd></dl>
+    <dt>Scanned revision</dt><dd><a href="https://github.com/lumberroom/lumberroom-claude-code/tree/f507d46c897ec315632de32259e518bb50e615ab"><code>f507d46c897e</code></a></dd>
+    <dt>Marketplace passed</dt><dd><a href="https://github.com/lumberroom/lumberroom-claude-code/blob/f507d46c897ec315632de32259e518bb50e615ab/.claude-plugin/marketplace.json">lumberroom</a></dd></dl>
 <p class="note">These are the hooks and API calls reported by <code>claude plugin validate</code>. Access levels describe the widest reach of those calls and are not safety ratings. Validation is a static check, not a runtime test, and a passing result does not prove that a mod works or is safe. <a href="https://github.com/karanb192/awesome-claude-code-mods/blob/main/SCANNING.md">How the scan works</a>.</p></section>
 
+<section class="badge-snippet" aria-labelledby="badge-title"><h2 id="badge-title">Badge for your README</h2><p><img src="/badges/lumberroom--lumberroom-claude-code--lumberroom-memory-reach.svg" alt="Reach badge for lumberroom-memory"> <img src="/badges/lumberroom--lumberroom-claude-code--lumberroom-memory-validates.svg" alt="Validation badge for lumberroom-memory"></p><p>Authors can show the latest scan result in their README. Each badge links to this page.</p><pre><code>[![reach](https://raw.githubusercontent.com/karanb192/awesome-claude-code-mods/main/badges/lumberroom--lumberroom-claude-code--lumberroom-memory-reach.svg)](https://mods.aidojo.si/mods/lumberroom--lumberroom-claude-code--lumberroom-memory/)
+[![validates](https://raw.githubusercontent.com/karanb192/awesome-claude-code-mods/main/badges/lumberroom--lumberroom-claude-code--lumberroom-memory-validates.svg)](https://mods.aidojo.si/mods/lumberroom--lumberroom-claude-code--lumberroom-memory/)</code></pre></section>
 </main>
 <footer class="shell"><a href="/" class="brand"><svg viewBox="0 0 32 32" fill="none" aria-hidden="true"><path d="M11 5H5v22h6M21 5h6v22h-6M16 10v12M10 16h12"/></svg><span>claude<span class="brand-light">mods</span></span></a><p>An independent community scan.<br>Not an official Anthropic directory.</p><a href="https://github.com/karanb192/awesome-claude-code-mods">Awesome Claude Code Mods on GitHub <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 19 19 5M5 5h14v14"/></svg></a></footer>
 </body></html>

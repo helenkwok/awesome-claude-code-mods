@@ -15,24 +15,26 @@
 <p class="byline">A Claude Code mod in <a href="https://github.com/Tzy197/claude-mods">Tzy197/claude-mods</a></p>
 <p class="lede">Der Plan eines Repos in zwei Ansichten, mit GOAL.md als Anker: /graph zeigt schmal die laufenden Chats und den Plan als Graph, /orchestrator breit denselben Plan als Prozesskarten</p>
 
-<div class="facts"><div><h2>Access</h2><span class="level">L2 Writes or runs</span><span class="track" aria-label="Reach level 2: Writes or runs"><i class="on l2"></i><i class="on l2"></i><i class="on l2"></i><i class=""></i></span><span class="labels">other: $.prompt.read, other: $.state.get, other: $.state.set, runs processes, writes files, drives Claude, writes the prompt box, reads files, reads env vars, reads the transcript, draws</span></div>
-<div><h2>Validation</h2><span class="status">Passed with warnings on Claude Code 2.1.301</span></div></div>
+<div class="facts"><div><h2>Access</h2><span class="level">L0 Draws &amp; remembers</span><span class="track" aria-label="Reach level 0: Draws & remembers"><i class="on l0"></i><i class=""></i><i class=""></i><i class=""></i></span><span class="labels">draws</span></div>
+<div><h2>Validation</h2><span class="status">Passed with warnings on Claude Code 2.1.332</span></div></div>
 <p class="actions"><a class="source" href="https://github.com/Tzy197/claude-mods/tree/main/plugins/ziel-graph">View the source on GitHub <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 19 19 5M5 5h14v14"/></svg></a><a href="/#Tzy197--claude-mods--ziel-graph">Back to the list</a></p>
 <p class="install">To install it, open the repository and follow the author’s setup instructions. Mods need Claude Code 2.1.287 or later.</p>
 <section class="record" aria-labelledby="record-title"><h2 id="record-title">What the scan recorded</h2>
 <dl>
 
     <dt>Observed events</dt><dd>every prompt</dd>
-    <dt>Hooks</dt><dd><code>session.receive, ui.render {component=Pane, requestId=orchestrator}, session.start, prompt.submit, turn.complete, command.run {command=graph}, command.run {command=orchestrator}, ui.render {component=Pane, requestId=ziel-graph}, ui.render {component=Pane, requestId=orchestrator}</code></dd>
-    <dt>API calls</dt><dd><code>$.clock.after, $.clock.every, $.clock.now, $.command.register, $.env.get, $.fs.exists, $.fs.list, $.fs.read, $.fs.write, $.model.complete, $.process.run, $.prompt.fill, $.prompt.read, $.prompt.submit, $.session.id, $.session.messages, $.session.repo, $.session.root, $.session.send, $.session.surfaces, $.state.get, $.state.set, $.ui.log, $.ui.open, $.ui.resolve, $.ui.toast</code></dd>
+    <dt>Hooks</dt><dd><code>session.receive, ui.render {component=Pane, requestId=orchestrator}, default, matcher, key, plugin, session.start, prompt.submit, turn.complete, command.run {command=graph}, command.run {command=orchestrator}, ui.render {component=Pane, requestId=ziel-graph}, default, matcher, key, plugin, ui.render {component=Pane, requestId=orchestrator}, default, matcher, key, plugin</code></dd>
+    <dt>API calls</dt><dd><code>$.ui.toast</code></dd>
 
-    <dt>Validation on 2.1.301</dt><dd>Passed with warnings</dd>
+    <dt>Validation on 2.1.332</dt><dd>Passed with warnings</dd>
 
 
     <dt>Scanned revision</dt><dd><a href="https://github.com/Tzy197/claude-mods/tree/6be3c7828efac3c6152d94f5af346acfe0621a61"><code>6be3c7828efa</code></a></dd>
     <dt>Marketplace warnings</dt><dd><a href="https://github.com/Tzy197/claude-mods/blob/6be3c7828efac3c6152d94f5af346acfe0621a61/.claude-plugin/marketplace.json">claude-mods</a></dd></dl>
 <p class="note">These are the hooks and API calls reported by <code>claude plugin validate</code>. Access levels describe the widest reach of those calls and are not safety ratings. Validation is a static check, not a runtime test, and a passing result does not prove that a mod works or is safe. <a href="https://github.com/karanb192/awesome-claude-code-mods/blob/main/SCANNING.md">How the scan works</a>.</p></section>
 
+<section class="badge-snippet" aria-labelledby="badge-title"><h2 id="badge-title">Badge for your README</h2><p><img src="/badges/Tzy197--claude-mods--ziel-graph-reach.svg" alt="Reach badge for ziel-graph"> <img src="/badges/Tzy197--claude-mods--ziel-graph-validates.svg" alt="Validation badge for ziel-graph"></p><p>Authors can show the latest scan result in their README. Each badge links to this page.</p><pre><code>[![reach](https://raw.githubusercontent.com/karanb192/awesome-claude-code-mods/main/badges/Tzy197--claude-mods--ziel-graph-reach.svg)](https://mods.aidojo.si/mods/Tzy197--claude-mods--ziel-graph/)
+[![validates](https://raw.githubusercontent.com/karanb192/awesome-claude-code-mods/main/badges/Tzy197--claude-mods--ziel-graph-validates.svg)](https://mods.aidojo.si/mods/Tzy197--claude-mods--ziel-graph/)</code></pre></section>
 </main>
 <footer class="shell"><a href="/" class="brand"><svg viewBox="0 0 32 32" fill="none" aria-hidden="true"><path d="M11 5H5v22h6M21 5h6v22h-6M16 10v12M10 16h12"/></svg><span>claude<span class="brand-light">mods</span></span></a><p>An independent community scan.<br>Not an official Anthropic directory.</p><a href="https://github.com/karanb192/awesome-claude-code-mods">Awesome Claude Code Mods on GitHub <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 19 19 5M5 5h14v14"/></svg></a></footer>
 </body></html>

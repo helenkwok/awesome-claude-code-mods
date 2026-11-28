@@ -16,23 +16,25 @@
 <p class="lede">Warp-style Rich Input for Claude Code: the prompt box as a multi-line editor you switch on and off (Enter for a new line, Ctrl+Enter to send), an editor pane for mouse-capable terminals, and @ completion that browses folder by folder</p>
 <p class="compatibility">review UI rewrite</p>
 <div class="facts"><div><h2>Access</h2><span class="level">L2 Writes or runs</span><span class="track" aria-label="Reach level 2: Writes or runs"><i class="on l2"></i><i class="on l2"></i><i class="on l2"></i><i class=""></i></span><span class="labels">other: $.prompt.read, other: $.state.get, other: $.state.set, runs processes, writes files, writes the prompt box, reads files, reads env vars, draws</span></div>
-<div><h2>Validation</h2><span class="status">Passed on Claude Code 2.1.301</span></div></div>
+<div><h2>Validation</h2><span class="status">Passed with warnings on Claude Code 2.1.332</span></div></div>
 <p class="actions"><a class="source" href="https://github.com/higorcesarqn/rich-input-editor/tree/main/plugins/rich-input">View the source on GitHub <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 19 19 5M5 5h14v14"/></svg></a><a href="/#higorcesarqn--rich-input-editor--rich-input">Back to the list</a></p>
 <p class="install">To install it, open the repository and follow the author’s setup instructions. Mods need Claude Code 2.1.287 or later.</p>
 <section class="record" aria-labelledby="record-title"><h2 id="record-title">What the scan recorded</h2>
 <dl>
 
     <dt>Observed events</dt><dd>Only what it hooks</dd>
-    <dt>Hooks</dt><dd><code>session.start, command.run {command=rich}, ui.render {component=Pane, requestId=rich-input-pane}, ui.message {requestId=rich-input-pane}, ui.close {id=rich-input-pane}, prompt.autocomplete {token=/&quot;^@&quot;/}, prompt.edit, ui.render {component=SessionMode}, ui.render {component=AbovePrompt}</code></dd>
+    <dt>Hooks</dt><dd><code>session.start, command.run {command=rich}, ui.render {component=Pane, requestId=rich-input-pane}, default, matcher, key, plugin, ui.message {requestId=rich-input-pane}, ui.close {id=rich-input-pane}, prompt.autocomplete {token=/&quot;^@&quot;/}, prompt.edit, ui.render {component=SessionMode}, ui.render {component=AbovePrompt}, default, matcher, key, plugin</code></dd>
     <dt>API calls</dt><dd><code>$.clock.now, $.command.register, $.env.get, $.fs.exists, $.fs.list, $.fs.read, $.fs.write, $.process.run, $.prompt.fill, $.prompt.read, $.session.cwd, $.state.get, $.state.set, $.ui.close, $.ui.open, $.ui.panes, $.ui.resolve, $.ui.toast</code></dd>
     <dt>Surface modules</dt><dd><code>hooks/editor.tsx</code></dd>
-    <dt>Validation on 2.1.301</dt><dd>Passed</dd>
+    <dt>Validation on 2.1.332</dt><dd>Passed with warnings</dd>
 
 
     <dt>Scanned revision</dt><dd><a href="https://github.com/higorcesarqn/rich-input-editor/tree/9ee50ee085c85bb409cd7b891fc2510c4b332289"><code>9ee50ee085c8</code></a></dd>
     <dt>Marketplace passed</dt><dd><a href="https://github.com/higorcesarqn/rich-input-editor/blob/9ee50ee085c85bb409cd7b891fc2510c4b332289/.claude-plugin/marketplace.json">rich-input-editor</a></dd><dt>UI rewrite review</dt><dd>UI hook source contains control-character strings. Review any values passed to next() as rewritten props.text; the scanner does not trace whether these strings reach that call. <a href="https://github.com/higorcesarqn/rich-input-editor/blob/9ee50ee085c85bb409cd7b891fc2510c4b332289/plugins/rich-input/hooks/register.tsx#L58">plugins/rich-input/hooks/register.tsx:58</a></dd></dl>
 <p class="note">These are the hooks and API calls reported by <code>claude plugin validate</code>. Access levels describe the widest reach of those calls and are not safety ratings. Validation is a static check, not a runtime test, and a passing result does not prove that a mod works or is safe. <a href="https://github.com/karanb192/awesome-claude-code-mods/blob/main/SCANNING.md">How the scan works</a>.</p></section>
 
+<section class="badge-snippet" aria-labelledby="badge-title"><h2 id="badge-title">Badge for your README</h2><p><img src="/badges/higorcesarqn--rich-input-editor--rich-input-reach.svg" alt="Reach badge for rich-input"> <img src="/badges/higorcesarqn--rich-input-editor--rich-input-validates.svg" alt="Validation badge for rich-input"></p><p>Authors can show the latest scan result in their README. Each badge links to this page.</p><pre><code>[![reach](https://raw.githubusercontent.com/karanb192/awesome-claude-code-mods/main/badges/higorcesarqn--rich-input-editor--rich-input-reach.svg)](https://mods.aidojo.si/mods/higorcesarqn--rich-input-editor--rich-input/)
+[![validates](https://raw.githubusercontent.com/karanb192/awesome-claude-code-mods/main/badges/higorcesarqn--rich-input-editor--rich-input-validates.svg)](https://mods.aidojo.si/mods/higorcesarqn--rich-input-editor--rich-input/)</code></pre></section>
 </main>
 <footer class="shell"><a href="/" class="brand"><svg viewBox="0 0 32 32" fill="none" aria-hidden="true"><path d="M11 5H5v22h6M21 5h6v22h-6M16 10v12M10 16h12"/></svg><span>claude<span class="brand-light">mods</span></span></a><p>An independent community scan.<br>Not an official Anthropic directory.</p><a href="https://github.com/karanb192/awesome-claude-code-mods">Awesome Claude Code Mods on GitHub <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 19 19 5M5 5h14v14"/></svg></a></footer>
 </body></html>

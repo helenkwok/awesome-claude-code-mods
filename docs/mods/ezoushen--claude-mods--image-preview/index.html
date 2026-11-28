@@ -16,7 +16,7 @@
 <p class="lede">Render image paths inline: a thumbnail in the user's prompt row (aspect-fill, max 10 rows) and in agent reply rows when the model mentions a path. Recognises a file path ending in a supported image extension (quoted or with escaped spaces too), or an [Image #N] token for a pasted picture.</p>
 
 <div class="facts"><div><h2>Access</h2><span class="level">L2 Writes or runs</span><span class="track" aria-label="Reach level 2: Writes or runs"><i class="on l2"></i><i class="on l2"></i><i class="on l2"></i><i class=""></i></span><span class="labels">other: $.state.get, other: $.state.set, runs processes, reads env vars, reads the transcript, draws</span></div>
-<div><h2>Validation</h2><span class="status">Passed on Claude Code 2.1.301</span></div></div>
+<div><h2>Validation</h2><span class="status">Passed on Claude Code 2.1.332</span></div></div>
 <p class="actions"><a class="source" href="https://github.com/ezoushen/claude-mods/tree/main/image-preview">View the source on GitHub <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 19 19 5M5 5h14v14"/></svg></a><a href="/#ezoushen--claude-mods--image-preview">Back to the list</a></p>
 <p class="install">To install it, open the repository and follow the author’s setup instructions. Mods need Claude Code 2.1.287 or later.</p>
 <section class="record" aria-labelledby="record-title"><h2 id="record-title">What the scan recorded</h2>
@@ -26,13 +26,15 @@
     <dt>Hooks</dt><dd><code>ui.render {component=UserMessage}, ui.render {component=AssistantMessage}, session.start, command.run</code></dd>
     <dt>API calls</dt><dd><code>$.command.register, $.env.get, $.process.run, $.session.cwd, $.session.messages, $.state.get, $.state.set, $.ui.resolve</code></dd>
 
-    <dt>Validation on 2.1.301</dt><dd>Passed</dd>
+    <dt>Validation on 2.1.332</dt><dd>Passed</dd>
 
 
-    <dt>Scanned revision</dt><dd><a href="https://github.com/ezoushen/claude-mods/tree/35410dc13e294a0d8a7f7457889f2e22ddf5dd2f"><code>35410dc13e29</code></a></dd>
-    <dt>Marketplace passed</dt><dd><a href="https://github.com/ezoushen/claude-mods/blob/35410dc13e294a0d8a7f7457889f2e22ddf5dd2f/.claude-plugin/marketplace.json">claude-mods</a></dd></dl>
+    <dt>Scanned revision</dt><dd><a href="https://github.com/ezoushen/claude-mods/tree/8cf9fddf8bb85ed9262d20bae9446118067438b3"><code>8cf9fddf8bb8</code></a></dd>
+    <dt>Marketplace passed</dt><dd><a href="https://github.com/ezoushen/claude-mods/blob/8cf9fddf8bb85ed9262d20bae9446118067438b3/.claude-plugin/marketplace.json">claude-mods</a></dd></dl>
 <p class="note">These are the hooks and API calls reported by <code>claude plugin validate</code>. Access levels describe the widest reach of those calls and are not safety ratings. Validation is a static check, not a runtime test, and a passing result does not prove that a mod works or is safe. <a href="https://github.com/karanb192/awesome-claude-code-mods/blob/main/SCANNING.md">How the scan works</a>.</p></section>
-<section class="siblings" aria-labelledby="siblings-title"><h2 id="siblings-title">More from ezoushen/claude-mods</h2><ul><li><a href="/mods/ezoushen--claude-mods--mermaid-pane/">mermaid-pane</a><span>Renders mermaid code blocks inline as ASCII art (beautiful-mermaid, termaid) or images with an open-full-size…</span></li></ul></section>
+<section class="siblings" aria-labelledby="siblings-title"><h2 id="siblings-title">More from ezoushen/claude-mods</h2><ul><li><a href="/mods/ezoushen--claude-mods--mermaid-pane/">mermaid-pane</a><span>Renders mermaid code blocks inline as ASCII art (beautiful-mermaid, termaid) or images with an open-full-size…</span></li><li><a href="/mods/ezoushen--claude-mods--prompt-redact/">prompt-redact</a><span>Replaces secrets and credentials with stable placeholders inside Claude Code before the model or the session…</span></li></ul></section>
+<section class="badge-snippet" aria-labelledby="badge-title"><h2 id="badge-title">Badge for your README</h2><p><img src="/badges/ezoushen--claude-mods--image-preview-reach.svg" alt="Reach badge for image-preview"> <img src="/badges/ezoushen--claude-mods--image-preview-validates.svg" alt="Validation badge for image-preview"></p><p>Authors can show the latest scan result in their README. Each badge links to this page.</p><pre><code>[![reach](https://raw.githubusercontent.com/karanb192/awesome-claude-code-mods/main/badges/ezoushen--claude-mods--image-preview-reach.svg)](https://mods.aidojo.si/mods/ezoushen--claude-mods--image-preview/)
+[![validates](https://raw.githubusercontent.com/karanb192/awesome-claude-code-mods/main/badges/ezoushen--claude-mods--image-preview-validates.svg)](https://mods.aidojo.si/mods/ezoushen--claude-mods--image-preview/)</code></pre></section>
 </main>
 <footer class="shell"><a href="/" class="brand"><svg viewBox="0 0 32 32" fill="none" aria-hidden="true"><path d="M11 5H5v22h6M21 5h6v22h-6M16 10v12M10 16h12"/></svg><span>claude<span class="brand-light">mods</span></span></a><p>An independent community scan.<br>Not an official Anthropic directory.</p><a href="https://github.com/karanb192/awesome-claude-code-mods">Awesome Claude Code Mods on GitHub <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 19 19 5M5 5h14v14"/></svg></a></footer>
 </body></html>

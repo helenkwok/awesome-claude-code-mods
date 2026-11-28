@@ -16,7 +16,7 @@
 <p class="lede">Discord 멘션을 headless Claude 실행으로 연결하고, 실행 중 질문을 Discord 버튼으로 중계하는 connector</p>
 
 <div class="facts"><div><h2>Access</h2><span class="level">L2 Writes or runs</span><span class="track" aria-label="Reach level 2: Writes or runs"><i class="on l2"></i><i class="on l2"></i><i class="on l2"></i><i class=""></i></span><span class="labels">runs processes, writes files, reads files, reads env vars</span></div>
-<div><h2>Validation</h2><span class="status">Passed on Claude Code 2.1.301</span></div></div>
+<div><h2>Validation</h2><span class="status">Passed with warnings on Claude Code 2.1.332</span></div></div>
 <p class="actions"><a class="source" href="https://github.com/kys0213/kys-claude-plugin/tree/main/plugins/discord-connector">View the source on GitHub <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 19 19 5M5 5h14v14"/></svg></a><a href="/#kys0213--kys-claude-plugin--discord-connector">Back to the list</a></p>
 <p class="install">To install it, open the repository and follow the author’s setup instructions. Mods need Claude Code 2.1.287 or later.</p>
 <section class="record" aria-labelledby="record-title"><h2 id="record-title">What the scan recorded</h2>
@@ -26,13 +26,15 @@
     <dt>Hooks</dt><dd><code>tool.call {tool=AskUserQuestion}, tool.call {tool=Bash}, agent.spawn, classic.PermissionDenied</code></dd>
     <dt>API calls</dt><dd><code>$.clock.now, $.env.get, $.fs.exists, $.fs.read, $.fs.write, $.process.run</code></dd>
 
-    <dt>Validation on 2.1.301</dt><dd>Passed</dd>
+    <dt>Validation on 2.1.332</dt><dd>Passed with warnings</dd>
 
 
-    <dt>Scanned revision</dt><dd><a href="https://github.com/kys0213/kys-claude-plugin/tree/5513c2e13be1e90fc9e310a2f784dc49306e68a6"><code>5513c2e13be1</code></a></dd>
-    <dt>Marketplace passed</dt><dd><a href="https://github.com/kys0213/kys-claude-plugin/blob/5513c2e13be1e90fc9e310a2f784dc49306e68a6/.claude-plugin/marketplace.json">kys-claude-plugin</a></dd></dl>
+    <dt>Scanned revision</dt><dd><a href="https://github.com/kys0213/kys-claude-plugin/tree/8737fef3d4fe8e7a3df7fb56d986b27b8b6c1c25"><code>8737fef3d4fe</code></a></dd>
+    <dt>Marketplace passed</dt><dd><a href="https://github.com/kys0213/kys-claude-plugin/blob/8737fef3d4fe8e7a3df7fb56d986b27b8b6c1c25/.claude-plugin/marketplace.json">kys-claude-plugin</a></dd></dl>
 <p class="note">These are the hooks and API calls reported by <code>claude plugin validate</code>. Access levels describe the widest reach of those calls and are not safety ratings. Validation is a static check, not a runtime test, and a passing result does not prove that a mod works or is safe. <a href="https://github.com/karanb192/awesome-claude-code-mods/blob/main/SCANNING.md">How the scan works</a>.</p></section>
 <section class="siblings" aria-labelledby="siblings-title"><h2 id="siblings-title">More from kys0213/kys-claude-plugin</h2><ul><li><a href="/mods/kys0213--kys-claude-plugin--atelier/">atelier</a><span>통합 개발 워크플로우: spec/git/orchestrator/workflow 를 관심사 단위 skill 로 큐레이션한 단일 plugin</span></li></ul></section>
+<section class="badge-snippet" aria-labelledby="badge-title"><h2 id="badge-title">Badge for your README</h2><p><img src="/badges/kys0213--kys-claude-plugin--discord-connector-reach.svg" alt="Reach badge for discord-connector"> <img src="/badges/kys0213--kys-claude-plugin--discord-connector-validates.svg" alt="Validation badge for discord-connector"></p><p>Authors can show the latest scan result in their README. Each badge links to this page.</p><pre><code>[![reach](https://raw.githubusercontent.com/karanb192/awesome-claude-code-mods/main/badges/kys0213--kys-claude-plugin--discord-connector-reach.svg)](https://mods.aidojo.si/mods/kys0213--kys-claude-plugin--discord-connector/)
+[![validates](https://raw.githubusercontent.com/karanb192/awesome-claude-code-mods/main/badges/kys0213--kys-claude-plugin--discord-connector-validates.svg)](https://mods.aidojo.si/mods/kys0213--kys-claude-plugin--discord-connector/)</code></pre></section>
 </main>
 <footer class="shell"><a href="/" class="brand"><svg viewBox="0 0 32 32" fill="none" aria-hidden="true"><path d="M11 5H5v22h6M21 5h6v22h-6M16 10v12M10 16h12"/></svg><span>claude<span class="brand-light">mods</span></span></a><p>An independent community scan.<br>Not an official Anthropic directory.</p><a href="https://github.com/karanb192/awesome-claude-code-mods">Awesome Claude Code Mods on GitHub <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 19 19 5M5 5h14v14"/></svg></a></footer>
 </body></html>

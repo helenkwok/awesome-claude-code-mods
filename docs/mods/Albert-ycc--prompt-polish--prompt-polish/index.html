@@ -16,23 +16,25 @@
 <p class="lede">提示词优化：点击输入框上方按钮或在草稿末尾输入 ;; 触发 · 结合会话上下文与记忆补全草稿，并按任务类型追加工作方式要求 · 结果写回输入框，发送前可编辑或还原</p>
 
 <div class="facts"><div><h2>Access</h2><span class="level">L2 Writes or runs</span><span class="track" aria-label="Reach level 2: Writes or runs"><i class="on l2"></i><i class="on l2"></i><i class="on l2"></i><i class=""></i></span><span class="labels">other: $.prompt.read, other: $.state.get, other: $.state.set, drives Claude, writes the prompt box, reads files, reads env vars, draws</span></div>
-<div><h2>Validation</h2><span class="status">Passed on Claude Code 2.1.301</span></div></div>
+<div><h2>Validation</h2><span class="status">Passed on Claude Code 2.1.332</span></div></div>
 <p class="actions"><a class="source" href="https://github.com/Albert-ycc/prompt-polish">View the source on GitHub <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 19 19 5M5 5h14v14"/></svg></a><a href="/#Albert-ycc--prompt-polish--prompt-polish">Back to the list</a></p>
 <p class="install">To install it, open the repository and follow the author’s setup instructions. Mods need Claude Code 2.1.287 or later.</p>
 <section class="record" aria-labelledby="record-title"><h2 id="record-title">What the scan recorded</h2>
 <dl>
 
     <dt>Observed events</dt><dd>every prompt</dd>
-    <dt>Hooks</dt><dd><code>prompt.submit, prompt.edit, ui.render {component=AbovePrompt}</code></dd>
+    <dt>Hooks</dt><dd><code>prompt.submit, prompt.edit, ui.render {component=AbovePrompt}, default, matcher, key, plugin</code></dd>
     <dt>API calls</dt><dd><code>$.clock.after, $.clock.every, $.env.get, $.fs.ancestors, $.fs.read, $.model.complete, $.model.fork, $.prompt.fill, $.prompt.read, $.session.root, $.state.get, $.state.set, $.ui.copy, $.ui.resolve, $.ui.toast</code></dd>
 
-    <dt>Validation on 2.1.301</dt><dd>Passed</dd>
+    <dt>Validation on 2.1.332</dt><dd>Passed</dd>
 
 
     <dt>Scanned revision</dt><dd><a href="https://github.com/Albert-ycc/prompt-polish/tree/177a72f6840cf24e3376613380be818653844f33"><code>177a72f6840c</code></a></dd>
     </dl>
 <p class="note">These are the hooks and API calls reported by <code>claude plugin validate</code>. Access levels describe the widest reach of those calls and are not safety ratings. Validation is a static check, not a runtime test, and a passing result does not prove that a mod works or is safe. <a href="https://github.com/karanb192/awesome-claude-code-mods/blob/main/SCANNING.md">How the scan works</a>.</p></section>
 
+<section class="badge-snippet" aria-labelledby="badge-title"><h2 id="badge-title">Badge for your README</h2><p><img src="/badges/Albert-ycc--prompt-polish--prompt-polish-reach.svg" alt="Reach badge for prompt-polish"> <img src="/badges/Albert-ycc--prompt-polish--prompt-polish-validates.svg" alt="Validation badge for prompt-polish"></p><p>Authors can show the latest scan result in their README. Each badge links to this page.</p><pre><code>[![reach](https://raw.githubusercontent.com/karanb192/awesome-claude-code-mods/main/badges/Albert-ycc--prompt-polish--prompt-polish-reach.svg)](https://mods.aidojo.si/mods/Albert-ycc--prompt-polish--prompt-polish/)
+[![validates](https://raw.githubusercontent.com/karanb192/awesome-claude-code-mods/main/badges/Albert-ycc--prompt-polish--prompt-polish-validates.svg)](https://mods.aidojo.si/mods/Albert-ycc--prompt-polish--prompt-polish/)</code></pre></section>
 </main>
 <footer class="shell"><a href="/" class="brand"><svg viewBox="0 0 32 32" fill="none" aria-hidden="true"><path d="M11 5H5v22h6M21 5h6v22h-6M16 10v12M10 16h12"/></svg><span>claude<span class="brand-light">mods</span></span></a><p>An independent community scan.<br>Not an official Anthropic directory.</p><a href="https://github.com/karanb192/awesome-claude-code-mods">Awesome Claude Code Mods on GitHub <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 19 19 5M5 5h14v14"/></svg></a></footer>
 </body></html>

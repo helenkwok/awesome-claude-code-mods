@@ -16,23 +16,25 @@
 <p class="lede">Asks the user to run a tool call that auto mode denied without a verdict</p>
 
 <div class="facts"><div><h2>Access</h2><span class="level">L0 Draws &amp; remembers</span><span class="track" aria-label="Reach level 0: Draws & remembers"><i class="on l0"></i><i class=""></i><i class=""></i><i class=""></i></span><span class="labels">draws</span></div>
-<div><h2>Validation</h2><span class="status">Passed on Claude Code 2.1.301</span></div></div>
+<div><h2>Validation</h2><span class="status">Passed with warnings on Claude Code 2.1.332</span></div></div>
 <p class="actions"><a class="source" href="https://github.com/tunglt1810/claude-gadgets/tree/main/mods/verdict-gate">View the source on GitHub <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 19 19 5M5 5h14v14"/></svg></a><a href="/#tunglt1810--claude-gadgets--verdict-gate">Back to the list</a></p>
 <p class="install">To install it, open the repository and follow the author’s setup instructions. Mods need Claude Code 2.1.287 or later.</p>
 <section class="record" aria-labelledby="record-title"><h2 id="record-title">What the scan recorded</h2>
 <dl>
 
-    <dt>Observed events</dt><dd>every tool call, classic hooks</dd>
-    <dt>Hooks</dt><dd><code>session.start, ui.render {component=Pane, requestId=verdict}, tool.check, tool.call, classic.PostToolUse, classic.PostToolUseFailure</code></dd>
+    <dt>Observed events</dt><dd>every tool call, classic hooks, REPL calls</dd>
+    <dt>Hooks</dt><dd><code>session.start, ui.render {component=Pane, requestId=verdict}, default, matcher, key, plugin, tool.judge, tool.check, tool.call, classic.PostToolUse, classic.PostToolUseFailure, tool.judge {tool=REPL}, tool.check {tool=REPL}, tool.call {tool=REPL}, classic.PostToolUse {tool_name=REPL}, classic.PostToolUseFailure {tool_name=REPL}</code></dd>
     <dt>API calls</dt><dd><code>$.session.id, $.session.surfaces, $.ui.ask, $.ui.close, $.ui.open, $.ui.resolve, $.ui.toast</code></dd>
 
-    <dt>Validation on 2.1.301</dt><dd>Passed</dd>
+    <dt>Validation on 2.1.332</dt><dd>Passed with warnings</dd>
 
 
-    <dt>Scanned revision</dt><dd><a href="https://github.com/tunglt1810/claude-gadgets/tree/7d939542f4e543f64e9616d4b8ef9741a75ef397"><code>7d939542f4e5</code></a></dd>
-    <dt>Marketplace passed</dt><dd><a href="https://github.com/tunglt1810/claude-gadgets/blob/7d939542f4e543f64e9616d4b8ef9741a75ef397/.claude-plugin/marketplace.json">claude-gadgets</a></dd></dl>
+    <dt>Scanned revision</dt><dd><a href="https://github.com/tunglt1810/claude-gadgets/tree/a797adab004e0a2e75c66a0fd4dc4f9f708a6740"><code>a797adab004e</code></a></dd>
+    <dt>Marketplace passed</dt><dd><a href="https://github.com/tunglt1810/claude-gadgets/blob/a797adab004e0a2e75c66a0fd4dc4f9f708a6740/.claude-plugin/marketplace.json">claude-gadgets</a></dd></dl>
 <p class="note">These are the hooks and API calls reported by <code>claude plugin validate</code>. Access levels describe the widest reach of those calls and are not safety ratings. Validation is a static check, not a runtime test, and a passing result does not prove that a mod works or is safe. <a href="https://github.com/karanb192/awesome-claude-code-mods/blob/main/SCANNING.md">How the scan works</a>.</p></section>
-<section class="siblings" aria-labelledby="siblings-title"><h2 id="siblings-title">More from tunglt1810/claude-gadgets</h2><ul><li><a href="/mods/tunglt1810--claude-gadgets--flight-deck/">flight-deck</a><span>Band tracking session tokens, tool calls, model working time and cache countdown, with a pane that shows each…</span></li></ul></section>
+<section class="siblings" aria-labelledby="siblings-title"><h2 id="siblings-title">More from tunglt1810/claude-gadgets</h2><ul><li><a href="/mods/tunglt1810--claude-gadgets--flight-deck/">flight-deck</a><span>Band tracking session tokens, tool calls, model working time and cache countdown, with a pane that shows each…</span></li><li><a href="/mods/tunglt1810--claude-gadgets--glyph-tide/">glyph-tide</a><span>Code glyphs that water ripples reveal behind the desktop and mobile conversation</span></li></ul></section>
+<section class="badge-snippet" aria-labelledby="badge-title"><h2 id="badge-title">Badge for your README</h2><p><img src="/badges/tunglt1810--claude-gadgets--verdict-gate-reach.svg" alt="Reach badge for verdict-gate"> <img src="/badges/tunglt1810--claude-gadgets--verdict-gate-validates.svg" alt="Validation badge for verdict-gate"></p><p>Authors can show the latest scan result in their README. Each badge links to this page.</p><pre><code>[![reach](https://raw.githubusercontent.com/karanb192/awesome-claude-code-mods/main/badges/tunglt1810--claude-gadgets--verdict-gate-reach.svg)](https://mods.aidojo.si/mods/tunglt1810--claude-gadgets--verdict-gate/)
+[![validates](https://raw.githubusercontent.com/karanb192/awesome-claude-code-mods/main/badges/tunglt1810--claude-gadgets--verdict-gate-validates.svg)](https://mods.aidojo.si/mods/tunglt1810--claude-gadgets--verdict-gate/)</code></pre></section>
 </main>
 <footer class="shell"><a href="/" class="brand"><svg viewBox="0 0 32 32" fill="none" aria-hidden="true"><path d="M11 5H5v22h6M21 5h6v22h-6M16 10v12M10 16h12"/></svg><span>claude<span class="brand-light">mods</span></span></a><p>An independent community scan.<br>Not an official Anthropic directory.</p><a href="https://github.com/karanb192/awesome-claude-code-mods">Awesome Claude Code Mods on GitHub <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 19 19 5M5 5h14v14"/></svg></a></footer>
 </body></html>

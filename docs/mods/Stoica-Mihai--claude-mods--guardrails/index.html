@@ -16,23 +16,25 @@
 <p class="lede">Blocks the Bash commands your own rules file names, and shows every block in /blocked. Ships no rules.</p>
 
 <div class="facts"><div><h2>Access</h2><span class="level">L2 Writes or runs</span><span class="track" aria-label="Reach level 2: Writes or runs"><i class="on l2"></i><i class="on l2"></i><i class="on l2"></i><i class=""></i></span><span class="labels">other: $.state.get, other: $.state.set, runs processes, reads files, reads env vars, persists state, draws</span></div>
-<div><h2>Validation</h2><span class="status">Passed on Claude Code 2.1.301</span></div></div>
+<div><h2>Validation</h2><span class="status">Passed on Claude Code 2.1.332</span></div></div>
 <p class="actions"><a class="source" href="https://github.com/Stoica-Mihai/claude-mods/tree/main/plugins/guardrails">View the source on GitHub <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 19 19 5M5 5h14v14"/></svg></a><a href="/#Stoica-Mihai--claude-mods--guardrails">Back to the list</a></p>
 <p class="install">To install it, open the repository and follow the author’s setup instructions. Mods need Claude Code 2.1.287 or later.</p>
 <section class="record" aria-labelledby="record-title"><h2 id="record-title">What the scan recorded</h2>
 <dl>
 
     <dt>Observed events</dt><dd>Bash calls</dd>
-    <dt>Hooks</dt><dd><code>session.start, tool.call {tool=Bash}, command.run {command=blocked}, ui.render {component=Pane, requestId=blocked}</code></dd>
+    <dt>Hooks</dt><dd><code>session.start, tool.call {tool=Bash}, command.run {command=blocked}, ui.render {component=Pane, requestId=blocked}, default, matcher, key, plugin</code></dd>
     <dt>API calls</dt><dd><code>$.clock.now, $.command.register, $.env.get, $.fs.read, $.fs.stat, $.process.run, $.state.get, $.state.set, $.store.get, $.store.set, $.ui.open, $.ui.resolve, $.ui.toast</code></dd>
 
-    <dt>Validation on 2.1.301</dt><dd>Passed</dd>
+    <dt>Validation on 2.1.332</dt><dd>Passed</dd>
 
 
     <dt>Scanned revision</dt><dd><a href="https://github.com/Stoica-Mihai/claude-mods/tree/a2ec9a9a866e0ac172927f745811eda735ff93c0"><code>a2ec9a9a866e</code></a></dd>
     <dt>Marketplace passed</dt><dd><a href="https://github.com/Stoica-Mihai/claude-mods/blob/a2ec9a9a866e0ac172927f745811eda735ff93c0/.claude-plugin/marketplace.json">claude-mods</a></dd></dl>
 <p class="note">These are the hooks and API calls reported by <code>claude plugin validate</code>. Access levels describe the widest reach of those calls and are not safety ratings. Validation is a static check, not a runtime test, and a passing result does not prove that a mod works or is safe. <a href="https://github.com/karanb192/awesome-claude-code-mods/blob/main/SCANNING.md">How the scan works</a>.</p></section>
 <section class="siblings" aria-labelledby="siblings-title"><h2 id="siblings-title">More from Stoica-Mihai/claude-mods</h2><ul><li><a href="/mods/Stoica-Mihai--claude-mods--leftovers/">leftovers</a><span>Tracks the processes Claude's Bash calls leave running, and has Claude close or explain them. /leftovers list…</span></li></ul></section>
+<section class="badge-snippet" aria-labelledby="badge-title"><h2 id="badge-title">Badge for your README</h2><p><img src="/badges/Stoica-Mihai--claude-mods--guardrails-reach.svg" alt="Reach badge for guardrails"> <img src="/badges/Stoica-Mihai--claude-mods--guardrails-validates.svg" alt="Validation badge for guardrails"></p><p>Authors can show the latest scan result in their README. Each badge links to this page.</p><pre><code>[![reach](https://raw.githubusercontent.com/karanb192/awesome-claude-code-mods/main/badges/Stoica-Mihai--claude-mods--guardrails-reach.svg)](https://mods.aidojo.si/mods/Stoica-Mihai--claude-mods--guardrails/)
+[![validates](https://raw.githubusercontent.com/karanb192/awesome-claude-code-mods/main/badges/Stoica-Mihai--claude-mods--guardrails-validates.svg)](https://mods.aidojo.si/mods/Stoica-Mihai--claude-mods--guardrails/)</code></pre></section>
 </main>
 <footer class="shell"><a href="/" class="brand"><svg viewBox="0 0 32 32" fill="none" aria-hidden="true"><path d="M11 5H5v22h6M21 5h6v22h-6M16 10v12M10 16h12"/></svg><span>claude<span class="brand-light">mods</span></span></a><p>An independent community scan.<br>Not an official Anthropic directory.</p><a href="https://github.com/karanb192/awesome-claude-code-mods">Awesome Claude Code Mods on GitHub <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 19 19 5M5 5h14v14"/></svg></a></footer>
 </body></html>

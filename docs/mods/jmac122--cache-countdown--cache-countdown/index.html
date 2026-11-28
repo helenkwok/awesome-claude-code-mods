@@ -15,24 +15,26 @@
 <p class="byline">A Claude Code mod in <a href="https://github.com/jmac122/cache-countdown">jmac122/cache-countdown</a></p>
 <p class="lede">Prompt-cache meter above the input box: hit %, read/wrote/new tokens, a TTL countdown and advice; cache-expiry toasts and context-window alerts. /cache opens a detail pane; /cache setup walks through every setting.</p>
 
-<div class="facts"><div><h2>Access</h2><span class="level">L2 Writes or runs</span><span class="track" aria-label="Reach level 2: Writes or runs"><i class="on l2"></i><i class="on l2"></i><i class="on l2"></i><i class=""></i></span><span class="labels">other: $.state.get, other: $.state.set, changes config, reads env vars, reads settings, persists state, draws</span></div>
-<div><h2>Validation</h2><span class="status">Passed on Claude Code 2.1.301</span></div></div>
+<div class="facts"><div><h2>Access</h2><span class="level">L1 Reads files</span><span class="track" aria-label="Reach level 1: Reads files"><i class="on l1"></i><i class="on l1"></i><i class=""></i><i class=""></i></span><span class="labels">other: $.state.get, other: $.state.set, reads env vars, reads settings, persists state, draws</span></div>
+<div><h2>Validation</h2><span class="status">Passed on Claude Code 2.1.332</span></div></div>
 <p class="actions"><a class="source" href="https://github.com/jmac122/cache-countdown">View the source on GitHub <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 19 19 5M5 5h14v14"/></svg></a><a href="/#jmac122--cache-countdown--cache-countdown">Back to the list</a></p>
 <p class="install">To install it, open the repository and follow the author’s setup instructions. Mods need Claude Code 2.1.287 or later.</p>
 <section class="record" aria-labelledby="record-title"><h2 id="record-title">What the scan recorded</h2>
 <dl>
 
     <dt>Observed events</dt><dd>Only what it hooks</dd>
-    <dt>Hooks</dt><dd><code>session.start, session.end, turn.step, command.run {command=cache}, ui.close {id=cache}, ui.render {component=AbovePrompt}, ui.render {component=Pane, requestId=cache}, ui.render {component=Pane, requestId=cache-setup}</code></dd>
-    <dt>API calls</dt><dd><code>$.clock.after, $.clock.now, $.command.register, $.config.set, $.env.get, $.session.usage, $.settings.read, $.state.get, $.state.set, $.store.get, $.store.set, $.ui.close, $.ui.focus, $.ui.log, $.ui.open, $.ui.resolve, $.ui.status, $.ui.toast</code></dd>
+    <dt>Hooks</dt><dd><code>session.start, session.end, turn.step, command.run {command=cache}, ui.close {id=cache}, ui.render {component=AbovePrompt}, default, matcher, key, plugin, ui.render {component=Pane, requestId=cache}, default, matcher, key, plugin, ui.render {component=Pane, requestId=cache-setup}, default, matcher, key, plugin</code></dd>
+    <dt>API calls</dt><dd><code>$.clock.after, $.clock.now, $.command.register, $.env.get, $.session.usage, $.settings.read, $.state.get, $.state.set, $.store.delete, $.store.get, $.store.set, $.ui.close, $.ui.focus, $.ui.log, $.ui.open, $.ui.resolve, $.ui.status, $.ui.toast</code></dd>
 
-    <dt>Validation on 2.1.301</dt><dd>Passed</dd>
+    <dt>Validation on 2.1.332</dt><dd>Passed</dd>
 
 
-    <dt>Scanned revision</dt><dd><a href="https://github.com/jmac122/cache-countdown/tree/eb44a210527ed0f9922494a0a0681aa2761f56ab"><code>eb44a210527e</code></a></dd>
-    <dt>Marketplace passed</dt><dd><a href="https://github.com/jmac122/cache-countdown/blob/eb44a210527ed0f9922494a0a0681aa2761f56ab/.claude-plugin/marketplace.json">cache-countdown</a></dd></dl>
+    <dt>Scanned revision</dt><dd><a href="https://github.com/jmac122/cache-countdown/tree/29a9fbd1731f26080ba5b22689399dd1930aa626"><code>29a9fbd1731f</code></a></dd>
+    <dt>Marketplace passed</dt><dd><a href="https://github.com/jmac122/cache-countdown/blob/29a9fbd1731f26080ba5b22689399dd1930aa626/.claude-plugin/marketplace.json">cache-countdown</a></dd></dl>
 <p class="note">These are the hooks and API calls reported by <code>claude plugin validate</code>. Access levels describe the widest reach of those calls and are not safety ratings. Validation is a static check, not a runtime test, and a passing result does not prove that a mod works or is safe. <a href="https://github.com/karanb192/awesome-claude-code-mods/blob/main/SCANNING.md">How the scan works</a>.</p></section>
 
+<section class="badge-snippet" aria-labelledby="badge-title"><h2 id="badge-title">Badge for your README</h2><p><img src="/badges/jmac122--cache-countdown--cache-countdown-reach.svg" alt="Reach badge for cache-countdown"> <img src="/badges/jmac122--cache-countdown--cache-countdown-validates.svg" alt="Validation badge for cache-countdown"></p><p>Authors can show the latest scan result in their README. Each badge links to this page.</p><pre><code>[![reach](https://raw.githubusercontent.com/karanb192/awesome-claude-code-mods/main/badges/jmac122--cache-countdown--cache-countdown-reach.svg)](https://mods.aidojo.si/mods/jmac122--cache-countdown--cache-countdown/)
+[![validates](https://raw.githubusercontent.com/karanb192/awesome-claude-code-mods/main/badges/jmac122--cache-countdown--cache-countdown-validates.svg)](https://mods.aidojo.si/mods/jmac122--cache-countdown--cache-countdown/)</code></pre></section>
 </main>
 <footer class="shell"><a href="/" class="brand"><svg viewBox="0 0 32 32" fill="none" aria-hidden="true"><path d="M11 5H5v22h6M21 5h6v22h-6M16 10v12M10 16h12"/></svg><span>claude<span class="brand-light">mods</span></span></a><p>An independent community scan.<br>Not an official Anthropic directory.</p><a href="https://github.com/karanb192/awesome-claude-code-mods">Awesome Claude Code Mods on GitHub <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 19 19 5M5 5h14v14"/></svg></a></footer>
 </body></html>

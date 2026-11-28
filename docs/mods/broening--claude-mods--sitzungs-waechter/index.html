@@ -16,23 +16,25 @@
 <p class="lede">Warnt mit einem Band ueber dem Prompt, wenn eine zweite Claude-Code-Sitzung im selben Ordner laeuft.</p>
 
 <div class="facts"><div><h2>Access</h2><span class="level">L2 Writes or runs</span><span class="track" aria-label="Reach level 2: Writes or runs"><i class="on l2"></i><i class="on l2"></i><i class="on l2"></i><i class=""></i></span><span class="labels">other: $.state.get, other: $.state.set, writes files, reads files, reads env vars, draws</span></div>
-<div><h2>Validation</h2><span class="status">Passed with warnings on Claude Code 2.1.301</span></div></div>
+<div><h2>Validation</h2><span class="status">Passed with warnings on Claude Code 2.1.332</span></div></div>
 <p class="actions"><a class="source" href="https://github.com/broening/claude-mods/tree/main/sitzungs-waechter">View the source on GitHub <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 19 19 5M5 5h14v14"/></svg></a><a href="/#broening--claude-mods--sitzungs-waechter">Back to the list</a></p>
 <p class="install">To install it, open the repository and follow the author’s setup instructions. Mods need Claude Code 2.1.287 or later.</p>
 <section class="record" aria-labelledby="record-title"><h2 id="record-title">What the scan recorded</h2>
 <dl>
 
     <dt>Observed events</dt><dd>Only what it hooks</dd>
-    <dt>Hooks</dt><dd><code>session.start, session.end, ui.render {component=AbovePrompt}</code></dd>
+    <dt>Hooks</dt><dd><code>session.start, session.end, ui.render {component=AbovePrompt}, default, matcher, key, plugin</code></dd>
     <dt>API calls</dt><dd><code>$.clock.every, $.clock.now, $.env.get, $.fs.read, $.fs.write, $.session.id, $.session.root, $.state.get, $.state.set, $.ui.resolve, $.ui.toast</code></dd>
 
-    <dt>Validation on 2.1.301</dt><dd>Passed with warnings</dd>
+    <dt>Validation on 2.1.332</dt><dd>Passed with warnings</dd>
 
 
     <dt>Scanned revision</dt><dd><a href="https://github.com/broening/claude-mods/tree/20feb89c51494cacba8be5856a9c253160e466e3"><code>20feb89c5149</code></a></dd>
     <dt>Marketplace warnings</dt><dd><a href="https://github.com/broening/claude-mods/blob/20feb89c51494cacba8be5856a9c253160e466e3/.claude-plugin/marketplace.json">claude-mods</a></dd></dl>
 <p class="note">These are the hooks and API calls reported by <code>claude plugin validate</code>. Access levels describe the widest reach of those calls and are not safety ratings. Validation is a static check, not a runtime test, and a passing result does not prove that a mod works or is safe. <a href="https://github.com/karanb192/awesome-claude-code-mods/blob/main/SCANNING.md">How the scan works</a>.</p></section>
 <section class="siblings" aria-labelledby="siblings-title"><h2 id="siblings-title">More from broening/claude-mods</h2><ul><li><a href="/mods/broening--claude-mods--annahmen/">annahmen</a><span>Zeigt nach jeder Antwort die stillen Annahmen von Claude (Band ueber dem Eingabefeld); richtig/falsch markier…</span></li><li><a href="/mods/broening--claude-mods--blast-radius/">blast-radius</a><span>Faengt gefaehrliche Shell-Befehle (Bash und PowerShell) ab, zeigt Befehl und Folge und fragt vor dem Ausfuehr…</span></li><li><a href="/mods/broening--claude-mods--cache-countdown/">cache-countdown</a><span>Zeigt ueber dem Prompt, wie lange der Prompt-Cache noch warm ist, mit Compact-Knopf und Auto-Compact kurz vor…</span></li><li><a href="/mods/broening--claude-mods--grill/">grill</a><span>Grill-Assistent: mit /grill stellt Claude bis zu 5 Rueckfragen zu deinem Plan, eine pro Schritt als Band uebe…</span></li><li><a href="/mods/broening--claude-mods--next-steps/">next-steps</a><span>Schlaegt nach jeder fertigen Antwort drei naechste Schritte vor (Band ueber dem Eingabefeld); ein Klick schic…</span></li><li><a href="/mods/broening--claude-mods--prompt-boost/">prompt-boost</a><span>Knopf ueber dem Eingabefeld: schreibt den Prompt-Entwurf besser um (passende Skills, offene Entscheidungen, Z…</span></li><li><a href="/mods/broening--claude-mods--todo-list/">todo-list</a><span>Arbeitsliste im Seitenfenster (/todo): Aufgaben einreihen, ohne Claude zu unterbrechen; mit Auto arbeitet Cla…</span></li></ul></section>
+<section class="badge-snippet" aria-labelledby="badge-title"><h2 id="badge-title">Badge for your README</h2><p><img src="/badges/broening--claude-mods--sitzungs-waechter-reach.svg" alt="Reach badge for sitzungs-waechter"> <img src="/badges/broening--claude-mods--sitzungs-waechter-validates.svg" alt="Validation badge for sitzungs-waechter"></p><p>Authors can show the latest scan result in their README. Each badge links to this page.</p><pre><code>[![reach](https://raw.githubusercontent.com/karanb192/awesome-claude-code-mods/main/badges/broening--claude-mods--sitzungs-waechter-reach.svg)](https://mods.aidojo.si/mods/broening--claude-mods--sitzungs-waechter/)
+[![validates](https://raw.githubusercontent.com/karanb192/awesome-claude-code-mods/main/badges/broening--claude-mods--sitzungs-waechter-validates.svg)](https://mods.aidojo.si/mods/broening--claude-mods--sitzungs-waechter/)</code></pre></section>
 </main>
 <footer class="shell"><a href="/" class="brand"><svg viewBox="0 0 32 32" fill="none" aria-hidden="true"><path d="M11 5H5v22h6M21 5h6v22h-6M16 10v12M10 16h12"/></svg><span>claude<span class="brand-light">mods</span></span></a><p>An independent community scan.<br>Not an official Anthropic directory.</p><a href="https://github.com/karanb192/awesome-claude-code-mods">Awesome Claude Code Mods on GitHub <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 19 19 5M5 5h14v14"/></svg></a></footer>
 </body></html>

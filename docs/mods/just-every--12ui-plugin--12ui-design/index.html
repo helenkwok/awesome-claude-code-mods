@@ -16,23 +16,25 @@
 <p class="lede">A Design workspace in Claude Code: see design options for a UI as images, select one, ask for more, ask for a change with a note and hand an option off to be built. Your agent runs the 12ui command line once per request, which draws every option at once with your own Codex sign-in.</p>
 <p class="compatibility">review UI rewrite</p>
 <div class="facts"><div><h2>Access</h2><span class="level">L3 Uses the network</span><span class="track" aria-label="Reach level 3: Uses the network"><i class="on l3"></i><i class="on l3"></i><i class="on l3"></i><i class="on l3"></i></span><span class="labels">network, drives Claude, reads files, draws</span></div>
-<div><h2>Validation</h2><span class="status">Passed on Claude Code 2.1.301</span></div></div>
+<div><h2>Validation</h2><span class="status">Passed on Claude Code 2.1.332</span></div></div>
 <p class="actions"><a class="source" href="https://github.com/just-every/12ui-plugin">View the source on GitHub <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 19 19 5M5 5h14v14"/></svg></a><a href="/#just-every--12ui-plugin--12ui-design">Back to the list</a></p>
 <p class="install">To install it, open the repository and follow the author’s setup instructions. Mods need Claude Code 2.1.287 or later.</p>
 <section class="record" aria-labelledby="record-title"><h2 id="record-title">What the scan recorded</h2>
 <dl>
 
     <dt>Observed events</dt><dd>mcp__plugin_12ui-design_12ui-workspace__design_slate_create|mcp__plugin_12ui-design_12ui-workspace__design_slate_show calls</dd>
-    <dt>Hooks</dt><dd><code>tool.call {tool=mcp__plugin_12ui-design_12ui-workspace__design_slate_create|mcp__plugin_12ui-design_12ui-workspace__design_slate_show}, ui.render {component=Pane}, ui.render {component=AbovePrompt}</code></dd>
+    <dt>Hooks</dt><dd><code>tool.call {tool=mcp__plugin_12ui-design_12ui-workspace__design_slate_create|mcp__plugin_12ui-design_12ui-workspace__design_slate_show}, ui.render {component=Pane}, default, matcher, key, plugin, ui.render {component=AbovePrompt}, default, matcher, key, plugin</code></dd>
     <dt>API calls</dt><dd><code>$.clock.after, $.clock.now, $.fs.read, $.http.fetch, $.prompt.submit, $.ui.blit, $.ui.invalidate, $.ui.log, $.ui.open, $.ui.panes, $.ui.resolve, $.ui.toast</code></dd>
 
-    <dt>Validation on 2.1.301</dt><dd>Passed</dd>
+    <dt>Validation on 2.1.332</dt><dd>Passed</dd>
 
 
-    <dt>Scanned revision</dt><dd><a href="https://github.com/just-every/12ui-plugin/tree/117af6dd5e648efff6b991622c4b4a0e4a3dda2d"><code>117af6dd5e64</code></a></dd>
-    <dt>Marketplace passed</dt><dd><a href="https://github.com/just-every/12ui-plugin/blob/117af6dd5e648efff6b991622c4b4a0e4a3dda2d/.claude-plugin/marketplace.json">12ui-plugin</a></dd><dt>UI rewrite review</dt><dd>UI hook source contains control-character strings. Review any values passed to next() as rewritten props.text; the scanner does not trace whether these strings reach that call. <a href="https://github.com/just-every/12ui-plugin/blob/117af6dd5e648efff6b991622c4b4a0e4a3dda2d/hooks/register.mjs#L79">hooks/register.mjs:79</a></dd></dl>
+    <dt>Scanned revision</dt><dd><a href="https://github.com/just-every/12ui-plugin/tree/ed4cf6da0a3e748cafc2a80e35c1db263a4bc4a1"><code>ed4cf6da0a3e</code></a></dd>
+    <dt>Marketplace passed</dt><dd><a href="https://github.com/just-every/12ui-plugin/blob/ed4cf6da0a3e748cafc2a80e35c1db263a4bc4a1/.claude-plugin/marketplace.json">12ui-plugin</a></dd><dt>UI rewrite review</dt><dd>UI hook source contains control-character strings. Review any values passed to next() as rewritten props.text; the scanner does not trace whether these strings reach that call. <a href="https://github.com/just-every/12ui-plugin/blob/ed4cf6da0a3e748cafc2a80e35c1db263a4bc4a1/hooks/register.mjs#L79">hooks/register.mjs:79</a></dd></dl>
 <p class="note">These are the hooks and API calls reported by <code>claude plugin validate</code>. Access levels describe the widest reach of those calls and are not safety ratings. Validation is a static check, not a runtime test, and a passing result does not prove that a mod works or is safe. <a href="https://github.com/karanb192/awesome-claude-code-mods/blob/main/SCANNING.md">How the scan works</a>.</p></section>
 
+<section class="badge-snippet" aria-labelledby="badge-title"><h2 id="badge-title">Badge for your README</h2><p><img src="/badges/just-every--12ui-plugin--12ui-design-reach.svg" alt="Reach badge for 12ui-design"> <img src="/badges/just-every--12ui-plugin--12ui-design-validates.svg" alt="Validation badge for 12ui-design"></p><p>Authors can show the latest scan result in their README. Each badge links to this page.</p><pre><code>[![reach](https://raw.githubusercontent.com/karanb192/awesome-claude-code-mods/main/badges/just-every--12ui-plugin--12ui-design-reach.svg)](https://mods.aidojo.si/mods/just-every--12ui-plugin--12ui-design/)
+[![validates](https://raw.githubusercontent.com/karanb192/awesome-claude-code-mods/main/badges/just-every--12ui-plugin--12ui-design-validates.svg)](https://mods.aidojo.si/mods/just-every--12ui-plugin--12ui-design/)</code></pre></section>
 </main>
 <footer class="shell"><a href="/" class="brand"><svg viewBox="0 0 32 32" fill="none" aria-hidden="true"><path d="M11 5H5v22h6M21 5h6v22h-6M16 10v12M10 16h12"/></svg><span>claude<span class="brand-light">mods</span></span></a><p>An independent community scan.<br>Not an official Anthropic directory.</p><a href="https://github.com/karanb192/awesome-claude-code-mods">Awesome Claude Code Mods on GitHub <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 19 19 5M5 5h14v14"/></svg></a></footer>
 </body></html>

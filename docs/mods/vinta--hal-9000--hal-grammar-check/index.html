@@ -15,24 +15,26 @@
 <p class="byline">A Claude Code mod in <a href="https://github.com/vinta/hal-9000">vinta/hal-9000</a></p>
 <p class="lede">Grammar-check your prompt as you type, shown above the prompt box</p>
 
-<div class="facts"><div><h2>Access</h2><span class="level">L1 Reads files</span><span class="track" aria-label="Reach level 1: Reads files"><i class="on l1"></i><i class="on l1"></i><i class=""></i><i class=""></i></span><span class="labels">other: $.process.spawn, other: $.state.get, other: $.state.set, draws</span></div>
-<div><h2>Validation</h2><span class="status">Passed on Claude Code 2.1.301</span></div></div>
+<div class="facts"><div><h2>Access</h2><span class="level">L2 Writes or runs</span><span class="track" aria-label="Reach level 2: Writes or runs"><i class="on l2"></i><i class="on l2"></i><i class="on l2"></i><i class=""></i></span><span class="labels">other: $.process.spawn, other: $.state.get, other: $.state.set, drives Claude, draws</span></div>
+<div><h2>Validation</h2><span class="status">Passed on Claude Code 2.1.332</span></div></div>
 <p class="actions"><a class="source" href="https://github.com/vinta/hal-9000/tree/main/plugins/hal-grammar-check">View the source on GitHub <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 19 19 5M5 5h14v14"/></svg></a><a href="/#vinta--hal-9000--hal-grammar-check">Back to the list</a></p>
 <p class="install">To install it, open the repository and follow the author’s setup instructions. Mods need Claude Code 2.1.287 or later.</p>
 <section class="record" aria-labelledby="record-title"><h2 id="record-title">What the scan recorded</h2>
 <dl>
 
     <dt>Observed events</dt><dd>every prompt</dd>
-    <dt>Hooks</dt><dd><code>prompt.edit, prompt.change, prompt.submit, ui.render {component=AbovePrompt}</code></dd>
-    <dt>API calls</dt><dd><code>$.clock.after, $.process.spawn, $.state.get, $.state.set, $.ui.resolve</code></dd>
+    <dt>Hooks</dt><dd><code>session.start, prompt.edit, prompt.change, prompt.submit, ui.render {component=AbovePrompt}, default, matcher, key, plugin</code></dd>
+    <dt>API calls</dt><dd><code>$.clock.after, $.model.complete, $.process.spawn, $.state.get, $.state.set, $.ui.resolve</code></dd>
 
-    <dt>Validation on 2.1.301</dt><dd>Passed</dd>
+    <dt>Validation on 2.1.332</dt><dd>Passed</dd>
 
 
-    <dt>Scanned revision</dt><dd><a href="https://github.com/vinta/hal-9000/tree/ca589730953fb5a5f319635c9559dc47e5e38954"><code>ca589730953f</code></a></dd>
-    <dt>Marketplace passed</dt><dd><a href="https://github.com/vinta/hal-9000/blob/ca589730953fb5a5f319635c9559dc47e5e38954/.claude-plugin/marketplace.json">hal-9000</a></dd></dl>
+    <dt>Scanned revision</dt><dd><a href="https://github.com/vinta/hal-9000/tree/6fa16365641b9e1741182acc8853ebe789473e1f"><code>6fa16365641b</code></a></dd>
+    <dt>Marketplace passed</dt><dd><a href="https://github.com/vinta/hal-9000/blob/6fa16365641b9e1741182acc8853ebe789473e1f/.claude-plugin/marketplace.json">hal-9000</a></dd></dl>
 <p class="note">These are the hooks and API calls reported by <code>claude plugin validate</code>. Access levels describe the widest reach of those calls and are not safety ratings. Validation is a static check, not a runtime test, and a passing result does not prove that a mod works or is safe. <a href="https://github.com/karanb192/awesome-claude-code-mods/blob/main/SCANNING.md">How the scan works</a>.</p></section>
-
+<section class="siblings" aria-labelledby="siblings-title"><h2 id="siblings-title">More from vinta/hal-9000</h2><ul><li><a href="/mods/vinta--hal-9000--hal-session-auto-rename/">hal-session-auto-rename</a><span>Automatically name each session and rename it as the conversation evolves</span></li><li><a href="/mods/vinta--hal-9000--hal-shell-mode-auto-suggest/">hal-shell-mode-auto-suggest</a><span>Suggests the `!` shell command Claude's last reply asks you to run, Tab to take</span></li><li><a href="/mods/vinta--hal-9000--hal-subagent-rows/">hal-subagent-rows</a><span>Show each subagent's status, model, effort, and context usage in its agent row</span></li></ul></section>
+<section class="badge-snippet" aria-labelledby="badge-title"><h2 id="badge-title">Badge for your README</h2><p><img src="/badges/vinta--hal-9000--hal-grammar-check-reach.svg" alt="Reach badge for hal-grammar-check"> <img src="/badges/vinta--hal-9000--hal-grammar-check-validates.svg" alt="Validation badge for hal-grammar-check"></p><p>Authors can show the latest scan result in their README. Each badge links to this page.</p><pre><code>[![reach](https://raw.githubusercontent.com/karanb192/awesome-claude-code-mods/main/badges/vinta--hal-9000--hal-grammar-check-reach.svg)](https://mods.aidojo.si/mods/vinta--hal-9000--hal-grammar-check/)
+[![validates](https://raw.githubusercontent.com/karanb192/awesome-claude-code-mods/main/badges/vinta--hal-9000--hal-grammar-check-validates.svg)](https://mods.aidojo.si/mods/vinta--hal-9000--hal-grammar-check/)</code></pre></section>
 </main>
 <footer class="shell"><a href="/" class="brand"><svg viewBox="0 0 32 32" fill="none" aria-hidden="true"><path d="M11 5H5v22h6M21 5h6v22h-6M16 10v12M10 16h12"/></svg><span>claude<span class="brand-light">mods</span></span></a><p>An independent community scan.<br>Not an official Anthropic directory.</p><a href="https://github.com/karanb192/awesome-claude-code-mods">Awesome Claude Code Mods on GitHub <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 19 19 5M5 5h14v14"/></svg></a></footer>
 </body></html>

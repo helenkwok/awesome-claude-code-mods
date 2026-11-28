@@ -16,23 +16,25 @@
 <p class="lede">Shows the background tasks this session left running and how much memory is free. Stops only what it started.</p>
 
 <div class="facts"><div><h2>Access</h2><span class="level">L2 Writes or runs</span><span class="track" aria-label="Reach level 2: Writes or runs"><i class="on l2"></i><i class="on l2"></i><i class="on l2"></i><i class=""></i></span><span class="labels">other: $.state.get, other: $.state.set, runs processes, drives Claude, reads env vars, persists state, draws</span></div>
-<div><h2>Validation</h2><span class="status">Passed on Claude Code 2.1.301</span></div></div>
+<div><h2>Validation</h2><span class="status">Passed with warnings on Claude Code 2.1.332</span></div></div>
 <p class="actions"><a class="source" href="https://github.com/ivanvyd/ground-rules/tree/main/plugins/lights-out">View the source on GitHub <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 19 19 5M5 5h14v14"/></svg></a><a href="/#ivanvyd--ground-rules--lights-out">Back to the list</a></p>
 <p class="install">To install it, open the repository and follow the author’s setup instructions. Mods need Claude Code 2.1.287 or later.</p>
 <section class="record" aria-labelledby="record-title"><h2 id="record-title">What the scan recorded</h2>
 <dl>
 
     <dt>Observed events</dt><dd>classic hooks</dd>
-    <dt>Hooks</dt><dd><code>session.start, classic.PostToolUse, classic.Stop, classic.SubagentStop, session.end, command.run {command=lights-out}, ui.render {component=AbovePrompt}, ui.render {component=Pane, requestId=lights-out}</code></dd>
+    <dt>Hooks</dt><dd><code>session.start, classic.PostToolUse, classic.Stop, classic.SubagentStop, session.end, command.run {command=lights-out}, ui.render {component=AbovePrompt}, default, matcher, key, plugin, ui.render {component=Pane, requestId=lights-out}, default, matcher, key, plugin</code></dd>
     <dt>API calls</dt><dd><code>$.clock.after, $.clock.every, $.clock.now, $.command.register, $.env.get, $.process.run, $.session.id, $.state.get, $.state.set, $.store.delete, $.store.get, $.store.keys, $.store.set, $.tool.call, $.ui.ask, $.ui.open, $.ui.resolve, $.ui.toast</code></dd>
 
-    <dt>Validation on 2.1.301</dt><dd>Passed</dd>
+    <dt>Validation on 2.1.332</dt><dd>Passed with warnings</dd>
 
 
     <dt>Scanned revision</dt><dd><a href="https://github.com/ivanvyd/ground-rules/tree/6e02ddc2fcfb19887e1292fdfb1bfbbaca55e968"><code>6e02ddc2fcfb</code></a></dd>
     <dt>Marketplace passed</dt><dd><a href="https://github.com/ivanvyd/ground-rules/blob/6e02ddc2fcfb19887e1292fdfb1bfbbaca55e968/.claude-plugin/marketplace.json">ground-rules</a></dd></dl>
 <p class="note">These are the hooks and API calls reported by <code>claude plugin validate</code>. Access levels describe the widest reach of those calls and are not safety ratings. Validation is a static check, not a runtime test, and a passing result does not prove that a mod works or is safe. <a href="https://github.com/karanb192/awesome-claude-code-mods/blob/main/SCANNING.md">How the scan works</a>.</p></section>
 <section class="siblings" aria-labelledby="siblings-title"><h2 id="siblings-title">More from ivanvyd/ground-rules</h2><ul><li><a href="/mods/ivanvyd--ground-rules--save-point/">save-point</a><span>Saves uncommitted work a moment before a command erases it. /save-point brings it back.</span></li><li><a href="/mods/ivanvyd--ground-rules--spotcheck/">spotcheck</a><span>Checks the files, line numbers and symbols a subagent cites before Claude repeats the report.</span></li><li><a href="/mods/ivanvyd--ground-rules--stay-put/">stay-put</a><span>Bounces `cd dir &amp;&amp; …` before it runs and gives Claude the one-command form.</span></li><li><a href="/mods/ivanvyd--ground-rules--wake-me/">wake-me</a><span>Claude ends its turn instead of polling. You watch the progress bar, and the mod wakes Claude when the file i…</span></li></ul></section>
+<section class="badge-snippet" aria-labelledby="badge-title"><h2 id="badge-title">Badge for your README</h2><p><img src="/badges/ivanvyd--ground-rules--lights-out-reach.svg" alt="Reach badge for lights-out"> <img src="/badges/ivanvyd--ground-rules--lights-out-validates.svg" alt="Validation badge for lights-out"></p><p>Authors can show the latest scan result in their README. Each badge links to this page.</p><pre><code>[![reach](https://raw.githubusercontent.com/karanb192/awesome-claude-code-mods/main/badges/ivanvyd--ground-rules--lights-out-reach.svg)](https://mods.aidojo.si/mods/ivanvyd--ground-rules--lights-out/)
+[![validates](https://raw.githubusercontent.com/karanb192/awesome-claude-code-mods/main/badges/ivanvyd--ground-rules--lights-out-validates.svg)](https://mods.aidojo.si/mods/ivanvyd--ground-rules--lights-out/)</code></pre></section>
 </main>
 <footer class="shell"><a href="/" class="brand"><svg viewBox="0 0 32 32" fill="none" aria-hidden="true"><path d="M11 5H5v22h6M21 5h6v22h-6M16 10v12M10 16h12"/></svg><span>claude<span class="brand-light">mods</span></span></a><p>An independent community scan.<br>Not an official Anthropic directory.</p><a href="https://github.com/karanb192/awesome-claude-code-mods">Awesome Claude Code Mods on GitHub <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 19 19 5M5 5h14v14"/></svg></a></footer>
 </body></html>

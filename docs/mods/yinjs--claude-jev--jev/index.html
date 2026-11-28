@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <title>jev, a Claude Code mod by yinjs | Awesome Claude Code Mods</title>
-<meta name="description" content="Jev answers clear permission prompts, flags prompt injection in fetched content, checks done claims, nudges large or vague requests, and routes effort and…"><meta name="theme-color" content="#f0eee6" media="(prefers-color-scheme: light)"><meta name="theme-color" content="#1c1c1a" media="(prefers-color-scheme: dark)">
+<meta name="description" content="Jev answers clear permission prompts, flags prompt injection in fetched content, checks done claims, nudges large or vague requests, and routes effort and…"><meta name="robots" content="noindex"><meta name="theme-color" content="#f0eee6" media="(prefers-color-scheme: light)"><meta name="theme-color" content="#1c1c1a" media="(prefers-color-scheme: dark)">
 <link rel="canonical" href="https://mods.aidojo.si/mods/yinjs--claude-jev--jev/"><link rel="icon" href="/favicon.svg" type="image/svg+xml">
 <link rel="preload" href="/fonts/hanken-grotesk-latin.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="/site.css">
@@ -16,7 +16,7 @@
 <p class="lede">Jev answers clear permission prompts, flags prompt injection in fetched content, checks done claims, nudges large or vague requests, and routes effort and models without trading away the prompt cache.</p>
 
 <div class="facts"><div><h2>Access</h2><span class="level">L2 Writes or runs</span><span class="track" aria-label="Reach level 2: Writes or runs"><i class="on l2"></i><i class="on l2"></i><i class="on l2"></i><i class=""></i></span><span class="labels">runs processes, reads env vars, reads the transcript, draws</span></div>
-<div><h2>Validation</h2><span class="status">Passed with warnings on Claude Code 2.1.301</span></div></div>
+<div><h2>Validation</h2><span class="status bad">not verified</span></div></div>
 <p class="actions"><a class="source" href="https://github.com/yinjs/claude-jev">View the source on GitHub <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 19 19 5M5 5h14v14"/></svg></a><a href="/#yinjs--claude-jev--jev">Back to the list</a></p>
 <p class="install">To install it, open the repository and follow the author’s setup instructions. Mods need Claude Code 2.1.287 or later.</p>
 <section class="record" aria-labelledby="record-title"><h2 id="record-title">What the scan recorded</h2>
@@ -26,13 +26,15 @@
     <dt>Hooks</dt><dd><code>session.start, session.end, command.run {command=jev-route}, command.run {command=jev-stats}, turn.start, turn.step, turn.complete, agent.spawn</code></dd>
     <dt>API calls</dt><dd><code>$.command.register, $.env.get, $.process.run, $.session.messages, $.ui.log</code></dd>
 
-    <dt>Validation on 2.1.301</dt><dd>Passed with warnings</dd>
-
-
+    <dt>Validation on 2.1.301</dt><dd>not verified</dd>
+    <dt>Last known result</dt><dd>Passed with warnings on 2.1.301</dd>
+    <dt>Validator output</dt><dd>Repository could not be scanned; showing the last known footprint.</dd>
     <dt>Scanned revision</dt><dd><a href="https://github.com/yinjs/claude-jev/tree/a0dd115cf1502d397ecee110bba1257c30ef7015"><code>a0dd115cf150</code></a></dd>
     <dt>Marketplace passed</dt><dd><a href="https://github.com/yinjs/claude-jev/blob/a0dd115cf1502d397ecee110bba1257c30ef7015/.claude-plugin/marketplace.json">yinjs</a></dd></dl>
 <p class="note">These are the hooks and API calls reported by <code>claude plugin validate</code>. Access levels describe the widest reach of those calls and are not safety ratings. Validation is a static check, not a runtime test, and a passing result does not prove that a mod works or is safe. <a href="https://github.com/karanb192/awesome-claude-code-mods/blob/main/SCANNING.md">How the scan works</a>.</p></section>
 
+<section class="badge-snippet" aria-labelledby="badge-title"><h2 id="badge-title">Badge for your README</h2><p><img src="/badges/yinjs--claude-jev--jev-reach.svg" alt="Reach badge for jev"> <img src="/badges/yinjs--claude-jev--jev-validates.svg" alt="Validation badge for jev"></p><p>Authors can show the latest scan result in their README. Each badge links to this page.</p><pre><code>[![reach](https://raw.githubusercontent.com/karanb192/awesome-claude-code-mods/main/badges/yinjs--claude-jev--jev-reach.svg)](https://mods.aidojo.si/mods/yinjs--claude-jev--jev/)
+[![validates](https://raw.githubusercontent.com/karanb192/awesome-claude-code-mods/main/badges/yinjs--claude-jev--jev-validates.svg)](https://mods.aidojo.si/mods/yinjs--claude-jev--jev/)</code></pre></section>
 </main>
 <footer class="shell"><a href="/" class="brand"><svg viewBox="0 0 32 32" fill="none" aria-hidden="true"><path d="M11 5H5v22h6M21 5h6v22h-6M16 10v12M10 16h12"/></svg><span>claude<span class="brand-light">mods</span></span></a><p>An independent community scan.<br>Not an official Anthropic directory.</p><a href="https://github.com/karanb192/awesome-claude-code-mods">Awesome Claude Code Mods on GitHub <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 19 19 5M5 5h14v14"/></svg></a></footer>
 </body></html>

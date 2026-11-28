@@ -15,24 +15,26 @@
 <p class="byline">A Claude Code mod in <a href="https://github.com/warrendeanlangeveldt/code-kit">warrendeanlangeveldt/code-kit</a></p>
 <p class="lede">Keeps AI coding agents inside your project's rules, from idea to merged code: spec design, lanes, layer rules, protected paths with an approval log, spec-check and design gates, proof-before-finish checks, dispatch, review, build status and CI verification, configured per project from its docs</p>
 
-<div class="facts"><div><h2>Access</h2><span class="level">L2 Writes or runs</span><span class="track" aria-label="Reach level 2: Writes or runs"><i class="on l2"></i><i class="on l2"></i><i class="on l2"></i><i class=""></i></span><span class="labels">other: $.agent.register, other: $.prompt.read, runs processes, drives Claude, writes the prompt box, reads files, draws</span></div>
-<div><h2>Validation</h2><span class="status">Passed with warnings on Claude Code 2.1.301</span></div></div>
+<div class="facts"><div><h2>Access</h2><span class="level">L2 Writes or runs</span><span class="track" aria-label="Reach level 2: Writes or runs"><i class="on l2"></i><i class="on l2"></i><i class="on l2"></i><i class=""></i></span><span class="labels">other: $.agent.register, other: $.prompt.read, runs processes, drives Claude, reads files, draws</span></div>
+<div><h2>Validation</h2><span class="status">Passed with warnings on Claude Code 2.1.332</span></div></div>
 <p class="actions"><a class="source" href="https://github.com/warrendeanlangeveldt/code-kit">View the source on GitHub <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 19 19 5M5 5h14v14"/></svg></a><a href="/#warrendeanlangeveldt--code-kit--code-kit">Back to the list</a></p>
 <p class="install">To install it, open the repository and follow the author’s setup instructions. Mods need Claude Code 2.1.287 or later.</p>
 <section class="record" aria-labelledby="record-title"><h2 id="record-title">What the scan recorded</h2>
 <dl>
 
-    <dt>Observed events</dt><dd>classic hooks, every tool call, subagent spawns, every prompt</dd>
-    <dt>Hooks</dt><dd><code>session.start, command.run {command=lanes}, command.run {command=team}, command.run {command=harness}, command.run {command=approvals}, command.run {command=verify-branch}, classic.PermissionDenied, tool.call, ui.render {component=ToolGroup}, ui.render {component=ToolResult}, ui.render {component=ToolUse}, agent.spawn, turn.step, session.measure, turn.start, turn.complete, prompt.submit, session.end, ui.render {component=Pane, requestId=?}, ui.close, ui.render {component=Pane, requestId=?}, ui.render {component=AbovePrompt}, ui.render {component=Pane, requestId=?}, ui.render {component=Pane, requestId=?}, ui.render {component=Pane, requestId=?}, ui.render {component=Pane, requestId=?}, ui.render {component=Pane, requestId=?}</code></dd>
-    <dt>API calls</dt><dd><code>$.agent.list, $.agent.register, $.clock.every, $.clock.now, $.command.register, $.command.run, $.fs.list, $.fs.read, $.fs.stat, $.model.complete, $.model.fork, $.process.run, $.prompt.fill, $.prompt.read, $.prompt.submit, $.session.cwd, $.session.id, $.session.send, $.session.usage, $.ui.ask, $.ui.blit, $.ui.close, $.ui.focus, $.ui.invalidate, $.ui.log, $.ui.open, $.ui.panes, $.ui.resolve</code></dd>
+    <dt>Observed events</dt><dd>Only what it hooks</dd>
+    <dt>Hooks</dt><dd><code>ui.render {component=Pane, requestId=?}, default, matcher, key, plugin, ui.render {component=Pane, requestId=?}, default, matcher, key, plugin, ui.render {component=Pane, requestId=?}, default, matcher, key, plugin, ui.render {component=Pane, requestId=?}, default, matcher, key, plugin</code></dd>
+    <dt>API calls</dt><dd><code>$.agent.list, $.agent.register, $.clock.every, $.clock.now, $.clock.sleep, $.command.register, $.command.run, $.fs.list, $.fs.read, $.fs.stat, $.model.complete, $.model.fork, $.process.run, $.prompt.read, $.prompt.submit, $.session.compact, $.session.cwd, $.session.id, $.session.send, $.session.usage, $.ui.ask, $.ui.close, $.ui.focus, $.ui.invalidate, $.ui.log, $.ui.notify, $.ui.open, $.ui.panes, $.ui.resolve, $.ui.toast, $.ui.view</code></dd>
+    <dt>Surface modules</dt><dd><code>hooks/mod/surface/character.mjs, hooks/mod/surface/clock.mjs, hooks/mod/surface/rail.mjs</code></dd>
+    <dt>Validation on 2.1.332</dt><dd>Passed with warnings</dd>
 
-    <dt>Validation on 2.1.301</dt><dd>Passed with warnings</dd>
 
-
-    <dt>Scanned revision</dt><dd><a href="https://github.com/warrendeanlangeveldt/code-kit/tree/90bb2fb99753690128b4011b4f24b4d6ce8e5d10"><code>90bb2fb99753</code></a></dd>
-    <dt>Marketplace passed</dt><dd><a href="https://github.com/warrendeanlangeveldt/code-kit/blob/90bb2fb99753690128b4011b4f24b4d6ce8e5d10/.claude-plugin/marketplace.json">code-kit</a></dd></dl>
+    <dt>Scanned revision</dt><dd><a href="https://github.com/warrendeanlangeveldt/code-kit/tree/5179b9f7b0fca5338b1e0c940cb54ed4d050ce95"><code>5179b9f7b0fc</code></a></dd>
+    <dt>Marketplace passed</dt><dd><a href="https://github.com/warrendeanlangeveldt/code-kit/blob/5179b9f7b0fca5338b1e0c940cb54ed4d050ce95/.claude-plugin/marketplace.json">code-kit</a></dd></dl>
 <p class="note">These are the hooks and API calls reported by <code>claude plugin validate</code>. Access levels describe the widest reach of those calls and are not safety ratings. Validation is a static check, not a runtime test, and a passing result does not prove that a mod works or is safe. <a href="https://github.com/karanb192/awesome-claude-code-mods/blob/main/SCANNING.md">How the scan works</a>.</p></section>
 
+<section class="badge-snippet" aria-labelledby="badge-title"><h2 id="badge-title">Badge for your README</h2><p><img src="/badges/warrendeanlangeveldt--code-kit--code-kit-reach.svg" alt="Reach badge for code-kit"> <img src="/badges/warrendeanlangeveldt--code-kit--code-kit-validates.svg" alt="Validation badge for code-kit"></p><p>Authors can show the latest scan result in their README. Each badge links to this page.</p><pre><code>[![reach](https://raw.githubusercontent.com/karanb192/awesome-claude-code-mods/main/badges/warrendeanlangeveldt--code-kit--code-kit-reach.svg)](https://mods.aidojo.si/mods/warrendeanlangeveldt--code-kit--code-kit/)
+[![validates](https://raw.githubusercontent.com/karanb192/awesome-claude-code-mods/main/badges/warrendeanlangeveldt--code-kit--code-kit-validates.svg)](https://mods.aidojo.si/mods/warrendeanlangeveldt--code-kit--code-kit/)</code></pre></section>
 </main>
 <footer class="shell"><a href="/" class="brand"><svg viewBox="0 0 32 32" fill="none" aria-hidden="true"><path d="M11 5H5v22h6M21 5h6v22h-6M16 10v12M10 16h12"/></svg><span>claude<span class="brand-light">mods</span></span></a><p>An independent community scan.<br>Not an official Anthropic directory.</p><a href="https://github.com/karanb192/awesome-claude-code-mods">Awesome Claude Code Mods on GitHub <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 19 19 5M5 5h14v14"/></svg></a></footer>
 </body></html>

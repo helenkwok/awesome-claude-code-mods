@@ -16,7 +16,7 @@
 <p class="lede">Lossless compaction for Claude Code: nothing is summarized; everything removed is archived verbatim with provenance and restorable by id (Jev or a local ruleset). /lossless to inspect and restore.</p>
 
 <div class="facts"><div><h2>Access</h2><span class="level">L3 Uses the network</span><span class="track" aria-label="Reach level 3: Uses the network"><i class="on l3"></i><i class="on l3"></i><i class="on l3"></i><i class="on l3"></i></span><span class="labels">network, writes files, drives Claude, reads files, reads env vars, reads settings, reads the transcript, persists state, draws</span></div>
-<div><h2>Validation</h2><span class="status">Passed with warnings on Claude Code 2.1.301</span></div></div>
+<div><h2>Validation</h2><span class="status">Passed with warnings on Claude Code 2.1.332</span></div></div>
 <p class="actions"><a class="source" href="https://github.com/MusicStudioNYC/lossless-compact">View the source on GitHub <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 19 19 5M5 5h14v14"/></svg></a><a href="/#MusicStudioNYC--lossless-compact--lossless-compact">Back to the list</a></p>
 <p class="install">To install it, open the repository and follow the author’s setup instructions. Mods need Claude Code 2.1.287 or later.</p>
 <section class="record" aria-labelledby="record-title"><h2 id="record-title">What the scan recorded</h2>
@@ -24,15 +24,17 @@
 
     <dt>Observed events</dt><dd>every skill, compaction, every prompt</dd>
     <dt>Hooks</dt><dd><code>session.start, command.run {command=lossless}, skill.prompt, session.compact, prompt.submit, turn.complete</code></dd>
-    <dt>API calls</dt><dd><code>$.command.register, $.command.run, $.env.get, $.fs.exists, $.fs.list, $.fs.read, $.fs.write, $.http.fetch, $.model.complete, $.model.fork, $.session.compact, $.session.cwd, $.session.id, $.session.messages, $.session.usage, $.settings.read, $.store.get, $.store.set, $.ui.ask, $.ui.log, $.ui.toast</code></dd>
+    <dt>API calls</dt><dd><code>$.command.register, $.command.run, $.env.get, $.fs.exists, $.fs.list, $.fs.read, $.fs.write, $.http.fetch, $.model.complete, $.model.fork, $.session.compact, $.session.cwd, $.session.id, $.session.messages, $.session.repo, $.session.usage, $.settings.read, $.store.get, $.store.set, $.ui.ask, $.ui.log, $.ui.toast</code></dd>
 
-    <dt>Validation on 2.1.301</dt><dd>Passed with warnings</dd>
+    <dt>Validation on 2.1.332</dt><dd>Passed with warnings</dd>
 
 
-    <dt>Scanned revision</dt><dd><a href="https://github.com/MusicStudioNYC/lossless-compact/tree/f496be954449a6ad408be40045a9eaf09252b6c8"><code>f496be954449</code></a></dd>
-    <dt>Marketplace warnings</dt><dd><a href="https://github.com/MusicStudioNYC/lossless-compact/blob/f496be954449a6ad408be40045a9eaf09252b6c8/.claude-plugin/marketplace.json">lossless-compact</a></dd></dl>
+    <dt>Scanned revision</dt><dd><a href="https://github.com/MusicStudioNYC/lossless-compact/tree/990ba4129ec990b0ee141e39acf263a068f3d03c"><code>990ba4129ec9</code></a></dd>
+    <dt>Marketplace warnings</dt><dd><a href="https://github.com/MusicStudioNYC/lossless-compact/blob/990ba4129ec990b0ee141e39acf263a068f3d03c/.claude-plugin/marketplace.json">lossless-compact</a></dd></dl>
 <p class="note">These are the hooks and API calls reported by <code>claude plugin validate</code>. Access levels describe the widest reach of those calls and are not safety ratings. Validation is a static check, not a runtime test, and a passing result does not prove that a mod works or is safe. <a href="https://github.com/karanb192/awesome-claude-code-mods/blob/main/SCANNING.md">How the scan works</a>.</p></section>
 
+<section class="badge-snippet" aria-labelledby="badge-title"><h2 id="badge-title">Badge for your README</h2><p><img src="/badges/MusicStudioNYC--lossless-compact--lossless-compact-reach.svg" alt="Reach badge for lossless-compact"> <img src="/badges/MusicStudioNYC--lossless-compact--lossless-compact-validates.svg" alt="Validation badge for lossless-compact"></p><p>Authors can show the latest scan result in their README. Each badge links to this page.</p><pre><code>[![reach](https://raw.githubusercontent.com/karanb192/awesome-claude-code-mods/main/badges/MusicStudioNYC--lossless-compact--lossless-compact-reach.svg)](https://mods.aidojo.si/mods/MusicStudioNYC--lossless-compact--lossless-compact/)
+[![validates](https://raw.githubusercontent.com/karanb192/awesome-claude-code-mods/main/badges/MusicStudioNYC--lossless-compact--lossless-compact-validates.svg)](https://mods.aidojo.si/mods/MusicStudioNYC--lossless-compact--lossless-compact/)</code></pre></section>
 </main>
 <footer class="shell"><a href="/" class="brand"><svg viewBox="0 0 32 32" fill="none" aria-hidden="true"><path d="M11 5H5v22h6M21 5h6v22h-6M16 10v12M10 16h12"/></svg><span>claude<span class="brand-light">mods</span></span></a><p>An independent community scan.<br>Not an official Anthropic directory.</p><a href="https://github.com/karanb192/awesome-claude-code-mods">Awesome Claude Code Mods on GitHub <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 19 19 5M5 5h14v14"/></svg></a></footer>
 </body></html>

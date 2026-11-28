@@ -16,23 +16,25 @@
 <p class="lede">A pane listing the files Claude changed since your last message, each one's diff a click away.</p>
 <p class="compatibility">review UI rewrite</p>
 <div class="facts"><div><h2>Access</h2><span class="level">L2 Writes or runs</span><span class="track" aria-label="Reach level 2: Writes or runs"><i class="on l2"></i><i class="on l2"></i><i class="on l2"></i><i class=""></i></span><span class="labels">other: $.state.get, other: $.state.set, runs processes, reads files, persists state, draws</span></div>
-<div><h2>Validation</h2><span class="status">Passed on Claude Code 2.1.301</span></div></div>
+<div><h2>Validation</h2><span class="status">Passed on Claude Code 2.1.332</span></div></div>
 <p class="actions"><a class="source" href="https://github.com/endless-fr/claude-mods/tree/main/mods/changed-files">View the source on GitHub <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 19 19 5M5 5h14v14"/></svg></a><a href="/#endless-fr--claude-mods--changed-files">Back to the list</a></p>
 <p class="install">To install it, open the repository and follow the author’s setup instructions. Mods need Claude Code 2.1.287 or later.</p>
 <section class="record" aria-labelledby="record-title"><h2 id="record-title">What the scan recorded</h2>
 <dl>
 
     <dt>Observed events</dt><dd>every prompt, every tool call, Bash calls</dd>
-    <dt>Hooks</dt><dd><code>session.start, command.run {command=changed-files}, prompt.submit, tool.call, tool.call {tool=Bash}, ui.message {requestId=changed-files}, ui.focus {requestId=changed-files}, ui.render {component=Pane, requestId=changed-files}</code></dd>
+    <dt>Hooks</dt><dd><code>session.start, command.run {command=changed-files}, prompt.submit, tool.call, tool.call {tool=Bash}, ui.message {requestId=changed-files}, ui.focus {requestId=changed-files}, default, matcher, key, plugin, component, ui.render {component=Pane, requestId=changed-files}, default, matcher, key, plugin</code></dd>
     <dt>API calls</dt><dd><code>$.command.register, $.fs.exists, $.fs.read, $.fs.stat, $.process.run, $.session.cwd, $.session.surfaces, $.state.get, $.state.set, $.store.get, $.store.set, $.ui.open, $.ui.resolve</code></dd>
     <dt>Surface modules</dt><dd><code>hooks/row.tsx</code></dd>
-    <dt>Validation on 2.1.301</dt><dd>Passed</dd>
+    <dt>Validation on 2.1.332</dt><dd>Passed</dd>
 
 
     <dt>Scanned revision</dt><dd><a href="https://github.com/endless-fr/claude-mods/tree/4e73d5fc37400a019e9cc3e006c37cbcb64e0835"><code>4e73d5fc3740</code></a></dd>
     <dt>Marketplace passed</dt><dd><a href="https://github.com/endless-fr/claude-mods/blob/4e73d5fc37400a019e9cc3e006c37cbcb64e0835/.claude-plugin/marketplace.json">endless-claude-mods</a></dd><dt>UI rewrite review</dt><dd>UI hook source contains control-character strings. Review any values passed to next() as rewritten props.text; the scanner does not trace whether these strings reach that call. <a href="https://github.com/endless-fr/claude-mods/blob/4e73d5fc37400a019e9cc3e006c37cbcb64e0835/mods/changed-files/hooks/shell.ts#L99">mods/changed-files/hooks/shell.ts:99</a></dd></dl>
 <p class="note">These are the hooks and API calls reported by <code>claude plugin validate</code>. Access levels describe the widest reach of those calls and are not safety ratings. Validation is a static check, not a runtime test, and a passing result does not prove that a mod works or is safe. <a href="https://github.com/karanb192/awesome-claude-code-mods/blob/main/SCANNING.md">How the scan works</a>.</p></section>
 <section class="siblings" aria-labelledby="siblings-title"><h2 id="siblings-title">More from endless-fr/claude-mods</h2><ul><li><a href="/mods/endless-fr--claude-mods--context-weather/">context-weather</a><span>One band above the prompt: context size with its weather, your 5-hour and 7-day limits against the clock, the…</span></li><li><a href="/mods/endless-fr--claude-mods--session-recap/">session-recap</a><span>A recap of the conversation you just cleared, as a card to share: time worked, turns, tool calls, files and l…</span></li></ul></section>
+<section class="badge-snippet" aria-labelledby="badge-title"><h2 id="badge-title">Badge for your README</h2><p><img src="/badges/endless-fr--claude-mods--changed-files-reach.svg" alt="Reach badge for changed-files"> <img src="/badges/endless-fr--claude-mods--changed-files-validates.svg" alt="Validation badge for changed-files"></p><p>Authors can show the latest scan result in their README. Each badge links to this page.</p><pre><code>[![reach](https://raw.githubusercontent.com/karanb192/awesome-claude-code-mods/main/badges/endless-fr--claude-mods--changed-files-reach.svg)](https://mods.aidojo.si/mods/endless-fr--claude-mods--changed-files/)
+[![validates](https://raw.githubusercontent.com/karanb192/awesome-claude-code-mods/main/badges/endless-fr--claude-mods--changed-files-validates.svg)](https://mods.aidojo.si/mods/endless-fr--claude-mods--changed-files/)</code></pre></section>
 </main>
 <footer class="shell"><a href="/" class="brand"><svg viewBox="0 0 32 32" fill="none" aria-hidden="true"><path d="M11 5H5v22h6M21 5h6v22h-6M16 10v12M10 16h12"/></svg><span>claude<span class="brand-light">mods</span></span></a><p>An independent community scan.<br>Not an official Anthropic directory.</p><a href="https://github.com/karanb192/awesome-claude-code-mods">Awesome Claude Code Mods on GitHub <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 19 19 5M5 5h14v14"/></svg></a></footer>
 </body></html>

@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <title>desktop-look, a Claude Code mod by KyongSik-Yoon | Awesome Claude Code Mods</title>
-<meta name="description" content="Make the terminal transcript look like the Claude Code apps: your prompts beside an orange bar, tool calls as one line with a state mark, lists set in wit…"><meta name="theme-color" content="#f0eee6" media="(prefers-color-scheme: light)"><meta name="theme-color" content="#1c1c1a" media="(prefers-color-scheme: dark)">
+<meta name="description" content="Make the terminal transcript look like the Claude Code apps: your prompts beside an orange bar, tool calls as one line with a state mark, lists set in wit…"><meta name="robots" content="noindex"><meta name="theme-color" content="#f0eee6" media="(prefers-color-scheme: light)"><meta name="theme-color" content="#1c1c1a" media="(prefers-color-scheme: dark)">
 <link rel="canonical" href="https://mods.aidojo.si/mods/KyongSik-Yoon--claude-mods--desktop-look/"><link rel="icon" href="/favicon.svg" type="image/svg+xml">
 <link rel="preload" href="/fonts/hanken-grotesk-latin.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="/site.css">
@@ -16,7 +16,7 @@
 <p class="lede">Make the terminal transcript look like the Claude Code apps: your prompts beside an orange bar, tool calls as one line with a state mark, lists set in with bullets, the text between tool calls set apart, and an info band</p>
 <p class="compatibility">review UI rewrite</p>
 <div class="facts"><div><h2>Access</h2><span class="level">L2 Writes or runs</span><span class="track" aria-label="Reach level 2: Writes or runs"><i class="on l2"></i><i class="on l2"></i><i class="on l2"></i><i class=""></i></span><span class="labels">other: $.state.get, other: $.state.set, runs processes, reads files, reads the transcript, draws</span></div>
-<div><h2>Validation</h2><span class="status">Passed on Claude Code 2.1.301</span></div></div>
+<div><h2>Validation</h2><span class="status bad">not verified</span></div></div>
 <p class="actions"><a class="source" href="https://github.com/KyongSik-Yoon/claude-mods/tree/main/desktop-look">View the source on GitHub <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 19 19 5M5 5h14v14"/></svg></a><a href="/#KyongSik-Yoon--claude-mods--desktop-look">Back to the list</a></p>
 <p class="install">To install it, open the repository and follow the author’s setup instructions. Mods need Claude Code 2.1.287 or later.</p>
 <section class="record" aria-labelledby="record-title"><h2 id="record-title">What the scan recorded</h2>
@@ -26,13 +26,15 @@
     <dt>Hooks</dt><dd><code>session.start, turn.step, session.measure, session.compact, tool.call, ui.render {component=AbovePrompt}, ui.render {component=UserMessage}, ui.render {component=AssistantMessage}, ui.render {component=ToolUse}, ui.render {component=ToolResult}, ui.render {component=ToolGroup}</code></dd>
     <dt>API calls</dt><dd><code>$.fs.read, $.process.run, $.session.messages, $.session.model, $.session.usage, $.state.get, $.state.set, $.ui.resolve</code></dd>
 
-    <dt>Validation on 2.1.301</dt><dd>Passed</dd>
-
-
+    <dt>Validation on 2.1.301</dt><dd>not verified</dd>
+    <dt>Last known result</dt><dd>Passed on 2.1.301</dd>
+    <dt>Validator output</dt><dd>Repository could not be scanned; showing the last known footprint.</dd>
     <dt>Scanned revision</dt><dd><a href="https://github.com/KyongSik-Yoon/claude-mods/tree/00d2725b6ef72d5559a00576497cd78ebf19ea31"><code>00d2725b6ef7</code></a></dd>
     <dt>Marketplace warnings</dt><dd><a href="https://github.com/KyongSik-Yoon/claude-mods/blob/00d2725b6ef72d5559a00576497cd78ebf19ea31/.claude-plugin/marketplace.json">kyongsik-mods</a></dd><dt>UI rewrite review</dt><dd>UI hook source contains control-character strings. Review any values passed to next() as rewritten props.text; the scanner does not trace whether these strings reach that call. <a href="https://github.com/KyongSik-Yoon/claude-mods/blob/00d2725b6ef72d5559a00576497cd78ebf19ea31/desktop-look/hooks/register.tsx#L568">desktop-look/hooks/register.tsx:568</a>, <a href="https://github.com/KyongSik-Yoon/claude-mods/blob/00d2725b6ef72d5559a00576497cd78ebf19ea31/desktop-look/hooks/register.tsx#L592">desktop-look/hooks/register.tsx:592</a></dd></dl>
 <p class="note">These are the hooks and API calls reported by <code>claude plugin validate</code>. Access levels describe the widest reach of those calls and are not safety ratings. Validation is a static check, not a runtime test, and a passing result does not prove that a mod works or is safe. <a href="https://github.com/karanb192/awesome-claude-code-mods/blob/main/SCANNING.md">How the scan works</a>.</p></section>
 <section class="siblings" aria-labelledby="siblings-title"><h2 id="siblings-title">More from KyongSik-Yoon/claude-mods</h2><ul><li><a href="/mods/KyongSik-Yoon--claude-mods--smooth-stream/">smooth-stream</a><span>Reveal streaming assistant replies with a smooth typewriter effect</span></li></ul></section>
+<section class="badge-snippet" aria-labelledby="badge-title"><h2 id="badge-title">Badge for your README</h2><p><img src="/badges/KyongSik-Yoon--claude-mods--desktop-look-reach.svg" alt="Reach badge for desktop-look"> <img src="/badges/KyongSik-Yoon--claude-mods--desktop-look-validates.svg" alt="Validation badge for desktop-look"></p><p>Authors can show the latest scan result in their README. Each badge links to this page.</p><pre><code>[![reach](https://raw.githubusercontent.com/karanb192/awesome-claude-code-mods/main/badges/KyongSik-Yoon--claude-mods--desktop-look-reach.svg)](https://mods.aidojo.si/mods/KyongSik-Yoon--claude-mods--desktop-look/)
+[![validates](https://raw.githubusercontent.com/karanb192/awesome-claude-code-mods/main/badges/KyongSik-Yoon--claude-mods--desktop-look-validates.svg)](https://mods.aidojo.si/mods/KyongSik-Yoon--claude-mods--desktop-look/)</code></pre></section>
 </main>
 <footer class="shell"><a href="/" class="brand"><svg viewBox="0 0 32 32" fill="none" aria-hidden="true"><path d="M11 5H5v22h6M21 5h6v22h-6M16 10v12M10 16h12"/></svg><span>claude<span class="brand-light">mods</span></span></a><p>An independent community scan.<br>Not an official Anthropic directory.</p><a href="https://github.com/karanb192/awesome-claude-code-mods">Awesome Claude Code Mods on GitHub <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 19 19 5M5 5h14v14"/></svg></a></footer>
 </body></html>

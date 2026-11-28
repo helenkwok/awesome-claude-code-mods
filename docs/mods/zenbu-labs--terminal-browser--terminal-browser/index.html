@@ -16,23 +16,25 @@
 <p class="lede">A browser running directly inside claude code. Preview websites, view HTML documents, and let your agent control the built in browser.</p>
 
 <div class="facts"><div><h2>Access</h2><span class="level">L3 Uses the network</span><span class="track" aria-label="Reach level 3: Uses the network"><i class="on l3"></i><i class="on l3"></i><i class="on l3"></i><i class="on l3"></i></span><span class="labels">network, runs processes, drives Claude, writes the prompt box, reads files, draws</span></div>
-<div><h2>Validation</h2><span class="status">Passed on Claude Code 2.1.301</span></div></div>
+<div><h2>Validation</h2><span class="status">Passed with warnings on Claude Code 2.1.332</span></div></div>
 <p class="actions"><a class="source" href="https://github.com/zenbu-labs/terminal-browser/tree/main/claude-code-plugin">View the source on GitHub <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 19 19 5M5 5h14v14"/></svg></a><a href="/#zenbu-labs--terminal-browser--terminal-browser">Back to the list</a></p>
 <p class="install">To install it, open the repository and follow the author’s setup instructions. Mods need Claude Code 2.1.287 or later.</p>
 <section class="record" aria-labelledby="record-title"><h2 id="record-title">What the scan recorded</h2>
 <dl>
 
     <dt>Observed events</dt><dd>? calls</dd>
-    <dt>Hooks</dt><dd><code>engine.create, browser.open, browser.close, session.start, command.run {command=browser}, tool.call {tool=?}, tool.call {tool=?}, ui.render {component=Pane, requestId=browser}, ui.message, ui.scroll {requestId=browser}, ui.close {id=browser}</code></dd>
+    <dt>Hooks</dt><dd><code>engine.create, browser.open, browser.close, session.start, command.run {command=browser}, tool.call {tool=?}, tool.call {tool=?}, ui.render {component=Pane, requestId=browser}, default, matcher, key, plugin, ui.message, ui.scroll {requestId=browser}, ui.close {id=browser}</code></dd>
     <dt>API calls</dt><dd><code>$.clock.sleep, $.command.register, $.fs.exists, $.http.fetch, $.process.run, $.prompt.fill, $.session.surfaces, $.tool.register, $.ui.blit, $.ui.close, $.ui.invalidate, $.ui.log, $.ui.open, $.ui.resolve</code></dd>
     <dt>Surface modules</dt><dd><code>hooks/surface.tsx</code></dd>
-    <dt>Validation on 2.1.301</dt><dd>Passed</dd>
+    <dt>Validation on 2.1.332</dt><dd>Passed with warnings</dd>
 
 
-    <dt>Scanned revision</dt><dd><a href="https://github.com/zenbu-labs/terminal-browser/tree/2165ae76c9639e3996829ab0e6d54ddbd4f06ad8"><code>2165ae76c963</code></a></dd>
-    <dt>Marketplace passed</dt><dd><a href="https://github.com/zenbu-labs/terminal-browser/blob/2165ae76c9639e3996829ab0e6d54ddbd4f06ad8/.claude-plugin/marketplace.json">terminal-browser</a></dd></dl>
+    <dt>Scanned revision</dt><dd><a href="https://github.com/zenbu-labs/terminal-browser/tree/690f59f2d98cafc5f36f2c1db4c764a1b5f3aa39"><code>690f59f2d98c</code></a></dd>
+    <dt>Marketplace passed</dt><dd><a href="https://github.com/zenbu-labs/terminal-browser/blob/690f59f2d98cafc5f36f2c1db4c764a1b5f3aa39/.claude-plugin/marketplace.json">terminal-browser</a></dd></dl>
 <p class="note">These are the hooks and API calls reported by <code>claude plugin validate</code>. Access levels describe the widest reach of those calls and are not safety ratings. Validation is a static check, not a runtime test, and a passing result does not prove that a mod works or is safe. <a href="https://github.com/karanb192/awesome-claude-code-mods/blob/main/SCANNING.md">How the scan works</a>.</p></section>
 
+<section class="badge-snippet" aria-labelledby="badge-title"><h2 id="badge-title">Badge for your README</h2><p><img src="/badges/zenbu-labs--terminal-browser--terminal-browser-reach.svg" alt="Reach badge for terminal-browser"> <img src="/badges/zenbu-labs--terminal-browser--terminal-browser-validates.svg" alt="Validation badge for terminal-browser"></p><p>Authors can show the latest scan result in their README. Each badge links to this page.</p><pre><code>[![reach](https://raw.githubusercontent.com/karanb192/awesome-claude-code-mods/main/badges/zenbu-labs--terminal-browser--terminal-browser-reach.svg)](https://mods.aidojo.si/mods/zenbu-labs--terminal-browser--terminal-browser/)
+[![validates](https://raw.githubusercontent.com/karanb192/awesome-claude-code-mods/main/badges/zenbu-labs--terminal-browser--terminal-browser-validates.svg)](https://mods.aidojo.si/mods/zenbu-labs--terminal-browser--terminal-browser/)</code></pre></section>
 </main>
 <footer class="shell"><a href="/" class="brand"><svg viewBox="0 0 32 32" fill="none" aria-hidden="true"><path d="M11 5H5v22h6M21 5h6v22h-6M16 10v12M10 16h12"/></svg><span>claude<span class="brand-light">mods</span></span></a><p>An independent community scan.<br>Not an official Anthropic directory.</p><a href="https://github.com/karanb192/awesome-claude-code-mods">Awesome Claude Code Mods on GitHub <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 19 19 5M5 5h14v14"/></svg></a></footer>
 </body></html>

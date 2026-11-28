@@ -15,24 +15,26 @@
 <p class="byline">A Claude Code mod in <a href="https://github.com/KonstantinRoehrl/devcycle">KonstantinRoehrl/devcycle</a></p>
 <p class="lede">Opinionated pipeline from a feature, bug, or refactor description to a verified, publish-ready implementation: scoped interview, wave-based plan, parallelized subagent execution, cross-model branch review, on-device UI verification via claude-in-chrome, and GitHub reconcile: layered on the superpowers skill set, with a doctor/learn loop that benchmarks and improves the pipeline from session to session.</p>
 
-<div class="facts"><div><h2>Access</h2><span class="level">L2 Writes or runs</span><span class="track" aria-label="Reach level 2: Writes or runs"><i class="on l2"></i><i class="on l2"></i><i class="on l2"></i><i class=""></i></span><span class="labels">runs processes, reads files, reads env vars, draws</span></div>
-<div><h2>Validation</h2><span class="status">Passed on Claude Code 2.1.301</span></div></div>
+<div class="facts"><div><h2>Access</h2><span class="level">L2 Writes or runs</span><span class="track" aria-label="Reach level 2: Writes or runs"><i class="on l2"></i><i class="on l2"></i><i class="on l2"></i><i class=""></i></span><span class="labels">other: $.state.get, other: $.state.set, runs processes, reads files, reads env vars, draws</span></div>
+<div><h2>Validation</h2><span class="status">Passed on Claude Code 2.1.332</span></div></div>
 <p class="actions"><a class="source" href="https://github.com/KonstantinRoehrl/devcycle">View the source on GitHub <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 19 19 5M5 5h14v14"/></svg></a><a href="/#KonstantinRoehrl--devcycle--devcycle">Back to the list</a></p>
 <p class="install">To install it, open the repository and follow the author’s setup instructions. Mods need Claude Code 2.1.287 or later.</p>
 <section class="record" aria-labelledby="record-title"><h2 id="record-title">What the scan recorded</h2>
 <dl>
 
     <dt>Observed events</dt><dd>subagent spawns, every tool call</dd>
-    <dt>Hooks</dt><dd><code>turn.start, session.end, agent.spawn, turn.step, tool.call, turn.complete, session.measure</code></dd>
-    <dt>API calls</dt><dd><code>$.agent.list, $.env.get, $.fs.exists, $.fs.read, $.fs.stat, $.process.run, $.session.cwd, $.session.id, $.session.surfaces, $.session.version, $.ui.status</code></dd>
+    <dt>Hooks</dt><dd><code>turn.start, session.end, agent.spawn, turn.step, tool.call, turn.complete, session.start, ui.render {component=AbovePrompt}, default, matcher, key, plugin, session.measure</code></dd>
+    <dt>API calls</dt><dd><code>$.agent.list, $.clock.every, $.clock.now, $.env.get, $.fs.exists, $.fs.read, $.fs.stat, $.process.run, $.session.cwd, $.session.id, $.session.surfaces, $.session.version, $.state.get, $.state.set, $.ui.notify, $.ui.resolve, $.ui.status</code></dd>
 
-    <dt>Validation on 2.1.301</dt><dd>Passed</dd>
+    <dt>Validation on 2.1.332</dt><dd>Passed</dd>
 
 
-    <dt>Scanned revision</dt><dd><a href="https://github.com/KonstantinRoehrl/devcycle/tree/9ba27058c0edd35548475a03f760b7e4d2aa3b51"><code>9ba27058c0ed</code></a></dd>
-    <dt>Marketplace passed</dt><dd><a href="https://github.com/KonstantinRoehrl/devcycle/blob/9ba27058c0edd35548475a03f760b7e4d2aa3b51/.claude-plugin/marketplace.json">devcycle</a></dd></dl>
+    <dt>Scanned revision</dt><dd><a href="https://github.com/KonstantinRoehrl/devcycle/tree/45c332abc17135d95029ceb6a357c598817cb065"><code>45c332abc171</code></a></dd>
+    <dt>Marketplace passed</dt><dd><a href="https://github.com/KonstantinRoehrl/devcycle/blob/45c332abc17135d95029ceb6a357c598817cb065/.claude-plugin/marketplace.json">devcycle</a></dd></dl>
 <p class="note">These are the hooks and API calls reported by <code>claude plugin validate</code>. Access levels describe the widest reach of those calls and are not safety ratings. Validation is a static check, not a runtime test, and a passing result does not prove that a mod works or is safe. <a href="https://github.com/karanb192/awesome-claude-code-mods/blob/main/SCANNING.md">How the scan works</a>.</p></section>
 
+<section class="badge-snippet" aria-labelledby="badge-title"><h2 id="badge-title">Badge for your README</h2><p><img src="/badges/KonstantinRoehrl--devcycle--devcycle-reach.svg" alt="Reach badge for devcycle"> <img src="/badges/KonstantinRoehrl--devcycle--devcycle-validates.svg" alt="Validation badge for devcycle"></p><p>Authors can show the latest scan result in their README. Each badge links to this page.</p><pre><code>[![reach](https://raw.githubusercontent.com/karanb192/awesome-claude-code-mods/main/badges/KonstantinRoehrl--devcycle--devcycle-reach.svg)](https://mods.aidojo.si/mods/KonstantinRoehrl--devcycle--devcycle/)
+[![validates](https://raw.githubusercontent.com/karanb192/awesome-claude-code-mods/main/badges/KonstantinRoehrl--devcycle--devcycle-validates.svg)](https://mods.aidojo.si/mods/KonstantinRoehrl--devcycle--devcycle/)</code></pre></section>
 </main>
 <footer class="shell"><a href="/" class="brand"><svg viewBox="0 0 32 32" fill="none" aria-hidden="true"><path d="M11 5H5v22h6M21 5h6v22h-6M16 10v12M10 16h12"/></svg><span>claude<span class="brand-light">mods</span></span></a><p>An independent community scan.<br>Not an official Anthropic directory.</p><a href="https://github.com/karanb192/awesome-claude-code-mods">Awesome Claude Code Mods on GitHub <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 19 19 5M5 5h14v14"/></svg></a></footer>
 </body></html>

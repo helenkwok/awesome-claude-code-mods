@@ -16,23 +16,25 @@
 <p class="lede">Line-by-line review pane: comment on what Claude changed, then send every comment back as one prompt.</p>
 
 <div class="facts"><div><h2>Access</h2><span class="level">L2 Writes or runs</span><span class="track" aria-label="Reach level 2: Writes or runs"><i class="on l2"></i><i class="on l2"></i><i class="on l2"></i><i class=""></i></span><span class="labels">other: $.state.get, other: $.state.set, drives Claude, reads files, reads env vars, reads the transcript, draws</span></div>
-<div><h2>Validation</h2><span class="status">Passed on Claude Code 2.1.301</span></div></div>
+<div><h2>Validation</h2><span class="status">Passed on Claude Code 2.1.332</span></div></div>
 <p class="actions"><a class="source" href="https://github.com/joonhyukyim/redpen">View the source on GitHub <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 19 19 5M5 5h14v14"/></svg></a><a href="/#joonhyukyim--redpen--redpen">Back to the list</a></p>
 <p class="install">To install it, open the repository and follow the author’s setup instructions. Mods need Claude Code 2.1.287 or later.</p>
 <section class="record" aria-labelledby="record-title"><h2 id="record-title">What the scan recorded</h2>
 <dl>
 
     <dt>Observed events</dt><dd>Edit calls, Write calls, NotebookEdit calls</dd>
-    <dt>Hooks</dt><dd><code>session.start, command.run {command=redpen}, prompt.autocomplete, turn.start, turn.complete, tool.call {tool=Edit}, tool.call {tool=Write}, tool.call {tool=NotebookEdit}, ui.focus {requestId=redpen}, ui.render {component=Pane, requestId=redpen}</code></dd>
+    <dt>Hooks</dt><dd><code>session.start, command.run {command=redpen}, prompt.autocomplete, turn.start, turn.complete, tool.call {tool=Edit}, tool.call {tool=Write}, tool.call {tool=NotebookEdit}, ui.focus {requestId=redpen}, default, matcher, key, plugin, component, ui.render {component=Pane, requestId=redpen}, default, matcher, key, plugin</code></dd>
     <dt>API calls</dt><dd><code>$.clock.now, $.clock.sleep, $.command.register, $.env.get, $.fs.list, $.fs.read, $.fs.stat, $.prompt.submit, $.session.cwd, $.session.messages, $.state.get, $.state.set, $.ui.focus, $.ui.invalidate, $.ui.open, $.ui.resolve, $.ui.toast</code></dd>
 
-    <dt>Validation on 2.1.301</dt><dd>Passed</dd>
+    <dt>Validation on 2.1.332</dt><dd>Passed</dd>
 
 
     <dt>Scanned revision</dt><dd><a href="https://github.com/joonhyukyim/redpen/tree/fe87757410c40c723315b080ff8c202dc97bac58"><code>fe87757410c4</code></a></dd>
     <dt>Marketplace passed</dt><dd><a href="https://github.com/joonhyukyim/redpen/blob/fe87757410c40c723315b080ff8c202dc97bac58/.claude-plugin/marketplace.json">redpen</a></dd></dl>
 <p class="note">These are the hooks and API calls reported by <code>claude plugin validate</code>. Access levels describe the widest reach of those calls and are not safety ratings. Validation is a static check, not a runtime test, and a passing result does not prove that a mod works or is safe. <a href="https://github.com/karanb192/awesome-claude-code-mods/blob/main/SCANNING.md">How the scan works</a>.</p></section>
 
+<section class="badge-snippet" aria-labelledby="badge-title"><h2 id="badge-title">Badge for your README</h2><p><img src="/badges/joonhyukyim--redpen--redpen-reach.svg" alt="Reach badge for redpen"> <img src="/badges/joonhyukyim--redpen--redpen-validates.svg" alt="Validation badge for redpen"></p><p>Authors can show the latest scan result in their README. Each badge links to this page.</p><pre><code>[![reach](https://raw.githubusercontent.com/karanb192/awesome-claude-code-mods/main/badges/joonhyukyim--redpen--redpen-reach.svg)](https://mods.aidojo.si/mods/joonhyukyim--redpen--redpen/)
+[![validates](https://raw.githubusercontent.com/karanb192/awesome-claude-code-mods/main/badges/joonhyukyim--redpen--redpen-validates.svg)](https://mods.aidojo.si/mods/joonhyukyim--redpen--redpen/)</code></pre></section>
 </main>
 <footer class="shell"><a href="/" class="brand"><svg viewBox="0 0 32 32" fill="none" aria-hidden="true"><path d="M11 5H5v22h6M21 5h6v22h-6M16 10v12M10 16h12"/></svg><span>claude<span class="brand-light">mods</span></span></a><p>An independent community scan.<br>Not an official Anthropic directory.</p><a href="https://github.com/karanb192/awesome-claude-code-mods">Awesome Claude Code Mods on GitHub <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 19 19 5M5 5h14v14"/></svg></a></footer>
 </body></html>

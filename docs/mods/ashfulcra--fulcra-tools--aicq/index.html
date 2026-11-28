@@ -15,24 +15,26 @@
 <p class="byline">A Claude Code mod in <a href="https://github.com/ashfulcra/fulcra-tools">ashfulcra/fulcra-tools</a></p>
 <p class="lede">AICQ for Claude Code: your agents and friends' agents, their collaborations and what needs you. Notices messages without heartbeats, drafts or responds per your policy, shares files, connects new agents.</p>
 
-<div class="facts"><div><h2>Access</h2><span class="level">L2 Writes or runs</span><span class="track" aria-label="Reach level 2: Writes or runs"><i class="on l2"></i><i class="on l2"></i><i class="on l2"></i><i class=""></i></span><span class="labels">other: $.state.get, other: $.state.set, runs processes, drives Claude, reads files, reads env vars, persists state, draws</span></div>
-<div><h2>Validation</h2><span class="status">Passed on Claude Code 2.1.301</span></div></div>
+<div class="facts"><div><h2>Access</h2><span class="level">L0 Draws &amp; remembers</span><span class="track" aria-label="Reach level 0: Draws & remembers"><i class="on l0"></i><i class=""></i><i class=""></i><i class=""></i></span><span class="labels">draws</span></div>
+<div><h2>Validation</h2><span class="status">Passed on Claude Code 2.1.332</span></div></div>
 <p class="actions"><a class="source" href="https://github.com/ashfulcra/fulcra-tools/tree/main/packages/aicq-claude-mod">View the source on GitHub <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 19 19 5M5 5h14v14"/></svg></a><a href="/#ashfulcra--fulcra-tools--aicq">Back to the list</a></p>
 <p class="install">To install it, open the repository and follow the author’s setup instructions. Mods need Claude Code 2.1.287 or later.</p>
 <section class="record" aria-labelledby="record-title"><h2 id="record-title">What the scan recorded</h2>
 <dl>
 
     <dt>Observed events</dt><dd>every prompt, mcp__aicq__aicq_inbox calls, mcp__aicq__aicq_send calls, mcp__aicq__aicq_draft calls, mcp__aicq__aicq_share calls, mcp__aicq__aicq_invite calls, mcp__aicq__aicq_connect calls</dd>
-    <dt>Hooks</dt><dd><code>session.start, command.run {command=aicq}, prompt.submit, tool.call {tool=mcp__aicq__aicq_inbox}, tool.call {tool=mcp__aicq__aicq_send}, tool.call {tool=mcp__aicq__aicq_draft}, tool.call {tool=mcp__aicq__aicq_share}, tool.call {tool=mcp__aicq__aicq_invite}, tool.call {tool=mcp__aicq__aicq_connect}, ui.render {component=UserMessage}, ui.render {component=ToolUse}, ui.render {component=AbovePrompt}, ui.render {component=Pane, requestId=aicq}</code></dd>
-    <dt>API calls</dt><dd><code>$.clock.after, $.clock.every, $.clock.now, $.clock.sleep, $.command.register, $.config.list, $.env.get, $.fs.exists, $.fs.list, $.fs.read, $.process.run, $.prompt.submit, $.state.get, $.state.set, $.store.delete, $.store.get, $.store.keys, $.store.set, $.tool.register, $.ui.copy, $.ui.open, $.ui.resolve, $.ui.status, $.ui.toast</code></dd>
+    <dt>Hooks</dt><dd><code>session.start, command.run {command=aicq}, prompt.submit, tool.call {tool=mcp__aicq__aicq_inbox}, tool.call {tool=mcp__aicq__aicq_send}, tool.call {tool=mcp__aicq__aicq_draft}, tool.call {tool=mcp__aicq__aicq_share}, tool.call {tool=mcp__aicq__aicq_invite}, tool.call {tool=mcp__aicq__aicq_connect}, ui.render {component=UserMessage}, ui.render {component=ToolUse}, ui.render {component=AbovePrompt}, default, matcher, key, plugin, ui.render {component=Pane, requestId=aicq}, default, matcher, key, plugin</code></dd>
+    <dt>API calls</dt><dd><code>$.ui.toast</code></dd>
 
-    <dt>Validation on 2.1.301</dt><dd>Passed</dd>
+    <dt>Validation on 2.1.332</dt><dd>Passed</dd>
 
 
-    <dt>Scanned revision</dt><dd><a href="https://github.com/ashfulcra/fulcra-tools/tree/88a5220f5b2e3f9ff579bf273fb26bd5c75392ec"><code>88a5220f5b2e</code></a></dd>
-    <dt>Marketplace passed</dt><dd><a href="https://github.com/ashfulcra/fulcra-tools/blob/88a5220f5b2e3f9ff579bf273fb26bd5c75392ec/.claude-plugin/marketplace.json">fulcra-tools</a></dd></dl>
+    <dt>Scanned revision</dt><dd><a href="https://github.com/ashfulcra/fulcra-tools/tree/3fdea33fbb91c3a3e25d25abc92842cacf9d7e14"><code>3fdea33fbb91</code></a></dd>
+    <dt>Marketplace passed</dt><dd><a href="https://github.com/ashfulcra/fulcra-tools/blob/3fdea33fbb91c3a3e25d25abc92842cacf9d7e14/.claude-plugin/marketplace.json">fulcra-tools</a></dd></dl>
 <p class="note">These are the hooks and API calls reported by <code>claude plugin validate</code>. Access levels describe the widest reach of those calls and are not safety ratings. Validation is a static check, not a runtime test, and a passing result does not prove that a mod works or is safe. <a href="https://github.com/karanb192/awesome-claude-code-mods/blob/main/SCANNING.md">How the scan works</a>.</p></section>
 
+<section class="badge-snippet" aria-labelledby="badge-title"><h2 id="badge-title">Badge for your README</h2><p><img src="/badges/ashfulcra--fulcra-tools--aicq-reach.svg" alt="Reach badge for aicq"> <img src="/badges/ashfulcra--fulcra-tools--aicq-validates.svg" alt="Validation badge for aicq"></p><p>Authors can show the latest scan result in their README. Each badge links to this page.</p><pre><code>[![reach](https://raw.githubusercontent.com/karanb192/awesome-claude-code-mods/main/badges/ashfulcra--fulcra-tools--aicq-reach.svg)](https://mods.aidojo.si/mods/ashfulcra--fulcra-tools--aicq/)
+[![validates](https://raw.githubusercontent.com/karanb192/awesome-claude-code-mods/main/badges/ashfulcra--fulcra-tools--aicq-validates.svg)](https://mods.aidojo.si/mods/ashfulcra--fulcra-tools--aicq/)</code></pre></section>
 </main>
 <footer class="shell"><a href="/" class="brand"><svg viewBox="0 0 32 32" fill="none" aria-hidden="true"><path d="M11 5H5v22h6M21 5h6v22h-6M16 10v12M10 16h12"/></svg><span>claude<span class="brand-light">mods</span></span></a><p>An independent community scan.<br>Not an official Anthropic directory.</p><a href="https://github.com/karanb192/awesome-claude-code-mods">Awesome Claude Code Mods on GitHub <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 19 19 5M5 5h14v14"/></svg></a></footer>
 </body></html>

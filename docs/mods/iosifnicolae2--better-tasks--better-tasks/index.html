@@ -14,25 +14,27 @@
 <h1>better-tasks</h1>
 <p class="byline">A Claude Code mod in <a href="https://github.com/iosifnicolae2/better-tasks">iosifnicolae2/better-tasks</a></p>
 <p class="lede">Plan and track tasks inside Claude Code, kept as plain Markdown files in your project, with weekly sprints, a sprint board and agent teammates.</p>
-<p class="compatibility">review UI rewrite</p>
-<div class="facts"><div><h2>Access</h2><span class="level">L2 Writes or runs</span><span class="track" aria-label="Reach level 2: Writes or runs"><i class="on l2"></i><i class="on l2"></i><i class="on l2"></i><i class=""></i></span><span class="labels">other: $.agent.register, other: $.pro, other: $.process.spawn, other: $.prompt.read, runs processes, writes files, sets env vars, changes config, drives Claude, reads files, reads env vars</span></div>
-<div><h2>Validation</h2><span class="status">Passed with warnings on Claude Code 2.1.301</span></div></div>
+
+<div class="facts"><div><h2>Access</h2><span class="level">L0 Draws &amp; remembers</span><span class="track" aria-label="Reach level 0: Draws & remembers"><i class="on l0"></i><i class=""></i><i class=""></i><i class=""></i></span><span class="labels">draws</span></div>
+<div><h2>Validation</h2><span class="status">Passed with warnings on Claude Code 2.1.332</span></div></div>
 <p class="actions"><a class="source" href="https://github.com/iosifnicolae2/better-tasks">View the source on GitHub <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 19 19 5M5 5h14v14"/></svg></a><a href="/#iosifnicolae2--better-tasks--better-tasks">Back to the list</a></p>
 <p class="install">To install it, open the repository and follow the author’s setup instructions. Mods need Claude Code 2.1.287 or later.</p>
 <section class="record" aria-labelledby="record-title"><h2 id="record-title">What the scan recorded</h2>
 <dl>
 
-    <dt>Observed events</dt><dd>mcp__better-tasks__task_create calls, AskUserQuestion calls, mcp__better-tasks__screen_off calls, every skill, every prompt, Agent calls, every tool call, SendMessage calls</dd>
-    <dt>Hooks</dt><dd><code>command.run {command=better-tasks}, ui.press {plugin=better-tasks, requestId=better-tasks-sprint}, config.describe {key=/&quot;^better-tasks\\.&quot;/}, tool.call {tool=mcp__better-tasks__task_create}, tool.call {tool=AskUserQuestion}, session.start {isInteractive=true, surface=terminal}, ui.close {id=better-tasks-sprint}, ui.focus {requestId=better-tasks-sprint}, ui.scroll {component=Pane, requestId=better-tasks-sprint}, ui.render {component=Pane, requestId=better-tasks-sprint}, command.run {command=away}, tool.call {tool=mcp__better-tasks__screen_off}, state.set {plugin=better-tasks, key=team}, session.start, ui.render {component=SessionMode}, prompt.compose, skill.prompt, config.set {key=/&quot;^better-tasks\\.&quot;/}, state.set {plugin=better-tasks, key=turnedOn}, state.set {plugin=better-tasks, key=tasks}, prompt.submit, tool.call {tool=AskUserQuestion}, tool.call {tool=Agent}, tool.call, turn.start, turn.complete, turn.step, tool.call {tool=SendMessage}, tool.call, tool, mcp__better-tasks__task_cre, 385, chars</code></dd>
-    <dt>API calls</dt><dd><code>$.agent.list, $.agent.register, $.clock.after, $.clock.every, $.clock.now, $.clock.sleep, $.command.register, $.command.run, $.config.set, $.env.get, $.env.set, $.fs.list, $.fs.read, $.fs.write, $.pro, $.process.run, $.process.spawn, $.prompt.read</code></dd>
+    <dt>Observed events</dt><dd>mcp__better-tasks__task_search calls, mcp__better-tasks__upstream_pr calls</dd>
+    <dt>Hooks</dt><dd><code>tool.call {tool=mcp__better-tasks__task_search}, tool.call {tool=mcp__better-tasks__upstream_pr}</code></dd>
+    <dt>API calls</dt><dd><code>$.ui.invalidate, $.ui.log, $.ui.open, $.ui.panes, $.ui.resolve, $.ui.status, $.ui.toast</code></dd>
     <dt>Surface modules</dt><dd><code>hooks/spinner.tsx</code></dd>
-    <dt>Validation on 2.1.301</dt><dd>Passed with warnings</dd>
+    <dt>Validation on 2.1.332</dt><dd>Passed with warnings</dd>
 
 
     <dt>Scanned revision</dt><dd><a href="https://github.com/iosifnicolae2/better-tasks/tree/e70e80907616a84002914eee840666927733368c"><code>e70e80907616</code></a></dd>
-    <dt>UI rewrite review</dt><dd>UI hook source contains control-character strings. Review any values passed to next() as rewritten props.text; the scanner does not trace whether these strings reach that call. <a href="https://github.com/iosifnicolae2/better-tasks/blob/e70e80907616a84002914eee840666927733368c/hooks/yaml.ts#L18">hooks/yaml.ts:18</a>, <a href="https://github.com/iosifnicolae2/better-tasks/blob/e70e80907616a84002914eee840666927733368c/hooks/yaml.ts#L20">hooks/yaml.ts:20</a>, <a href="https://github.com/iosifnicolae2/better-tasks/blob/e70e80907616a84002914eee840666927733368c/hooks/yaml.ts#L21">hooks/yaml.ts:21</a></dd></dl>
+    </dl>
 <p class="note">These are the hooks and API calls reported by <code>claude plugin validate</code>. Access levels describe the widest reach of those calls and are not safety ratings. Validation is a static check, not a runtime test, and a passing result does not prove that a mod works or is safe. <a href="https://github.com/karanb192/awesome-claude-code-mods/blob/main/SCANNING.md">How the scan works</a>.</p></section>
 
+<section class="badge-snippet" aria-labelledby="badge-title"><h2 id="badge-title">Badge for your README</h2><p><img src="/badges/iosifnicolae2--better-tasks--better-tasks-reach.svg" alt="Reach badge for better-tasks"> <img src="/badges/iosifnicolae2--better-tasks--better-tasks-validates.svg" alt="Validation badge for better-tasks"></p><p>Authors can show the latest scan result in their README. Each badge links to this page.</p><pre><code>[![reach](https://raw.githubusercontent.com/karanb192/awesome-claude-code-mods/main/badges/iosifnicolae2--better-tasks--better-tasks-reach.svg)](https://mods.aidojo.si/mods/iosifnicolae2--better-tasks--better-tasks/)
+[![validates](https://raw.githubusercontent.com/karanb192/awesome-claude-code-mods/main/badges/iosifnicolae2--better-tasks--better-tasks-validates.svg)](https://mods.aidojo.si/mods/iosifnicolae2--better-tasks--better-tasks/)</code></pre></section>
 </main>
 <footer class="shell"><a href="/" class="brand"><svg viewBox="0 0 32 32" fill="none" aria-hidden="true"><path d="M11 5H5v22h6M21 5h6v22h-6M16 10v12M10 16h12"/></svg><span>claude<span class="brand-light">mods</span></span></a><p>An independent community scan.<br>Not an official Anthropic directory.</p><a href="https://github.com/karanb192/awesome-claude-code-mods">Awesome Claude Code Mods on GitHub <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 19 19 5M5 5h14v14"/></svg></a></footer>
 </body></html>

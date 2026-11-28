@@ -15,8 +15,8 @@
 <p class="byline">A Claude Code mod in <a href="https://github.com/chrisns/spare10-mod">chrisns/spare10-mod</a></p>
 <p class="lede">Keeps the last part of your 5-hour and weekly quota for you. At the reserve, spare10 holds all work and asks you whether to continue. After a Resume, it asks again at the floor, by default at 5% left. Shortly before the reset, it lets work use the reserve.</p>
 
-<div class="facts"><div><h2>Access</h2><span class="level">L2 Writes or runs</span><span class="track" aria-label="Reach level 2: Writes or runs"><i class="on l2"></i><i class="on l2"></i><i class="on l2"></i><i class=""></i></span><span class="labels">other: $.prompt.read, other: $.s, other: $.spare10.auto, other: $.spare10.limit, other: $.spare10.park, other: $.spare10.poke, sets env vars, drives Claude, writes the prompt box, reads env vars, reads settings</span></div>
-<div><h2>Validation</h2><span class="status">Passed on Claude Code 2.1.301</span></div></div>
+<div class="facts"><div><h2>Access</h2><span class="level">L2 Writes or runs</span><span class="track" aria-label="Reach level 2: Writes or runs"><i class="on l2"></i><i class="on l2"></i><i class="on l2"></i><i class=""></i></span><span class="labels">other: $.spare10.auto, other: $.spare10.limit, other: $.spare10.park, other: $.spare10.poke, other: $.spare10.spans, drives Claude, reads settings, persists state, draws</span></div>
+<div><h2>Validation</h2><span class="status">Passed with warnings on Claude Code 2.1.332</span></div></div>
 <p class="actions"><a class="source" href="https://github.com/chrisns/spare10-mod">View the source on GitHub <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 19 19 5M5 5h14v14"/></svg></a><a href="/#chrisns--spare10-mod--spare10">Back to the list</a></p>
 <p class="install">To install it, open the repository and follow the author’s setup instructions. Mods need Claude Code 2.1.287 or later.</p>
 <section class="record" aria-labelledby="record-title"><h2 id="record-title">What the scan recorded</h2>
@@ -24,15 +24,17 @@
 
     <dt>Observed events</dt><dd>every tool call, /&quot;^AskUserQuestion$&quot;/ calls, every prompt</dd>
     <dt>Hooks</dt><dd><code>engine.create, session.start, session.end, session.measure, tool.call, tool.call {tool=/&quot;^AskUserQuestion$&quot;/}, turn.step, prompt.submit, command.run {command=spare10}, ui.render {component=SessionMode}</code></dd>
-    <dt>API calls</dt><dd><code>$.agent.list, $.clock.after, $.clock.every, $.clock.now, $.command.register, $.env.get, $.env.set, $.prompt.fill, $.prompt.read, $.prompt.submit, $.s, $.session.id, $.session.surfaces, $.session.usage, $.settings.read, $.spare10.auto, $.spare10.limit, $.spare10.park, $.spare10.poke</code></dd>
+    <dt>API calls</dt><dd><code>$.session.surfaces, $.session.usage, $.settings.read, $.spare10.auto, $.spare10.limit, $.spare10.park, $.spare10.poke, $.spare10.spans, $.store.get, $.store.set, $.turn.abort, $.ui.ask, $.ui.invalidate, $.ui.log, $.ui.resolve</code></dd>
 
-    <dt>Validation on 2.1.301</dt><dd>Passed</dd>
+    <dt>Validation on 2.1.332</dt><dd>Passed with warnings</dd>
 
 
-    <dt>Scanned revision</dt><dd><a href="https://github.com/chrisns/spare10-mod/tree/2abc6f75c97c4aecd98a2014f66722cf41567bee"><code>2abc6f75c97c</code></a></dd>
-    <dt>Marketplace passed</dt><dd><a href="https://github.com/chrisns/spare10-mod/blob/2abc6f75c97c4aecd98a2014f66722cf41567bee/.claude-plugin/marketplace.json">spare10</a></dd></dl>
+    <dt>Scanned revision</dt><dd><a href="https://github.com/chrisns/spare10-mod/tree/f3a9fb10a8f72517fab02806c9f682d719fe6e0d"><code>f3a9fb10a8f7</code></a></dd>
+    <dt>Marketplace passed</dt><dd><a href="https://github.com/chrisns/spare10-mod/blob/f3a9fb10a8f72517fab02806c9f682d719fe6e0d/.claude-plugin/marketplace.json">spare10</a></dd></dl>
 <p class="note">These are the hooks and API calls reported by <code>claude plugin validate</code>. Access levels describe the widest reach of those calls and are not safety ratings. Validation is a static check, not a runtime test, and a passing result does not prove that a mod works or is safe. <a href="https://github.com/karanb192/awesome-claude-code-mods/blob/main/SCANNING.md">How the scan works</a>.</p></section>
 
+<section class="badge-snippet" aria-labelledby="badge-title"><h2 id="badge-title">Badge for your README</h2><p><img src="/badges/chrisns--spare10-mod--spare10-reach.svg" alt="Reach badge for spare10"> <img src="/badges/chrisns--spare10-mod--spare10-validates.svg" alt="Validation badge for spare10"></p><p>Authors can show the latest scan result in their README. Each badge links to this page.</p><pre><code>[![reach](https://raw.githubusercontent.com/karanb192/awesome-claude-code-mods/main/badges/chrisns--spare10-mod--spare10-reach.svg)](https://mods.aidojo.si/mods/chrisns--spare10-mod--spare10/)
+[![validates](https://raw.githubusercontent.com/karanb192/awesome-claude-code-mods/main/badges/chrisns--spare10-mod--spare10-validates.svg)](https://mods.aidojo.si/mods/chrisns--spare10-mod--spare10/)</code></pre></section>
 </main>
 <footer class="shell"><a href="/" class="brand"><svg viewBox="0 0 32 32" fill="none" aria-hidden="true"><path d="M11 5H5v22h6M21 5h6v22h-6M16 10v12M10 16h12"/></svg><span>claude<span class="brand-light">mods</span></span></a><p>An independent community scan.<br>Not an official Anthropic directory.</p><a href="https://github.com/karanb192/awesome-claude-code-mods">Awesome Claude Code Mods on GitHub <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 19 19 5M5 5h14v14"/></svg></a></footer>
 </body></html>

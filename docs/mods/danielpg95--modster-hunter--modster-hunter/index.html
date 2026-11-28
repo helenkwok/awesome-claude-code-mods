@@ -15,24 +15,26 @@
 <p class="byline">A Claude Code mod in <a href="https://github.com/danielpg95/modster-hunter">danielpg95/modster-hunter</a></p>
 <p class="lede">Catch Modsters while you wait for Claude.</p>
 
-<div class="facts"><div><h2>Access</h2><span class="level">L2 Writes or runs</span><span class="track" aria-label="Reach level 2: Writes or runs"><i class="on l2"></i><i class="on l2"></i><i class="on l2"></i><i class=""></i></span><span class="labels">writes files, reads files, reads env vars, persists state, draws</span></div>
-<div><h2>Validation</h2><span class="status">Passed on Claude Code 2.1.301</span></div></div>
+<div class="facts"><div><h2>Access</h2><span class="level">L0 Draws &amp; remembers</span><span class="track" aria-label="Reach level 0: Draws & remembers"><i class="on l0"></i><i class=""></i><i class=""></i><i class=""></i></span><span class="labels">draws</span></div>
+<div><h2>Validation</h2><span class="status">Passed with warnings on Claude Code 2.1.332</span></div></div>
 <p class="actions"><a class="source" href="https://github.com/danielpg95/modster-hunter/tree/main/plugin">View the source on GitHub <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 19 19 5M5 5h14v14"/></svg></a><a href="/#danielpg95--modster-hunter--modster-hunter">Back to the list</a></p>
 <p class="install">To install it, open the repository and follow the author’s setup instructions. Mods need Claude Code 2.1.287 or later.</p>
 <section class="record" aria-labelledby="record-title"><h2 id="record-title">What the scan recorded</h2>
 <dl>
 
     <dt>Observed events</dt><dd>classic hooks</dd>
-    <dt>Hooks</dt><dd><code>session.start, classic.SessionStart, turn.start, turn.complete, classic.SubagentStart, classic.SubagentStop, session.end, ui.render {component=AbovePrompt}, ui.render {component=Pane}, ui.render {component=Pane}, ui.render {component=Spinner}, ui.close, command.run {command=modsters}</code></dd>
-    <dt>API calls</dt><dd><code>$.clock.every, $.clock.now, $.clock.sleep, $.command.register, $.env.get, $.fs.exists, $.fs.list, $.fs.read, $.fs.stat, $.fs.write, $.session.id, $.store.delete, $.store.get, $.store.keys, $.store.set, $.ui.blit, $.ui.close, $.ui.invalidate, $.ui.log, $.ui.open, $.ui.panes, $.ui.resolve, $.ui.status, $.ui.toast</code></dd>
+    <dt>Hooks</dt><dd><code>session.start, classic.SessionStart, turn.start, turn.complete, classic.SubagentStart, classic.SubagentStop, session.end, ui.message, ui.render {component=AbovePrompt}, default, matcher, key, plugin, ui.render {component=Pane}, default, matcher, key, plugin, ui.render {component=Pane}, default, matcher, key, plugin, ui.render {component=Spinner}, ui.close, command.run {command=modsters}</code></dd>
+    <dt>API calls</dt><dd><code>$.ui.blit, $.ui.close, $.ui.invalidate, $.ui.log, $.ui.open, $.ui.panes, $.ui.resolve, $.ui.status, $.ui.toast</code></dd>
+    <dt>Surface modules</dt><dd><code>hooks/encounter-controls.tsx</code></dd>
+    <dt>Validation on 2.1.332</dt><dd>Passed with warnings</dd>
 
-    <dt>Validation on 2.1.301</dt><dd>Passed</dd>
 
-
-    <dt>Scanned revision</dt><dd><a href="https://github.com/danielpg95/modster-hunter/tree/38475d6446f88f3a871d1057ae0c5b8c287a2c66"><code>38475d6446f8</code></a></dd>
-    <dt>Marketplace passed</dt><dd><a href="https://github.com/danielpg95/modster-hunter/blob/38475d6446f88f3a871d1057ae0c5b8c287a2c66/.claude-plugin/marketplace.json">modster-hunter</a></dd></dl>
+    <dt>Scanned revision</dt><dd><a href="https://github.com/danielpg95/modster-hunter/tree/6b8d4bda7324254e3ee2b0533deb3cc79cc1818a"><code>6b8d4bda7324</code></a></dd>
+    <dt>Marketplace passed</dt><dd><a href="https://github.com/danielpg95/modster-hunter/blob/6b8d4bda7324254e3ee2b0533deb3cc79cc1818a/.claude-plugin/marketplace.json">modster-hunter</a></dd></dl>
 <p class="note">These are the hooks and API calls reported by <code>claude plugin validate</code>. Access levels describe the widest reach of those calls and are not safety ratings. Validation is a static check, not a runtime test, and a passing result does not prove that a mod works or is safe. <a href="https://github.com/karanb192/awesome-claude-code-mods/blob/main/SCANNING.md">How the scan works</a>.</p></section>
-
+<section class="siblings" aria-labelledby="siblings-title"><h2 id="siblings-title">More from danielpg95/modster-hunter</h2><ul><li><a href="/mods/danielpg95--modster-hunter--modster-art-spike/">modster-art-spike</a><span>Throwaway P5-39 spike: test richer, animated Modster art in a desktop Svg.</span></li></ul></section>
+<section class="badge-snippet" aria-labelledby="badge-title"><h2 id="badge-title">Badge for your README</h2><p><img src="/badges/danielpg95--modster-hunter--modster-hunter-reach.svg" alt="Reach badge for modster-hunter"> <img src="/badges/danielpg95--modster-hunter--modster-hunter-validates.svg" alt="Validation badge for modster-hunter"></p><p>Authors can show the latest scan result in their README. Each badge links to this page.</p><pre><code>[![reach](https://raw.githubusercontent.com/karanb192/awesome-claude-code-mods/main/badges/danielpg95--modster-hunter--modster-hunter-reach.svg)](https://mods.aidojo.si/mods/danielpg95--modster-hunter--modster-hunter/)
+[![validates](https://raw.githubusercontent.com/karanb192/awesome-claude-code-mods/main/badges/danielpg95--modster-hunter--modster-hunter-validates.svg)](https://mods.aidojo.si/mods/danielpg95--modster-hunter--modster-hunter/)</code></pre></section>
 </main>
 <footer class="shell"><a href="/" class="brand"><svg viewBox="0 0 32 32" fill="none" aria-hidden="true"><path d="M11 5H5v22h6M21 5h6v22h-6M16 10v12M10 16h12"/></svg><span>claude<span class="brand-light">mods</span></span></a><p>An independent community scan.<br>Not an official Anthropic directory.</p><a href="https://github.com/karanb192/awesome-claude-code-mods">Awesome Claude Code Mods on GitHub <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 19 19 5M5 5h14v14"/></svg></a></footer>
 </body></html>

@@ -16,23 +16,25 @@
 <p class="lede">Clawd's pixel world above your prompt in the Claude desktop app, in five scenes (open space among them, where everyone floats) that follow your local time, season and holidays: Clawd walks to the zone of whatever Claude is doing while his crew plays, and acts out what happens: tests, commits, pushes, permission asks, a library that fills with the context. The crew keeps its own day, rare sights turn up, and Clawds from your other sessions drop by. Name them and make them yours. A git safety net and a list of what each session changed. A Clawd spinner, 78 trophies with hats and pals to earn, a card of your day to share, live usage figures and a deadline radar. Costs no tokens. English and 繁體中文.</p>
 
 <div class="facts"><div><h2>Access</h2><span class="level">L2 Writes or runs</span><span class="track" aria-label="Reach level 2: Writes or runs"><i class="on l2"></i><i class="on l2"></i><i class="on l2"></i><i class=""></i></span><span class="labels">other: $.state.get, other: $.state.set, runs processes, reads files, reads env vars, persists state, draws</span></div>
-<div><h2>Validation</h2><span class="status">Passed on Claude Code 2.1.301</span></div></div>
+<div><h2>Validation</h2><span class="status">Passed with warnings on Claude Code 2.1.332</span></div></div>
 <p class="actions"><a class="source" href="https://github.com/Tunai-0511/clawd-sidekick">View the source on GitHub <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 19 19 5M5 5h14v14"/></svg></a><a href="/#Tunai-0511--clawd-sidekick--clawd-sidekick">Back to the list</a></p>
 <p class="install">To install it, open the repository and follow the author’s setup instructions. Mods need Claude Code 2.1.287 or later.</p>
 <section class="record" aria-labelledby="record-title"><h2 id="record-title">What the scan recorded</h2>
 <dl>
 
     <dt>Observed events</dt><dd>every tool call, classic hooks, compaction</dd>
-    <dt>Hooks</dt><dd><code>ui.message, ui.render {component=AbovePrompt}, ui.render {component=Spinner}, ui.render {component=ToolUse}, ui.render {component=PromptHint}, ui.render {component=Pane, requestId=clawd}, ui.render {component=Pane, requestId=clawd-changes}, ui.render {component=Pane, requestId=clawd-trophies}, ui.render {component=Pane, requestId=clawd-session}, ui.render {component=Pane, requestId=clawd-recap}, session.end, session.start, command.describe {command=clawd}, command.describe {command=deadline}, command.run {command=clawd}, command.run {command=deadline}, turn.start, tool.call, classic.Notification, session.compact, turn.complete</code></dd>
+    <dt>Hooks</dt><dd><code>command.run {command=deadline}, turn.start, tool.call, classic.Notification, session.compact, turn.complete</code></dd>
     <dt>API calls</dt><dd><code>$.clock.after, $.clock.every, $.clock.now, $.command.register, $.env.get, $.fs.read, $.process.run, $.session.id, $.session.model, $.session.root, $.session.surfaces, $.session.usage, $.state.get, $.state.set, $.store.delete, $.store.get, $.store.keys, $.store.set, $.ui.open, $.ui.resolve, $.ui.toast</code></dd>
     <dt>Surface modules</dt><dd><code>hooks/spinner-client.tsx</code></dd>
-    <dt>Validation on 2.1.301</dt><dd>Passed</dd>
+    <dt>Validation on 2.1.332</dt><dd>Passed with warnings</dd>
 
 
     <dt>Scanned revision</dt><dd><a href="https://github.com/Tunai-0511/clawd-sidekick/tree/2c1c19e43b488fe589b70537d7e6c9869ad20743"><code>2c1c19e43b48</code></a></dd>
     <dt>Marketplace passed</dt><dd><a href="https://github.com/Tunai-0511/clawd-sidekick/blob/2c1c19e43b488fe589b70537d7e6c9869ad20743/.claude-plugin/marketplace.json">clawd-sidekick</a></dd></dl>
 <p class="note">These are the hooks and API calls reported by <code>claude plugin validate</code>. Access levels describe the widest reach of those calls and are not safety ratings. Validation is a static check, not a runtime test, and a passing result does not prove that a mod works or is safe. <a href="https://github.com/karanb192/awesome-claude-code-mods/blob/main/SCANNING.md">How the scan works</a>.</p></section>
 
+<section class="badge-snippet" aria-labelledby="badge-title"><h2 id="badge-title">Badge for your README</h2><p><img src="/badges/Tunai-0511--clawd-sidekick--clawd-sidekick-reach.svg" alt="Reach badge for clawd-sidekick"> <img src="/badges/Tunai-0511--clawd-sidekick--clawd-sidekick-validates.svg" alt="Validation badge for clawd-sidekick"></p><p>Authors can show the latest scan result in their README. Each badge links to this page.</p><pre><code>[![reach](https://raw.githubusercontent.com/karanb192/awesome-claude-code-mods/main/badges/Tunai-0511--clawd-sidekick--clawd-sidekick-reach.svg)](https://mods.aidojo.si/mods/Tunai-0511--clawd-sidekick--clawd-sidekick/)
+[![validates](https://raw.githubusercontent.com/karanb192/awesome-claude-code-mods/main/badges/Tunai-0511--clawd-sidekick--clawd-sidekick-validates.svg)](https://mods.aidojo.si/mods/Tunai-0511--clawd-sidekick--clawd-sidekick/)</code></pre></section>
 </main>
 <footer class="shell"><a href="/" class="brand"><svg viewBox="0 0 32 32" fill="none" aria-hidden="true"><path d="M11 5H5v22h6M21 5h6v22h-6M16 10v12M10 16h12"/></svg><span>claude<span class="brand-light">mods</span></span></a><p>An independent community scan.<br>Not an official Anthropic directory.</p><a href="https://github.com/karanb192/awesome-claude-code-mods">Awesome Claude Code Mods on GitHub <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 19 19 5M5 5h14v14"/></svg></a></footer>
 </body></html>

@@ -16,7 +16,7 @@
 <p class="lede">요청마다 맞는 모델이 처리해요. 메인(Opus)은 그대로 두고 단순한 일은 Sonnet·Haiku 일꾼에게 맡겨서, 기억(프롬프트 캐시)을 안 깨고 사용료를 아껴요. 쉬고 온 뒤 압축은 Sonnet 요약, 아낀 만큼 테리 카드에 표시</p>
 
 <div class="facts"><div><h2>Access</h2><span class="level">L2 Writes or runs</span><span class="track" aria-label="Reach level 2: Writes or runs"><i class="on l2"></i><i class="on l2"></i><i class="on l2"></i><i class=""></i></span><span class="labels">other: $.state.get, other: $.state.set, writes files, drives Claude, reads files, reads env vars, reads the transcript, persists state, draws</span></div>
-<div><h2>Validation</h2><span class="status">Passed on Claude Code 2.1.301</span></div></div>
+<div><h2>Validation</h2><span class="status">Passed on Claude Code 2.1.332</span></div></div>
 <p class="actions"><a class="source" href="https://github.com/d3nims/d3nim-claude-mods/tree/main/plugins/auto-model">View the source on GitHub <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 19 19 5M5 5h14v14"/></svg></a><a href="/#d3nims--d3nim-claude-mods--auto-model">Back to the list</a></p>
 <p class="install">To install it, open the repository and follow the author’s setup instructions. Mods need Claude Code 2.1.287 or later.</p>
 <section class="record" aria-labelledby="record-title"><h2 id="record-title">What the scan recorded</h2>
@@ -26,13 +26,15 @@
     <dt>Hooks</dt><dd><code>session.start, turn.step, session.end, classic.SessionStart, prompt.submit, tool.call, turn.complete, agent.spawn, session.compact, command.run {command=auto-model}</code></dd>
     <dt>API calls</dt><dd><code>$.agent.spawn, $.clock.every, $.clock.now, $.clock.sleep, $.command.register, $.env.get, $.fs.exists, $.fs.read, $.fs.write, $.model.classify, $.model.complete, $.session.compact, $.session.id, $.session.messages, $.session.usage, $.state.get, $.state.set, $.store.get, $.store.set, $.ui.toast</code></dd>
 
-    <dt>Validation on 2.1.301</dt><dd>Passed</dd>
+    <dt>Validation on 2.1.332</dt><dd>Passed</dd>
 
 
-    <dt>Scanned revision</dt><dd><a href="https://github.com/d3nims/d3nim-claude-mods/tree/9d3fa5d464e878b5f0ddd10e6eecad11f34d7daa"><code>9d3fa5d464e8</code></a></dd>
-    <dt>Marketplace passed</dt><dd><a href="https://github.com/d3nims/d3nim-claude-mods/blob/9d3fa5d464e878b5f0ddd10e6eecad11f34d7daa/.claude-plugin/marketplace.json">d3nim-claude-mods</a></dd></dl>
+    <dt>Scanned revision</dt><dd><a href="https://github.com/d3nims/d3nim-claude-mods/tree/de9ee96a4d3453f81294a63825c0e31dd3f7c11b"><code>de9ee96a4d34</code></a></dd>
+    <dt>Marketplace passed</dt><dd><a href="https://github.com/d3nims/d3nim-claude-mods/blob/de9ee96a4d3453f81294a63825c0e31dd3f7c11b/.claude-plugin/marketplace.json">d3nim-claude-mods</a></dd></dl>
 <p class="note">These are the hooks and API calls reported by <code>claude plugin validate</code>. Access levels describe the widest reach of those calls and are not safety ratings. Validation is a static check, not a runtime test, and a passing result does not prove that a mod works or is safe. <a href="https://github.com/karanb192/awesome-claude-code-mods/blob/main/SCANNING.md">How the scan works</a>.</p></section>
 <section class="siblings" aria-labelledby="siblings-title"><h2 id="siblings-title">More from d3nims/d3nim-claude-mods</h2><ul><li><a href="/mods/d3nims--d3nim-claude-mods--usage-meter/">usage-meter</a><span>5시간/주간/대화 사용량을 프롬프트 위에 보여줍니다. /flame1 은 파란 불꽃 사용량 밴드, /terry 는 입력·응답에 반응하는 베들링턴 테리어와 이번 요청의 시간·토큰 카드. 80%/90%…</span></li></ul></section>
+<section class="badge-snippet" aria-labelledby="badge-title"><h2 id="badge-title">Badge for your README</h2><p><img src="/badges/d3nims--d3nim-claude-mods--auto-model-reach.svg" alt="Reach badge for auto-model"> <img src="/badges/d3nims--d3nim-claude-mods--auto-model-validates.svg" alt="Validation badge for auto-model"></p><p>Authors can show the latest scan result in their README. Each badge links to this page.</p><pre><code>[![reach](https://raw.githubusercontent.com/karanb192/awesome-claude-code-mods/main/badges/d3nims--d3nim-claude-mods--auto-model-reach.svg)](https://mods.aidojo.si/mods/d3nims--d3nim-claude-mods--auto-model/)
+[![validates](https://raw.githubusercontent.com/karanb192/awesome-claude-code-mods/main/badges/d3nims--d3nim-claude-mods--auto-model-validates.svg)](https://mods.aidojo.si/mods/d3nims--d3nim-claude-mods--auto-model/)</code></pre></section>
 </main>
 <footer class="shell"><a href="/" class="brand"><svg viewBox="0 0 32 32" fill="none" aria-hidden="true"><path d="M11 5H5v22h6M21 5h6v22h-6M16 10v12M10 16h12"/></svg><span>claude<span class="brand-light">mods</span></span></a><p>An independent community scan.<br>Not an official Anthropic directory.</p><a href="https://github.com/karanb192/awesome-claude-code-mods">Awesome Claude Code Mods on GitHub <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 19 19 5M5 5h14v14"/></svg></a></footer>
 </body></html>

@@ -15,24 +15,26 @@
 <p class="byline">A Claude Code mod in <a href="https://github.com/cmj-hub/gtm-operator-claude-mod">cmj-hub/gtm-operator-claude-mod</a></p>
 <p class="lede">The GTM operator mod for Claude Code: scores every go-to-market draft with its own skill pack's scorer, flags stale and inconsistent drafts across packs, pack dashboards, a guided sprint, analytics, and a guard that keeps brand-config.json and SOUL.md merged.</p>
 
-<div class="facts"><div><h2>Access</h2><span class="level">L2 Writes or runs</span><span class="track" aria-label="Reach level 2: Writes or runs"><i class="on l2"></i><i class="on l2"></i><i class="on l2"></i><i class=""></i></span><span class="labels">other: $.agent.register, other: $.state.get, other: $.state.set, runs processes, drives Claude, writes the prompt box, reads files, reads env vars, persists state, draws</span></div>
-<div><h2>Validation</h2><span class="status">Passed on Claude Code 2.1.301</span></div></div>
+<div class="facts"><div><h2>Access</h2><span class="level">L0 Draws &amp; remembers</span><span class="track" aria-label="Reach level 0: Draws & remembers"><i class="on l0"></i><i class=""></i><i class=""></i><i class=""></i></span><span class="labels">draws</span></div>
+<div><h2>Validation</h2><span class="status">Passed with warnings on Claude Code 2.1.332</span></div></div>
 <p class="actions"><a class="source" href="https://github.com/cmj-hub/gtm-operator-claude-mod">View the source on GitHub <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 19 19 5M5 5h14v14"/></svg></a><a href="/#cmj-hub--gtm-operator-claude-mod--gtm-operator">Back to the list</a></p>
 <p class="install">To install it, open the repository and follow the author’s setup instructions. Mods need Claude Code 2.1.287 or later.</p>
 <section class="record" aria-labelledby="record-title"><h2 id="record-title">What the scan recorded</h2>
 <dl>
 
     <dt>Observed events</dt><dd>classic hooks, Write calls, Edit calls, every tool call, mcp__gtm-operator__gtm_status calls, mcp__gtm-operator__gtm_score calls, mcp__gtm-operator__gtm_consistency calls</dd>
-    <dt>Hooks</dt><dd><code>session.start, classic.SessionStart {source=clear|resume|fork}, command.run {command=gtm-board}, command.run {command=gtm-score}, command.run {command=gtm-health}, command.run {command=gtm-sprint}, command.run {command=gtm-digest}, command.run {command=gtm-outcomes}, command.run {command=gtm-guard}, tool.call {tool=Write}, tool.call {tool=Edit}, tool.call, tool.call {tool=mcp__gtm-operator__gtm_status}, tool.call {tool=mcp__gtm-operator__gtm_score}, tool.call {tool=mcp__gtm-operator__gtm_consistency}, turn.complete, prompt.compose, ui.render {component=AbovePrompt}, ui.render {component=Pane, requestId=gtm-board}</code></dd>
-    <dt>API calls</dt><dd><code>$.agent.register, $.clock.after, $.clock.every, $.clock.now, $.command.register, $.command.run, $.env.get, $.fs.exists, $.fs.list, $.fs.read, $.fs.stat, $.process.run, $.prompt.fill, $.session.root, $.state.get, $.state.set, $.store.get, $.store.set, $.tool.register, $.ui.copy, $.ui.open, $.ui.resolve, $.ui.status, $.ui.toast</code></dd>
+    <dt>Hooks</dt><dd><code>session.start, classic.SessionStart {source=clear|resume|fork}, command.run {command=gtm-board}, command.run {command=gtm-score}, command.run {command=gtm-health}, command.run {command=gtm-sprint}, command.run {command=gtm-digest}, command.run {command=gtm-outcomes}, command.run {command=gtm-guard}, tool.call {tool=Write}, tool.call {tool=Edit}, tool.call, tool.call {tool=mcp__gtm-operator__gtm_status}, tool.call {tool=mcp__gtm-operator__gtm_score}, tool.call {tool=mcp__gtm-operator__gtm_consistency}, turn.complete, prompt.compose, ui.render {component=AbovePrompt}, default, matcher, key, plugin, ui.render {component=Pane, requestId=gtm-board}, default, matcher, key, plugin</code></dd>
+    <dt>API calls</dt><dd><code>$.ui.status, $.ui.toast</code></dd>
 
-    <dt>Validation on 2.1.301</dt><dd>Passed</dd>
+    <dt>Validation on 2.1.332</dt><dd>Passed with warnings</dd>
 
 
-    <dt>Scanned revision</dt><dd><a href="https://github.com/cmj-hub/gtm-operator-claude-mod/tree/bee9bae32b57ea0eac3ad800f29cb59cca2c149d"><code>bee9bae32b57</code></a></dd>
-    <dt>Marketplace passed</dt><dd><a href="https://github.com/cmj-hub/gtm-operator-claude-mod/blob/bee9bae32b57ea0eac3ad800f29cb59cca2c149d/.claude-plugin/marketplace.json">gtm-operator-claude-mod</a></dd></dl>
+    <dt>Scanned revision</dt><dd><a href="https://github.com/cmj-hub/gtm-operator-claude-mod/tree/494b43e9f84cc7c0cdd396ea7b601e83a58c9a50"><code>494b43e9f84c</code></a></dd>
+    <dt>Marketplace passed</dt><dd><a href="https://github.com/cmj-hub/gtm-operator-claude-mod/blob/494b43e9f84cc7c0cdd396ea7b601e83a58c9a50/.claude-plugin/marketplace.json">gtm-operator-claude-mod</a></dd></dl>
 <p class="note">These are the hooks and API calls reported by <code>claude plugin validate</code>. Access levels describe the widest reach of those calls and are not safety ratings. Validation is a static check, not a runtime test, and a passing result does not prove that a mod works or is safe. <a href="https://github.com/karanb192/awesome-claude-code-mods/blob/main/SCANNING.md">How the scan works</a>.</p></section>
 
+<section class="badge-snippet" aria-labelledby="badge-title"><h2 id="badge-title">Badge for your README</h2><p><img src="/badges/cmj-hub--gtm-operator-claude-mod--gtm-operator-reach.svg" alt="Reach badge for gtm-operator"> <img src="/badges/cmj-hub--gtm-operator-claude-mod--gtm-operator-validates.svg" alt="Validation badge for gtm-operator"></p><p>Authors can show the latest scan result in their README. Each badge links to this page.</p><pre><code>[![reach](https://raw.githubusercontent.com/karanb192/awesome-claude-code-mods/main/badges/cmj-hub--gtm-operator-claude-mod--gtm-operator-reach.svg)](https://mods.aidojo.si/mods/cmj-hub--gtm-operator-claude-mod--gtm-operator/)
+[![validates](https://raw.githubusercontent.com/karanb192/awesome-claude-code-mods/main/badges/cmj-hub--gtm-operator-claude-mod--gtm-operator-validates.svg)](https://mods.aidojo.si/mods/cmj-hub--gtm-operator-claude-mod--gtm-operator/)</code></pre></section>
 </main>
 <footer class="shell"><a href="/" class="brand"><svg viewBox="0 0 32 32" fill="none" aria-hidden="true"><path d="M11 5H5v22h6M21 5h6v22h-6M16 10v12M10 16h12"/></svg><span>claude<span class="brand-light">mods</span></span></a><p>An independent community scan.<br>Not an official Anthropic directory.</p><a href="https://github.com/karanb192/awesome-claude-code-mods">Awesome Claude Code Mods on GitHub <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 19 19 5M5 5h14v14"/></svg></a></footer>
 </body></html>

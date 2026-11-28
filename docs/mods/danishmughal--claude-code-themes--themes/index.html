@@ -16,7 +16,7 @@
 <p class="lede">Draws Claude's replies in color: headings, bold, italics, inline code, links, list markers and highlighted code blocks, in a Monokai Pro theme. Display only: the stored transcript and what Claude reads are unchanged.</p>
 <p class="compatibility">review UI rewrite</p>
 <div class="facts"><div><h2>Access</h2><span class="level">L0 Draws &amp; remembers</span><span class="track" aria-label="Reach level 0: Draws & remembers"><i class="on l0"></i><i class=""></i><i class=""></i><i class=""></i></span><span class="labels">draws</span></div>
-<div><h2>Validation</h2><span class="status">Passed with warnings on Claude Code 2.1.301</span></div></div>
+<div><h2>Validation</h2><span class="status">Passed with warnings on Claude Code 2.1.332</span></div></div>
 <p class="actions"><a class="source" href="https://github.com/danishmughal/claude-code-themes">View the source on GitHub <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 19 19 5M5 5h14v14"/></svg></a><a href="/#danishmughal--claude-code-themes--themes">Back to the list</a></p>
 <p class="install">To install it, open the repository and follow the author’s setup instructions. Mods need Claude Code 2.1.287 or later.</p>
 <section class="record" aria-labelledby="record-title"><h2 id="record-title">What the scan recorded</h2>
@@ -26,13 +26,15 @@
     <dt>Hooks</dt><dd><code>ui.render {component=AssistantMessage}</code></dd>
     <dt>API calls</dt><dd><code>$.ui.resolve</code></dd>
 
-    <dt>Validation on 2.1.301</dt><dd>Passed with warnings</dd>
+    <dt>Validation on 2.1.332</dt><dd>Passed with warnings</dd>
 
 
     <dt>Scanned revision</dt><dd><a href="https://github.com/danishmughal/claude-code-themes/tree/b011658548467e8266f11423a2db5ab4add27ab7"><code>b01165854846</code></a></dd>
     <dt>Marketplace warnings</dt><dd><a href="https://github.com/danishmughal/claude-code-themes/blob/b011658548467e8266f11423a2db5ab4add27ab7/.claude-plugin/marketplace.json">claude-code-themes</a></dd><dt>UI rewrite review</dt><dd>UI hook source contains control-character strings. Review any values passed to next() as rewritten props.text; the scanner does not trace whether these strings reach that call. <a href="https://github.com/danishmughal/claude-code-themes/blob/b011658548467e8266f11423a2db5ab4add27ab7/hooks/highlight.ts#L67">hooks/highlight.ts:67</a></dd></dl>
 <p class="note">These are the hooks and API calls reported by <code>claude plugin validate</code>. Access levels describe the widest reach of those calls and are not safety ratings. Validation is a static check, not a runtime test, and a passing result does not prove that a mod works or is safe. <a href="https://github.com/karanb192/awesome-claude-code-mods/blob/main/SCANNING.md">How the scan works</a>.</p></section>
 
+<section class="badge-snippet" aria-labelledby="badge-title"><h2 id="badge-title">Badge for your README</h2><p><img src="/badges/danishmughal--claude-code-themes--themes-reach.svg" alt="Reach badge for themes"> <img src="/badges/danishmughal--claude-code-themes--themes-validates.svg" alt="Validation badge for themes"></p><p>Authors can show the latest scan result in their README. Each badge links to this page.</p><pre><code>[![reach](https://raw.githubusercontent.com/karanb192/awesome-claude-code-mods/main/badges/danishmughal--claude-code-themes--themes-reach.svg)](https://mods.aidojo.si/mods/danishmughal--claude-code-themes--themes/)
+[![validates](https://raw.githubusercontent.com/karanb192/awesome-claude-code-mods/main/badges/danishmughal--claude-code-themes--themes-validates.svg)](https://mods.aidojo.si/mods/danishmughal--claude-code-themes--themes/)</code></pre></section>
 </main>
 <footer class="shell"><a href="/" class="brand"><svg viewBox="0 0 32 32" fill="none" aria-hidden="true"><path d="M11 5H5v22h6M21 5h6v22h-6M16 10v12M10 16h12"/></svg><span>claude<span class="brand-light">mods</span></span></a><p>An independent community scan.<br>Not an official Anthropic directory.</p><a href="https://github.com/karanb192/awesome-claude-code-mods">Awesome Claude Code Mods on GitHub <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 19 19 5M5 5h14v14"/></svg></a></footer>
 </body></html>

@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <title>session-start, a Claude Code mod by ray-manaloto | Awesome Claude Code Mods</title>
-<meta name="description" content="On each new interactive session: reload skills and plugins, then name the session &lt;project&gt;-&lt;Chicago ISO ns&gt;.&lt;feature&gt;"><meta name="theme-color" content="#f0eee6" media="(prefers-color-scheme: light)"><meta name="theme-color" content="#1c1c1a" media="(prefers-color-scheme: dark)">
+<meta name="description" content="On each new interactive session: reload skills and plugins, then name the session &lt;project&gt;-&lt;Chicago ISO ns&gt;.&lt;feature&gt;"><meta name="robots" content="noindex"><meta name="theme-color" content="#f0eee6" media="(prefers-color-scheme: light)"><meta name="theme-color" content="#1c1c1a" media="(prefers-color-scheme: dark)">
 <link rel="canonical" href="https://mods.aidojo.si/mods/ray-manaloto--dotfiles--session-start/"><link rel="icon" href="/favicon.svg" type="image/svg+xml">
 <link rel="preload" href="/fonts/hanken-grotesk-latin.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="/site.css">
@@ -16,7 +16,7 @@
 <p class="lede">On each new interactive session: reload skills and plugins, then name the session &lt;project&gt;-&lt;Chicago ISO ns&gt;.&lt;feature&gt;</p>
 
 <div class="facts"><div><h2>Access</h2><span class="level">L2 Writes or runs</span><span class="track" aria-label="Reach level 2: Writes or runs"><i class="on l2"></i><i class="on l2"></i><i class="on l2"></i><i class=""></i></span><span class="labels">runs processes, drives Claude, reads env vars, draws</span></div>
-<div><h2>Validation</h2><span class="status">Passed on Claude Code 2.1.301</span></div></div>
+<div><h2>Validation</h2><span class="status bad">not verified</span></div></div>
 <p class="actions"><a class="source" href="https://github.com/ray-manaloto/dotfiles/tree/main/.claude/skills/session-start">View the source on GitHub <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 19 19 5M5 5h14v14"/></svg></a><a href="/#ray-manaloto--dotfiles--session-start">Back to the list</a></p>
 <p class="install">To install it, open the repository and follow the author’s setup instructions. Mods need Claude Code 2.1.287 or later.</p>
 <section class="record" aria-labelledby="record-title"><h2 id="record-title">What the scan recorded</h2>
@@ -26,13 +26,15 @@
     <dt>Hooks</dt><dd><code>session.start, prompt.submit</code></dd>
     <dt>API calls</dt><dd><code>$.command.run, $.env.get, $.model.complete, $.process.run, $.session.id, $.session.root, $.ui.status, $.ui.toast</code></dd>
 
-    <dt>Validation on 2.1.301</dt><dd>Passed</dd>
-
-
+    <dt>Validation on 2.1.301</dt><dd>not verified</dd>
+    <dt>Last known result</dt><dd>Passed on 2.1.301</dd>
+    <dt>Validator output</dt><dd>Not found in this scan; retained pending weekly retirement review.</dd>
     <dt>Scanned revision</dt><dd><a href="https://github.com/ray-manaloto/dotfiles/tree/52d784990588297db8e29f96ff686ae6e1b29e98"><code>52d784990588</code></a></dd>
     </dl>
 <p class="note">These are the hooks and API calls reported by <code>claude plugin validate</code>. Access levels describe the widest reach of those calls and are not safety ratings. Validation is a static check, not a runtime test, and a passing result does not prove that a mod works or is safe. <a href="https://github.com/karanb192/awesome-claude-code-mods/blob/main/SCANNING.md">How the scan works</a>.</p></section>
-<section class="siblings" aria-labelledby="siblings-title"><h2 id="siblings-title">More from ray-manaloto/dotfiles</h2><ul><li><a href="/mods/ray-manaloto--dotfiles--coordinator-handoff/">coordinator-handoff</a><span>Auto-submits /coordinator-handoff when a dotfiles coordinator session's context reaches the configured limit,…</span></li><li><a href="/mods/ray-manaloto--dotfiles--install-doctor/">install-doctor</a><span>Reports the install-doctor verdict at session start and refuses tool calls while the install is provably brok…</span></li><li><a href="/mods/ray-manaloto--dotfiles--plugin-health/">plugin-health</a><span>Reports at session start when plugins declared in settings are not actually installed or are disabled for thi…</span></li></ul></section>
+<section class="siblings" aria-labelledby="siblings-title"><h2 id="siblings-title">More from ray-manaloto/dotfiles</h2><ul><li><a href="/mods/ray-manaloto--dotfiles--coordinator-handoff/">coordinator-handoff</a><span>Auto-submits /coordinator-handoff when a dotfiles coordinator session's context reaches the configured limit,…</span></li><li><a href="/mods/ray-manaloto--dotfiles--install-doctor/">install-doctor</a><span>Reports the install-doctor verdict at session start and refuses tool calls while the install is provably brok…</span></li><li><a href="/mods/ray-manaloto--dotfiles--plugin-health/">plugin-health</a><span>Reports at session start when plugins declared in settings are not actually installed or are disabled for thi…</span></li><li><a href="/mods/ray-manaloto--dotfiles--side-notes/">side-notes</a><span>A side agent (Haiku by default) that checks the session every few steps for real risks (wrong facts, unsafe a…</span></li><li><a href="/mods/ray-manaloto--dotfiles--you-should-know-forward/">you-should-know-forward</a><span>Pass each &quot;You should know&quot; note to the session's own agent once, marked as a separate model's claim to verify</span></li></ul></section>
+<section class="badge-snippet" aria-labelledby="badge-title"><h2 id="badge-title">Badge for your README</h2><p><img src="/badges/ray-manaloto--dotfiles--session-start-reach.svg" alt="Reach badge for session-start"> <img src="/badges/ray-manaloto--dotfiles--session-start-validates.svg" alt="Validation badge for session-start"></p><p>Authors can show the latest scan result in their README. Each badge links to this page.</p><pre><code>[![reach](https://raw.githubusercontent.com/karanb192/awesome-claude-code-mods/main/badges/ray-manaloto--dotfiles--session-start-reach.svg)](https://mods.aidojo.si/mods/ray-manaloto--dotfiles--session-start/)
+[![validates](https://raw.githubusercontent.com/karanb192/awesome-claude-code-mods/main/badges/ray-manaloto--dotfiles--session-start-validates.svg)](https://mods.aidojo.si/mods/ray-manaloto--dotfiles--session-start/)</code></pre></section>
 </main>
 <footer class="shell"><a href="/" class="brand"><svg viewBox="0 0 32 32" fill="none" aria-hidden="true"><path d="M11 5H5v22h6M21 5h6v22h-6M16 10v12M10 16h12"/></svg><span>claude<span class="brand-light">mods</span></span></a><p>An independent community scan.<br>Not an official Anthropic directory.</p><a href="https://github.com/karanb192/awesome-claude-code-mods">Awesome Claude Code Mods on GitHub <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 19 19 5M5 5h14v14"/></svg></a></footer>
 </body></html>

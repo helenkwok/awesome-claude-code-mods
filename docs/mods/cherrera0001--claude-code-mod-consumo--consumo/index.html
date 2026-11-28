@@ -15,24 +15,26 @@
 <p class="byline">A Claude Code mod in <a href="https://github.com/cherrera0001/claude-code-mod-consumo">cherrera0001/claude-code-mod-consumo</a></p>
 <p class="lede">Mide, gestiona y controla el trabajo, y el control escucha lo medido: el panel y la orden del próximo despertar salen de la foto del index (cuellos de botella, quién está en qué, flujo con sus n), no de un cálculo aparte. Mide la sesión (presupuesto, contexto, ritmo), las issues cerradas contra la factura, GitHub y la cobertura. Gestiona la cola y quién tiene cada issue. Controla: en session.start y en cada despertar del bucle asigna, reasigna o se detiene, y escribe la decisión en .claude/orquestacion.json del repositorio de trabajo antes de que nadie empiece. Trae un index vivo que se actualiza solo, sin modelo y sin sesión abierta: un guion de Node (herramientas/indice.mjs), disparado por hooks de git y por una tarea programada, mide árboles, ramas, trabajo sin confirmar, commits sin integrar, números de migración y remoto, pone arriba los cuellos de botella, y deja una pizarra en texto llano para los agentes que no ejecutan el mod. El index es privado; la ficha pública de producción lleva sólo commit y salud.</p>
 
-<div class="facts"><div><h2>Access</h2><span class="level">L2 Writes or runs</span><span class="track" aria-label="Reach level 2: Writes or runs"><i class="on l2"></i><i class="on l2"></i><i class="on l2"></i><i class=""></i></span><span class="labels">other: $.state.get, other: $.state.set, runs processes, writes files, reads files, persists state</span></div>
-<div><h2>Validation</h2><span class="status">Passed on Claude Code 2.1.301</span></div></div>
+<div class="facts"><div><h2>Access</h2><span class="level">L1 Reads files</span><span class="track" aria-label="Reach level 1: Reads files"><i class="on l1"></i><i class="on l1"></i><i class=""></i><i class=""></i></span><span class="labels">other: $.state.get, other: $.state.set, persists state, draws</span></div>
+<div><h2>Validation</h2><span class="status">Passed on Claude Code 2.1.332</span></div></div>
 <p class="actions"><a class="source" href="https://github.com/cherrera0001/claude-code-mod-consumo">View the source on GitHub <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 19 19 5M5 5h14v14"/></svg></a><a href="/#cherrera0001--claude-code-mod-consumo--consumo">Back to the list</a></p>
 <p class="install">To install it, open the repository and follow the author’s setup instructions. Mods need Claude Code 2.1.287 or later.</p>
 <section class="record" aria-labelledby="record-title"><h2 id="record-title">What the scan recorded</h2>
 <dl>
 
     <dt>Observed events</dt><dd>every prompt</dd>
-    <dt>Hooks</dt><dd><code>session.start, prompt.submit, prompt.compose, turn.complete, command.run {command=consumo}, ui.render {component=Pane, requestId=consumo}</code></dd>
-    <dt>API calls</dt><dd><code>$.clock.after, $.clock.every, $.clock.now, $.command.register, $.fs.exists, $.fs.read, $.fs.stat, $.fs.write, $.process.run, $.session.cwd, $.session.id, $.session.root, $.session.usage, $.state.get, $.state.set, $.store.get, $.store.set</code></dd>
+    <dt>Hooks</dt><dd><code>session.start, prompt.submit, prompt.compose, turn.complete, command.run {command=consumo}, ui.render {component=Pane, requestId=consumo}, default, matcher, key, plugin</code></dd>
+    <dt>API calls</dt><dd><code>$.session.id, $.session.root, $.session.usage, $.state.get, $.state.set, $.store.get, $.store.set, $.ui.open, $.ui.resolve, $.ui.toast</code></dd>
 
-    <dt>Validation on 2.1.301</dt><dd>Passed</dd>
+    <dt>Validation on 2.1.332</dt><dd>Passed</dd>
 
 
     <dt>Scanned revision</dt><dd><a href="https://github.com/cherrera0001/claude-code-mod-consumo/tree/e074399157cb999244ee883130bf9e1c441d09d5"><code>e074399157cb</code></a></dd>
     <dt>Marketplace warnings</dt><dd><a href="https://github.com/cherrera0001/claude-code-mod-consumo/blob/e074399157cb999244ee883130bf9e1c441d09d5/.claude-plugin/marketplace.json">consumo-local</a></dd></dl>
 <p class="note">These are the hooks and API calls reported by <code>claude plugin validate</code>. Access levels describe the widest reach of those calls and are not safety ratings. Validation is a static check, not a runtime test, and a passing result does not prove that a mod works or is safe. <a href="https://github.com/karanb192/awesome-claude-code-mods/blob/main/SCANNING.md">How the scan works</a>.</p></section>
 
+<section class="badge-snippet" aria-labelledby="badge-title"><h2 id="badge-title">Badge for your README</h2><p><img src="/badges/cherrera0001--claude-code-mod-consumo--consumo-reach.svg" alt="Reach badge for consumo"> <img src="/badges/cherrera0001--claude-code-mod-consumo--consumo-validates.svg" alt="Validation badge for consumo"></p><p>Authors can show the latest scan result in their README. Each badge links to this page.</p><pre><code>[![reach](https://raw.githubusercontent.com/karanb192/awesome-claude-code-mods/main/badges/cherrera0001--claude-code-mod-consumo--consumo-reach.svg)](https://mods.aidojo.si/mods/cherrera0001--claude-code-mod-consumo--consumo/)
+[![validates](https://raw.githubusercontent.com/karanb192/awesome-claude-code-mods/main/badges/cherrera0001--claude-code-mod-consumo--consumo-validates.svg)](https://mods.aidojo.si/mods/cherrera0001--claude-code-mod-consumo--consumo/)</code></pre></section>
 </main>
 <footer class="shell"><a href="/" class="brand"><svg viewBox="0 0 32 32" fill="none" aria-hidden="true"><path d="M11 5H5v22h6M21 5h6v22h-6M16 10v12M10 16h12"/></svg><span>claude<span class="brand-light">mods</span></span></a><p>An independent community scan.<br>Not an official Anthropic directory.</p><a href="https://github.com/karanb192/awesome-claude-code-mods">Awesome Claude Code Mods on GitHub <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 19 19 5M5 5h14v14"/></svg></a></footer>
 </body></html>

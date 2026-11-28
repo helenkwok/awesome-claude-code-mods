@@ -16,7 +16,7 @@
 <p class="lede">Clawd types on a tiny laptop under the spinner: the code Claude writes floats out of the screen, input tokens float in, and he turns to face you while thinking.</p>
 
 <div class="facts"><div><h2>Access</h2><span class="level">L0 Draws &amp; remembers</span><span class="track" aria-label="Reach level 0: Draws & remembers"><i class="on l0"></i><i class=""></i><i class=""></i><i class=""></i></span><span class="labels">plays audio, persists state, draws</span></div>
-<div><h2>Validation</h2><span class="status">Passed on Claude Code 2.1.301</span></div></div>
+<div><h2>Validation</h2><span class="status">Passed on Claude Code 2.1.332</span></div></div>
 <p class="actions"><a class="source" href="https://github.com/scoobynko/claude-code-mods/tree/main/plugins/clawd-spinner">View the source on GitHub <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 19 19 5M5 5h14v14"/></svg></a><a href="/#scoobynko--claude-code-mods--clawd-spinner">Back to the list</a></p>
 <p class="install">To install it, open the repository and follow the author’s setup instructions. Mods need Claude Code 2.1.287 or later.</p>
 <section class="record" aria-labelledby="record-title"><h2 id="record-title">What the scan recorded</h2>
@@ -26,13 +26,15 @@
     <dt>Hooks</dt><dd><code>session.start, command.run {command=clawd-sound}, turn.start, turn.step, turn.complete, ui.render {component=Spinner}</code></dd>
     <dt>API calls</dt><dd><code>$.audio.play, $.clock.every, $.command.register, $.session.usage, $.store.get, $.store.set, $.ui.blit, $.ui.invalidate, $.ui.resolve</code></dd>
 
-    <dt>Validation on 2.1.301</dt><dd>Passed</dd>
+    <dt>Validation on 2.1.332</dt><dd>Passed</dd>
 
 
     <dt>Scanned revision</dt><dd><a href="https://github.com/scoobynko/claude-code-mods/tree/2b60bc6c9e3aa4da63045c6a8a702c5d79b9aa7c"><code>2b60bc6c9e3a</code></a></dd>
     <dt>Marketplace passed</dt><dd><a href="https://github.com/scoobynko/claude-code-mods/blob/2b60bc6c9e3aa4da63045c6a8a702c5d79b9aa7c/.claude-plugin/marketplace.json">scoobynko-mods</a></dd></dl>
 <p class="note">These are the hooks and API calls reported by <code>claude plugin validate</code>. Access levels describe the widest reach of those calls and are not safety ratings. Validation is a static check, not a runtime test, and a passing result does not prove that a mod works or is safe. <a href="https://github.com/karanb192/awesome-claude-code-mods/blob/main/SCANNING.md">How the scan works</a>.</p></section>
 <section class="siblings" aria-labelledby="siblings-title"><h2 id="siblings-title">More from scoobynko/claude-code-mods</h2><ul><li><a href="/mods/scoobynko--claude-code-mods--image-preview/">image-preview</a><span>/image-preview opens a pane listing every image of the session, pasted or returned by a tool, and shows the o…</span></li><li><a href="/mods/scoobynko--claude-code-mods--md-view/">md-view</a><span>Click a Markdown file in Claude's reply to read it rendered in a side pane, or list the session's Markdown fi…</span></li></ul></section>
+<section class="badge-snippet" aria-labelledby="badge-title"><h2 id="badge-title">Badge for your README</h2><p><img src="/badges/scoobynko--claude-code-mods--clawd-spinner-reach.svg" alt="Reach badge for clawd-spinner"> <img src="/badges/scoobynko--claude-code-mods--clawd-spinner-validates.svg" alt="Validation badge for clawd-spinner"></p><p>Authors can show the latest scan result in their README. Each badge links to this page.</p><pre><code>[![reach](https://raw.githubusercontent.com/karanb192/awesome-claude-code-mods/main/badges/scoobynko--claude-code-mods--clawd-spinner-reach.svg)](https://mods.aidojo.si/mods/scoobynko--claude-code-mods--clawd-spinner/)
+[![validates](https://raw.githubusercontent.com/karanb192/awesome-claude-code-mods/main/badges/scoobynko--claude-code-mods--clawd-spinner-validates.svg)](https://mods.aidojo.si/mods/scoobynko--claude-code-mods--clawd-spinner/)</code></pre></section>
 </main>
 <footer class="shell"><a href="/" class="brand"><svg viewBox="0 0 32 32" fill="none" aria-hidden="true"><path d="M11 5H5v22h6M21 5h6v22h-6M16 10v12M10 16h12"/></svg><span>claude<span class="brand-light">mods</span></span></a><p>An independent community scan.<br>Not an official Anthropic directory.</p><a href="https://github.com/karanb192/awesome-claude-code-mods">Awesome Claude Code Mods on GitHub <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 19 19 5M5 5h14v14"/></svg></a></footer>
 </body></html>

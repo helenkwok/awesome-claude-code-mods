@@ -15,24 +15,26 @@
 <p class="byline">A Claude Code mod in <a href="https://github.com/HeyCubit/effortless">HeyCubit/effortless</a></p>
 <p class="lede">While Claude works, the chat shows one tall pixel-art card of Clawd instead of every step. Its buttons sit on the card, which minimizes to one line, and under the newest answer; /textless toggles it too.</p>
 
-<div class="facts"><div><h2>Access</h2><span class="level">L3 Uses the network</span><span class="track" aria-label="Reach level 3: Uses the network"><i class="on l3"></i><i class="on l3"></i><i class="on l3"></i><i class="on l3"></i></span><span class="labels">other: $.prompt.read, network, runs processes, writes files, drives Claude, writes the prompt box, reads files, reads env vars, persists state</span></div>
-<div><h2>Validation</h2><span class="status">Passed with warnings on Claude Code 2.1.301</span></div></div>
+<div class="facts"><div><h2>Access</h2><span class="level">L3 Uses the network</span><span class="track" aria-label="Reach level 3: Uses the network"><i class="on l3"></i><i class="on l3"></i><i class="on l3"></i><i class="on l3"></i></span><span class="labels">other: $.prompt.read, network, runs processes, drives Claude, writes the prompt box, persists state, draws</span></div>
+<div><h2>Validation</h2><span class="status">Passed with warnings on Claude Code 2.1.332</span></div></div>
 <p class="actions"><a class="source" href="https://github.com/HeyCubit/effortless/tree/main/textless/plugin">View the source on GitHub <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 19 19 5M5 5h14v14"/></svg></a><a href="/#HeyCubit--effortless--textless">Back to the list</a></p>
 <p class="install">To install it, open the repository and follow the author’s setup instructions. Mods need Claude Code 2.1.287 or later.</p>
 <section class="record" aria-labelledby="record-title"><h2 id="record-title">What the scan recorded</h2>
 <dl>
 
     <dt>Observed events</dt><dd>every prompt, classic hooks</dd>
-    <dt>Hooks</dt><dd><code>session.start, command.run, prompt.submit, turn.step, classic.UserPromptSubmit, classic.SessionStart, classic.Stop, turn.complete, ui.render {component=ToolUse}, ui.render {component=ToolGroup}, ui.render {component=Pane, requestId=textless-settings}, ui.render {component=UserMessage}, ui.render {component=AssistantMessage}, ui.render {component=CommandOutput}, ui.render {component=AbovePrompt}</code></dd>
-    <dt>API calls</dt><dd><code>$.clock.after, $.clock.every, $.clock.now, $.command.register, $.command.run, $.config.list, $.env.get, $.fs.list, $.fs.read, $.fs.write, $.http.fetch, $.process.run, $.prompt.fill, $.prompt.read, $.prompt.submit, $.session.id, $.store.get</code></dd>
+    <dt>Hooks</dt><dd><code>session.start, command.run, prompt.submit, turn.step, classic.UserPromptSubmit, classic.SessionStart, classic.Stop, turn.complete, ui.render {component=ToolUse}, ui.render {component=ToolGroup}, ui.render {component=Pane, requestId=textless-settings}, default, matcher, key, plugin, ui.render {component=UserMessage}, ui.render {component=AssistantMessage}, ui.render {component=CommandOutput}, ui.render {component=AbovePrompt}, default, matcher, key, plugin</code></dd>
+    <dt>API calls</dt><dd><code>$.http.fetch, $.process.run, $.prompt.fill, $.prompt.read, $.prompt.submit, $.session.id, $.store.get, $.store.set, $.ui.copy, $.ui.invalidate, $.ui.open, $.ui.resolve, $.ui.toast</code></dd>
 
-    <dt>Validation on 2.1.301</dt><dd>Passed with warnings</dd>
+    <dt>Validation on 2.1.332</dt><dd>Passed with warnings</dd>
 
 
-    <dt>Scanned revision</dt><dd><a href="https://github.com/HeyCubit/effortless/tree/df5602ef9b49c70f678a3ce9a12518176e09afea"><code>df5602ef9b49</code></a></dd>
-    <dt>Marketplace warnings</dt><dd><a href="https://github.com/HeyCubit/effortless/blob/df5602ef9b49c70f678a3ce9a12518176e09afea/textless/.claude-plugin/marketplace.json">heycubit</a></dd></dl>
+    <dt>Scanned revision</dt><dd><a href="https://github.com/HeyCubit/effortless/tree/e5c590dfd9402244ea66a8bf795d1cb86d1df7b9"><code>e5c590dfd940</code></a></dd>
+    <dt>Marketplace warnings</dt><dd><a href="https://github.com/HeyCubit/effortless/blob/e5c590dfd9402244ea66a8bf795d1cb86d1df7b9/textless/.claude-plugin/marketplace.json">heycubit</a></dd></dl>
 <p class="note">These are the hooks and API calls reported by <code>claude plugin validate</code>. Access levels describe the widest reach of those calls and are not safety ratings. Validation is a static check, not a runtime test, and a passing result does not prove that a mod works or is safe. <a href="https://github.com/karanb192/awesome-claude-code-mods/blob/main/SCANNING.md">How the scan works</a>.</p></section>
 <section class="siblings" aria-labelledby="siblings-title"><h2 id="siblings-title">More from HeyCubit/effortless</h2><ul><li><a href="/mods/HeyCubit--effortless--effortless/">effortless</a><span>Sets the reasoning effort for every prompt automatically, shows it under the prompt box, and counts down how…</span></li></ul></section>
+<section class="badge-snippet" aria-labelledby="badge-title"><h2 id="badge-title">Badge for your README</h2><p><img src="/badges/HeyCubit--effortless--textless-reach.svg" alt="Reach badge for textless"> <img src="/badges/HeyCubit--effortless--textless-validates.svg" alt="Validation badge for textless"></p><p>Authors can show the latest scan result in their README. Each badge links to this page.</p><pre><code>[![reach](https://raw.githubusercontent.com/karanb192/awesome-claude-code-mods/main/badges/HeyCubit--effortless--textless-reach.svg)](https://mods.aidojo.si/mods/HeyCubit--effortless--textless/)
+[![validates](https://raw.githubusercontent.com/karanb192/awesome-claude-code-mods/main/badges/HeyCubit--effortless--textless-validates.svg)](https://mods.aidojo.si/mods/HeyCubit--effortless--textless/)</code></pre></section>
 </main>
 <footer class="shell"><a href="/" class="brand"><svg viewBox="0 0 32 32" fill="none" aria-hidden="true"><path d="M11 5H5v22h6M21 5h6v22h-6M16 10v12M10 16h12"/></svg><span>claude<span class="brand-light">mods</span></span></a><p>An independent community scan.<br>Not an official Anthropic directory.</p><a href="https://github.com/karanb192/awesome-claude-code-mods">Awesome Claude Code Mods on GitHub <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 19 19 5M5 5h14v14"/></svg></a></footer>
 </body></html>

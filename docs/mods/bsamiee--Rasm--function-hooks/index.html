@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <title>function-hooks, a Claude Code mod by bsamiee | Awesome Claude Code Mods</title>
-<meta name="description" content="Mod that runs Bash commands through repository Nx targets and refuses unsafe forms"><meta name="theme-color" content="#f0eee6" media="(prefers-color-scheme: light)"><meta name="theme-color" content="#1c1c1a" media="(prefers-color-scheme: dark)">
+<meta name="description" content="Mod that runs Bash commands through repository Nx targets and refuses unsafe forms"><meta name="robots" content="noindex"><meta name="theme-color" content="#f0eee6" media="(prefers-color-scheme: light)"><meta name="theme-color" content="#1c1c1a" media="(prefers-color-scheme: dark)">
 <link rel="canonical" href="https://mods.aidojo.si/mods/bsamiee--Rasm--function-hooks/"><link rel="icon" href="/favicon.svg" type="image/svg+xml">
 <link rel="preload" href="/fonts/hanken-grotesk-latin.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="/site.css">
@@ -16,7 +16,7 @@
 <p class="lede">Mod that runs Bash commands through repository Nx targets and refuses unsafe forms</p>
 
 <div class="facts"><div><h2>Access</h2><span class="level">L2 Writes or runs</span><span class="track" aria-label="Reach level 2: Writes or runs"><i class="on l2"></i><i class="on l2"></i><i class="on l2"></i><i class=""></i></span><span class="labels">runs processes, reads files, reads env vars, draws</span></div>
-<div><h2>Validation</h2><span class="status">Passed on Claude Code 2.1.301</span></div></div>
+<div><h2>Validation</h2><span class="status bad">not verified</span></div></div>
 <p class="actions"><a class="source" href="https://github.com/bsamiee/Rasm/tree/main/plugins/function-hooks">View the source on GitHub <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 19 19 5M5 5h14v14"/></svg></a><a href="/#bsamiee--Rasm--function-hooks">Back to the list</a></p>
 <p class="install">To install it, open the repository and follow the author’s setup instructions. Mods need Claude Code 2.1.287 or later.</p>
 <section class="record" aria-labelledby="record-title"><h2 id="record-title">What the scan recorded</h2>
@@ -26,13 +26,15 @@
     <dt>Hooks</dt><dd><code>tool.call {tool=EnterWorktree}, tool.call {tool=Agent, isolation=worktree}, tool.call {tool=Bash|Monitor}</code></dd>
     <dt>API calls</dt><dd><code>$.env.get, $.fs.exists, $.fs.read, $.fs.stat, $.process.run, $.session.cwd, $.session.repo, $.session.root, $.ui.log, $.ui.toast</code></dd>
 
-    <dt>Validation on 2.1.301</dt><dd>Passed</dd>
-
-
+    <dt>Validation on 2.1.301</dt><dd>not verified</dd>
+    <dt>Last known result</dt><dd>Passed on 2.1.301</dd>
+    <dt>Validator output</dt><dd>Not found in this scan; retained pending weekly retirement review.</dd>
     <dt>Scanned revision</dt><dd><a href="https://github.com/bsamiee/Rasm/tree/54b60638d7dd0c0add8a397de517c74aa7031027"><code>54b60638d7dd</code></a></dd>
     <dt>Marketplace passed</dt><dd><a href="https://github.com/bsamiee/Rasm/blob/54b60638d7dd0c0add8a397de517c74aa7031027/plugins/.claude-plugin/marketplace.json">rasm</a></dd></dl>
 <p class="note">These are the hooks and API calls reported by <code>claude plugin validate</code>. Access levels describe the widest reach of those calls and are not safety ratings. Validation is a static check, not a runtime test, and a passing result does not prove that a mod works or is safe. <a href="https://github.com/karanb192/awesome-claude-code-mods/blob/main/SCANNING.md">How the scan works</a>.</p></section>
-
+<section class="siblings" aria-labelledby="siblings-title"><h2 id="siblings-title">More from bsamiee/Rasm</h2><ul><li><a href="/mods/bsamiee--Rasm--delegate/">delegate</a><span>Claude Code runs of outside agents (codex exec, agy, any one-command CLI agent) as background engine agents r…</span></li><li><a href="/mods/bsamiee--Rasm--dreamweave/">dreamweave</a><span>Claude Code auto-memory system: a skill for writing, editing, and auditing memories, a generated MEMORY.md in…</span></li><li><a href="/mods/bsamiee--Rasm--function-hooks--plugins-claude-function-hooks/">function-hooks</a><span>Hooks that correct agent commands</span></li><li><a href="/mods/bsamiee--Rasm--naqib/">naqib</a><span>Claude Code hooks that gather the owner's agent work in the terminal, with the way back to each, and open eve…</span></li><li><a href="/mods/bsamiee--Rasm--preview-recorder/">preview-recorder</a><span>Records what other plugins draw, call, and send into the debug log, for the mod preview script</span></li><li><a href="/mods/bsamiee--Rasm--risman/">risman</a><span>Hooks that deliver the events of an application to the agent that drove it through a local MCP server built o…</span></li></ul></section>
+<section class="badge-snippet" aria-labelledby="badge-title"><h2 id="badge-title">Badge for your README</h2><p><img src="/badges/bsamiee--Rasm--function-hooks-reach.svg" alt="Reach badge for function-hooks"> <img src="/badges/bsamiee--Rasm--function-hooks-validates.svg" alt="Validation badge for function-hooks"></p><p>Authors can show the latest scan result in their README. Each badge links to this page.</p><pre><code>[![reach](https://raw.githubusercontent.com/karanb192/awesome-claude-code-mods/main/badges/bsamiee--Rasm--function-hooks-reach.svg)](https://mods.aidojo.si/mods/bsamiee--Rasm--function-hooks/)
+[![validates](https://raw.githubusercontent.com/karanb192/awesome-claude-code-mods/main/badges/bsamiee--Rasm--function-hooks-validates.svg)](https://mods.aidojo.si/mods/bsamiee--Rasm--function-hooks/)</code></pre></section>
 </main>
 <footer class="shell"><a href="/" class="brand"><svg viewBox="0 0 32 32" fill="none" aria-hidden="true"><path d="M11 5H5v22h6M21 5h6v22h-6M16 10v12M10 16h12"/></svg><span>claude<span class="brand-light">mods</span></span></a><p>An independent community scan.<br>Not an official Anthropic directory.</p><a href="https://github.com/karanb192/awesome-claude-code-mods">Awesome Claude Code Mods on GitHub <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 19 19 5M5 5h14v14"/></svg></a></footer>
 </body></html>

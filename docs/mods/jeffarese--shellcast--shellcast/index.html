@@ -15,24 +15,26 @@
 <p class="byline">A Claude Code mod in <a href="https://github.com/jeffarese/shellcast">jeffarese/shellcast</a></p>
 <p class="lede">Tidy one-line shell command rows with live output, progress, timing and exit status, plus details on demand.</p>
 <p class="compatibility">review UI rewrite</p>
-<div class="facts"><div><h2>Access</h2><span class="level">L2 Writes or runs</span><span class="track" aria-label="Reach level 2: Writes or runs"><i class="on l2"></i><i class="on l2"></i><i class="on l2"></i><i class=""></i></span><span class="labels">other: $.state.get, other: $.state.set, runs processes, reads files, reads env vars, draws</span></div>
-<div><h2>Validation</h2><span class="status">Passed on Claude Code 2.1.301</span></div></div>
+<div class="facts"><div><h2>Access</h2><span class="level">L2 Writes or runs</span><span class="track" aria-label="Reach level 2: Writes or runs"><i class="on l2"></i><i class="on l2"></i><i class="on l2"></i><i class=""></i></span><span class="labels">other: $.state.get, other: $.state.set, runs processes, reads files, reads env vars, reads the transcript, draws</span></div>
+<div><h2>Validation</h2><span class="status">Passed with warnings on Claude Code 2.1.332</span></div></div>
 <p class="actions"><a class="source" href="https://github.com/jeffarese/shellcast">View the source on GitHub <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 19 19 5M5 5h14v14"/></svg></a><a href="/#jeffarese--shellcast--shellcast">Back to the list</a></p>
 <p class="install">To install it, open the repository and follow the author’s setup instructions. Mods need Claude Code 2.1.287 or later.</p>
 <section class="record" aria-labelledby="record-title"><h2 id="record-title">What the scan recorded</h2>
 <dl>
 
     <dt>Observed events</dt><dd>Bash calls, TaskStop calls, classic hooks</dd>
-    <dt>Hooks</dt><dd><code>session.start, tool.call {tool=Bash}, tool.call {tool=TaskStop}, classic.Stop, session.append, ui.render {component=ToolUse, props has {tool=Bash}, ui.render {component=ToolResult, props has {tool=Bash}, ui.render {component=ToolResult, props has {tool=Write}, ui.render {component=ToolGroup}, ui.render {component=AbovePrompt}, ui.render {component=PromptHint}</code></dd>
-    <dt>API calls</dt><dd><code>$.clock.every, $.clock.now, $.env.get, $.fs.exists, $.fs.list, $.fs.read, $.fs.stat, $.process.run, $.session.cwd, $.session.id, $.session.root, $.state.get, $.state.set, $.ui.log, $.ui.resolve</code></dd>
+    <dt>Hooks</dt><dd><code>session.start, tool.call {tool=Bash}, tool.call {tool=TaskStop}, classic.Stop, session.append, ui.render {component=ToolUse, props has {tool=Bash}, ui.render {component=ToolResult, props has {tool=Bash}, ui.render {component=ToolResult, props has {tool=Write}, ui.render {component=ToolGroup}, ui.render {component=AbovePrompt}, default, matcher, key, plugin, ui.render {component=PromptHint}</code></dd>
+    <dt>API calls</dt><dd><code>$.clock.every, $.clock.now, $.env.get, $.fs.exists, $.fs.list, $.fs.read, $.fs.stat, $.process.run, $.session.cwd, $.session.id, $.session.messages, $.session.root, $.state.get, $.state.set, $.ui.log, $.ui.resolve</code></dd>
 
-    <dt>Validation on 2.1.301</dt><dd>Passed</dd>
+    <dt>Validation on 2.1.332</dt><dd>Passed with warnings</dd>
 
 
-    <dt>Scanned revision</dt><dd><a href="https://github.com/jeffarese/shellcast/tree/e70a0ee6238e69e89f23579b2ecf9dee75629a78"><code>e70a0ee6238e</code></a></dd>
-    <dt>Marketplace passed</dt><dd><a href="https://github.com/jeffarese/shellcast/blob/e70a0ee6238e69e89f23579b2ecf9dee75629a78/.claude-plugin/marketplace.json">shellcast</a></dd><dt>UI rewrite review</dt><dd>UI hook source contains control-character strings. Review any values passed to next() as rewritten props.text; the scanner does not trace whether these strings reach that call. <a href="https://github.com/jeffarese/shellcast/blob/e70a0ee6238e69e89f23579b2ecf9dee75629a78/hooks/format.ts#L43">hooks/format.ts:43</a></dd></dl>
+    <dt>Scanned revision</dt><dd><a href="https://github.com/jeffarese/shellcast/tree/582d782be0dcced3c430c5522a3cd1512ed8c8b3"><code>582d782be0dc</code></a></dd>
+    <dt>Marketplace passed</dt><dd><a href="https://github.com/jeffarese/shellcast/blob/582d782be0dcced3c430c5522a3cd1512ed8c8b3/.claude-plugin/marketplace.json">shellcast</a></dd><dt>UI rewrite review</dt><dd>UI hook source contains control-character strings. Review any values passed to next() as rewritten props.text; the scanner does not trace whether these strings reach that call. <a href="https://github.com/jeffarese/shellcast/blob/582d782be0dcced3c430c5522a3cd1512ed8c8b3/hooks/format.ts#L43">hooks/format.ts:43</a></dd></dl>
 <p class="note">These are the hooks and API calls reported by <code>claude plugin validate</code>. Access levels describe the widest reach of those calls and are not safety ratings. Validation is a static check, not a runtime test, and a passing result does not prove that a mod works or is safe. <a href="https://github.com/karanb192/awesome-claude-code-mods/blob/main/SCANNING.md">How the scan works</a>.</p></section>
 
+<section class="badge-snippet" aria-labelledby="badge-title"><h2 id="badge-title">Badge for your README</h2><p><img src="/badges/jeffarese--shellcast--shellcast-reach.svg" alt="Reach badge for shellcast"> <img src="/badges/jeffarese--shellcast--shellcast-validates.svg" alt="Validation badge for shellcast"></p><p>Authors can show the latest scan result in their README. Each badge links to this page.</p><pre><code>[![reach](https://raw.githubusercontent.com/karanb192/awesome-claude-code-mods/main/badges/jeffarese--shellcast--shellcast-reach.svg)](https://mods.aidojo.si/mods/jeffarese--shellcast--shellcast/)
+[![validates](https://raw.githubusercontent.com/karanb192/awesome-claude-code-mods/main/badges/jeffarese--shellcast--shellcast-validates.svg)](https://mods.aidojo.si/mods/jeffarese--shellcast--shellcast/)</code></pre></section>
 </main>
 <footer class="shell"><a href="/" class="brand"><svg viewBox="0 0 32 32" fill="none" aria-hidden="true"><path d="M11 5H5v22h6M21 5h6v22h-6M16 10v12M10 16h12"/></svg><span>claude<span class="brand-light">mods</span></span></a><p>An independent community scan.<br>Not an official Anthropic directory.</p><a href="https://github.com/karanb192/awesome-claude-code-mods">Awesome Claude Code Mods on GitHub <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 19 19 5M5 5h14v14"/></svg></a></footer>
 </body></html>

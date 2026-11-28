@@ -16,23 +16,25 @@
 <p class="lede">Shows HTML files Claude writes (or /preview &lt;file&gt;) like a browser: terminal-browser when installed, else a built-in Chrome-rendered pane</p>
 
 <div class="facts"><div><h2>Access</h2><span class="level">L2 Writes or runs</span><span class="track" aria-label="Reach level 2: Writes or runs"><i class="on l2"></i><i class="on l2"></i><i class="on l2"></i><i class=""></i></span><span class="labels">other: $.browser.open, other: $.process.spawn, other: $.state.get, other: $.state.set, runs processes, writes files, reads files, reads env vars, draws</span></div>
-<div><h2>Validation</h2><span class="status">Passed on Claude Code 2.1.301</span></div></div>
+<div><h2>Validation</h2><span class="status">Passed on Claude Code 2.1.332</span></div></div>
 <p class="actions"><a class="source" href="https://github.com/JAICHANGPARK/html-preview">View the source on GitHub <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 19 19 5M5 5h14v14"/></svg></a><a href="/#JAICHANGPARK--html-preview--html-preview">Back to the list</a></p>
 <p class="install">To install it, open the repository and follow the author’s setup instructions. Mods need Claude Code 2.1.287 or later.</p>
 <section class="record" aria-labelledby="record-title"><h2 id="record-title">What the scan recorded</h2>
 <dl>
 
     <dt>Observed events</dt><dd>every tool call</dd>
-    <dt>Hooks</dt><dd><code>session.start, command.run {command=preview}, tool.call, ui.scroll {component=Pane, requestId=html-preview}, ui.render {component=Pane, requestId=html-preview}</code></dd>
+    <dt>Hooks</dt><dd><code>session.start, command.run {command=preview}, tool.call, ui.scroll {component=Pane, requestId=html-preview}, ui.render {component=Pane, requestId=html-preview}, default, matcher, key, plugin</code></dd>
     <dt>API calls</dt><dd><code>$.browser.open, $.clock.after, $.command.register, $.env.get, $.fs.read, $.fs.stat, $.fs.write, $.process.run, $.process.spawn, $.session.cwd, $.state.get, $.state.set, $.ui.ask, $.ui.close, $.ui.log, $.ui.open, $.ui.resolve, $.ui.toast</code></dd>
 
-    <dt>Validation on 2.1.301</dt><dd>Passed</dd>
+    <dt>Validation on 2.1.332</dt><dd>Passed</dd>
 
 
     <dt>Scanned revision</dt><dd><a href="https://github.com/JAICHANGPARK/html-preview/tree/12893f47e1c5641aae3abf811bc26ba1ab6a4bad"><code>12893f47e1c5</code></a></dd>
     <dt>Marketplace passed</dt><dd><a href="https://github.com/JAICHANGPARK/html-preview/blob/12893f47e1c5641aae3abf811bc26ba1ab6a4bad/.claude-plugin/marketplace.json">html-preview</a></dd></dl>
 <p class="note">These are the hooks and API calls reported by <code>claude plugin validate</code>. Access levels describe the widest reach of those calls and are not safety ratings. Validation is a static check, not a runtime test, and a passing result does not prove that a mod works or is safe. <a href="https://github.com/karanb192/awesome-claude-code-mods/blob/main/SCANNING.md">How the scan works</a>.</p></section>
 
+<section class="badge-snippet" aria-labelledby="badge-title"><h2 id="badge-title">Badge for your README</h2><p><img src="/badges/JAICHANGPARK--html-preview--html-preview-reach.svg" alt="Reach badge for html-preview"> <img src="/badges/JAICHANGPARK--html-preview--html-preview-validates.svg" alt="Validation badge for html-preview"></p><p>Authors can show the latest scan result in their README. Each badge links to this page.</p><pre><code>[![reach](https://raw.githubusercontent.com/karanb192/awesome-claude-code-mods/main/badges/JAICHANGPARK--html-preview--html-preview-reach.svg)](https://mods.aidojo.si/mods/JAICHANGPARK--html-preview--html-preview/)
+[![validates](https://raw.githubusercontent.com/karanb192/awesome-claude-code-mods/main/badges/JAICHANGPARK--html-preview--html-preview-validates.svg)](https://mods.aidojo.si/mods/JAICHANGPARK--html-preview--html-preview/)</code></pre></section>
 </main>
 <footer class="shell"><a href="/" class="brand"><svg viewBox="0 0 32 32" fill="none" aria-hidden="true"><path d="M11 5H5v22h6M21 5h6v22h-6M16 10v12M10 16h12"/></svg><span>claude<span class="brand-light">mods</span></span></a><p>An independent community scan.<br>Not an official Anthropic directory.</p><a href="https://github.com/karanb192/awesome-claude-code-mods">Awesome Claude Code Mods on GitHub <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 19 19 5M5 5h14v14"/></svg></a></footer>
 </body></html>

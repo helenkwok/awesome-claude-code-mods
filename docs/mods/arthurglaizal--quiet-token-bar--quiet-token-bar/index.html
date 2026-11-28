@@ -16,23 +16,25 @@
 <p class="lede">Your context window as one quiet line above the prompt: a patterned bar, the fill against the compaction point, a compact button and your session and weekly limits, grey until something gets warm. /quiet-token-bar shows or hides it.</p>
 
 <div class="facts"><div><h2>Access</h2><span class="level">L2 Writes or runs</span><span class="track" aria-label="Reach level 2: Writes or runs"><i class="on l2"></i><i class="on l2"></i><i class="on l2"></i><i class=""></i></span><span class="labels">other: $.state.get, other: $.state.set, drives Claude, persists state, draws</span></div>
-<div><h2>Validation</h2><span class="status">Passed on Claude Code 2.1.301</span></div></div>
+<div><h2>Validation</h2><span class="status">Passed on Claude Code 2.1.332</span></div></div>
 <p class="actions"><a class="source" href="https://github.com/arthurglaizal/quiet-token-bar">View the source on GitHub <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 19 19 5M5 5h14v14"/></svg></a><a href="/#arthurglaizal--quiet-token-bar--quiet-token-bar">Back to the list</a></p>
 <p class="install">To install it, open the repository and follow the author’s setup instructions. Mods need Claude Code 2.1.287 or later.</p>
 <section class="record" aria-labelledby="record-title"><h2 id="record-title">What the scan recorded</h2>
 <dl>
 
     <dt>Observed events</dt><dd>compaction</dd>
-    <dt>Hooks</dt><dd><code>session.start, turn.complete, session.compact, session.measure, command.run {command=quiet-token-bar}, ui.render {component=AbovePrompt}</code></dd>
+    <dt>Hooks</dt><dd><code>session.start, turn.complete, session.compact, session.measure, command.run {command=quiet-token-bar}, ui.render {component=AbovePrompt}, default, matcher, key, plugin</code></dd>
     <dt>API calls</dt><dd><code>$.clock.now, $.command.register, $.command.run, $.session.usage, $.state.get, $.state.set, $.store.get, $.store.set, $.ui.resolve, $.ui.toast</code></dd>
 
-    <dt>Validation on 2.1.301</dt><dd>Passed</dd>
+    <dt>Validation on 2.1.332</dt><dd>Passed</dd>
 
 
-    <dt>Scanned revision</dt><dd><a href="https://github.com/arthurglaizal/quiet-token-bar/tree/7c8678fa23c729fca11d6507a687a948ba99f84e"><code>7c8678fa23c7</code></a></dd>
-    <dt>Marketplace passed</dt><dd><a href="https://github.com/arthurglaizal/quiet-token-bar/blob/7c8678fa23c729fca11d6507a687a948ba99f84e/.claude-plugin/marketplace.json">arturo-mods</a></dd></dl>
+    <dt>Scanned revision</dt><dd><a href="https://github.com/arthurglaizal/quiet-token-bar/tree/4de88c5c402b74e0d630a41dccfdb3ca52c38656"><code>4de88c5c402b</code></a></dd>
+    <dt>Marketplace passed</dt><dd><a href="https://github.com/arthurglaizal/quiet-token-bar/blob/4de88c5c402b74e0d630a41dccfdb3ca52c38656/.claude-plugin/marketplace.json">arturo-mods</a></dd></dl>
 <p class="note">These are the hooks and API calls reported by <code>claude plugin validate</code>. Access levels describe the widest reach of those calls and are not safety ratings. Validation is a static check, not a runtime test, and a passing result does not prove that a mod works or is safe. <a href="https://github.com/karanb192/awesome-claude-code-mods/blob/main/SCANNING.md">How the scan works</a>.</p></section>
 
+<section class="badge-snippet" aria-labelledby="badge-title"><h2 id="badge-title">Badge for your README</h2><p><img src="/badges/arthurglaizal--quiet-token-bar--quiet-token-bar-reach.svg" alt="Reach badge for quiet-token-bar"> <img src="/badges/arthurglaizal--quiet-token-bar--quiet-token-bar-validates.svg" alt="Validation badge for quiet-token-bar"></p><p>Authors can show the latest scan result in their README. Each badge links to this page.</p><pre><code>[![reach](https://raw.githubusercontent.com/karanb192/awesome-claude-code-mods/main/badges/arthurglaizal--quiet-token-bar--quiet-token-bar-reach.svg)](https://mods.aidojo.si/mods/arthurglaizal--quiet-token-bar--quiet-token-bar/)
+[![validates](https://raw.githubusercontent.com/karanb192/awesome-claude-code-mods/main/badges/arthurglaizal--quiet-token-bar--quiet-token-bar-validates.svg)](https://mods.aidojo.si/mods/arthurglaizal--quiet-token-bar--quiet-token-bar/)</code></pre></section>
 </main>
 <footer class="shell"><a href="/" class="brand"><svg viewBox="0 0 32 32" fill="none" aria-hidden="true"><path d="M11 5H5v22h6M21 5h6v22h-6M16 10v12M10 16h12"/></svg><span>claude<span class="brand-light">mods</span></span></a><p>An independent community scan.<br>Not an official Anthropic directory.</p><a href="https://github.com/karanb192/awesome-claude-code-mods">Awesome Claude Code Mods on GitHub <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 19 19 5M5 5h14v14"/></svg></a></footer>
 </body></html>

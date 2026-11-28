@@ -16,23 +16,25 @@
 <p class="lede">The session's dashboard in one pane, opened by /dash: the model, the effort and presets that set both, ultracode and fast mode, each switched with one click; the context and quota gauges, the cost and the duration, /compact behind a confirmation, the session's name; the agents, commands, skills, plugins, MCP servers and hooks, a plugin or a server turned on or off from there; and the /config settings. The model, the effort and the session's gauges can sit in the band above the prompt, and compact mode folds each list onto its current row.</p>
 
 <div class="facts"><div><h2>Access</h2><span class="level">L2 Writes or runs</span><span class="track" aria-label="Reach level 2: Writes or runs"><i class="on l2"></i><i class="on l2"></i><i class="on l2"></i><i class=""></i></span><span class="labels">other: $.prompt.read, runs processes, changes config, drives Claude, writes the prompt box, reads files, reads env vars, reads settings, persists state, draws</span></div>
-<div><h2>Validation</h2><span class="status">Passed on Claude Code 2.1.301</span></div></div>
+<div><h2>Validation</h2><span class="status">Passed with warnings on Claude Code 2.1.332</span></div></div>
 <p class="actions"><a class="source" href="https://github.com/devohmycode/ccmods/tree/main/dash">View the source on GitHub <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 19 19 5M5 5h14v14"/></svg></a><a href="/#devohmycode--ccmods--dash">Back to the list</a></p>
 <p class="install">To install it, open the repository and follow the author’s setup instructions. Mods need Claude Code 2.1.287 or later.</p>
 <section class="record" aria-labelledby="record-title"><h2 id="record-title">What the scan recorded</h2>
 <dl>
 
     <dt>Observed events</dt><dd>Workflow calls</dd>
-    <dt>Hooks</dt><dd><code>engine.create, session.start, command.run {command=?}, command.run {command=rename}, command.run {command=fast}, turn.step, tool.call {tool=Workflow}, ui.render {component=AbovePrompt}, ui.render {component=Pane, requestId=?}</code></dd>
+    <dt>Hooks</dt><dd><code>engine.create, session.start, command.run {command=?}, command.run {command=rename}, command.run {command=fast}, turn.step, tool.call {tool=Workflow}, ui.render {component=AbovePrompt}, default, matcher, key, plugin, ui.render {component=Pane, requestId=?}, default, matcher, key, plugin</code></dd>
     <dt>API calls</dt><dd><code>$.clock.after, $.clock.now, $.command.list, $.command.register, $.command.run, $.config.list, $.config.set, $.env.get, $.fs.exists, $.fs.list, $.fs.read, $.process.run, $.prompt.fill, $.prompt.read, $.session.cwd, $.session.model, $.session.usage, $.settings.read, $.store.get, $.store.set, $.ui.invalidate, $.ui.open, $.ui.resolve, $.ui.toast</code></dd>
 
-    <dt>Validation on 2.1.301</dt><dd>Passed</dd>
+    <dt>Validation on 2.1.332</dt><dd>Passed with warnings</dd>
 
 
-    <dt>Scanned revision</dt><dd><a href="https://github.com/devohmycode/ccmods/tree/bb142cd6b28b792e69b87259639237ff6d034c41"><code>bb142cd6b28b</code></a></dd>
-    <dt>Marketplace passed</dt><dd><a href="https://github.com/devohmycode/ccmods/blob/bb142cd6b28b792e69b87259639237ff6d034c41/.claude-plugin/marketplace.json">ccmods</a></dd></dl>
+    <dt>Scanned revision</dt><dd><a href="https://github.com/devohmycode/ccmods/tree/5baf0076245cf892be07966a0e9d2684f1987be1"><code>5baf0076245c</code></a></dd>
+    <dt>Marketplace passed</dt><dd><a href="https://github.com/devohmycode/ccmods/blob/5baf0076245cf892be07966a0e9d2684f1987be1/.claude-plugin/marketplace.json">ccmods</a></dd></dl>
 <p class="note">These are the hooks and API calls reported by <code>claude plugin validate</code>. Access levels describe the widest reach of those calls and are not safety ratings. Validation is a static check, not a runtime test, and a passing result does not prove that a mod works or is safe. <a href="https://github.com/karanb192/awesome-claude-code-mods/blob/main/SCANNING.md">How the scan works</a>.</p></section>
-
+<section class="siblings" aria-labelledby="siblings-title"><h2 id="siblings-title">More from devohmycode/ccmods</h2><ul><li><a href="/mods/devohmycode--ccmods--statusbar/">statusbar</a><span>A one-row bar above the prompt: the model and the effort, each switched from a picker; the context, 5-hour an…</span></li></ul></section>
+<section class="badge-snippet" aria-labelledby="badge-title"><h2 id="badge-title">Badge for your README</h2><p><img src="/badges/devohmycode--ccmods--dash-reach.svg" alt="Reach badge for dash"> <img src="/badges/devohmycode--ccmods--dash-validates.svg" alt="Validation badge for dash"></p><p>Authors can show the latest scan result in their README. Each badge links to this page.</p><pre><code>[![reach](https://raw.githubusercontent.com/karanb192/awesome-claude-code-mods/main/badges/devohmycode--ccmods--dash-reach.svg)](https://mods.aidojo.si/mods/devohmycode--ccmods--dash/)
+[![validates](https://raw.githubusercontent.com/karanb192/awesome-claude-code-mods/main/badges/devohmycode--ccmods--dash-validates.svg)](https://mods.aidojo.si/mods/devohmycode--ccmods--dash/)</code></pre></section>
 </main>
 <footer class="shell"><a href="/" class="brand"><svg viewBox="0 0 32 32" fill="none" aria-hidden="true"><path d="M11 5H5v22h6M21 5h6v22h-6M16 10v12M10 16h12"/></svg><span>claude<span class="brand-light">mods</span></span></a><p>An independent community scan.<br>Not an official Anthropic directory.</p><a href="https://github.com/karanb192/awesome-claude-code-mods">Awesome Claude Code Mods on GitHub <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 19 19 5M5 5h14v14"/></svg></a></footer>
 </body></html>

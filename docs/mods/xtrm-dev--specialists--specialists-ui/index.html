@@ -16,7 +16,7 @@
 <p class="lede">Teammate-style transcript rows for Specialists in Claude Code: channel wakes, the fallback wake, and Specialists MCP tool calls under native labels. Companion to the specialists plugin, which raises those rows and therefore cannot draw them itself.</p>
 
 <div class="facts"><div><h2>Access</h2><span class="level">L3 Uses the network</span><span class="track" aria-label="Reach level 3: Uses the network"><i class="on l3"></i><i class="on l3"></i><i class="on l3"></i><i class="on l3"></i></span><span class="labels">MCP servers, writes files, reads env vars, draws</span></div>
-<div><h2>Validation</h2><span class="status">Passed on Claude Code 2.1.301</span></div></div>
+<div><h2>Validation</h2><span class="status">Passed with warnings on Claude Code 2.1.332</span></div></div>
 <p class="actions"><a class="source" href="https://github.com/xtrm-dev/specialists/tree/master/plugins/specialists-ui">View the source on GitHub <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 19 19 5M5 5h14v14"/></svg></a><a href="/#xtrm-dev--specialists--specialists-ui">Back to the list</a></p>
 <p class="install">To install it, open the repository and follow the author’s setup instructions. Mods need Claude Code 2.1.287 or later.</p>
 <section class="record" aria-labelledby="record-title"><h2 id="record-title">What the scan recorded</h2>
@@ -26,13 +26,15 @@
     <dt>Hooks</dt><dd><code>prompt.submit {origin has {kind=channel, server=plugin:specialists:specialists}, ui.render {component=UserMessage, props.origin has {kind=channel}, ui.render {component=UserMessage, props.origin has {kind=task-notification}, ui.render {component=ToolGroup}, ui.render {component=ToolUse, props has {tool=/&quot;^mcp__(?:plugin_specialists_)?specialists__&quot;/}, ui.render {component=ToolResult, props has {tool=/&quot;^mcp__(?:plugin_specialists_)?specialists__&quot;/}</code></dd>
     <dt>API calls</dt><dd><code>$.env.get, $.fs.write, $.mcp.call, $.ui.invalidate, $.ui.resolve</code></dd>
 
-    <dt>Validation on 2.1.301</dt><dd>Passed</dd>
+    <dt>Validation on 2.1.332</dt><dd>Passed with warnings</dd>
 
 
-    <dt>Scanned revision</dt><dd><a href="https://github.com/xtrm-dev/specialists/tree/4fbea420e55ee4a9da2bcf881b21a1a2001a5940"><code>4fbea420e55e</code></a></dd>
-    <dt>Marketplace passed</dt><dd><a href="https://github.com/xtrm-dev/specialists/blob/4fbea420e55ee4a9da2bcf881b21a1a2001a5940/.claude-plugin/marketplace.json">xtrm</a></dd></dl>
+    <dt>Scanned revision</dt><dd><a href="https://github.com/xtrm-dev/specialists/tree/c17901a91e9222f12daf60740478c6639dfbee49"><code>c17901a91e92</code></a></dd>
+    <dt>Marketplace passed</dt><dd><a href="https://github.com/xtrm-dev/specialists/blob/c17901a91e9222f12daf60740478c6639dfbee49/.claude-plugin/marketplace.json">xtrm</a></dd></dl>
 <p class="note">These are the hooks and API calls reported by <code>claude plugin validate</code>. Access levels describe the widest reach of those calls and are not safety ratings. Validation is a static check, not a runtime test, and a passing result does not prove that a mod works or is safe. <a href="https://github.com/karanb192/awesome-claude-code-mods/blob/main/SCANNING.md">How the scan works</a>.</p></section>
 <section class="siblings" aria-labelledby="siblings-title"><h2 id="siblings-title">More from xtrm-dev/specialists</h2><ul><li><a href="/mods/xtrm-dev--specialists--specialists/">specialists</a><span>Specialists execution runtime in Claude Code: specialist activation and dispatch over MCP, session continuity…</span></li></ul></section>
+<section class="badge-snippet" aria-labelledby="badge-title"><h2 id="badge-title">Badge for your README</h2><p><img src="/badges/xtrm-dev--specialists--specialists-ui-reach.svg" alt="Reach badge for specialists-ui"> <img src="/badges/xtrm-dev--specialists--specialists-ui-validates.svg" alt="Validation badge for specialists-ui"></p><p>Authors can show the latest scan result in their README. Each badge links to this page.</p><pre><code>[![reach](https://raw.githubusercontent.com/karanb192/awesome-claude-code-mods/main/badges/xtrm-dev--specialists--specialists-ui-reach.svg)](https://mods.aidojo.si/mods/xtrm-dev--specialists--specialists-ui/)
+[![validates](https://raw.githubusercontent.com/karanb192/awesome-claude-code-mods/main/badges/xtrm-dev--specialists--specialists-ui-validates.svg)](https://mods.aidojo.si/mods/xtrm-dev--specialists--specialists-ui/)</code></pre></section>
 </main>
 <footer class="shell"><a href="/" class="brand"><svg viewBox="0 0 32 32" fill="none" aria-hidden="true"><path d="M11 5H5v22h6M21 5h6v22h-6M16 10v12M10 16h12"/></svg><span>claude<span class="brand-light">mods</span></span></a><p>An independent community scan.<br>Not an official Anthropic directory.</p><a href="https://github.com/karanb192/awesome-claude-code-mods">Awesome Claude Code Mods on GitHub <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 19 19 5M5 5h14v14"/></svg></a></footer>
 </body></html>

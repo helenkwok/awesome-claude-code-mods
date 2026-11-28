@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <title>meetproxy, a Claude Code mod by jeon-jihyeon | Awesome Claude Code Mods</title>
-<meta name="description" content="Stop being a meat proxy. Keeps Slack and GitHub requests in one inbox you open from any Claude Code session, where the session does the work and posts the…"><meta name="theme-color" content="#f0eee6" media="(prefers-color-scheme: light)"><meta name="theme-color" content="#1c1c1a" media="(prefers-color-scheme: dark)">
+<meta name="description" content="Stop being a meat proxy. Keeps Slack and GitHub requests in one inbox you open from any Claude Code session, where the session does the work and posts the…"><meta name="robots" content="noindex"><meta name="theme-color" content="#f0eee6" media="(prefers-color-scheme: light)"><meta name="theme-color" content="#1c1c1a" media="(prefers-color-scheme: dark)">
 <link rel="canonical" href="https://mods.aidojo.si/mods/jeon-jihyeon--meetproxy--meetproxy/"><link rel="icon" href="/favicon.svg" type="image/svg+xml">
 <link rel="preload" href="/fonts/hanken-grotesk-latin.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="/site.css">
@@ -16,7 +16,7 @@
 <p class="lede">Stop being a meat proxy. Keeps Slack and GitHub requests in one inbox you open from any Claude Code session, where the session does the work and posts the reply you approve back to the thread.</p>
 
 <div class="facts"><div><h2>Access</h2><span class="level">L3 Uses the network</span><span class="track" aria-label="Reach level 3: Uses the network"><i class="on l3"></i><i class="on l3"></i><i class="on l3"></i><i class="on l3"></i></span><span class="labels">other: $.tool.list, MCP servers, runs processes, drives Claude, persists state, draws</span></div>
-<div><h2>Validation</h2><span class="status">Passed on Claude Code 2.1.301</span></div></div>
+<div><h2>Validation</h2><span class="status bad">not verified</span></div></div>
 <p class="actions"><a class="source" href="https://github.com/jeon-jihyeon/meetproxy/tree/main/plugin">View the source on GitHub <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 19 19 5M5 5h14v14"/></svg></a><a href="/#jeon-jihyeon--meetproxy--meetproxy">Back to the list</a></p>
 <p class="install">To install it, open the repository and follow the author’s setup instructions. Mods need Claude Code 2.1.287 or later.</p>
 <section class="record" aria-labelledby="record-title"><h2 id="record-title">What the scan recorded</h2>
@@ -26,13 +26,15 @@
     <dt>Hooks</dt><dd><code>session.start, turn.start, turn.complete, tool.call {tool=mcp__meetproxy__inbox}, tool.call {tool=mcp__meetproxy__post}, tool.call {tool=mcp__meetproxy__retract}, tool.call {tool=mcp__meetproxy__slack_token}</code></dd>
     <dt>API calls</dt><dd><code>$.clock.after, $.clock.every, $.clock.now, $.mcp.call, $.model.complete, $.process.run, $.session.id, $.store.delete, $.store.get, $.store.keys, $.store.set, $.tool.list, $.tool.register, $.ui.ask, $.ui.log, $.ui.status</code></dd>
 
-    <dt>Validation on 2.1.301</dt><dd>Passed</dd>
-
-
+    <dt>Validation on 2.1.301</dt><dd>not verified</dd>
+    <dt>Last known result</dt><dd>Passed on 2.1.301</dd>
+    <dt>Validator output</dt><dd>Not found in this scan; retained pending weekly retirement review.</dd>
     <dt>Scanned revision</dt><dd><a href="https://github.com/jeon-jihyeon/meetproxy/tree/db5473dc1e3f29645bb23920bc10755a0e129941"><code>db5473dc1e3f</code></a></dd>
     <dt>Marketplace passed</dt><dd><a href="https://github.com/jeon-jihyeon/meetproxy/blob/db5473dc1e3f29645bb23920bc10755a0e129941/.claude-plugin/marketplace.json">meetproxy</a></dd></dl>
 <p class="note">These are the hooks and API calls reported by <code>claude plugin validate</code>. Access levels describe the widest reach of those calls and are not safety ratings. Validation is a static check, not a runtime test, and a passing result does not prove that a mod works or is safe. <a href="https://github.com/karanb192/awesome-claude-code-mods/blob/main/SCANNING.md">How the scan works</a>.</p></section>
 
+<section class="badge-snippet" aria-labelledby="badge-title"><h2 id="badge-title">Badge for your README</h2><p><img src="/badges/jeon-jihyeon--meetproxy--meetproxy-reach.svg" alt="Reach badge for meetproxy"> <img src="/badges/jeon-jihyeon--meetproxy--meetproxy-validates.svg" alt="Validation badge for meetproxy"></p><p>Authors can show the latest scan result in their README. Each badge links to this page.</p><pre><code>[![reach](https://raw.githubusercontent.com/karanb192/awesome-claude-code-mods/main/badges/jeon-jihyeon--meetproxy--meetproxy-reach.svg)](https://mods.aidojo.si/mods/jeon-jihyeon--meetproxy--meetproxy/)
+[![validates](https://raw.githubusercontent.com/karanb192/awesome-claude-code-mods/main/badges/jeon-jihyeon--meetproxy--meetproxy-validates.svg)](https://mods.aidojo.si/mods/jeon-jihyeon--meetproxy--meetproxy/)</code></pre></section>
 </main>
 <footer class="shell"><a href="/" class="brand"><svg viewBox="0 0 32 32" fill="none" aria-hidden="true"><path d="M11 5H5v22h6M21 5h6v22h-6M16 10v12M10 16h12"/></svg><span>claude<span class="brand-light">mods</span></span></a><p>An independent community scan.<br>Not an official Anthropic directory.</p><a href="https://github.com/karanb192/awesome-claude-code-mods">Awesome Claude Code Mods on GitHub <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 19 19 5M5 5h14v14"/></svg></a></footer>
 </body></html>

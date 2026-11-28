@@ -15,24 +15,26 @@
 <p class="byline">A Claude Code mod in <a href="https://github.com/mtmtian/cc-mods">mtmtian/cc-mods</a></p>
 <p class="lede">Live plan progress bars above the Claude Code prompt: stages, steps, a pixel fill and soft sounds for decision, error and done</p>
 
-<div class="facts"><div><h2>Access</h2><span class="level">L2 Writes or runs</span><span class="track" aria-label="Reach level 2: Writes or runs"><i class="on l2"></i><i class="on l2"></i><i class="on l2"></i><i class=""></i></span><span class="labels">other: $.state.get, other: $.state.set, runs processes, drives Claude, plays audio, persists state, draws</span></div>
-<div><h2>Validation</h2><span class="status">Passed on Claude Code 2.1.301</span></div></div>
+<div class="facts"><div><h2>Access</h2><span class="level">L2 Writes or runs</span><span class="track" aria-label="Reach level 2: Writes or runs"><i class="on l2"></i><i class="on l2"></i><i class="on l2"></i><i class=""></i></span><span class="labels">other: $.tool.list, drives Claude, draws</span></div>
+<div><h2>Validation</h2><span class="status">Passed on Claude Code 2.1.332</span></div></div>
 <p class="actions"><a class="source" href="https://github.com/mtmtian/cc-mods/tree/main/mods/plan-progress/plugins/plan-progress">View the source on GitHub <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 19 19 5M5 5h14v14"/></svg></a><a href="/#mtmtian--cc-mods--plan-progress">Back to the list</a></p>
 <p class="install">To install it, open the repository and follow the author’s setup instructions. Mods need Claude Code 2.1.287 or later.</p>
 <section class="record" aria-labelledby="record-title"><h2 id="record-title">What the scan recorded</h2>
 <dl>
 
-    <dt>Observed events</dt><dd>every prompt, every tool call, classic hooks, mcp__plan-progress__plan_progress calls, AskUserQuestion calls, subagent spawns</dd>
-    <dt>Hooks</dt><dd><code>turn.start, prompt.submit, tool.call, classic.Stop, session.start, tool.call {tool=mcp__plan-progress__plan_progress}, tool.call {tool=AskUserQuestion}, command.run {command=progress}, command.run {command=progress-clear}, ui.render {component=AbovePrompt}, agent.spawn, classic.Notification {notification_type=permission_prompt}, tool.check, turn.step, turn.complete</code></dd>
-    <dt>API calls</dt><dd><code>$.audio.play, $.clock.after, $.clock.every, $.clock.now, $.command.register, $.config.list, $.process.run, $.session.id, $.state.get, $.state.set, $.store.delete, $.store.get, $.store.keys, $.store.set, $.tool.register, $.ui.blit, $.ui.resolve</code></dd>
+    <dt>Observed events</dt><dd>classic hooks</dd>
+    <dt>Hooks</dt><dd><code>classic.Notification {notification_type=permission_prompt}, classic.PermissionRequest, classic.PermissionDenied, turn.step, turn.complete</code></dd>
+    <dt>API calls</dt><dd><code>$.tool.list, $.tool.register, $.ui.blit, $.ui.focus, $.ui.log, $.ui.open, $.ui.resolve, $.ui.toast</code></dd>
 
-    <dt>Validation on 2.1.301</dt><dd>Passed</dd>
+    <dt>Validation on 2.1.332</dt><dd>Passed</dd>
 
 
-    <dt>Scanned revision</dt><dd><a href="https://github.com/mtmtian/cc-mods/tree/22198fb8769bbef2e1eb8f1ddb720074aa15cef8"><code>22198fb8769b</code></a></dd>
-    <dt>Marketplace passed</dt><dd><a href="https://github.com/mtmtian/cc-mods/blob/22198fb8769bbef2e1eb8f1ddb720074aa15cef8/mods/plan-progress/.claude-plugin/marketplace.json">zycck-mods</a></dd><dt>Marketplace passed</dt><dd><a href="https://github.com/mtmtian/cc-mods/blob/22198fb8769bbef2e1eb8f1ddb720074aa15cef8/.claude-plugin/marketplace.json">cc-mods</a></dd></dl>
+    <dt>Scanned revision</dt><dd><a href="https://github.com/mtmtian/cc-mods/tree/b7ba677ed1b85a4c800e384ebf9e6acbdd9213e5"><code>b7ba677ed1b8</code></a></dd>
+    <dt>Marketplace passed</dt><dd><a href="https://github.com/mtmtian/cc-mods/blob/b7ba677ed1b85a4c800e384ebf9e6acbdd9213e5/mods/plan-progress/.claude-plugin/marketplace.json">zycck-mods</a></dd><dt>Marketplace passed</dt><dd><a href="https://github.com/mtmtian/cc-mods/blob/b7ba677ed1b85a4c800e384ebf9e6acbdd9213e5/.claude-plugin/marketplace.json">cc-mods</a></dd></dl>
 <p class="note">These are the hooks and API calls reported by <code>claude plugin validate</code>. Access levels describe the widest reach of those calls and are not safety ratings. Validation is a static check, not a runtime test, and a passing result does not prove that a mod works or is safe. <a href="https://github.com/karanb192/awesome-claude-code-mods/blob/main/SCANNING.md">How the scan works</a>.</p></section>
 <section class="siblings" aria-labelledby="siblings-title"><h2 id="siblings-title">More from mtmtian/cc-mods</h2><ul><li><a href="/mods/mtmtian--cc-mods--md-prompt/">md-prompt</a><span>Paints Markdown onto Claude Code's prompt box as you type: fenced code becomes a syntax-highlighted card (eve…</span></li></ul></section>
+<section class="badge-snippet" aria-labelledby="badge-title"><h2 id="badge-title">Badge for your README</h2><p><img src="/badges/mtmtian--cc-mods--plan-progress-reach.svg" alt="Reach badge for plan-progress"> <img src="/badges/mtmtian--cc-mods--plan-progress-validates.svg" alt="Validation badge for plan-progress"></p><p>Authors can show the latest scan result in their README. Each badge links to this page.</p><pre><code>[![reach](https://raw.githubusercontent.com/karanb192/awesome-claude-code-mods/main/badges/mtmtian--cc-mods--plan-progress-reach.svg)](https://mods.aidojo.si/mods/mtmtian--cc-mods--plan-progress/)
+[![validates](https://raw.githubusercontent.com/karanb192/awesome-claude-code-mods/main/badges/mtmtian--cc-mods--plan-progress-validates.svg)](https://mods.aidojo.si/mods/mtmtian--cc-mods--plan-progress/)</code></pre></section>
 </main>
 <footer class="shell"><a href="/" class="brand"><svg viewBox="0 0 32 32" fill="none" aria-hidden="true"><path d="M11 5H5v22h6M21 5h6v22h-6M16 10v12M10 16h12"/></svg><span>claude<span class="brand-light">mods</span></span></a><p>An independent community scan.<br>Not an official Anthropic directory.</p><a href="https://github.com/karanb192/awesome-claude-code-mods">Awesome Claude Code Mods on GitHub <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 19 19 5M5 5h14v14"/></svg></a></footer>
 </body></html>
